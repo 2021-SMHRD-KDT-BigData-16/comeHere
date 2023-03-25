@@ -2,13 +2,13 @@ package com.smhrd3.model;
 
 public class CreditDTO {
 	// 소비 순번 
-    public Double consumption_seq;
+    public int consumption_seq;
 
     // 연월 
     public String consumption_yearmonth;
 
     // 소비액 
-    public Double consumption_amount;
+    public int consumption_amount;
 
     // 지역 
     public String consumption_area;
@@ -19,11 +19,11 @@ public class CreditDTO {
     // 관리자 아이디 
     public String admin_id;
 
-	public Double getConsumption_seq() {
+	public int getConsumption_seq() {
 		return consumption_seq;
 	}
 
-	public void setConsumption_seq(Double consumption_seq) {
+	public void setConsumption_seq(int consumption_seq) {
 		this.consumption_seq = consumption_seq;
 	}
 
@@ -35,11 +35,11 @@ public class CreditDTO {
 		this.consumption_yearmonth = consumption_yearmonth;
 	}
 
-	public Double getConsumption_amount() {
+	public int getConsumption_amount() {
 		return consumption_amount;
 	}
 
-	public void setConsumption_amount(Double consumption_amount) {
+	public void setConsumption_amount(int consumption_amount) {
 		this.consumption_amount = consumption_amount;
 	}
 
@@ -67,7 +67,7 @@ public class CreditDTO {
 		this.admin_id = admin_id;
 	}
 
-	public CreditDTO(Double consumption_seq, String consumption_yearmonth, Double consumption_amount,
+	public CreditDTO(int consumption_seq, String consumption_yearmonth, int consumption_amount,
 			String consumption_area, String consumption_type, String admin_id) {
 		this.consumption_seq = consumption_seq;
 		this.consumption_yearmonth = consumption_yearmonth;
