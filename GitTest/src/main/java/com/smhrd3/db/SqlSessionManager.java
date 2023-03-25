@@ -13,7 +13,6 @@ public class SqlSessionManager {
 		public static SqlSessionFactory sqlSessionFactory;
 		
 		// 인스턴스 생성자
-		// ex) Class.forName("driver명칭")
 		// ---> 제일 먼저 실행되는 구간, 서로 다른 객체끼리 꼭 공유해야하는 고정값
 		static {
 			// 프로젝트 시 resource 경로만 잘 확인하기
