@@ -37,7 +37,7 @@
 				<div class="row">
 					<div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
 						<div class="card">
-							<a href="./전남.html">
+							<a href="./전남.jsp">
 								<div class="card-body p-3">
 									<div class="row">
 										<div class="col-8">
@@ -59,7 +59,7 @@
 					</div>
 					<div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
 						<div class="card">
-							<a href="./광주.html">
+							<a href="./광주.jsp">
 								<div class="card-body p-3">
 									<div class="row">
 										<div class="col-8">
@@ -81,7 +81,7 @@
 					</div>
 					<div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
 						<div class="card">
-							<a href="./담양.html">
+							<a href="./담양.jsp">
 								<div class="card-body p-3">
 									<div class="row">
 										<div class="col-8">
@@ -103,7 +103,7 @@
 					</div>
 					<div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
 						<div class="card">
-							<a href="./목포.html">
+							<a href="./목포.jsp">
 								<div class="card-body p-3">
 									<div class="row">
 										<div class="col-8">
@@ -125,7 +125,7 @@
 					</div>
 					<div class="col-xl-3 col-sm-6">
 						<div class="card">
-							<a href="./여수.html">
+							<a href="./여수.jsp">
 								<div class="card-body p-3">
 									<div class="row">
 										<div class="col-8">
