@@ -1,3 +1,4 @@
+<%@page import="com.smhrd3.model.TravelPurposeDTO"%>
 <%@page import="com.smhrd3.model.SNSDTO"%>
 <%@page import="com.smhrd3.model.CreditDTO"%>
 <%@page import="com.smhrd3.model.ConsumptionDTO"%>
@@ -714,6 +715,8 @@
 							<h3>여행유형/트렌드</h3>
 							<script type="text/javascript"
 								src="https://www.gstatic.com/charts/loader.js"></script>
+							<%List<TravelPurposeDTO> tpList = (List)request.getAttribute("tpList");
+							if (tpList != null) {%>
 							<script type="text/javascript">
 								google.charts.load('current', {
 									'packages' : [ 'line' ]
@@ -723,27 +726,25 @@
 								function drawChart() {
 
 									var data = new google.visualization.DataTable();
-									data.addColumn('number', 'Day');
-									data.addColumn('number',
-											'Guardians of the Galaxy');
-									data.addColumn('number', 'The Avengers');
-									data.addColumn('number',
-											'Transformers: Age of Extinction');
-
-									data.addRows([ [ 1, 37.8, 80.8, 41.8 ],
-											[ 2, 30.9, 69.5, 32.4 ],
-											[ 3, 25.4, 57, 25.7 ],
-											[ 4, 11.7, 18.8, 10.5 ],
-											[ 5, 11.9, 17.6, 10.4 ],
-											[ 6, 8.8, 13.6, 7.7 ],
-											[ 7, 7.6, 12.3, 9.6 ],
-											[ 8, 12.3, 29.2, 10.6 ],
-											[ 9, 16.9, 42.9, 14.8 ],
-											[ 10, 12.8, 30.9, 11.6 ],
-											[ 11, 5.3, 7.9, 4.7 ],
-											[ 12, 6.6, 8.4, 5.2 ],
-											[ 13, 4.8, 6.3, 3.6 ],
-											[ 14, 4.2, 6.2, 3.4 ] ]);
+									data.addColumn('number', '언급량');
+									data.addColumn('number', '<%=tpList.get(0).getTravel_purpose()%>');
+									data.addColumn('number', '<%=tpList.get(1).getTravel_purpose()%>');
+									data.addColumn('number', '<%=tpList.get(2).getTravel_purpose()%>');
+									data.addColumn('number', '<%=tpList.get(3).getTravel_purpose()%>');
+									data.addRows([ 
+											[ 1, <%=tpList.get(0).getTravel_count()%>, <%=tpList.get(1).getTravel_count()%>, <%=tpList.get(2).getTravel_count()%>, <%=tpList.get(3).getTravel_count()%> ],
+											[ 2, <%=tpList.get(4).getTravel_count()%>, <%=tpList.get(5).getTravel_count()%>, <%=tpList.get(6).getTravel_count()%>, <%=tpList.get(7).getTravel_count()%> ],
+											[ 3, <%=tpList.get(8).getTravel_count()%>, <%=tpList.get(9).getTravel_count()%>, <%=tpList.get(10).getTravel_count()%>, <%=tpList.get(11).getTravel_count()%> ],
+											[ 4, <%=tpList.get(12).getTravel_count()%>, <%=tpList.get(13).getTravel_count()%>, <%=tpList.get(14).getTravel_count()%>, <%=tpList.get(15).getTravel_count()%> ],
+											[ 5, <%=tpList.get(16).getTravel_count()%>, <%=tpList.get(17).getTravel_count()%>, <%=tpList.get(18).getTravel_count()%>, <%=tpList.get(19).getTravel_count()%> ],
+											[ 6, <%=tpList.get(20).getTravel_count()%>, <%=tpList.get(21).getTravel_count()%>, <%=tpList.get(22).getTravel_count()%>, <%=tpList.get(23).getTravel_count()%> ],
+											[ 7, <%=tpList.get(24).getTravel_count()%>, <%=tpList.get(25).getTravel_count()%>, <%=tpList.get(26).getTravel_count()%>, <%=tpList.get(27).getTravel_count()%> ],
+											[ 8, <%=tpList.get(28).getTravel_count()%>, <%=tpList.get(29).getTravel_count()%>, <%=tpList.get(30).getTravel_count()%>, <%=tpList.get(31).getTravel_count()%> ],
+											[ 9, <%=tpList.get(32).getTravel_count()%>, <%=tpList.get(33).getTravel_count()%>, <%=tpList.get(34).getTravel_count()%>, <%=tpList.get(35).getTravel_count()%> ],
+											[ 10, <%=tpList.get(36).getTravel_count()%>, <%=tpList.get(37).getTravel_count()%>, <%=tpList.get(38).getTravel_count()%>, <%=tpList.get(39).getTravel_count()%> ],
+											[ 11, <%=tpList.get(40).getTravel_count()%>, <%=tpList.get(41).getTravel_count()%>, <%=tpList.get(42).getTravel_count()%>, <%=tpList.get(43).getTravel_count()%> ],
+											[ 12, <%=tpList.get(44).getTravel_count()%>, <%=tpList.get(45).getTravel_count()%>, <%=tpList.get(46).getTravel_count()%>, <%=tpList.get(47).getTravel_count()%> ] 
+											]);
 
 									var options = {
 										chart : {
@@ -768,6 +769,7 @@
 											.convertOptions(options));
 								}
 							</script>
+							<%} %>
 							<div>
 								<div id="line_top_x"></div>
 							</div>

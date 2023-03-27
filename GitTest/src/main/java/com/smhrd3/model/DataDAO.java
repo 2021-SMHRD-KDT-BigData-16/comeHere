@@ -51,4 +51,18 @@ public class DataDAO {
 		
 	}
 
+	public List<TravelPurposeDTO> travelPurposeJN(TravelPurposeDTO tp_dto) {
+		List<TravelPurposeDTO> tpList = null;
+		SqlSession session = factory.openSession(true);
+		
+		try {
+			tpList = session.selectList("selecttpJN", tp_dto);
+		} finally {
+			session.close();
+		}
+		
+		return tpList;
+		
+	}
+
 }

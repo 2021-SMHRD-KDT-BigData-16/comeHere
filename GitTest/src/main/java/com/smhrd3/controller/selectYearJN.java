@@ -14,6 +14,7 @@ import com.smhrd3.model.ConsumptionDTO;
 import com.smhrd3.model.CreditDTO;
 import com.smhrd3.model.DataDAO;
 import com.smhrd3.model.SNSDTO;
+import com.smhrd3.model.TravelPurposeDTO;
 
 @WebServlet("/selectYearJN")
 public class selectYearJN extends HttpServlet {
@@ -35,6 +36,9 @@ public class selectYearJN extends HttpServlet {
 		SNSDTO sns_dto = new SNSDTO();
 		sns_dto.setSns_year(temp);
 		
+		TravelPurposeDTO tp_dto = new TravelPurposeDTO();
+		tp_dto.setPurpose_year(temp);
+		
 		// 메소드 실행을 위한 DAO 가져오기
 		DataDAO dao = new DataDAO();
 		
@@ -55,7 +59,13 @@ public class selectYearJN extends HttpServlet {
 		if (snsList != null) {
 			request.setAttribute("snsList", snsList);
 		}
-				
+		
+		// 전라남도 여행유형/트렌드 가져오기
+		List<TravelPurposeDTO> tpList = dao.travelPurposeJN(tp_dto);
+		if (tpList != null) {
+			request.setAttribute("tpList", tpList);
+		}
+		
 		// 전라남도 페이지로 데이터들 보내기
 		RequestDispatcher rd = request.getRequestDispatcher("전남.jsp");
 		rd.forward(request, response);
