@@ -22,6 +22,54 @@ public class ConsumptionDTO {
     // 관리자 아이디 
     public String admin_id;
 
+	public int getCunsumption_seq() {
+		return cunsumption_seq;
+	}
+
+	public void setCunsumption_seq(int cunsumption_seq) {
+		this.cunsumption_seq = cunsumption_seq;
+	}
+
+	public int getCunsumption_year() {
+		return cunsumption_year;
+	}
+
+	public void setCunsumption_year(int cunsumption_year) {
+		this.cunsumption_year = cunsumption_year;
+	}
+
+	public int getCunsumption_amount() {
+		return cunsumption_amount;
+	}
+
+	public void setCunsumption_amount(int cunsumption_amount) {
+		this.cunsumption_amount = cunsumption_amount;
+	}
+
+	public String getCunsumption_area() {
+		return cunsumption_area;
+	}
+
+	public void setCunsumption_area(String cunsumption_area) {
+		this.cunsumption_area = cunsumption_area;
+	}
+
+	public String getCunsumption_type1() {
+		return cunsumption_type1;
+	}
+
+	public void setCunsumption_type1(String cunsumption_type1) {
+		this.cunsumption_type1 = cunsumption_type1;
+	}
+
+	public String getCunsumption_type2() {
+		return cunsumption_type2;
+	}
+
+	public void setCunsumption_type2(String cunsumption_type2) {
+		this.cunsumption_type2 = cunsumption_type2;
+	}
+
 	public ConsumptionDTO(int cunsumption_seq, int cunsumption_year, int cunsumption_amount,
 			String cunsumption_area, String cunsumption_type1, String cunsumption_type2, String admin_id) {
 		this.cunsumption_seq = cunsumption_seq;

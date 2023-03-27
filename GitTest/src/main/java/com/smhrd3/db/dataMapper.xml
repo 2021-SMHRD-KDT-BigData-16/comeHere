@@ -13,6 +13,13 @@
   	resultType : SQL 구문을 실행하고 나서 결과값을 java내부에서 어떤 자료형으로 받아올건지 지정
   				 (풀네임을 작성해야함) ** select구문 작성할 때 꼭 써주기!! **
    -->
- 
+ 	<select id="selectConsumption" parameterType="com.smhrd3.model.ConsumptionDTO" resultType="com.smhrd3.model.ConsumptionDTO">
+ 		SELECT SUM(CUNSUMPTION_AMOUNT), CUNSUMPTION_TYPE1
+    		FROM TB_CONSUMPTION
+    		WHERE CUNSUMPTION_AREA = '전라남도'
+    		AND CUNSUMPTION_YEAR = #{cunsumption_year}
+    		AND NOT CUNSUMPTION_TYPE1 IN '운송업'
+    		GROUP BY CUNSUMPTION_TYPE1;
+ 	</select>
   
 </mapper>

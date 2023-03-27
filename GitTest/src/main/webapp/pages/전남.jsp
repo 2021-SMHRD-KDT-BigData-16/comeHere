@@ -1,5 +1,7 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@page import="com.smhrd3.model.ConsumptionDTO"%>
+<%@page import="java.util.List"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -151,7 +153,7 @@
 		<div class="container-fluid py-1 px-3">
 			<h3 align="center">생명의 땅</h3>
 			<h1 align="center">전라남도</h1>
-			<form action="selectyearJN">
+			<form action="selectYearJN">
 				<h4> 연도 선택 : </h4>
 				<select id="selectyear" name="year">
 					<option value="2018">2018</option>
@@ -160,6 +162,7 @@
 					<option value="2021">2021</option>
 					<option value="2022">2022</option>
 				</select>
+				<input type="submit" value="선택">
 			</form>
 		</div>
 		<div class="row mt-4">
@@ -646,24 +649,25 @@
 				<div class="card h-100">
 					<div class="card-header pb-0">
 						<h4>업종별 신용카드 소비액 추이_운송업제외</h4>
-						<script type="text/javascript"
-							src="https://www.gstatic.com/charts/loader.js"></script>
+						<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+						<% List<ConsumptionDTO> consumptionList = (List)request.getAttribute("consumptionList"); %>
+						<%if(consumptionList != null) { %>
 						<script type="text/javascript">
 							google.charts.load('current', {
 								'packages' : [ 'corechart' ]
 							});
 							google.charts.setOnLoadCallback(drawChart);
-
-							function drawChart() {
-
+							
+							function drawChart() {	
+								
 								var data = google.visualization
 										.arrayToDataTable([
 												[ 'Task', 'Hours per Day' ],
-												[ 'Work', 20 ],
-												[ 'Eat', 20 ],
-												[ 'Commute', 20 ],
-												[ 'Watch TV', 20 ],
-												[ 'Sleep', 20 ] ]);
+												[ 'consumptionList.get(0).cunsumption_type1', consumptionList.get(0).cunsumption_amount ],
+												[ 'consumptionList.get(1).cunsumption_type1', consumptionList.get(1).cunsumption_amount ],
+												[ 'consumptionList.get(2).cunsumption_type1', consumptionList.get(2).cunsumption_amount ],
+												[ 'consumptionList.get(3).cunsumption_type1', consumptionList.get(3).cunsumption_amount ],
+												[ 'consumptionList.get(4).cunsumption_type1', consumptionList.get(4).cunsumption_amount ] ]);
 
 								var options = {
 									title : '',
@@ -677,9 +681,9 @@
 								chart.draw(data, options);
 							}
 						</script>
-
+						
 						<div id="piechart" style=" margin: 0px; padding: 0px;"></div>
-
+						<%}%>
 						<h3>여행유형/트렌드</h3>
 						<div>
 							<script type="text/javascript"
