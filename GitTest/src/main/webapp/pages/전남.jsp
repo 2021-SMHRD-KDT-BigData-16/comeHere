@@ -161,7 +161,7 @@
 					<option value="2020">2020</option>
 					<option value="2021">2021</option>
 					<option value="2022">2022</option>
-				</select>
+				</select>  
 				<input type="submit" value="선택">
 			</form>
 		</div>
@@ -667,11 +667,11 @@
 								var data = google.visualization
 										.arrayToDataTable([
 												[ 'Task', 'Hours per Day' ],
-												[ 'consumptionList.get(0).cunsumption_type1', consumptionList.get(0).cunsumption_amount ],
-												[ 'consumptionList.get(1).cunsumption_type1', consumptionList.get(1).cunsumption_amount ],
-												[ 'consumptionList.get(2).cunsumption_type1', consumptionList.get(2).cunsumption_amount ],
-												[ 'consumptionList.get(3).cunsumption_type1', consumptionList.get(3).cunsumption_amount ],
-												[ 'consumptionList.get(4).cunsumption_type1', consumptionList.get(4).cunsumption_amount ] ]);
+												[ consumptionList.get(0).cunsumption_type1, consumptionList.get(0).cunsumption_amount ],
+												[ consumptionList.get(1).cunsumption_type1, consumptionList.get(1).cunsumption_amount ],
+												[ consumptionList.get(2).cunsumption_type1, consumptionList.get(2).cunsumption_amount ],
+												[ consumptionList.get(3).cunsumption_type1, consumptionList.get(3).cunsumption_amount ],
+												[ consumptionList.get(4).cunsumption_type1, consumptionList.get(4).cunsumption_amount ] ]);
 
 								var options = {
 									title : '',
