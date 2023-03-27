@@ -688,7 +688,6 @@
 						
 						<div id="piechart" style=" margin: 0px; padding: 0px;"></div>
 						<%}%>
-						<h3>여행유형/트렌드</h3>
 
 						<div id="piechart"
 							style="margin-right: 100%; padding-right: 100%; margin: 0px; padding: 0px; margin-left: -99;"></div>
