@@ -218,7 +218,7 @@
 								<canvas id="chart-bars" class="chart-canvas" height="170"></canvas>
 							</div>
 						</div>
-						
+
 						<!-- 관광소비유형 -->
 						<h6 class="ms-2 mt-4 mb-0">관광소비유형</h6>
 						<p class="text-sm ms-2">
@@ -292,7 +292,7 @@
 				</div>
 			</div>
 		</div>
-		
+
 		<!-- 동반유형 키워드 언급량 -->
 		<div class="row my-4">
 			<div class="col-lg-8 col-md-6 mb-md-0 mb-4">
@@ -633,7 +633,7 @@
 					</div>
 				</div>
 			</div>
-			
+
 			<!-- 업종별 신용카드 소비액 추이 -->
 			<div class="col-lg-4 col-md-6">
 				<div class="card h-100">
@@ -675,7 +675,7 @@
 
 						<!-- 여행유형/트렌드 -->
 						<div>
-						<h3>여행유형/트렌드</h3>
+							<h3>여행유형/트렌드</h3>
 							<script type="text/javascript"
 								src="https://www.gstatic.com/charts/loader.js"></script>
 							<script type="text/javascript">
@@ -745,7 +745,7 @@
 			</div>
 	</main>
 
-<!------------------------------------------------------------------------------------------------------------------------------------------>
+	<!------------------------------------------------------------------------------------------------------------------------------------------>
 
 	<div class="fixed-plugin">
 		<a class="fixed-plugin-button text-dark position-fixed px-3 py-2">
@@ -845,7 +845,7 @@
 		new Chart(ctx, {
 			type : "bar",
 			data : {
-				labels : ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul",
+				labels : [ "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul",
 						"Aug", "Sep", "Oct", "Nov", "Dec" ],
 				datasets : [ {
 					label : "Sales",
@@ -924,7 +924,7 @@
 		new Chart(ctx2, {
 			type : "line",
 			data : {
-				labels : ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul",
+				labels : [ "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul",
 						"Aug", "Sep", "Oct", "Nov", "Dec" ],
 				datasets : [ {
 					label : "Mobile apps",
@@ -935,7 +935,7 @@
 					borderWidth : 3,
 					backgroundColor : gradientStroke1,
 					fill : true,
-					data : [ 100, 150, 240, 50, 40, 300, 220, 500, 250, 400, 230, 500 ],
+					data : [ 50, 40, 300, 220, 500, 250, 400, 230, 500 ],
 					maxBarThickness : 6
 
 				}, {
@@ -947,7 +947,7 @@
 					borderWidth : 3,
 					backgroundColor : gradientStroke2,
 					fill : true,
-					data : [ 100, 150, 240, 30, 90, 40, 140, 290, 290, 340, 230, 400 ],
+					data : [ 30, 90, 40, 140, 290, 290, 340, 230, 400 ],
 					maxBarThickness : 6
 				}, ],
 			},
