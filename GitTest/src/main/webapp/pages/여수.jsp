@@ -843,7 +843,7 @@
 		new Chart(ctx, {
 			type : "bar",
 			data : {
-				labels : [ "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct",
+				labels : [ "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct",
 						"Nov", "Dec" ],
 				datasets : [ {
 					label : "Sales",
@@ -922,7 +922,7 @@
 		new Chart(ctx2, {
 			type : "line",
 			data : {
-				labels : [ "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct",
+				labels : ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct",
 						"Nov", "Dec" ],
 				datasets : [ {
 					label : "Mobile apps",
