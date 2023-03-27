@@ -4,8 +4,11 @@ public class ConsumptionDTO {
 	// 소비 순번 
     public int cunsumption_seq;
 
-    // 연도 
+    // 연도 	
     public int cunsumption_year;
+    
+    // 합산
+    public int sum_amount;
 
     // 소비액 
     public int cunsumption_amount;
@@ -70,15 +73,12 @@ public class ConsumptionDTO {
 		this.cunsumption_type2 = cunsumption_type2;
 	}
 
-	public ConsumptionDTO(int cunsumption_seq, int cunsumption_year, int cunsumption_amount,
-			String cunsumption_area, String cunsumption_type1, String cunsumption_type2, String admin_id) {
-		this.cunsumption_seq = cunsumption_seq;
-		this.cunsumption_year = cunsumption_year;
-		this.cunsumption_amount = cunsumption_amount;
-		this.cunsumption_area = cunsumption_area;
-		this.cunsumption_type1 = cunsumption_type1;
-		this.cunsumption_type2 = cunsumption_type2;
-		this.admin_id = admin_id;
+	public int getSumamount() {
+		return sum_amount;
+	}
+
+	public void setSumamount(int sum_amount) {
+		this.sum_amount = sum_amount;
 	}
 
 	public ConsumptionDTO() {

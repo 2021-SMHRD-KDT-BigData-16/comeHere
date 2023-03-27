@@ -26,7 +26,7 @@
 <!-- CSS Files -->
 <link id="pagestyle" href="../assets/css/soft-ui-dashboard.css?v=1.0.7"
 	rel="stylesheet" />
-<link rel="stylesheet" href="../assets/css/CSS.css">
+<link rel="stylesheet" href="./assets/css/CSS.css">
 </head>
 <body class="g-sidenav-show  bg-gray-100">
 
@@ -652,10 +652,17 @@
 			<div class="col-lg-4 col-md-6">
 				<div class="card h-100">
 					<div class="card-header pb-0">
-						<h4>업종별 신용카드 소비액 추이_운송업제외</h4>
+						<h4>업종별 신용카드 소비액 추이_운송업제외(천원단위)</h4>
 						<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 						<% List<ConsumptionDTO> consumptionList = (List)request.getAttribute("consumptionList"); %>
 						<%if(consumptionList != null) { %>
+						<%
+						String type1 = consumptionList.get(0).cunsumption_type1; 
+						String type2 = consumptionList.get(1).cunsumption_type1;
+						String type3 = consumptionList.get(2).cunsumption_type1;
+						String type4 = consumptionList.get(3).cunsumption_type1;
+						String type5 = consumptionList.get(4).cunsumption_type1;
+						%>
 						<script type="text/javascript">
 							google.charts.load('current', {
 								'packages' : [ 'corechart' ]
@@ -664,14 +671,15 @@
 							
 							function drawChart() {	
 								
-								var data = google.visualization
-										.arrayToDataTable([
-												[ 'Task', 'Hours per Day' ],
-												[ consumptionList.get(0).cunsumption_type1, consumptionList.get(0).cunsumption_amount ],
-												[ consumptionList.get(1).cunsumption_type1, consumptionList.get(1).cunsumption_amount ],
-												[ consumptionList.get(2).cunsumption_type1, consumptionList.get(2).cunsumption_amount ],
-												[ consumptionList.get(3).cunsumption_type1, consumptionList.get(3).cunsumption_amount ],
-												[ consumptionList.get(4).cunsumption_type1, consumptionList.get(4).cunsumption_amount ] ]);
+								var data = google.visualization.arrayToDataTable([
+							          ['Task', 'Hours per Day'],
+							          ['<%=type1%>', <%=consumptionList.get(0).sum_amount%>],
+							          ['<%=type2%>', <%=consumptionList.get(1).sum_amount%>],
+							          ['<%=type3%>', <%=consumptionList.get(2).sum_amount%>],
+							          ['<%=type4%>', <%=consumptionList.get(3).sum_amount%>],
+							          ['<%=type5%>', <%=consumptionList.get(4).sum_amount%>]
+							        ]);
+								
 
 								var options = {
 									title : '',
@@ -686,17 +694,13 @@
 							}
 						</script>
 						
-						<div id="piechart" style=" margin: 0px; padding: 0px;"></div>
+						<div id="piechart"></div>
 						<%}%>
-
-						<div id="piechart"
-							style="margin-right: 100%; padding-right: 100%; margin: 0px; padding: 0px; margin-left: -99;"></div>
 
 						<!-- 여행유형/트렌드 -->
 						<div>
 							<h3>여행유형/트렌드</h3>
-							<script type="text/javascript"
-								src="https://www.gstatic.com/charts/loader.js"></script>
+							<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 							<script type="text/javascript">
 								google.charts.load('current', {
 									'packages' : [ 'line' ]

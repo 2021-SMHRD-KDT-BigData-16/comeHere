@@ -3,23 +3,10 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
   
-<!-- 1) mapper 태그 안쪽에 SQL쿼리문들을 작성 -->
-<!-- namespace : 식별자(mapper 파일이 여러개였을 때 중복되지 않게만 작성 -->
 <mapper namespace="com.smhrd.model.MemberDAO">
-  <!-- 
-  	id : 쿼리문을 구분할 수 있는 식별자(메소드명과 동일하게 사용)
-  	parameterType = : DAO에서부터 받아오는 매개변수의 자료형 지정
-  					  (풀네임을 작성해야함! >> package명까지)
-  	resultType : SQL 구문을 실행하고 나서 결과값을 java내부에서 어떤 자료형으로 받아올건지 지정
-  				 (풀네임을 작성해야함) ** select구문 작성할 때 꼭 써주기!! **
-   -->
+  
  	<select id="selectConsumption" parameterType="com.smhrd3.model.ConsumptionDTO" resultType="com.smhrd3.model.ConsumptionDTO">
- 		SELECT SUM(CUNSUMPTION_AMOUNT), CUNSUMPTION_TYPE1
-    		FROM TB_CONSUMPTION
-    		WHERE CUNSUMPTION_AREA = '전라남도'
-    		AND CUNSUMPTION_YEAR = #{cunsumption_year}
-    		AND NOT CUNSUMPTION_TYPE1 IN '운송업'
-    		GROUP BY CUNSUMPTION_TYPE1;
+ 		select sum(cunsumption_amount) as sum_amount, cunsumption_type1 from tb_consumption where cunsumption_area = '전라남도' and cunsumption_year = #{cunsumption_year} and not cunsumption_type1 in ('운송업') group by cunsumption_type1
  	</select>
   
 </mapper>

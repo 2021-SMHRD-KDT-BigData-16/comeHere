@@ -26,7 +26,6 @@ public class selectYearJN extends HttpServlet {
 		dto.setCunsumption_year(year);
 		DataDAO dao = new DataDAO();
 		List<ConsumptionDTO> consumptionList = dao.consumptionData(dto);
-
 		if (consumptionList != null) {
 			request.setAttribute("consumptionList", consumptionList);
 		}
