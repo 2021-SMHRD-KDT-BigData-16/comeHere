@@ -24,6 +24,7 @@
 <!-- CSS Files -->
 <link id="pagestyle" href="../assets/css/soft-ui-dashboard.css?v=1.0.7"
 	rel="stylesheet" />
+<link rel="stylesheet" href="../assets/css/CSS.css">
 </head>
 <body class="g-sidenav-show  bg-gray-100">
 
@@ -150,6 +151,16 @@
 		<div class="container-fluid py-1 px-3">
 			<h3 align="center">생명의 땅</h3>
 			<h1 align="center">전라남도</h1>
+			<form action="selectyearJN">
+				<h4> 연도 선택 : </h4>
+				<select id="selectyear" name="year">
+					<option value="2018">2018</option>
+					<option value="2019">2019</option>
+					<option value="2020">2020</option>
+					<option value="2021">2021</option>
+					<option value="2022">2022</option>
+				</select>
+			</form>
 		</div>
 		<div class="row mt-4">
 			<div class="col-lg-7 mb-lg-0 mb-4">
@@ -303,8 +314,6 @@
 										'동반유형'관련 주요 키워드 순위를 제공.</span>
 								</p>
 							</div>
-
-
 							<script type="text/javascript"
 								src="https://www.gstatic.com/charts/loader.js"></script>
 							<script type="text/javascript">
@@ -650,7 +659,8 @@
 								var data = google.visualization
 										.arrayToDataTable([
 												[ 'Task', 'Hours per Day' ],
-												[ 'Work', 20 ], [ 'Eat', 20 ],
+												[ 'Work', 20 ],
+												[ 'Eat', 20 ],
 												[ 'Commute', 20 ],
 												[ 'Watch TV', 20 ],
 												[ 'Sleep', 20 ] ]);
@@ -668,8 +678,7 @@
 							}
 						</script>
 
-						<div id="piechart"
-							style="margin-right: 100%; padding-right: 100%; margin: 0px; padding: 0px; margin-left: -99;"></div>
+						<div id="piechart" style=" margin: 0px; padding: 0px;"></div>
 
 						<h3>여행유형/트렌드</h3>
 						<div>
