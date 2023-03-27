@@ -232,6 +232,8 @@
 								<canvas id="chart-bars" class="chart-canvas" height="170"></canvas>
 							</div>
 						</div>
+
+						<!-- 관광소비유형 -->
 						<h6 class="ms-2 mt-4 mb-0">관광소비유형</h6>
 						<p class="text-sm ms-2">
 							<span class="font-weight-bolder"></span>
@@ -290,7 +292,7 @@
 			<div class="col-lg-7">
 				<div class="card z-index-2">
 					<div class="card-header pb-0">
-						<h6>SNS 언급량</h6>
+						<h3>SNS 언급량</h3>
 						<p class="text-sm">
 							<i class="fa fa-arrow-up text-success"></i> <span
 								class="font-weight-bold">4% more</span> in 2021
@@ -304,17 +306,19 @@
 				</div>
 			</div>
 		</div>
+
+		<!-- 동반유형 키워드 언급량 -->
 		<div class="row my-4">
 			<div class="col-lg-8 col-md-6 mb-md-0 mb-4">
 				<div class="card">
 					<div class="card-header pb-0">
 						<div class="row">
 							<div class="col-lg-6 col-7">
-								<h6>동반유형 키워드 언급량</h6>
+								<h3>동반유형 키워드 언급량</h3>
 								<p class="text-sm mb-0">
-									<i class="fa fa-check text-info" aria-hidden="true"></i> <span
+									<i class="fa fa-check text-info" aria-hidden="true"></i><span
 										class="font-weight-bold ms-1">주요 국내 소셜미디어,커뮤니티의
-										'동반유형'관련 주요 키워드 순위를 제공.</span>
+										'동반유형'관련 주요 키워드 순위를 제공</span>
 								</p>
 							</div>
 							<script type="text/javascript"
@@ -354,11 +358,9 @@
 									chart.draw(data, options);
 								}
 							</script>
-
-							<body>
+							<div>
 								<div id="chart_div" style="width: 100%; height: 500px;"></div>
-							</body>
-
+							</div>
 							<div class="col-lg-6 col-5 my-auto text-end">
 								<div class="dropdown float-lg-end pe-4"></div>
 							</div>
@@ -645,6 +647,8 @@
 					</div>
 				</div>
 			</div>
+
+			<!-- 업종별 신용카드 소비액 추이 -->
 			<div class="col-lg-4 col-md-6">
 				<div class="card h-100">
 					<div class="card-header pb-0">
@@ -685,7 +689,13 @@
 						<div id="piechart" style=" margin: 0px; padding: 0px;"></div>
 						<%}%>
 						<h3>여행유형/트렌드</h3>
+
+						<div id="piechart"
+							style="margin-right: 100%; padding-right: 100%; margin: 0px; padding: 0px; margin-left: -99;"></div>
+
+						<!-- 여행유형/트렌드 -->
 						<div>
+							<h3>여행유형/트렌드</h3>
 							<script type="text/javascript"
 								src="https://www.gstatic.com/charts/loader.js"></script>
 							<script type="text/javascript">
@@ -724,7 +734,7 @@
 											title : '',
 											subtitle : ''
 										},
-										width : 900,
+										width : 500,
 										height : 500,
 										axes : {
 											x : {
@@ -755,7 +765,7 @@
 			</div>
 	</main>
 
-
+	<!------------------------------------------------------------------------------------------------------------------------------------------>
 
 	<div class="fixed-plugin">
 		<a class="fixed-plugin-button text-dark position-fixed px-3 py-2">
@@ -945,7 +955,7 @@
 					borderWidth : 3,
 					backgroundColor : gradientStroke1,
 					fill : true,
-					data : [ 100, 150, 240, 50, 40, 300, 220, 500, 250, 400, 230, 500 ],
+					data : [ 50, 40, 300, 220, 500, 250, 400, 230, 500 ],
 					maxBarThickness : 6
 
 				}, {
@@ -957,7 +967,7 @@
 					borderWidth : 3,
 					backgroundColor : gradientStroke2,
 					fill : true,
-					data : [ 100, 150, 240, 30, 90, 40, 140, 290, 290, 340, 230, 400 ],
+					data : [ 30, 90, 40, 140, 290, 290, 340, 230, 400 ],
 					maxBarThickness : 6
 				}, ],
 			},
