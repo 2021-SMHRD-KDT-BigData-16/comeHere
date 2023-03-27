@@ -941,7 +941,7 @@
 					borderWidth : 3,
 					backgroundColor : gradientStroke1,
 					fill : true,
-					data : [ 50, 40, 300, 220, 500, 250, 400, 230, 500 ],
+					data : [ 100, 150, 240, 50, 40, 300, 220, 500, 250, 400, 230, 500 ],
 					maxBarThickness : 6
 
 				}, {
@@ -953,7 +953,7 @@
 					borderWidth : 3,
 					backgroundColor : gradientStroke2,
 					fill : true,
-					data : [ 30, 90, 40, 140, 290, 290, 340, 230, 400 ],
+					data : [ 100, 150, 240, 30, 90, 40, 140, 290, 290, 340, 230, 400 ],
 					maxBarThickness : 6
 				}, ],
 			},
