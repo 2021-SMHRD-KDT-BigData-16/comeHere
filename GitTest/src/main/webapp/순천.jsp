@@ -7,22 +7,22 @@
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link rel="apple-touch-icon" sizes="76x76"
-	href="../assets/img/apple-icon.png">
-<link rel="icon" type="image/png" href="../assets/img/favicon.png">
+	href="./assets/img/apple-icon.png">
+<link rel="icon" type="image/png" href="./assets/img/favicon.png">
 <title>Soft UI Dashboard by Creative Tim</title>
 <!--     Fonts and icons     -->
 <link
 	href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700"
 	rel="stylesheet" />
 <!-- Nucleo Icons -->
-<link href="../assets/css/nucleo-icons.css" rel="stylesheet" />
-<link href="../assets/css/nucleo-svg.css" rel="stylesheet" />
+<link href="./assets/css/nucleo-icons.css" rel="stylesheet" />
+<link href="./assets/css/nucleo-svg.css" rel="stylesheet" />
 <!-- Font Awesome Icons -->
 <script src="https://kit.fontawesome.com/42d5adcbca.js"
 	crossorigin="anonymous"></script>
-<link href="../assets/css/nucleo-svg.css" rel="stylesheet" />
+<link href="./assets/css/nucleo-svg.css" rel="stylesheet" />
 <!-- CSS Files -->
-<link id="pagestyle" href="../assets/css/soft-ui-dashboard.css?v=1.0.7"
+<link id="pagestyle" href="./assets/css/soft-ui-dashboard.css?v=1.0.7"
 	rel="stylesheet" />
 </head>
 <body class="g-sidenav-show  bg-gray-100">
@@ -50,7 +50,7 @@
 											</div>
 										</div>
 										<div class="col-4 text-end">
-											<img src="../메인페이지 목업/assets/css/images/전라남도.jpg">
+											<img src="./메인페이지 목업/assets/css/images/전라남도.jpg">
 										</div>
 									</div>
 								</div>
@@ -72,7 +72,7 @@
 											</div>
 										</div>
 										<div class="col-4 text-end">
-											<img src="../메인페이지 목업/assets/css/images/광주광역시.png">
+											<img src="./메인페이지 목업/assets/css/images/광주광역시.png">
 										</div>
 									</div>
 								</div>
@@ -94,7 +94,7 @@
 											</div>
 										</div>
 										<div class="col-4 text-end">
-											<img src="../메인페이지 목업/assets/css/images/담양.jpg">
+											<img src="./메인페이지 목업/assets/css/images/담양.jpg">
 										</div>
 									</div>
 								</div>
@@ -116,7 +116,7 @@
 											</div>
 										</div>
 										<div class="col-4 text-end">
-											<img src="../메인페이지 목업/assets/css/images/목포.jpg">
+											<img src="./메인페이지 목업/assets/css/images/목포.jpg">
 										</div>
 									</div>
 								</div>
@@ -138,7 +138,7 @@
 											</div>
 										</div>
 										<div class="col-4 text-end">
-											<img src="../메인페이지 목업/assets/css/images/여수.jpg">
+											<img src="./메인페이지 목업/assets/css/images/여수.jpg">
 										</div>
 									</div>
 								</div>
@@ -171,13 +171,13 @@
 							</div>
 							<div class="col-lg-5 ms-auto text-center mt-5 mt-lg-0">
 								<div class="bg-gradient-primary border-radius-lg h-100">
-									<img src="../assets/img/shapes/waves-white.svg"
+									<img src="./assets/img/shapes/waves-white.svg"
 										class="position-absolute h-100 w-50 top-0 d-lg-block d-none"
 										alt="waves">
 									<div
 										class="position-relative d-flex align-items-center justify-content-center h-100">
 										<img class="w-100 position-relative z-index-2 pt-4"
-											src="../assets/img/illustrations/rocket-white.png"
+											src="./assets/img/illustrations/rocket-white.png"
 											alt="rocket">
 									</div>
 								</div>
@@ -344,7 +344,7 @@
 										<td>
 											<div class="d-flex px-2 py-1">
 												<div>
-													<img src="../assets/img/small-logos/logo-xd.svg"
+													<img src="./assets/img/small-logos/logo-xd.svg"
 														class="avatar avatar-sm me-3" alt="xd">
 												</div>
 												<div class="d-flex flex-column justify-content-center">
@@ -358,22 +358,22 @@
 													class="avatar avatar-xs rounded-circle"
 													data-bs-toggle="tooltip" data-bs-placement="bottom"
 													title="Ryan Tompson"> <img
-													src="../assets/img/team-1.jpg" alt="team1">
+													src="./assets/img/team-1.jpg" alt="team1">
 												</a> <a href="javascript:;"
 													class="avatar avatar-xs rounded-circle"
 													data-bs-toggle="tooltip" data-bs-placement="bottom"
 													title="Romina Hadid"> <img
-													src="../assets/img/team-2.jpg" alt="team2">
+													src="./assets/img/team-2.jpg" alt="team2">
 												</a> <a href="javascript:;"
 													class="avatar avatar-xs rounded-circle"
 													data-bs-toggle="tooltip" data-bs-placement="bottom"
 													title="Alexander Smith"> <img
-													src="../assets/img/team-3.jpg" alt="team3">
+													src="./assets/img/team-3.jpg" alt="team3">
 												</a> <a href="javascript:;"
 													class="avatar avatar-xs rounded-circle"
 													data-bs-toggle="tooltip" data-bs-placement="bottom"
 													title="Jessica Doe"> <img
-													src="../assets/img/team-4.jpg" alt="team4">
+													src="./assets/img/team-4.jpg" alt="team4">
 												</a>
 											</div>
 										</td>
@@ -398,7 +398,7 @@
 										<td>
 											<div class="d-flex px-2 py-1">
 												<div>
-													<img src="../assets/img/small-logos/logo-atlassian.svg"
+													<img src="./assets/img/small-logos/logo-atlassian.svg"
 														class="avatar avatar-sm me-3" alt="atlassian">
 												</div>
 												<div class="d-flex flex-column justify-content-center">
@@ -412,12 +412,12 @@
 													class="avatar avatar-xs rounded-circle"
 													data-bs-toggle="tooltip" data-bs-placement="bottom"
 													title="Romina Hadid"> <img
-													src="../assets/img/team-2.jpg" alt="team5">
+													src="./assets/img/team-2.jpg" alt="team5">
 												</a> <a href="javascript:;"
 													class="avatar avatar-xs rounded-circle"
 													data-bs-toggle="tooltip" data-bs-placement="bottom"
 													title="Jessica Doe"> <img
-													src="../assets/img/team-4.jpg" alt="team6">
+													src="./assets/img/team-4.jpg" alt="team6">
 												</a>
 											</div>
 										</td>
@@ -442,7 +442,7 @@
 										<td>
 											<div class="d-flex px-2 py-1">
 												<div>
-													<img src="../assets/img/small-logos/logo-slack.svg"
+													<img src="./assets/img/small-logos/logo-slack.svg"
 														class="avatar avatar-sm me-3" alt="team7">
 												</div>
 												<div class="d-flex flex-column justify-content-center">
@@ -456,12 +456,12 @@
 													class="avatar avatar-xs rounded-circle"
 													data-bs-toggle="tooltip" data-bs-placement="bottom"
 													title="Romina Hadid"> <img
-													src="../assets/img/team-3.jpg" alt="team8">
+													src="./assets/img/team-3.jpg" alt="team8">
 												</a> <a href="javascript:;"
 													class="avatar avatar-xs rounded-circle"
 													data-bs-toggle="tooltip" data-bs-placement="bottom"
 													title="Jessica Doe"> <img
-													src="../assets/img/team-1.jpg" alt="team9">
+													src="./assets/img/team-1.jpg" alt="team9">
 												</a>
 											</div>
 										</td>
@@ -486,7 +486,7 @@
 										<td>
 											<div class="d-flex px-2 py-1">
 												<div>
-													<img src="../assets/img/small-logos/logo-spotify.svg"
+													<img src="./assets/img/small-logos/logo-spotify.svg"
 														class="avatar avatar-sm me-3" alt="spotify">
 												</div>
 												<div class="d-flex flex-column justify-content-center">
@@ -500,22 +500,22 @@
 													class="avatar avatar-xs rounded-circle"
 													data-bs-toggle="tooltip" data-bs-placement="bottom"
 													title="Ryan Tompson"> <img
-													src="../assets/img/team-4.jpg" alt="user1">
+													src="./assets/img/team-4.jpg" alt="user1">
 												</a> <a href="javascript:;"
 													class="avatar avatar-xs rounded-circle"
 													data-bs-toggle="tooltip" data-bs-placement="bottom"
 													title="Romina Hadid"> <img
-													src="../assets/img/team-3.jpg" alt="user2">
+													src="./assets/img/team-3.jpg" alt="user2">
 												</a> <a href="javascript:;"
 													class="avatar avatar-xs rounded-circle"
 													data-bs-toggle="tooltip" data-bs-placement="bottom"
 													title="Alexander Smith"> <img
-													src="../assets/img/team-4.jpg" alt="user3">
+													src="./assets/img/team-4.jpg" alt="user3">
 												</a> <a href="javascript:;"
 													class="avatar avatar-xs rounded-circle"
 													data-bs-toggle="tooltip" data-bs-placement="bottom"
 													title="Jessica Doe"> <img
-													src="../assets/img/team-1.jpg" alt="user4">
+													src="./assets/img/team-1.jpg" alt="user4">
 												</a>
 											</div>
 										</td>
@@ -540,7 +540,7 @@
 										<td>
 											<div class="d-flex px-2 py-1">
 												<div>
-													<img src="../assets/img/small-logos/logo-jira.svg"
+													<img src="./assets/img/small-logos/logo-jira.svg"
 														class="avatar avatar-sm me-3" alt="jira">
 												</div>
 												<div class="d-flex flex-column justify-content-center">
@@ -554,7 +554,7 @@
 													class="avatar avatar-xs rounded-circle"
 													data-bs-toggle="tooltip" data-bs-placement="bottom"
 													title="Ryan Tompson"> <img
-													src="../assets/img/team-4.jpg" alt="user5">
+													src="./assets/img/team-4.jpg" alt="user5">
 												</a>
 											</div>
 										</td>
@@ -579,7 +579,7 @@
 										<td>
 											<div class="d-flex px-2 py-1">
 												<div>
-													<img src="../assets/img/small-logos/logo-invision.svg"
+													<img src="./assets/img/small-logos/logo-invision.svg"
 														class="avatar avatar-sm me-3" alt="invision">
 												</div>
 												<div class="d-flex flex-column justify-content-center">
@@ -593,12 +593,12 @@
 													class="avatar avatar-xs rounded-circle"
 													data-bs-toggle="tooltip" data-bs-placement="bottom"
 													title="Ryan Tompson"> <img
-													src="../assets/img/team-1.jpg" alt="user6">
+													src="./assets/img/team-1.jpg" alt="user6">
 												</a> <a href="javascript:;"
 													class="avatar avatar-xs rounded-circle"
 													data-bs-toggle="tooltip" data-bs-placement="bottom"
 													title="Jessica Doe"> <img
-													src="../assets/img/team-4.jpg" alt="user7">
+													src="./assets/img/team-4.jpg" alt="user7">
 												</a>
 											</div>
 										</td>
@@ -830,11 +830,11 @@
 		</div>
 	</div>
 	<!--   Core JS Files   -->
-	<script src="../assets/js/core/popper.min.js"></script>
-	<script src="../assets/js/core/bootstrap.min.js"></script>
-	<script src="../assets/js/plugins/perfect-scrollbar.min.js"></script>
-	<script src="../assets/js/plugins/smooth-scrollbar.min.js"></script>
-	<script src="../assets/js/plugins/chartjs.min.js"></script>
+	<script src="./assets/js/core/popper.min.js"></script>
+	<script src="./assets/js/core/bootstrap.min.js"></script>
+	<script src="./assets/js/plugins/perfect-scrollbar.min.js"></script>
+	<script src="./assets/js/plugins/smooth-scrollbar.min.js"></script>
+	<script src="./assets/js/plugins/chartjs.min.js"></script>
 	<script>
 		var ctx = document.getElementById("chart-bars").getContext("2d");
 
@@ -1017,6 +1017,6 @@
 	<!-- Github buttons -->
 	<script async defer src="https://buttons.github.io/buttons.js"></script>
 	<!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
-	<script src="../assets/js/soft-ui-dashboard.min.js?v=1.0.7"></script>
+	<script src="./assets/js/soft-ui-dashboard.min.js?v=1.0.7"></script>
 </body>
 </html>
