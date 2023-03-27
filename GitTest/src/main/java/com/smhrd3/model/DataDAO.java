@@ -11,12 +11,12 @@ public class DataDAO {
 	
 	private SqlSessionFactory factory = SqlSessionManager.getFactory();
 
-	public List<ConsumptionDTO> consumptionData(ConsumptionDTO dto) {
+	public List<ConsumptionDTO> consumptionDataJN(ConsumptionDTO consump_dto) {
 		List<ConsumptionDTO> consumptionList = null;
 		SqlSession session = factory.openSession(true);
 		
 		try {
-			consumptionList = session.selectList("selectConsumption", dto);
+			consumptionList = session.selectList("selectConsumptionJN", consump_dto);
 		} finally {
 			session.close();
 		}
@@ -24,5 +24,31 @@ public class DataDAO {
 		return consumptionList;
 	}
 	
+	public List<CreditDTO> creditDataJN(CreditDTO credit_dto) {
+		List<CreditDTO> creditList = null;
+		SqlSession session = factory.openSession(true);
+		
+		try {
+			creditList = session.selectList("selectCreditJN", credit_dto);
+		} finally {
+			session.close();
+		}
+		
+		return creditList;
+	}
+
+	public List<SNSDTO> snsDataJN(SNSDTO sns_dto) {
+		List<SNSDTO> snsList = null;
+		SqlSession session = factory.openSession(true);
+		
+		try {
+			snsList = session.selectList("selectSNSJN", sns_dto);
+		} finally {
+			session.close();
+		}
+		
+		return snsList;
+		
+	}
 
 }

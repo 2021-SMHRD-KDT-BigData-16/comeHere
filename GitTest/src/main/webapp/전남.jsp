@@ -1,7 +1,10 @@
+<%@page import="com.smhrd3.model.SNSDTO"%>
+<%@page import="com.smhrd3.model.CreditDTO"%>
 <%@page import="com.smhrd3.model.ConsumptionDTO"%>
 <%@page import="java.util.List"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -154,15 +157,14 @@
 			<h3 align="center">생명의 땅</h3>
 			<h1 align="center">전라남도</h1>
 			<form action="selectYearJN">
-				<h4> 연도 선택 : </h4>
+				<h4>연도 선택 :</h4>
 				<select id="selectyear" name="year">
 					<option value="2018">2018</option>
 					<option value="2019">2019</option>
 					<option value="2020">2020</option>
 					<option value="2021">2021</option>
 					<option value="2022">2022</option>
-				</select>  
-				<input type="submit" value="선택">
+				</select> <input type="submit" value="선택">
 			</form>
 		</div>
 		<div class="row mt-4">
@@ -232,42 +234,43 @@
 								<canvas id="chart-bars" class="chart-canvas" height="170"></canvas>
 							</div>
 						</div>
-
+					
 						<!-- 관광소비유형 -->
-						<h6 class="ms-2 mt-4 mb-0">관광소비유형</h6>
+						<h6 class="ms-2 mt-4 mb-0">관광소비유형(단위:100M원)</h6>
 						<p class="text-sm ms-2">
 							<span class="font-weight-bolder"></span>
 						</p>
 						<div class="container border-radius-lg">
 							<div class="row">
+								<% List<ConsumptionDTO> consumptionList = (List<ConsumptionDTO>) request.getAttribute("consumptionList");%>
 								<div class="col-3 py-3 ps-0">
 									<div class="d-flex mb-2">
-										🍽
-										<p class="text-xs mt-1 mb-0 font-weight-bold">식음료업</p>
+										🏢
+										<p class="text-xs mt-1 mb-0 font-weight-bold"><%=consumptionList.get(0).getCunsumption_type1()%></p>
 									</div>
-									<h4 class="font-weight-bolder">36K</h4>
+									<h4 class="font-weight-bolder"><%= consumptionList.get(0).getSum_amount()/100000%></h4>
 									<div class="progress w-75">
-										<div class="progress-bar bg-dark w-60" role="progressbar"
-											aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+										<div class="progress-bar bg-dark w-10" role="progressbar"
+											aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
 									</div>
 								</div>
 								<div class="col-3 py-3 ps-0">
 									<div class="d-flex mb-2">
 										🛒
-										<p class="text-xs mt-1 mb-0 font-weight-bold">쇼핑업</p>
+										<p class="text-xs mt-1 mb-0 font-weight-bold"><%=consumptionList.get(1).getCunsumption_type1()%></p>
 									</div>
-									<h4 class="font-weight-bolder">2m</h4>
+									<h4 class="font-weight-bolder"><%=consumptionList.get(1).getSum_amount()/100000%></h4>
 									<div class="progress w-75">
-										<div class="progress-bar bg-dark w-90" role="progressbar"
-											aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+										<div class="progress-bar bg-dark w-50" role="progressbar"
+											aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
 									</div>
 								</div>
 								<div class="col-3 py-3 ps-0">
 									<div class="d-flex mb-2">
 										🎆
-										<p class="text-xs mt-1 mb-0 font-weight-bold">여가서비스업</p>
+										<p class="text-xs mt-1 mb-0 font-weight-bold"><%=consumptionList.get(2).getCunsumption_type1()%></p>
 									</div>
-									<h4 class="font-weight-bolder">435$</h4>
+									<h4 class="font-weight-bolder"><%=consumptionList.get(2).getSum_amount()/100000 %></h4>
 									<div class="progress w-75">
 										<div class="progress-bar bg-dark w-30" role="progressbar"
 											aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
@@ -275,13 +278,13 @@
 								</div>
 								<div class="col-3 py-3 ps-0">
 									<div class="d-flex mb-2">
-										🏢
-										<p class="text-xs mt-1 mb-0 font-weight-bold">숙박업</p>
+										🍽
+										<p class="text-xs mt-1 mb-0 font-weight-bold"><%=consumptionList.get(3).getCunsumption_type1()%></p>
 									</div>
-									<h4 class="font-weight-bolder">43</h4>
+									<h4 class="font-weight-bolder"><%=consumptionList.get(3).getSum_amount()/100000%></h4>
 									<div class="progress w-75">
-										<div class="progress-bar bg-dark w-50" role="progressbar"
-											aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+										<div class="progress-bar bg-dark w-90" role="progressbar"
+											aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
 									</div>
 								</div>
 							</div>
@@ -298,6 +301,7 @@
 								class="font-weight-bold">4% more</span> in 2021
 						</p>
 					</div>
+					<%List<SNSDTO> snsList = (List)request.getAttribute("snsList"); %>
 					<div class="card-body p-3">
 						<div class="chart">
 							<canvas id="chart-line" class="chart-canvas" height="300"></canvas>
@@ -652,16 +656,21 @@
 			<div class="col-lg-4 col-md-6">
 				<div class="card h-100">
 					<div class="card-header pb-0">
-						<h4>업종별 신용카드 소비액 추이_운송업제외(천원단위)</h4>
-						<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-						<% List<ConsumptionDTO> consumptionList = (List)request.getAttribute("consumptionList"); %>
-						<%if(consumptionList != null) { %>
+						<h4>업종별 신용카드 소비액 추이_운송업제외(단위:1000원)</h4>
+						<script type="text/javascript"
+							src="https://www.gstatic.com/charts/loader.js"></script>
 						<%
-						String type1 = consumptionList.get(0).cunsumption_type1; 
-						String type2 = consumptionList.get(1).cunsumption_type1;
-						String type3 = consumptionList.get(2).cunsumption_type1;
-						String type4 = consumptionList.get(3).cunsumption_type1;
-						String type5 = consumptionList.get(4).cunsumption_type1;
+						List<CreditDTO> creditList = (List) request.getAttribute("creditList");
+						%>
+						<%
+						if (creditList != null) {
+						%>
+						<%
+						String type1 = creditList.get(0).consumption_type;
+						String type2 = creditList.get(1).consumption_type;
+						String type3 = creditList.get(2).consumption_type;
+						String type4 = creditList.get(3).consumption_type;
+						String type5 = creditList.get(4).consumption_type;
 						%>
 						<script type="text/javascript">
 							google.charts.load('current', {
@@ -673,11 +682,11 @@
 								
 								var data = google.visualization.arrayToDataTable([
 							          ['Task', 'Hours per Day'],
-							          ['<%=type1%>', <%=consumptionList.get(0).sum_amount%>],
-							          ['<%=type2%>', <%=consumptionList.get(1).sum_amount%>],
-							          ['<%=type3%>', <%=consumptionList.get(2).sum_amount%>],
-							          ['<%=type4%>', <%=consumptionList.get(3).sum_amount%>],
-							          ['<%=type5%>', <%=consumptionList.get(4).sum_amount%>]
+							          ['<%=type1%>', <%=creditList.get(0).sum_amount%>],
+							          ['<%=type2%>', <%=creditList.get(1).sum_amount%>],
+							          ['<%=type3%>', <%=creditList.get(2).sum_amount%>],
+							          ['<%=type4%>', <%=creditList.get(3).sum_amount%>],
+							          ['<%=type5%>', <%=creditList.get(4).sum_amount%>],
 							        ]);
 								
 
@@ -693,14 +702,18 @@
 								chart.draw(data, options);
 							}
 						</script>
-						
+
 						<div id="piechart"></div>
-						<%}%>
+						<%
+						}
+						%>
+
 
 						<!-- 여행유형/트렌드 -->
 						<div>
 							<h3>여행유형/트렌드</h3>
-							<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+							<script type="text/javascript"
+								src="https://www.gstatic.com/charts/loader.js"></script>
 							<script type="text/javascript">
 								google.charts.load('current', {
 									'packages' : [ 'line' ]
@@ -755,7 +768,6 @@
 											.convertOptions(options));
 								}
 							</script>
-							</head>
 							<div>
 								<div id="line_top_x"></div>
 							</div>
@@ -863,13 +875,16 @@
 	<script src="../assets/js/plugins/smooth-scrollbar.min.js"></script>
 	<script src="../assets/js/plugins/chartjs.min.js"></script>
 	<script>
+		<%if (consumptionList != null) {%>
 		var ctx = document.getElementById("chart-bars").getContext("2d");
 
 		new Chart(ctx, {
 			type : "bar",
 			data : {
-				labels : [ "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul",
-						"Aug", "Sep", "Oct", "Nov", "Dec" ],
+				labels : [ "<%=consumptionList.get(0).getCunsumption_type1()%>",
+						   "<%=consumptionList.get(1).getCunsumption_type1()%>",
+						   "<%=consumptionList.get(2).getCunsumption_type1()%>",
+						   "<%=consumptionList.get(3).getCunsumption_type1()%>"],
 				datasets : [ {
 					label : "Sales",
 					tension : 0.4,
@@ -877,7 +892,10 @@
 					borderRadius : 4,
 					borderSkipped : false,
 					backgroundColor : "#fff",
-					data : [ 450, 200, 100, 220, 500, 100, 400, 230, 500 ],
+					data : [ <%= consumptionList.get(0).getSum_amount()/100000%>,
+							 <%= consumptionList.get(1).getSum_amount()/100000%>,
+							 <%= consumptionList.get(2).getSum_amount()/100000%>,
+							 <%= consumptionList.get(3).getSum_amount()/100000%>],
 					maxBarThickness : 6
 				}, ],
 			},
@@ -929,7 +947,8 @@
 				},
 			},
 		});
-
+		<%}%>
+		<%if(snsList != null) {%>
 		var ctx2 = document.getElementById("chart-line").getContext("2d");
 
 		var gradientStroke1 = ctx2.createLinearGradient(0, 230, 0, 50);
@@ -943,7 +962,7 @@
 		gradientStroke2.addColorStop(1, 'rgba(20,23,39,0.2)');
 		gradientStroke2.addColorStop(0.2, 'rgba(72,72,176,0.0)');
 		gradientStroke2.addColorStop(0, 'rgba(20,23,39,0)'); //purple colors
-
+		
 		new Chart(ctx2, {
 			type : "line",
 			data : {
@@ -958,20 +977,20 @@
 					borderWidth : 3,
 					backgroundColor : gradientStroke1,
 					fill : true,
-					data : [ 50, 40, 300, 220, 500, 250, 400, 230, 500 ],
+					data : [ <%=snsList.get(0).getSns_search()%>,
+							 <%=snsList.get(1).getSns_search()%>,
+							 <%=snsList.get(2).getSns_search()%>,
+							 <%=snsList.get(3).getSns_search()%>,
+							 <%=snsList.get(4).getSns_search()%>,
+							 <%=snsList.get(5).getSns_search()%>,
+							 <%=snsList.get(6).getSns_search()%>,
+							 <%=snsList.get(7).getSns_search()%>,
+							 <%=snsList.get(8).getSns_search()%>,
+							 <%=snsList.get(9).getSns_search()%>,
+							 <%=snsList.get(10).getSns_search()%>,
+							 <%=snsList.get(11).getSns_search()%> ],
 					maxBarThickness : 6
 
-				}, {
-					label : "Websites",
-					tension : 0.4,
-					borderWidth : 0,
-					pointRadius : 0,
-					borderColor : "#3A416F",
-					borderWidth : 3,
-					backgroundColor : gradientStroke2,
-					fill : true,
-					data : [ 30, 90, 40, 140, 290, 290, 340, 230, 400 ],
-					maxBarThickness : 6
 				}, ],
 			},
 			options : {
@@ -1030,6 +1049,7 @@
 				},
 			},
 		});
+		<%}%>
 	</script>
 	<script>
 		var win = navigator.platform.indexOf('Win') > -1;

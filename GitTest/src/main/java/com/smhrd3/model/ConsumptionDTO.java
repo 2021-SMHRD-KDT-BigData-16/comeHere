@@ -1,29 +1,29 @@
 package com.smhrd3.model;
 
 public class ConsumptionDTO {
-	// 소비 순번 
-    public int cunsumption_seq;
+	// 소비 순번
+	public int cunsumption_seq;
 
-    // 연도 	
-    public int cunsumption_year;
-    
-    // 합산
-    public int sum_amount;
+	// 연도
+	public int cunsumption_year;
 
-    // 소비액 
-    public int cunsumption_amount;
+	// 합산
+	public int sum_amount;
 
-    // 지역 
-    public String cunsumption_area;
+	// 소비액
+	public int cunsumption_amount;
 
-    // 구분1 
-    public String cunsumption_type1;
+	// 지역
+	public String cunsumption_area;
 
-    // 구분2 
-    public String cunsumption_type2;
+	// 구분1
+	public String cunsumption_type1;
 
-    // 관리자 아이디 
-    public String admin_id;
+	// 구분2
+	public String cunsumption_type2;
+
+	// 관리자 아이디
+	public String admin_id;
 
 	public int getCunsumption_seq() {
 		return cunsumption_seq;
@@ -73,15 +73,15 @@ public class ConsumptionDTO {
 		this.cunsumption_type2 = cunsumption_type2;
 	}
 
-	public int getSumamount() {
+	public int getSum_amount() {
 		return sum_amount;
 	}
 
-	public void setSumamount(int sum_amount) {
+	public void setSum_amount(int sum_amount) {
 		this.sum_amount = sum_amount;
 	}
 
 	public ConsumptionDTO() {
 	}
-    
+
 }
