@@ -236,21 +236,19 @@
 						</div>
 
 						<!-- 관광소비유형 -->
-						<h6 class="ms-2 mt-4 mb-0">관광소비유형(단위:1억원)</h6>
+						<h6 class="ms-2 mt-4 mb-0">관광소비유형(단위:100M원)</h6>
 						<p class="text-sm ms-2">
 							<span class="font-weight-bolder"></span>
 						</p>
 						<div class="container border-radius-lg">
 							<div class="row">
-								<%
-								List<ConsumptionDTO> consumptionList = (List<ConsumptionDTO>) request.getAttribute("consumptionList");
-								%>
+								<% List<ConsumptionDTO> consumptionList = (List<ConsumptionDTO>) request.getAttribute("consumptionList");%>
 								<div class="col-3 py-3 ps-0">
 									<div class="d-flex mb-2">
 										🏢
 										<p class="text-xs mt-1 mb-0 font-weight-bold"><%=consumptionList.get(0).getCunsumption_type1()%></p>
 									</div>
-									<h4 class="font-weight-bolder"><%=consumptionList.get(0).getSum_amount() / 100000%></h4>
+									<h4 class="font-weight-bolder"><%= consumptionList.get(0).getSum_amount()/100000%></h4>
 									<div class="progress w-75">
 										<div class="progress-bar bg-dark w-10" role="progressbar"
 											aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
@@ -261,7 +259,7 @@
 										🛒
 										<p class="text-xs mt-1 mb-0 font-weight-bold"><%=consumptionList.get(1).getCunsumption_type1()%></p>
 									</div>
-									<h4 class="font-weight-bolder"><%=consumptionList.get(1).getSum_amount() / 100000%></h4>
+									<h4 class="font-weight-bolder"><%=consumptionList.get(1).getSum_amount()/100000%></h4>
 									<div class="progress w-75">
 										<div class="progress-bar bg-dark w-50" role="progressbar"
 											aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
@@ -272,7 +270,7 @@
 										🎆
 										<p class="text-xs mt-1 mb-0 font-weight-bold"><%=consumptionList.get(2).getCunsumption_type1()%></p>
 									</div>
-									<h4 class="font-weight-bolder"><%=consumptionList.get(2).getSum_amount() / 100000%></h4>
+									<h4 class="font-weight-bolder"><%=consumptionList.get(2).getSum_amount()/100000 %></h4>
 									<div class="progress w-75">
 										<div class="progress-bar bg-dark w-30" role="progressbar"
 											aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
@@ -283,7 +281,7 @@
 										🍽
 										<p class="text-xs mt-1 mb-0 font-weight-bold"><%=consumptionList.get(3).getCunsumption_type1()%></p>
 									</div>
-									<h4 class="font-weight-bolder"><%=consumptionList.get(3).getSum_amount() / 100000%></h4>
+									<h4 class="font-weight-bolder"><%=consumptionList.get(3).getSum_amount()/100000%></h4>
 									<div class="progress w-75">
 										<div class="progress-bar bg-dark w-90" role="progressbar"
 											aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
@@ -327,42 +325,36 @@
 					</p>
 					<p></p><p></p><p></p>
 
-					<script type="text/javascript"
-						src="https://www.gstatic.com/charts/loader.js"></script>
+					<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 					<script type="text/javascript">
-						<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-						<script type="text/javascript">
-	      				google.charts.load('current', {'packages':['bar']});
-	      				google.charts.setOnLoadCallback(drawChart);
-	
-					      function drawChart() {
-					        var data = google.visualization.arrayToDataTable([
-					          ['Year', 'Sales', 'Expenses', 'Profit'],
-					          ['2014', 1000, 400, 200],
-					          ['2015', 1170, 460, 250],
-					          ['2016', 660, 1120, 300],
-					          ['2017', 1030, 540, 350]
-					        ]);
-					
-					        var options = {
-					          chart: {
-					            title: '',
-					            subtitle: '',
-					          }
-					        };
-					
-					        var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
-					
-					        chart.draw(data, google.charts.Bar.convertOptions(options));
-					      }
+					  google.charts.load('current', {'packages':['bar']});
+				      google.charts.setOnLoadCallback(drawChart);
+
+				      function drawChart() {
+				        var data = google.visualization.arrayToDataTable([
+				          ['Year', 'Sales', 'Expenses', 'Profit'],
+				          ['2014', 1000, 400, 200],
+				          ['2015', 1170, 460, 250],
+				          ['2016', 660, 1120, 300],
+				          ['2017', 1030, 540, 350]
+				        ]);
+
+				        var options = {
+				          chart: {
+				            title: 'Company Performance',
+				            subtitle: 'Sales, Expenses, and Profit: 2014-2017',
+				          }
+				        };
+
+				        var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
+
+				        chart.draw(data, google.charts.Bar.convertOptions(options));
+				      }
 					    </script>
-					    
-						<div id="columnchart_material" style="width: 850px; height: 450px;"></div>
-							
 					<div>
-						<div id="columnchart_material"
-							style="width: 800px; height: 500px;"></div>
-					</div>
+						<div id="columnchart_material" style="width: 850px; height: 450px;"></div>
+					</div>	
+					
 					
 					<!-- 동반유형 키워드 언급량 -->
 					<div class="col-lg-6 col-5 my-auto text-end">
@@ -846,76 +838,69 @@
 				labels : [ "<%=consumptionList.get(0).getCunsumption_type1()%>",
 						   "<%=consumptionList.get(1).getCunsumption_type1()%>",
 						   "<%=consumptionList.get(2).getCunsumption_type1()%>",
-						   "<%=consumptionList.get(3).getCunsumption_type1()%>
-		" ],
-						datasets : [
-								{
-									label : "Sales",
-									tension : 0.4,
-									borderWidth : 0,
-									borderRadius : 4,
-									borderSkipped : false,
-									backgroundColor : "#fff",
-									data : [
-	<%=consumptionList.get(0).getSum_amount() / 100000%>
-		,
-	<%=consumptionList.get(1).getSum_amount() / 100000%>
-		,
-	<%=consumptionList.get(2).getSum_amount() / 100000%>
-		,
-	<%=consumptionList.get(3).getSum_amount() / 100000%>
-		],
-									maxBarThickness : 6
-								}, ],
-					},
-					options : {
-						responsive : true,
-						maintainAspectRatio : false,
-						plugins : {
-							legend : {
-								display : false,
-							}
+						   "<%=consumptionList.get(3).getCunsumption_type1()%>"],
+				datasets : [ {
+					label : "Sales",
+					tension : 0.4,
+					borderWidth : 0,
+					borderRadius : 4,
+					borderSkipped : false,
+					backgroundColor : "#fff",
+					data : [ <%= consumptionList.get(0).getSum_amount()/100000%>,
+							 <%= consumptionList.get(1).getSum_amount()/100000%>,
+							 <%= consumptionList.get(2).getSum_amount()/100000%>,
+							 <%= consumptionList.get(3).getSum_amount()/100000%>],
+					maxBarThickness : 6
+				}, ],
+			},
+			options : {
+				responsive : true,
+				maintainAspectRatio : false,
+				plugins : {
+					legend : {
+						display : false,
+					}
+				},
+				interaction : {
+					intersect : false,
+					mode : 'index',
+				},
+				scales : {
+					y : {
+						grid : {
+							drawBorder : false,
+							display : false,
+							drawOnChartArea : false,
+							drawTicks : false,
 						},
-						interaction : {
-							intersect : false,
-							mode : 'index',
-						},
-						scales : {
-							y : {
-								grid : {
-									drawBorder : false,
-									display : false,
-									drawOnChartArea : false,
-									drawTicks : false,
-								},
-								ticks : {
-									suggestedMin : 0,
-									suggestedMax : 500,
-									beginAtZero : true,
-									padding : 15,
-									font : {
-										size : 14,
-										family : "Open Sans",
-										style : 'normal',
-										lineHeight : 2
-									},
-									color : "#fff"
-								},
+						ticks : {
+							suggestedMin : 0,
+							suggestedMax : 500,
+							beginAtZero : true,
+							padding : 15,
+							font : {
+								size : 14,
+								family : "Open Sans",
+								style : 'normal',
+								lineHeight : 2
 							},
-							x : {
-								grid : {
-									drawBorder : false,
-									display : false,
-									drawOnChartArea : false,
-									drawTicks : false
-								},
-								ticks : {
-									display : false
-								},
-							},
+							color : "#fff"
 						},
 					},
-				});
+					x : {
+						grid : {
+							drawBorder : false,
+							display : false,
+							drawOnChartArea : false,
+							drawTicks : false
+						},
+						ticks : {
+							display : false
+						},
+					},
+				},
+			},
+		});
 		// SNS 언급량 그래프
 		var ctx2 = document.getElementById("chart-line").getContext("2d");
 
@@ -1016,7 +1001,7 @@
 				},
 			},
 		});
-		</script>
+	</script>
 	<script>
 		var win = navigator.platform.indexOf('Win') > -1;
 		if (win && document.querySelector('#sidenav-scrollbar')) {
