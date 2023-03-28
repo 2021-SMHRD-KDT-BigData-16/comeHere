@@ -638,7 +638,7 @@
 			<div class="col-lg-4 col-md-6">
 				<div class="card h-100">
 					<div class="card-header pb-0">
-						<h4>업종별 신용카드 소비액 추이_운송업제외</h4>
+						<h3>업종별 신용카드 소비액 추이_운송업제외</h3>
 						<script type="text/javascript"
 							src="https://www.gstatic.com/charts/loader.js"></script>
 						<script type="text/javascript">
@@ -854,7 +854,7 @@
 					borderRadius : 4,
 					borderSkipped : false,
 					backgroundColor : "#fff",
-					data : [ 450, 200, 100, 220, 500, 100, 400, 230, 500 ],
+					data : [450, 200, 100, 220, 500, 100, 400, 230, 500 ],
 					maxBarThickness : 6
 				}, ],
 			},
