@@ -240,21 +240,25 @@
 								<canvas id="chart-bars" class="chart-canvas" height="170"></canvas>
 							</div>
 						</div>
+<<<<<<< HEAD
 						<h6 class="ms-2 mt-4 mb-0">관광소비유형(단위:1억원)</h6>
+=======
+
+						<!-- 관광소비유형 -->
+						<h6 class="ms-2 mt-4 mb-0">관광소비유형(단위:100M원)</h6>
+>>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-BigData-16/comeHere
 						<p class="text-sm ms-2">
 							<span class="font-weight-bolder"></span>
 						</p>
 						<div class="container border-radius-lg">
 							<div class="row">
-								<%
-								List<ConsumptionDTO> consumptionList = (List<ConsumptionDTO>) request.getAttribute("consumptionList");
-								%>
+								<% List<ConsumptionDTO> consumptionList = (List<ConsumptionDTO>) request.getAttribute("consumptionList");%>
 								<div class="col-3 py-3 ps-0">
 									<div class="d-flex mb-2">
 										🏢
 										<p class="text-xs mt-1 mb-0 font-weight-bold"><%=consumptionList.get(0).getCunsumption_type1()%></p>
 									</div>
-									<h4 class="font-weight-bolder"><%=consumptionList.get(0).getSum_amount() / 100000%></h4>
+									<h4 class="font-weight-bolder"><%= consumptionList.get(0).getSum_amount()/100000%></h4>
 									<div class="progress w-75">
 										<div class="progress-bar bg-dark w-10" role="progressbar"
 											aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
@@ -265,7 +269,7 @@
 										🛒
 										<p class="text-xs mt-1 mb-0 font-weight-bold"><%=consumptionList.get(1).getCunsumption_type1()%></p>
 									</div>
-									<h4 class="font-weight-bolder"><%=consumptionList.get(1).getSum_amount() / 100000%></h4>
+									<h4 class="font-weight-bolder"><%=consumptionList.get(1).getSum_amount()/100000%></h4>
 									<div class="progress w-75">
 										<div class="progress-bar bg-dark w-50" role="progressbar"
 											aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
@@ -276,7 +280,7 @@
 										🎆
 										<p class="text-xs mt-1 mb-0 font-weight-bold"><%=consumptionList.get(2).getCunsumption_type1()%></p>
 									</div>
-									<h4 class="font-weight-bolder"><%=consumptionList.get(2).getSum_amount() / 100000%></h4>
+									<h4 class="font-weight-bolder"><%=consumptionList.get(2).getSum_amount()/100000 %></h4>
 									<div class="progress w-75">
 										<div class="progress-bar bg-dark w-30" role="progressbar"
 											aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
@@ -287,7 +291,7 @@
 										🍽
 										<p class="text-xs mt-1 mb-0 font-weight-bold"><%=consumptionList.get(3).getCunsumption_type1()%></p>
 									</div>
-									<h4 class="font-weight-bolder"><%=consumptionList.get(3).getSum_amount() / 100000%></h4>
+									<h4 class="font-weight-bolder"><%=consumptionList.get(3).getSum_amount()/100000%></h4>
 									<div class="progress w-75">
 										<div class="progress-bar bg-dark w-90" role="progressbar"
 											aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
@@ -310,9 +314,7 @@
 								class="font-weight-bold">4% more</span> in 2021
 						</p>
 					</div>
-					<%
-					List<SNSDTO> snsList = (List) request.getAttribute("snsList");
-					%>
+					<%List<SNSDTO> snsList = (List)request.getAttribute("snsList"); %>
 					<div class="card-body p-3">
 						<div class="chart">
 							<canvas id="chart-line" class="chart-canvas" height="300"></canvas>
@@ -321,6 +323,7 @@
 				</div>
 			</div>
 		</div>
+
 
 		<!-- 동반유형 키워드 언급량 -->
 		<div class="row my-4">
@@ -331,14 +334,20 @@
 					<br>
 					<h3>&nbsp&nbsp동반유형 키워드 순위</h3>
 					<p class="text-sm mb-0">
+<<<<<<< HEAD
 						&nbsp&nbsp&nbsp&nbsp;<i class="fa fa-check text-info"
 							aria-hidden="true"></i> <span class="font-weight-bold ms-1">&nbsp주요
 							국내 소셜미디어,커뮤니티의 '동반유형'관련 주요 키워드 순위를 제공</span>
+=======
+						&nbsp&nbsp&nbsp&nbsp<i class="fa fa-check text-info" aria-hidden="true"></i>
+						<span class="font-weight-bold ms-1">&nbsp주요 국내 소셜미디어,커뮤니티의 '동반유형'관련 주요 키워드 순위를 제공</span>
+>>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-BigData-16/comeHere
 					</p>
 					<p></p>
 					<p></p>
 					<p></p>
 
+<<<<<<< HEAD
 					<script type="text/javascript"
 						src="https://www.gstatic.com/charts/loader.js"></script>
 					<script type="text/javascript">
@@ -366,13 +375,47 @@
 					        chart.draw(data, google.charts.Bar.convertOptions(options));
 					      }
 					    
+=======
+					<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+					<script type="text/javascript">
+					  google.charts.load('current', {'packages':['bar']});
+				      google.charts.setOnLoadCallback(drawChart);
+
+				      function drawChart() {
+				        var data = google.visualization.arrayToDataTable([
+				          ['Year', 'Sales', 'Expenses', 'Profit'],
+				          ['2014', 1000, 400, 200],
+				          ['2015', 1170, 460, 250],
+				          ['2016', 660, 1120, 300],
+				          ['2017', 1030, 540, 350]
+				        ]);
+
+				        var options = {
+				          chart: {
+				            title: 'Company Performance',
+				            subtitle: 'Sales, Expenses, and Profit: 2014-2017',
+				          }
+				        };
+
+				        var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
+
+				        chart.draw(data, google.charts.Bar.convertOptions(options));
+				      }
+>>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-BigData-16/comeHere
 					    </script>
 					    
 					<div>
+<<<<<<< HEAD
 						<div id="columnchart_material"
 							style="width: 800px; height: 500px;"></div>
 					</div>
 
+=======
+						<div id="columnchart_material" style="width: 850px; height: 450px;"></div>
+					</div>	
+					
+					
+>>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-BigData-16/comeHere
 					<!-- 동반유형 키워드 언급량 -->
 					<div class="col-lg-6 col-5 my-auto text-end">
 						<div class="dropdown float-lg-end pe-4"></div>
@@ -684,11 +727,9 @@
 						<h3>&nbsp&nbsp&nbsp여행유형/트렌드</h3>
 						<script type="text/javascript"
 							src="https://www.gstatic.com/charts/loader.js"></script>
-						<%
-						List<TravelPurposeDTO> tpList = (List) request.getAttribute("tpList");
-						if (tpList != null) {
-						%>
-						<script type="text/javascript">
+						<%List<TravelPurposeDTO> tpList = (List)request.getAttribute("tpList");
+							if (tpList != null) {%>
+							<script type="text/javascript">
 								google.charts.load('current', {
 									'packages' : [ 'line' ]
 								});
@@ -740,9 +781,7 @@
 											.convertOptions(options));
 								}
 							</script>
-						<%
-						}
-						%>
+							<%} %>
 						<div>
 							<div id="line_top_x"></div>
 						</div>
@@ -857,76 +896,70 @@
 				labels : [ "<%=consumptionList.get(0).getCunsumption_type1()%>",
 						   "<%=consumptionList.get(1).getCunsumption_type1()%>",
 						   "<%=consumptionList.get(2).getCunsumption_type1()%>",
-						   "<%=consumptionList.get(3).getCunsumption_type1()%>
-		" ],
-						datasets : [
-								{
-									label : "Sales",
-									tension : 0.4,
-									borderWidth : 0,
-									borderRadius : 4,
-									borderSkipped : false,
-									backgroundColor : "#fff",
-									data : [
-	<%=consumptionList.get(0).getSum_amount() / 100000%>
-		,
-	<%=consumptionList.get(1).getSum_amount() / 100000%>
-		,
-	<%=consumptionList.get(2).getSum_amount() / 100000%>
-		,
-	<%=consumptionList.get(3).getSum_amount() / 100000%>
-		],
-									maxBarThickness : 6
-								}, ],
-					},
-					options : {
-						responsive : true,
-						maintainAspectRatio : false,
-						plugins : {
-							legend : {
-								display : false,
-							}
+						   "<%=consumptionList.get(3).getCunsumption_type1()%>"],
+				datasets : [ {
+					label : "Sales",
+					tension : 0.4,
+					borderWidth : 0,
+					borderRadius : 4,
+					borderSkipped : false,
+					backgroundColor : "#fff",
+					data : [ <%= consumptionList.get(0).getSum_amount()/100000%>,
+							 <%= consumptionList.get(1).getSum_amount()/100000%>,
+							 <%= consumptionList.get(2).getSum_amount()/100000%>,
+							 <%= consumptionList.get(3).getSum_amount()/100000%>],
+					maxBarThickness : 6
+				}, ],
+			},
+			options : {
+				responsive : true,
+				maintainAspectRatio : false,
+				plugins : {
+					legend : {
+						display : false,
+					}
+				},
+				interaction : {
+					intersect : false,
+					mode : 'index',
+				},
+				scales : {
+					y : {
+						grid : {
+							drawBorder : false,
+							display : false,
+							drawOnChartArea : false,
+							drawTicks : false,
 						},
-						interaction : {
-							intersect : false,
-							mode : 'index',
-						},
-						scales : {
-							y : {
-								grid : {
-									drawBorder : false,
-									display : false,
-									drawOnChartArea : false,
-									drawTicks : false,
-								},
-								ticks : {
-									suggestedMin : 0,
-									suggestedMax : 500,
-									beginAtZero : true,
-									padding : 15,
-									font : {
-										size : 14,
-										family : "Open Sans",
-										style : 'normal',
-										lineHeight : 2
-									},
-									color : "#fff"
-								},
+						ticks : {
+							suggestedMin : 0,
+							suggestedMax : 500,
+							beginAtZero : true,
+							padding : 15,
+							font : {
+								size : 14,
+								family : "Open Sans",
+								style : 'normal',
+								lineHeight : 2
 							},
-							x : {
-								grid : {
-									drawBorder : false,
-									display : false,
-									drawOnChartArea : false,
-									drawTicks : false
-								},
-								ticks : {
-									display : false
-								},
-							},
+							color : "#fff"
 						},
 					},
-				});
+					x : {
+						grid : {
+							drawBorder : false,
+							display : false,
+							drawOnChartArea : false,
+							drawTicks : false
+						},
+						ticks : {
+							display : false
+						},
+					},
+				},
+			},
+		});
+		// SNS 언급량 그래프
 		var ctx2 = document.getElementById("chart-line").getContext("2d");
 
 		var gradientStroke1 = ctx2.createLinearGradient(0, 230, 0, 50);
@@ -940,49 +973,35 @@
 		gradientStroke2.addColorStop(1, 'rgba(20,23,39,0.2)');
 		gradientStroke2.addColorStop(0.2, 'rgba(72,72,176,0.0)');
 		gradientStroke2.addColorStop(0, 'rgba(20,23,39,0)'); //purple colors
-
+		
 		new Chart(ctx2, {
 			type : "line",
 			data : {
 				labels : [ "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul",
 						"Aug", "Sep", "Oct", "Nov", "Dec" ],
-				datasets : [
-						{
-							label : "Mobile apps",
-							tension : 0.4,
-							borderWidth : 0,
-							pointRadius : 0,
-							borderColor : "#cb0c9f",
-							borderWidth : 3,
-							backgroundColor : gradientStroke1,
-							fill : true,
-							data : [
-	<%=snsList.get(0).getSns_search()%>
-		,
-	<%=snsList.get(1).getSns_search()%>
-		,
-	<%=snsList.get(2).getSns_search()%>
-		,
-	<%=snsList.get(3).getSns_search()%>
-		,
-	<%=snsList.get(4).getSns_search()%>
-		,
-	<%=snsList.get(5).getSns_search()%>
-		,
-	<%=snsList.get(6).getSns_search()%>
-		,
-	<%=snsList.get(7).getSns_search()%>
-		,
-	<%=snsList.get(8).getSns_search()%>
-		,
-	<%=snsList.get(9).getSns_search()%>
-		,
-	<%=snsList.get(10).getSns_search()%>
-		,
-	<%=snsList.get(11).getSns_search()%>
-		],
-							maxBarThickness : 6
-						}, ],
+				datasets : [ {
+					label : "Mobile apps",
+					tension : 0.4,
+					borderWidth : 0,
+					pointRadius : 0,
+					borderColor : "#cb0c9f",
+					borderWidth : 3,
+					backgroundColor : gradientStroke1,
+					fill : true,
+					data : [ <%=snsList.get(0).getSns_search()%>,
+							 <%=snsList.get(1).getSns_search()%>,
+							 <%=snsList.get(2).getSns_search()%>,
+							 <%=snsList.get(3).getSns_search()%>,
+							 <%=snsList.get(4).getSns_search()%>,
+							 <%=snsList.get(5).getSns_search()%>,
+							 <%=snsList.get(6).getSns_search()%>,
+							 <%=snsList.get(7).getSns_search()%>,
+							 <%=snsList.get(8).getSns_search()%>,
+							 <%=snsList.get(9).getSns_search()%>,
+							 <%=snsList.get(10).getSns_search()%>,
+							 <%=snsList.get(11).getSns_search()%> ],
+					maxBarThickness : 6
+				}, ],
 			},
 			options : {
 				responsive : true,
