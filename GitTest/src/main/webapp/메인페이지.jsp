@@ -1,20 +1,17 @@
-<!DOCTYPE HTML>
-<!--
-	Aerial by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
 <html>
 <head>
-<title>Aerial by HTML5 UP</title>
-<meta charset="utf-8" />
+<meta charset="UTF-8">
+<title>Insert title here</title>
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, user-scalable=no" />
-<link rel="stylesheet" href="assets/css/main.css" />
+<link rel="stylesheet" href="./assets2/css/main.css" />
 <noscript>
-	<link rel="stylesheet" href="assets/css/noscript.css" />
+	<link rel="stylesheet" href="./assets2/css/noscript.css" />
 </noscript>
-<link rel="stylesheet" href="../assets/css/CSS.css">
+<link rel="stylesheet" href="./assets/css/CSS.css">
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
 	integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
@@ -31,7 +28,7 @@
 
 			<header id="header">
 				<h1>옴 &nbsp; 서 &nbsp; 감 &nbsp; 서</h1>
-				<a href="../전남.jsp">
+				<a href="areaJN">
 					<button type="button" class="delbtn" onclick="">Welcome</button>
 				</a>
 
@@ -60,5 +57,6 @@
 			document.body.scrollTop = 0;
 		}
 	</script>
+
 </body>
 </html>
