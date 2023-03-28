@@ -304,9 +304,7 @@
 								class="font-weight-bold">4% more</span> in 2021
 						</p>
 					</div>
-					<%
-					List<SNSDTO> snsList = (List) request.getAttribute("snsList");
-					%>
+					<%List<SNSDTO> snsList = (List)request.getAttribute("snsList"); %>
 					<div class="card-body p-3">
 						<div class="chart">
 							<canvas id="chart-line" class="chart-canvas" height="300"></canvas>
@@ -315,6 +313,7 @@
 				</div>
 			</div>
 		</div>
+
 
 		<!-- 동반유형 키워드 언급량 -->
 		<div class="row my-4">
@@ -330,9 +329,9 @@
 							'동반유형'관련 주요 키워드 순위를 제공</span>
 					</p>
 
-						<script type="text/javascript"
-							src="https://www.gstatic.com/charts/loader.js"></script>
-						<script type="text/javascript">
+					<script type="text/javascript"
+						src="https://www.gstatic.com/charts/loader.js"></script>
+					<script type="text/javascript">
 	      				google.charts.load('current', {'packages':['bar']});
 	      				google.charts.setOnLoadCallback(drawChart);
 	
@@ -357,10 +356,9 @@
 					        chart.draw(data, google.charts.Bar.convertOptions(options));
 					      }
 					    </script>
-					<body>
-						<div id="columnchart_material"
-							style="width: 800px; height: 500px;"></div>
-					</body>
+					    
+						<div id="columnchart_material" style="width: 850px; height: 450px;"></div>
+							
 					<div class="col-lg-6 col-5 my-auto text-end">
 						<div class="dropdown float-lg-end pe-4"></div>
 					</div>
@@ -673,11 +671,9 @@
 						<h3>&nbsp&nbsp&nbsp여행유형/트렌드</h3>
 						<script type="text/javascript"
 							src="https://www.gstatic.com/charts/loader.js"></script>
-						<%
-						List<TravelPurposeDTO> tpList = (List) request.getAttribute("tpList");
-						if (tpList != null) {
-						%>
-						<script type="text/javascript">
+						<%List<TravelPurposeDTO> tpList = (List)request.getAttribute("tpList");
+							if (tpList != null) {%>
+							<script type="text/javascript">
 								google.charts.load('current', {
 									'packages' : [ 'line' ]
 								});
@@ -729,9 +725,7 @@
 											.convertOptions(options));
 								}
 							</script>
-						<%
-						}
-						%>
+							<%} %>
 						<div>
 							<div id="line_top_x"></div>
 						</div>
@@ -916,6 +910,7 @@
 						},
 					},
 				});
+		// SNS 언급량 그래프
 		var ctx2 = document.getElementById("chart-line").getContext("2d");
 
 		var gradientStroke1 = ctx2.createLinearGradient(0, 230, 0, 50);
@@ -929,49 +924,35 @@
 		gradientStroke2.addColorStop(1, 'rgba(20,23,39,0.2)');
 		gradientStroke2.addColorStop(0.2, 'rgba(72,72,176,0.0)');
 		gradientStroke2.addColorStop(0, 'rgba(20,23,39,0)'); //purple colors
-
+		
 		new Chart(ctx2, {
 			type : "line",
 			data : {
 				labels : [ "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul",
 						"Aug", "Sep", "Oct", "Nov", "Dec" ],
-				datasets : [
-						{
-							label : "Mobile apps",
-							tension : 0.4,
-							borderWidth : 0,
-							pointRadius : 0,
-							borderColor : "#cb0c9f",
-							borderWidth : 3,
-							backgroundColor : gradientStroke1,
-							fill : true,
-							data : [
-	<%=snsList.get(0).getSns_search()%>
-		,
-	<%=snsList.get(1).getSns_search()%>
-		,
-	<%=snsList.get(2).getSns_search()%>
-		,
-	<%=snsList.get(3).getSns_search()%>
-		,
-	<%=snsList.get(4).getSns_search()%>
-		,
-	<%=snsList.get(5).getSns_search()%>
-		,
-	<%=snsList.get(6).getSns_search()%>
-		,
-	<%=snsList.get(7).getSns_search()%>
-		,
-	<%=snsList.get(8).getSns_search()%>
-		,
-	<%=snsList.get(9).getSns_search()%>
-		,
-	<%=snsList.get(10).getSns_search()%>
-		,
-	<%=snsList.get(11).getSns_search()%>
-		],
-							maxBarThickness : 6
-						}, ],
+				datasets : [ {
+					label : "Mobile apps",
+					tension : 0.4,
+					borderWidth : 0,
+					pointRadius : 0,
+					borderColor : "#cb0c9f",
+					borderWidth : 3,
+					backgroundColor : gradientStroke1,
+					fill : true,
+					data : [ <%=snsList.get(0).getSns_search()%>,
+							 <%=snsList.get(1).getSns_search()%>,
+							 <%=snsList.get(2).getSns_search()%>,
+							 <%=snsList.get(3).getSns_search()%>,
+							 <%=snsList.get(4).getSns_search()%>,
+							 <%=snsList.get(5).getSns_search()%>,
+							 <%=snsList.get(6).getSns_search()%>,
+							 <%=snsList.get(7).getSns_search()%>,
+							 <%=snsList.get(8).getSns_search()%>,
+							 <%=snsList.get(9).getSns_search()%>,
+							 <%=snsList.get(10).getSns_search()%>,
+							 <%=snsList.get(11).getSns_search()%> ],
+					maxBarThickness : 6
+				}, ],
 			},
 			options : {
 				responsive : true,
@@ -1029,7 +1010,7 @@
 				},
 			},
 		});
-	</script>
+		</script>
 	<script>
 		var win = navigator.platform.indexOf('Win') > -1;
 		if (win && document.querySelector('#sidenav-scrollbar')) {
