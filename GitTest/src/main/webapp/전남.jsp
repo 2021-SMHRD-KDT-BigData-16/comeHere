@@ -1,6 +1,7 @@
-<%@page import="com.smhrd3.model.TravelPurposeDTO"%>
+
 <%@page import="com.smhrd3.model.SNSDTO"%>
 <%@page import="com.smhrd3.model.CreditDTO"%>
+<%@page import="com.smhrd3.model.TravelPurposeDTO"%>
 <%@page import="com.smhrd3.model.ConsumptionDTO"%>
 <%@page import="java.util.List"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
