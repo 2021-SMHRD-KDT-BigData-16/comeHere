@@ -6,6 +6,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+	
 <!DOCTYPE html>
 <html>
 <head>
@@ -153,6 +154,7 @@
 					</div>
 				</div>
 		</nav>
+		
 		<div class="container-fluid py-1 px-3">
 			<h3 align="center">생명의 땅</h3>
 			<h1 align="center">전라남도</h1>
@@ -167,6 +169,7 @@
 				</select> <input type="submit" value="선택">
 			</form>
 		</div>
+		
 		<div class="row mt-4">
 			<div class="col-lg-7 mb-lg-0 mb-4">
 				<div class="card">
@@ -298,7 +301,7 @@
 						<h3>SNS 언급량</h3>
 						<p class="text-sm">
 							<i class="fa fa-arrow-up text-success"></i> <span
-								class="font-weight-bold">&nbsp&nbsp주요 국내 소셜미디어, 커뮤니티의 해당지역에 대한 관광 관련 언급량을 나타냅니다.</span>
+								class="font-weight-bold">&nbsp&nbsp주요 국내 소셜미디어, 커뮤니티의 해당지역에 대한 관광 관련 언급량을 제공</span>
 						</p>
 					</div>
 					<%List<SNSDTO> snsList = (List)request.getAttribute("snsList"); %>
@@ -727,12 +730,8 @@
 						<div>
 							<div id="line_top_x"></div>
 						</div>
-
 					</div>
 				</div>
-
-
-
 			</div>
 	</main>
 
