@@ -156,6 +156,10 @@
 		<div class="container-fluid py-1 px-3">
 			<h3 align="center">생명의 땅</h3>
 			<h1 align="center">전라남도</h1>
+			<%String year = (String)request.getAttribute("year");
+			if (year != null) {%>
+				<h3>선택한 연도 : <%=year %></h3>
+			<% }%>
 			<form action="selectYearJN">
 				<h4>연도 선택 :</h4>
 				<select id="selectyear" name="year">
@@ -341,8 +345,8 @@
 
 				        var options = {
 				          chart: {
-				            title: ' ',
-				            subtitle: ' ',
+				            title: '',
+				            subtitle: '',
 				          }
 				        };
 
@@ -607,9 +611,7 @@
 
 			<!-- 업종별 신용카드 소비액 추이 -->
 			<div class="col-lg-4 col-md-6">
-				<%
-				List<CreditDTO> creditList = (List) request.getAttribute("creditList");
-				%>
+				<% List<CreditDTO> creditList = (List) request.getAttribute("creditList"); %>
 				<div
 					style="background-color: white; width: 920px; border-radius: 15px; height: 930px;">
 					<br>

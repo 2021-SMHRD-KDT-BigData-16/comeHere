@@ -27,6 +27,8 @@ public class selectYearJN extends HttpServlet {
 		String temp = request.getParameter("year");
 		int year = Integer.parseInt(temp);
 		
+		request.setAttribute("year", year);
+		
 		CreditDTO cre_dto = new CreditDTO();
 		cre_dto.setConsumption_yearmonth(temp);
 		
