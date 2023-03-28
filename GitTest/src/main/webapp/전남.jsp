@@ -49,8 +49,7 @@
 									<div class="row">
 										<div class="col-8">
 											<div class="numbers">
-												<p class="text-sm mb-0 text-capitalize font-weight-bold">문화의
-													도시</p>
+												<p class="text-sm mb-0 text-capitalize font-weight-bold">문화의 도시</p>
 												<h5 class="font-weight-bolder mb-0">
 													광주 <span class="text-success text-sm font-weight-bolder"></span>
 												</h5>
@@ -320,18 +319,16 @@
 		<div class="row my-4">
 			<div style="width: 50%; border-radius: 15px;">
 
-				<div
-					style="background-color: white; width: 100%; border-radius: 15px; height: 930px;">
+				<div style="background-color: white; width: 100%; border-radius: 15px; height: 950px;">
 					<br>
-					<h3>&nbsp&nbsp&nbsp동반유형 키워드 언급량</h3>
+					<h3>&nbsp&nbsp동반유형 키워드 순위</h3>
 					<p class="text-sm mb-0">
-						&nbsp;<i class="fa fa-check text-info" aria-hidden="true"></i><span
-							class="font-weight-bold ms-1">&nbsp주요 국내 소셜미디어,커뮤니티의
-							'동반유형'관련 주요 키워드 순위를 제공</span>
+						&nbsp&nbsp&nbsp&nbsp;<i class="fa fa-check text-info" aria-hidden="true"></i>
+						<span class="font-weight-bold ms-1">&nbsp주요 국내 소셜미디어,커뮤니티의 '동반유형'관련 주요 키워드 순위를 제공</span>
 					</p>
+					<p></p><p></p><p></p>
 
-						<script type="text/javascript"
-							src="https://www.gstatic.com/charts/loader.js"></script>
+						<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 						<script type="text/javascript">
 	      				google.charts.load('current', {'packages':['bar']});
 	      				google.charts.setOnLoadCallback(drawChart);
@@ -347,8 +344,8 @@
 					
 					        var options = {
 					          chart: {
-					            title: 'Company Performance',
-					            subtitle: 'Sales, Expenses, and Profit: 2014-2017',
+					            title: '',
+					            subtitle: '',
 					          }
 					        };
 					
@@ -357,10 +354,12 @@
 					        chart.draw(data, google.charts.Bar.convertOptions(options));
 					      }
 					    </script>
-					<body>
+					<div>
 						<div id="columnchart_material"
 							style="width: 800px; height: 500px;"></div>
-					</body>
+					</div>
+					
+					<!-- 동반유형 키워드 언급량 -->
 					<div class="col-lg-6 col-5 my-auto text-end">
 						<div class="dropdown float-lg-end pe-4"></div>
 					</div>
