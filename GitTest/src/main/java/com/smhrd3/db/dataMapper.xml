@@ -6,19 +6,23 @@
 <mapper namespace="com.smhrd.model.MemberDAO">
 
 	<select id="selectConsumptionJN" parameterType="com.smhrd3.model.ConsumptionDTO" resultType="com.smhrd3.model.ConsumptionDTO">
-		select sum(cunsumption_amount) as sum_amount, cunsumption_type1 from tb_consumption where cunsumption_area = '전라남도' and cunsumption_year = #{cunsumption_year} and not cunsumption_type1 in ('운송업', '여행업') group by cunsumption_type1
+		select sum(cunsumption_amount) as sum_amount, cunsumption_type1 from tb_consumption where cunsumption_area = #{cunsumption_area} and cunsumption_year = #{cunsumption_year} and not cunsumption_type1 in ('운송업', '여행업') group by cunsumption_type1
 	</select>
 
 	<select id="selectCreditJN" parameterType="com.smhrd3.model.CreditDTO" resultType="com.smhrd3.model.CreditDTO">
-		select sum(consumption_amount) as sum_amount, consumption_type from tb_credit where consumption_area = '전라남도' and consumption_yearmonth like '%'||#{consumption_yearmonth}||'%' and not consumption_type in ('전체', '운송업') group by consumption_type
+		select sum(consumption_amount) as sum_amount, consumption_type from tb_credit where consumption_area = #{consumption_area} and consumption_yearmonth like '%'||#{consumption_yearmonth}||'%' and not consumption_type in ('전체', '운송업') group by consumption_type
 	</select>
 	
 	<select id="selectSNSJN" parameterType="com.smhrd3.model.SNSDTO" resultType="com.smhrd3.model.SNSDTO">
-		select sns_yearmonth, sns_search from tb_sns where sns_yearmonth like '%'||#{sns_year}||'%' and sns_are = '전라남도'
+		select sns_yearmonth, sns_search from tb_sns where sns_yearmonth like '%'||#{sns_year}||'%' and sns_are = #{sns_are}
 	</select>
 	
 	<select id="selecttpJN" parameterType="com.smhrd3.model.TravelPurposeDTO" resultType="com.smhrd3.model.TravelPurposeDTO">
-		select purpose_yearmonth ,sum(travel_count) as sum_count, travel_purpose from tb_travel_purpose where travel_area = '전라남도' and purpose_yearmonth like '%'||#{purpose_year}||'%' and not travel_purpose in ('역사유적', '반려동물', '휴식/힐링', '체험') group by travel_purpose, purpose_yearmonth order by purpose_yearmonth
+		select purpose_yearmonth ,sum(travel_count) as sum_count, travel_purpose from tb_travel_purpose where travel_area = #{travel_area} and purpose_yearmonth like '%'||#{purpose_year}||'%' and not travel_purpose in ('역사유적', '반려동물', '휴식/힐링', '체험') group by travel_purpose, purpose_yearmonth order by purpose_yearmonth
+	</select>
+	
+	<select id="selectCompanyJN" parameterType="com.smhrd3.model.CompanyDTO" resultType="com.smhrd3.model.CompanyDTO">
+		select sum(travel_count) as sum_count, travel_company from tb_travel_company where travel_area = #{travel_area} and travel_yearmonth like '%'||#{company_year}||'%' and not travel_company in ('싱글', '학생') group by travel_company
 	</select>
 	
 </mapper>	

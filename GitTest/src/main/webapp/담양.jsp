@@ -59,7 +59,7 @@
 										</div>
 										<div class="col-4 text-end">
 
-											<img src="./메인페이지 목업/assets/css/images/전라남도.jpg">
+											<img src="./assets2/css/images/전라남도.jpg">
 
 										</div>
 									</div>
@@ -83,7 +83,7 @@
 										</div>
 										<div class="col-4 text-end">
 
-											<img src="./메인페이지 목업/assets/css/images/광주광역시.png">
+											<img src="./assets2/css/images/광주광역시.png">
 
 										</div>
 									</div>
@@ -107,7 +107,7 @@
 										</div>
 										<div class="col-4 text-end">
 
-											<img src="./메인페이지 목업/assets/css/images/목포.jpg">
+											<img src="./assets2/css/images/목포.jpg">
 
 										</div>
 									</div>
@@ -130,7 +130,7 @@
 											</div>
 										</div>
 										<div class="col-4 text-end">
-											<img src="./메인페이지 목업/assets/css/images/순천.jpg">
+											<img src="./assets2/css/images/순천.jpg">
 										</div>
 									</div>
 								</div>
@@ -152,7 +152,7 @@
 											</div>
 										</div>
 										<div class="col-4 text-end">
-											<img src="./메인페이지 목업/assets/css/images/여수.jpg">
+											<img src="./assets2/css/images/여수.jpg">
 										</div>
 									</div>
 								</div>

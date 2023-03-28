@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+<%@page import="com.smhrd3.model.CompanyDTO"%>
+<%@page import="com.smhrd3.model.TravelPurposeDTO"%>
+>>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-BigData-16/comeHere.git
 <%@page import="com.smhrd3.model.SNSDTO"%>
 <%@page import="com.smhrd3.model.CreditDTO"%>
 <%@page import="com.smhrd3.model.TravelPurposeDTO"%>
@@ -57,7 +62,7 @@
 											</div>
 										</div>
 										<div class="col-4 text-end">
-											<img src="./메인페이지 목업/assets/css/images/광주광역시.png">
+											<img src="./assets2/css/images/광주광역시.png">
 										</div>
 									</div>
 								</div>
@@ -79,7 +84,7 @@
 											</div>
 										</div>
 										<div class="col-4 text-end">
-											<img src="./메인페이지 목업/assets/css/images/담양.jpg">
+											<img src="./assets2/css/images/담양.jpg">
 										</div>
 									</div>
 								</div>
@@ -101,7 +106,7 @@
 											</div>
 										</div>
 										<div class="col-4 text-end">
-											<img src="./메인페이지 목업/assets/css/images/목포.jpg">
+											<img src="./assets2/css/images/목포.jpg">
 										</div>
 									</div>
 								</div>
@@ -123,7 +128,7 @@
 											</div>
 										</div>
 										<div class="col-4 text-end">
-											<img src="./메인페이지 목업/assets/css/images/순천.jpg">
+											<img src="./assets2/css/images/순천.jpg">
 										</div>
 									</div>
 								</div>
@@ -145,7 +150,7 @@
 											</div>
 										</div>
 										<div class="col-4 text-end">
-											<img src="./메인페이지 목업/assets/css/images/여수.jpg">
+											<img src="./assets2/css/images/여수.jpg">
 										</div>
 									</div>
 								</div>
@@ -158,7 +163,7 @@
 		<div class="container-fluid py-1 px-3">
 			<h3 align="center">생명의 땅</h3>
 			<h1 align="center">전라남도</h1>
-			<form action="selectYearJN"> <!-- -->
+			<form action="selectYearJN"> 
 				<h4>연도 선택 :</h4>
 				<select id="selectyear" name="year"> 
 					<option value="2018">2018</option>
@@ -168,6 +173,12 @@
 					<option value="2022">2022</option>
 				</select> <input type="submit" value="선택">
 			</form>
+			<%String year = (String)request.getAttribute("year");
+			if (year != null) {%>
+				<h4 style="position: relative; margin-left: 80%;">선택한 연도 : <%=year %></h4>
+			<% } else {%>
+				<h4 style="position: relative; margin-left: 80%;">연도를 선택해주세요</h4>
+			<%} %>
 		</div>
 		
 		<div class="row mt-4">
@@ -307,7 +318,7 @@
 					<%List<SNSDTO> snsList = (List)request.getAttribute("snsList"); %>
 					<div class="card-body p-3">
 						<div class="chart">
-							<canvas id="chart-line" class="chart-canvas" height="300"></canvas>
+							<canvas id="chart-line" class="chart-canvas" height="275"></canvas>
 						</div>
 					</div>
 				</div>
@@ -327,7 +338,8 @@
 						<span class="font-weight-bold ms-1">&nbsp주요 국내 소셜미디어,커뮤니티의 '동반유형' 관련 주요 키워드 순위를 제공</span>
 					</p>
 					<p></p><p></p><p></p>
-
+					<%List<CompanyDTO> comList = (List)request.getAttribute("comList");
+					if (comList != null) {%>
 					<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 					<script type="text/javascript">
 					  google.charts.load('current', {'packages':['bar']});
@@ -335,11 +347,14 @@
 
 				      function drawChart() {
 				        var data = google.visualization.arrayToDataTable([
-				          ['Year', 'Sales', 'Expenses', 'Profit'],
-				          ['2014', 1000, 400, 200],
-				          ['2015', 1170, 460, 250],
-				          ['2016', 660, 1120, 300],
-				          ['2017', 1030, 540, 350]
+				          ['동반유형', '언급 건수'],
+				          ['<%=comList.get(0).getTravel_company()%>', <%=comList.get(0).getSum_count()%>],
+				          ['<%=comList.get(1).getTravel_company()%>', <%=comList.get(1).getSum_count()%>],
+				          ['<%=comList.get(2).getTravel_company()%>', <%=comList.get(2).getSum_count()%>],
+				          ['<%=comList.get(3).getTravel_company()%>', <%=comList.get(3).getSum_count()%>],
+				          ['<%=comList.get(4).getTravel_company()%>', <%=comList.get(4).getSum_count()%>],
+				          ['<%=comList.get(5).getTravel_company()%>', <%=comList.get(5).getSum_count()%>],
+				          ['<%=comList.get(6).getTravel_company()%>', <%=comList.get(6).getSum_count()%>]
 				        ]);
 
 				        var options = {
@@ -355,9 +370,8 @@
 				      }
 					    </script>
 					<div>
-						<div id="columnchart_material" style="width: 850px; height: 450px;"></div>
+						<div id="columnchart_material" style="width: 900px; height: 450px; margin-left: 30px"></div>
 					</div>	
-					
 					
 					<!-- 동반유형 키워드 언급량 -->
 					<div class="col-lg-6 col-5 my-auto text-end">
@@ -416,17 +430,17 @@
 											</div>
 										</td>
 										<td class="align-middle text-center text-sm"><span
-											class="text-xs font-weight-bold"> $14,000 </span></td>
+											class="text-xs font-weight-bold"> <%=comList.get(0).getTravel_company()%> </span></td>
 										<td class="align-middle">
 											<div class="progress-wrapper w-75 mx-auto">
 												<div class="progress-info">
 													<div class="progress-percentage">
-														<span class="text-xs font-weight-bold">60%</span>
+														<span class="text-xs font-weight-bold"><%=comList.get(0).getSum_count()%></span>
 													</div>
 												</div>
 												<div class="progress">
-													<div class="progress-bar bg-gradient-info w-60"
-														role="progressbar" aria-valuenow="60" aria-valuemin="0"
+													<div class="progress-bar bg-gradient-success w-100"
+														role="progressbar" aria-valuenow="100" aria-valuemin="0"
 														aria-valuemax="100"></div>
 												</div>
 											</div>
@@ -456,16 +470,16 @@
 											</div>
 										</td>
 										<td class="align-middle text-center text-sm"><span
-											class="text-xs font-weight-bold"> $3,000 </span></td>
+											class="text-xs font-weight-bold"> <%=comList.get(4).getTravel_company() %> </span></td>
 										<td class="align-middle">
 											<div class="progress-wrapper w-75 mx-auto">
 												<div class="progress-info">
 													<div class="progress-percentage">
-														<span class="text-xs font-weight-bold">10%</span>
+														<span class="text-xs font-weight-bold"><%=comList.get(4).getSum_count()%></span>
 													</div>
 												</div>
 												<div class="progress">
-													<div class="progress-bar bg-gradient-info w-10"
+													<div class="progress-bar bg-gradient-info w-40"
 														role="progressbar" aria-valuenow="10" aria-valuemin="0"
 														aria-valuemax="100"></div>
 												</div>
@@ -496,17 +510,17 @@
 											</div>
 										</td>
 										<td class="align-middle text-center text-sm"><span
-											class="text-xs font-weight-bold"> Not set </span></td>
+											class="text-xs font-weight-bold"> <%=comList.get(5).getTravel_company() %> </span></td>
 										<td class="align-middle">
 											<div class="progress-wrapper w-75 mx-auto">
 												<div class="progress-info">
 													<div class="progress-percentage">
-														<span class="text-xs font-weight-bold">100%</span>
+														<span class="text-xs font-weight-bold"><%=comList.get(5).getSum_count() %></span>
 													</div>
 												</div>
 												<div class="progress">
-													<div class="progress-bar bg-gradient-success w-100"
-														role="progressbar" aria-valuenow="100" aria-valuemin="0"
+													<div class="progress-bar bg-gradient-info w-30"
+														role="progressbar" aria-valuenow="10" aria-valuemin="0"
 														aria-valuemax="100"></div>
 												</div>
 											</div>
@@ -546,17 +560,17 @@
 											</div>
 										</td>
 										<td class="align-middle text-center text-sm"><span
-											class="text-xs font-weight-bold"> $20,500 </span></td>
+											class="text-xs font-weight-bold"> <%=comList.get(1).getTravel_company() %> </span></td>
 										<td class="align-middle">
 											<div class="progress-wrapper w-75 mx-auto">
 												<div class="progress-info">
 													<div class="progress-percentage">
-														<span class="text-xs font-weight-bold">100%</span>
+														<span class="text-xs font-weight-bold"><%=comList.get(1).getSum_count() %></span>
 													</div>
 												</div>
 												<div class="progress">
-													<div class="progress-bar bg-gradient-success w-100"
-														role="progressbar" aria-valuenow="100" aria-valuemin="0"
+													<div class="progress-bar bg-gradient-info w-20"
+														role="progressbar" aria-valuenow="10" aria-valuemin="0"
 														aria-valuemax="100"></div>
 												</div>
 											</div>
@@ -581,16 +595,16 @@
 											</div>
 										</td>
 										<td class="align-middle text-center text-sm"><span
-											class="text-xs font-weight-bold"> $500 </span></td>
+											class="text-xs font-weight-bold"> <%=comList.get(3).getTravel_company() %> </span></td>
 										<td class="align-middle">
 											<div class="progress-wrapper w-75 mx-auto">
 												<div class="progress-info">
 													<div class="progress-percentage">
-														<span class="text-xs font-weight-bold">25%</span>
+														<span class="text-xs font-weight-bold"><%=comList.get(3).getSum_count() %></span>
 													</div>
 												</div>
 												<div class="progress">
-													<div class="progress-bar bg-gradient-info w-25"
+													<div class="progress-bar bg-gradient-info w-5"
 														role="progressbar" aria-valuenow="25" aria-valuemin="0"
 														aria-valuemax="25"></div>
 												</div>
@@ -605,14 +619,13 @@
 							</table>
 						</div>
 					</div>
+					<%} %>
 				</div>
 			</div>
 
 			<!-- 업종별 신용카드 소비액 추이 -->
 			<div class="col-lg-4 col-md-6">
-				<%
-				List<CreditDTO> creditList = (List) request.getAttribute("creditList");
-				%>
+				<% List<CreditDTO> creditList = (List) request.getAttribute("creditList"); %>
 				<div
 					style="background-color: white; width: 920px; border-radius: 15px; height: 930px;">
 					<br>
