@@ -22,7 +22,7 @@
 	</select>
 	
 	<select id="selectCompanyJN" parameterType="com.smhrd3.model.CompanyDTO" resultType="com.smhrd3.model.CompanyDTO">
-		
+		select sum(travel_count) as sum_count, travel_company from tb_travel_company where travel_area = '전라남도' and travel_yearmonth like '%'||#{company_year}||'%' and not travel_company in ('싱글', '학생') group by travel_company
 	</select>
 	
 </mapper>	

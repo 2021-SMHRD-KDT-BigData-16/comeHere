@@ -73,7 +73,10 @@ public class selectYearJN extends HttpServlet {
 		}
 		
 		// 전라남도 동반유형 키워드
-		
+		List<CompanyDTO> comList = dao.companyJN(com_dto);
+		if (comList != null) {
+			request.setAttribute("comList", comList);
+		}
 		
 		// 전라남도 페이지로 데이터들 보내기
 		RequestDispatcher rd = request.getRequestDispatcher("전남.jsp");

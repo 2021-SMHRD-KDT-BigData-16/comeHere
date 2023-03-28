@@ -65,4 +65,18 @@ public class DataDAO {
 		
 	}
 
+	public List<CompanyDTO> companyJN(CompanyDTO com_dto) {
+		List<CompanyDTO> comList = null;
+		SqlSession session = factory.openSession(true);
+		
+		try {
+			comList = session.selectList("selectCompanyJN", com_dto);
+		} finally {
+			session.close();
+		}
+		
+		return comList;
+		
+	}
+
 }
