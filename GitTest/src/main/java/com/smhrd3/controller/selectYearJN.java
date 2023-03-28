@@ -23,6 +23,9 @@ public class selectYearJN extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		
+		System.out.println("서블릿 이동 완");
+		
+		
 		// 선택 연도 가져오기
 		String temp = request.getParameter("year");
 		int year = Integer.parseInt(temp);
