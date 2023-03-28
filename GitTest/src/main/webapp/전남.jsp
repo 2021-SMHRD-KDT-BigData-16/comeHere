@@ -240,7 +240,7 @@
 						</div>
 
 						<!-- 관광소비유형 -->
-						<h6 class="ms-2 mt-4 mb-0">관광소비유형(단위:100M원)</h6>
+						<h3 class="ms-2 mt-4 mb-0">관광소비유형(단위:1억)</h3>
 						<p class="text-sm ms-2">
 							<span class="font-weight-bolder"></span>
 						</p>
@@ -302,7 +302,7 @@
 						<h3>SNS 언급량</h3>
 						<p class="text-sm">
 							<i class="fa fa-arrow-up text-success"></i> <span
-								class="font-weight-bold">4% more</span> in 2021
+								class="font-weight-bold">&nbsp&nbsp주요 국내 소셜미디어, 커뮤니티의 해당지역에 대한 관광 관련 언급량을 나타냅니다.</span>
 						</p>
 					</div>
 					<%List<SNSDTO> snsList = (List)request.getAttribute("snsList"); %>
@@ -325,7 +325,7 @@
 					<h3>&nbsp&nbsp동반유형 키워드 순위</h3>
 					<p class="text-sm mb-0">
 						&nbsp&nbsp&nbsp&nbsp<i class="fa fa-check text-info" aria-hidden="true"></i>
-						<span class="font-weight-bold ms-1">&nbsp주요 국내 소셜미디어,커뮤니티의 '동반유형'관련 주요 키워드 순위를 제공</span>
+						<span class="font-weight-bold ms-1">&nbsp주요 국내 소셜미디어,커뮤니티의 '동반유형' 관련 주요 키워드 순위를 제공</span>
 					</p>
 					<p></p><p></p><p></p>
 
@@ -615,7 +615,7 @@
 				<div
 					style="background-color: white; width: 920px; border-radius: 15px; height: 930px;">
 					<br>
-					<h4>&nbsp&nbsp&nbsp업종별 신용카드 소비액 추이_운송업제외(단위:1000원)</h4>
+					<h3>&nbsp&nbsp&nbsp업종별 신용카드 소비액 추이(단위:1,000원)</h3>
 					<script type="text/javascript"
 						src="https://www.gstatic.com/charts/loader.js"></script>
 
@@ -738,7 +738,7 @@
 			</div>
 	</main>
 
-	<!------------------------------------------------------------------------------------------------------------------------------------------>
+	<!--------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
 	<div class="fixed-plugin">
 		<a class="fixed-plugin-button text-dark position-fixed px-3 py-2">
