@@ -49,8 +49,7 @@
 									<div class="row">
 										<div class="col-8">
 											<div class="numbers">
-												<p class="text-sm mb-0 text-capitalize font-weight-bold">문화의
-													도시</p>
+												<p class="text-sm mb-0 text-capitalize font-weight-bold">문화의 도시</p>
 												<h5 class="font-weight-bolder mb-0">
 													광주 <span class="text-success text-sm font-weight-bolder"></span>
 												</h5>
@@ -168,7 +167,6 @@
 				</select> <input type="submit" value="선택">
 			</form>
 		</div>
-
 		<div class="row mt-4">
 			<div class="col-lg-7 mb-lg-0 mb-4">
 				<div class="card">
@@ -204,7 +202,6 @@
 					</div>
 				</div>
 			</div>
-			
 			<div class="col-lg-5">
 				<div class="card h-100 p-3">
 					<div
@@ -228,9 +225,6 @@
 				</div>
 			</div>
 		</div>
-		
-		
-		<!-- 관광소비유형 -->
 		<div class="row mt-4">
 			<div class="col-lg-5 mb-lg-0 mb-4">
 				<div class="card z-index-2">
@@ -240,13 +234,9 @@
 								<canvas id="chart-bars" class="chart-canvas" height="170"></canvas>
 							</div>
 						</div>
-<<<<<<< HEAD
-						<h6 class="ms-2 mt-4 mb-0">관광소비유형(단위:1억원)</h6>
-=======
 
 						<!-- 관광소비유형 -->
-						<h6 class="ms-2 mt-4 mb-0">관광소비유형(단위:100M원)</h6>
->>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-BigData-16/comeHere
+						<h3 class="ms-2 mt-4 mb-0">관광소비유형(단위:1억)</h3>
 						<p class="text-sm ms-2">
 							<span class="font-weight-bolder"></span>
 						</p>
@@ -302,16 +292,13 @@
 					</div>
 				</div>
 			</div>
-
-	
-			<!--SNS 언급량 --->
 			<div class="col-lg-7">
 				<div class="card z-index-2">
 					<div class="card-header pb-0">
 						<h3>SNS 언급량</h3>
 						<p class="text-sm">
 							<i class="fa fa-arrow-up text-success"></i> <span
-								class="font-weight-bold">4% more</span> in 2021
+								class="font-weight-bold">&nbsp&nbsp주요 국내 소셜미디어, 커뮤니티의 해당지역에 대한 관광 관련 언급량을 나타냅니다.</span>
 						</p>
 					</div>
 					<%List<SNSDTO> snsList = (List)request.getAttribute("snsList"); %>
@@ -329,53 +316,15 @@
 		<div class="row my-4">
 			<div style="width: 50%; border-radius: 15px;">
 
-				<div
-					style="background-color: white; width: 100%; border-radius: 15px; height: 950px;">
+				<div style="background-color: white; width: 100%; border-radius: 15px; height: 950px;">
 					<br>
 					<h3>&nbsp&nbsp동반유형 키워드 순위</h3>
 					<p class="text-sm mb-0">
-<<<<<<< HEAD
-						&nbsp&nbsp&nbsp&nbsp;<i class="fa fa-check text-info"
-							aria-hidden="true"></i> <span class="font-weight-bold ms-1">&nbsp주요
-							국내 소셜미디어,커뮤니티의 '동반유형'관련 주요 키워드 순위를 제공</span>
-=======
 						&nbsp&nbsp&nbsp&nbsp<i class="fa fa-check text-info" aria-hidden="true"></i>
-						<span class="font-weight-bold ms-1">&nbsp주요 국내 소셜미디어,커뮤니티의 '동반유형'관련 주요 키워드 순위를 제공</span>
->>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-BigData-16/comeHere
+						<span class="font-weight-bold ms-1">&nbsp주요 국내 소셜미디어,커뮤니티의 '동반유형' 관련 주요 키워드 순위를 제공</span>
 					</p>
-					<p></p>
-					<p></p>
-					<p></p>
+					<p></p><p></p><p></p>
 
-<<<<<<< HEAD
-					<script type="text/javascript"
-						src="https://www.gstatic.com/charts/loader.js"></script>
-					<script type="text/javascript">
-	      				google.charts.load('current', {'packages':['bar']});
-	      				google.charts.setOnLoadCallback(drawChart);
-	
-					      function drawChart() {
-					        var data = google.visualization.arrayToDataTable([
-					          ['Year', 'Sales', 'Expenses', 'Profit'],
-					          ['2014', 1000, 400, 200],
-					          ['2015', 1170, 460, 250],
-					          ['2016', 660, 1120, 300],
-					          ['2017', 1030, 540, 350]
-					        ]);
-					
-					        var options = {
-					          chart: {
-					            title: '',
-					            subtitle: '',
-					          }
-					        };
-					
-					        var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
-					
-					        chart.draw(data, google.charts.Bar.convertOptions(options));
-					      }
-					    
-=======
 					<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 					<script type="text/javascript">
 					  google.charts.load('current', {'packages':['bar']});
@@ -392,8 +341,8 @@
 
 				        var options = {
 				          chart: {
-				            title: 'Company Performance',
-				            subtitle: 'Sales, Expenses, and Profit: 2014-2017',
+				            title: '',
+				            subtitle: '',
 				          }
 				        };
 
@@ -401,21 +350,12 @@
 
 				        chart.draw(data, google.charts.Bar.convertOptions(options));
 				      }
->>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-BigData-16/comeHere
 					    </script>
-					    
 					<div>
-<<<<<<< HEAD
-						<div id="columnchart_material"
-							style="width: 800px; height: 500px;"></div>
-					</div>
-
-=======
 						<div id="columnchart_material" style="width: 850px; height: 450px;"></div>
 					</div>	
 					
 					
->>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-BigData-16/comeHere
 					<!-- 동반유형 키워드 언급량 -->
 					<div class="col-lg-6 col-5 my-auto text-end">
 						<div class="dropdown float-lg-end pe-4"></div>
@@ -655,6 +595,8 @@
 										</td>
 									</tr>
 									<tr>
+
+
 									</tr>
 								</tbody>
 							</table>
@@ -662,7 +604,7 @@
 					</div>
 				</div>
 			</div>
-			
+
 			<!-- 업종별 신용카드 소비액 추이 -->
 			<div class="col-lg-4 col-md-6">
 				<%
@@ -671,7 +613,7 @@
 				<div
 					style="background-color: white; width: 920px; border-radius: 15px; height: 930px;">
 					<br>
-					<h4>&nbsp&nbsp&nbsp업종별 신용카드 소비액 추이_운송업제외(단위:1000원)</h4>
+					<h3>&nbsp&nbsp&nbsp업종별 신용카드 소비액 추이(단위:1,000원)</h3>
 					<script type="text/javascript"
 						src="https://www.gstatic.com/charts/loader.js"></script>
 
@@ -794,7 +736,7 @@
 			</div>
 	</main>
 
-	<!------------------------------------------------------------------------------------------------------------------------------------------>
+	<!--------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
 	<div class="fixed-plugin">
 		<a class="fixed-plugin-button text-dark position-fixed px-3 py-2">
