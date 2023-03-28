@@ -16,7 +16,7 @@ public class SqlSessionManager {
 		// ---> 제일 먼저 실행되는 구간, 서로 다른 객체끼리 꼭 공유해야하는 고정값
 		static {
 			// 프로젝트 시 resource 경로만 잘 확인하기
-			String resource = "com/smhrd/db/mybatis-config.xml";
+			String resource = "com/smhrd3/db/mybatis-config.xml";
 			InputStream inputStream;
 			try {
 				inputStream = Resources.getResourceAsStream(resource);

@@ -4,26 +4,25 @@
 <html>
 <head>
 <meta charset="utf-8" />
-`
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link rel="apple-touch-icon" sizes="76x76"
-	href="../assets/img/apple-icon.png">
-<link rel="icon" type="image/png" href="../assets/img/favicon.png">
+	href="./assets/img/apple-icon.png">
+<link rel="icon" type="image/png" href="./assets/img/favicon.png">
 <title>Soft UI Dashboard by Creative Tim</title>
 <!--     Fonts and icons     -->
 <link
 	href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700"
 	rel="stylesheet" />
 <!-- Nucleo Icons -->
-<link href="../assets/css/nucleo-icons.css" rel="stylesheet" />
-<link href="../assets/css/nucleo-svg.css" rel="stylesheet" />
+<link href="./assets/css/nucleo-icons.css" rel="stylesheet" />
+<link href="./assets/css/nucleo-svg.css" rel="stylesheet" />
 <!-- Font Awesome Icons -->
 <script src="https://kit.fontawesome.com/42d5adcbca.js"
 	crossorigin="anonymous"></script>
-<link href="../assets/css/nucleo-svg.css" rel="stylesheet" />
+<link href="./assets/css/nucleo-svg.css" rel="stylesheet" />
 <!-- CSS Files -->
-<link id="pagestyle" href="../assets/css/soft-ui-dashboard.css?v=1.0.7"
+<link id="pagestyle" href="./assets/css/soft-ui-dashboard.css?v=1.0.7"
 	rel="stylesheet" />
 </head>
 <body class="g-sidenav-show  bg-gray-100">
@@ -51,9 +50,29 @@
 											</div>
 										</div>
 										<div class="col-4 text-end">
-
-											<img src="../메인페이지 목업/assets/css/images/전라남도.jpg">
-
+											<img src="./메인페이지 목업/assets/css/images/전라남도.jpg">
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
+						<div class="card">
+							<a href="./광주.jsp">
+								<div class="card-body p-3">
+									<div class="row">
+										<div class="col-8">
+											<div class="numbers">
+												<p class="text-sm mb-0 text-capitalize font-weight-bold">문화의
+													도시</p>
+												<h5 class="font-weight-bolder mb-0">
+													광주 <span class="text-success text-sm font-weight-bolder"></span>
+												</h5>
+											</div>
+										</div>
+										<div class="col-4 text-end">
+											<img src="./메인페이지 목업/assets/css/images/광주광역시.png">
 										</div>
 									</div>
 								</div>
@@ -75,9 +94,7 @@
 											</div>
 										</div>
 										<div class="col-4 text-end">
-
-											<img src="../메인페이지 목업/assets/css/images/담양.jpg">
-
+											<img src="./메인페이지 목업/assets/css/images/담양.jpg">
 										</div>
 									</div>
 								</div>
@@ -94,21 +111,19 @@
 												<p class="text-sm mb-0 text-capitalize font-weight-bold">항구의
 													도시</p>
 												<h5 class="font-weight-bolder mb-0">
-													목포 <span class="text-success text-sm font-weight-bolder"></span>
+													목포 <span class="text-danger text-sm font-weight-bolder"></span>
 												</h5>
 											</div>
 										</div>
 										<div class="col-4 text-end">
-
-											<img src="../메인페이지 목업/assets/css/images/목포.jpg">
-
+											<img src="./메인페이지 목업/assets/css/images/목포.jpg">
 										</div>
 									</div>
 								</div>
 							</a>
 						</div>
 					</div>
-					<div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
+					<div class="col-xl-3 col-sm-6">
 						<div class="card">
 							<a href="./순천.jsp">
 								<div class="card-body p-3">
@@ -118,38 +133,12 @@
 												<p class="text-sm mb-0 text-capitalize font-weight-bold">자연의
 													도시</p>
 												<h5 class="font-weight-bolder mb-0">
-													순천 <span class="text-danger text-sm font-weight-bolder"></span>
+													순천 <span class="text-success text-sm font-weight-bolder"></span>
 												</h5>
 											</div>
 										</div>
 										<div class="col-4 text-end">
-
-											<img src="../메인페이지 목업/assets/css/images/순천.jpg">
-
-										</div>
-									</div>
-								</div>
-							</a>
-						</div>
-					</div>
-					<div class="col-xl-3 col-sm-6">
-						<div class="card">
-							<a href="./여수.jsp">
-								<div class="card-body p-3">
-									<div class="row">
-										<div class="col-8">
-											<div class="numbers">
-												<p class="text-sm mb-0 text-capitalize font-weight-bold">낭만의
-													도시</p>
-												<h5 class="font-weight-bolder mb-0">
-													여수 <span class="text-success text-sm font-weight-bolder"></span>
-												</h5>
-											</div>
-										</div>
-										<div class="col-4 text-end">
-
-											<img src="../메인페이지 목업/assets/css/images/여수.jpg">
-
+											<img src="./메인페이지 목업/assets/css/images/순천.jpg">
 										</div>
 									</div>
 								</div>
@@ -160,7 +149,7 @@
 		</nav>
 		<div class="container-fluid py-1 px-3">
 			<h3 align="center">문화의 도시</h3>
-			<h1 align="center">광주</h1>
+			<h1 align="center">여수</h1>
 		</div>
 		<div class="row mt-4">
 			<div class="col-lg-7 mb-lg-0 mb-4">
@@ -169,7 +158,7 @@
 						<div class="row">
 							<div class="col-lg-6">
 								<div class="d-flex flex-column h-100">
-									<p class="mb-1 pt-2 text-bold">무제</p>
+									<p class="mb-1 pt-2 text-bold">Built by developers</p>
 									<h5 class="font-weight-bolder">Soft UI Dashboard</h5>
 									<p class="mb-5">From colors, cards, typography to complex
 										elements, you will find the full documentation.</p>
@@ -182,13 +171,13 @@
 							</div>
 							<div class="col-lg-5 ms-auto text-center mt-5 mt-lg-0">
 								<div class="bg-gradient-primary border-radius-lg h-100">
-									<img src="../assets/img/shapes/waves-white.svg"
+									<img src="./assets/img/shapes/waves-white.svg"
 										class="position-absolute h-100 w-50 top-0 d-lg-block d-none"
 										alt="waves">
 									<div
 										class="position-relative d-flex align-items-center justify-content-center h-100">
 										<img class="w-100 position-relative z-index-2 pt-4"
-											src="../assets/img/illustrations/rocket-white.png"
+											src="./assets/img/illustrations/rocket-white.png"
 											alt="rocket">
 									</div>
 								</div>
@@ -205,7 +194,8 @@
 						<span class="mask bg-gradient-dark"></span>
 						<div
 							class="card-body position-relative z-index-1 d-flex flex-column h-100 p-3">
-							<h5 class="text-white font-weight-bolder mb-4 pt-2">무제</h5>
+							<h5 class="text-white font-weight-bolder mb-4 pt-2">Work
+								with the rockets</h5>
 							<p class="text-white">Wealth creation is an evolutionarily
 								recent positive-sum game. It is all about who take the
 								opportunity first.</p>
@@ -228,7 +218,7 @@
 								<canvas id="chart-bars" class="chart-canvas" height="170"></canvas>
 							</div>
 						</div>
-						<h6 class="ms-2 mt-4 mb-0">무제</h6>
+						<h6 class="ms-2 mt-4 mb-0">Active Users</h6>
 						<p class="text-sm ms-2">
 							(<span class="font-weight-bolder">+23%</span>) than last week
 						</p>
@@ -237,6 +227,7 @@
 								<div class="col-3 py-3 ps-0">
 									<div class="d-flex mb-2">
 										🍽
+
 										<p class="text-xs mt-1 mb-0 font-weight-bold">Users</p>
 									</div>
 									<h4 class="font-weight-bolder">36K</h4>
@@ -248,6 +239,7 @@
 								<div class="col-3 py-3 ps-0">
 									<div class="d-flex mb-2">
 										🛒
+
 										<p class="text-xs mt-1 mb-0 font-weight-bold">Clicks</p>
 									</div>
 									<h4 class="font-weight-bolder">2m</h4>
@@ -286,7 +278,7 @@
 			<div class="col-lg-7">
 				<div class="card z-index-2">
 					<div class="card-header pb-0">
-						<h6>무제</h6>
+						<h6>Sales overview</h6>
 						<p class="text-sm">
 							<i class="fa fa-arrow-up text-success"></i> <span
 								class="font-weight-bold">4% more</span> in 2021
@@ -306,7 +298,7 @@
 					<div class="card-header pb-0">
 						<div class="row">
 							<div class="col-lg-6 col-7">
-								<h6>무제</h6>
+								<h6>Projects</h6>
 								<p class="text-sm mb-0">
 									<i class="fa fa-check text-info" aria-hidden="true"></i> <span
 										class="font-weight-bold ms-1">30 done</span> this month
@@ -353,7 +345,7 @@
 										<td>
 											<div class="d-flex px-2 py-1">
 												<div>
-													<img src="../assets/img/small-logos/logo-xd.svg"
+													<img src="./assets/img/small-logos/logo-xd.svg"
 														class="avatar avatar-sm me-3" alt="xd">
 												</div>
 												<div class="d-flex flex-column justify-content-center">
@@ -367,22 +359,22 @@
 													class="avatar avatar-xs rounded-circle"
 													data-bs-toggle="tooltip" data-bs-placement="bottom"
 													title="Ryan Tompson"> <img
-													src="../assets/img/team-1.jpg" alt="team1">
+													src="./assets/img/team-1.jpg" alt="team1">
 												</a> <a href="javascript:;"
 													class="avatar avatar-xs rounded-circle"
 													data-bs-toggle="tooltip" data-bs-placement="bottom"
 													title="Romina Hadid"> <img
-													src="../assets/img/team-2.jpg" alt="team2">
+													src="./assets/img/team-2.jpg" alt="team2">
 												</a> <a href="javascript:;"
 													class="avatar avatar-xs rounded-circle"
 													data-bs-toggle="tooltip" data-bs-placement="bottom"
 													title="Alexander Smith"> <img
-													src="../assets/img/team-3.jpg" alt="team3">
+													src="./assets/img/team-3.jpg" alt="team3">
 												</a> <a href="javascript:;"
 													class="avatar avatar-xs rounded-circle"
 													data-bs-toggle="tooltip" data-bs-placement="bottom"
 													title="Jessica Doe"> <img
-													src="../assets/img/team-4.jpg" alt="team4">
+													src="./assets/img/team-4.jpg" alt="team4">
 												</a>
 											</div>
 										</td>
@@ -407,7 +399,7 @@
 										<td>
 											<div class="d-flex px-2 py-1">
 												<div>
-													<img src="../assets/img/small-logos/logo-atlassian.svg"
+													<img src="./assets/img/small-logos/logo-atlassian.svg"
 														class="avatar avatar-sm me-3" alt="atlassian">
 												</div>
 												<div class="d-flex flex-column justify-content-center">
@@ -421,12 +413,12 @@
 													class="avatar avatar-xs rounded-circle"
 													data-bs-toggle="tooltip" data-bs-placement="bottom"
 													title="Romina Hadid"> <img
-													src="../assets/img/team-2.jpg" alt="team5">
+													src="./assets/img/team-2.jpg" alt="team5">
 												</a> <a href="javascript:;"
 													class="avatar avatar-xs rounded-circle"
 													data-bs-toggle="tooltip" data-bs-placement="bottom"
 													title="Jessica Doe"> <img
-													src="../assets/img/team-4.jpg" alt="team6">
+													src="./assets/img/team-4.jpg" alt="team6">
 												</a>
 											</div>
 										</td>
@@ -451,7 +443,7 @@
 										<td>
 											<div class="d-flex px-2 py-1">
 												<div>
-													<img src="../assets/img/small-logos/logo-slack.svg"
+													<img src="./assets/img/small-logos/logo-slack.svg"
 														class="avatar avatar-sm me-3" alt="team7">
 												</div>
 												<div class="d-flex flex-column justify-content-center">
@@ -465,12 +457,12 @@
 													class="avatar avatar-xs rounded-circle"
 													data-bs-toggle="tooltip" data-bs-placement="bottom"
 													title="Romina Hadid"> <img
-													src="../assets/img/team-3.jpg" alt="team8">
+													src="./assets/img/team-3.jpg" alt="team8">
 												</a> <a href="javascript:;"
 													class="avatar avatar-xs rounded-circle"
 													data-bs-toggle="tooltip" data-bs-placement="bottom"
 													title="Jessica Doe"> <img
-													src="../assets/img/team-1.jpg" alt="team9">
+													src="./assets/img/team-1.jpg" alt="team9">
 												</a>
 											</div>
 										</td>
@@ -495,7 +487,7 @@
 										<td>
 											<div class="d-flex px-2 py-1">
 												<div>
-													<img src="../assets/img/small-logos/logo-spotify.svg"
+													<img src="./assets/img/small-logos/logo-spotify.svg"
 														class="avatar avatar-sm me-3" alt="spotify">
 												</div>
 												<div class="d-flex flex-column justify-content-center">
@@ -509,22 +501,22 @@
 													class="avatar avatar-xs rounded-circle"
 													data-bs-toggle="tooltip" data-bs-placement="bottom"
 													title="Ryan Tompson"> <img
-													src="../assets/img/team-4.jpg" alt="user1">
+													src="./assets/img/team-4.jpg" alt="user1">
 												</a> <a href="javascript:;"
 													class="avatar avatar-xs rounded-circle"
 													data-bs-toggle="tooltip" data-bs-placement="bottom"
 													title="Romina Hadid"> <img
-													src="../assets/img/team-3.jpg" alt="user2">
+													src="./assets/img/team-3.jpg" alt="user2">
 												</a> <a href="javascript:;"
 													class="avatar avatar-xs rounded-circle"
 													data-bs-toggle="tooltip" data-bs-placement="bottom"
 													title="Alexander Smith"> <img
-													src="../assets/img/team-4.jpg" alt="user3">
+													src="./assets/img/team-4.jpg" alt="user3">
 												</a> <a href="javascript:;"
 													class="avatar avatar-xs rounded-circle"
 													data-bs-toggle="tooltip" data-bs-placement="bottom"
 													title="Jessica Doe"> <img
-													src="../assets/img/team-1.jpg" alt="user4">
+													src="./assets/img/team-1.jpg" alt="user4">
 												</a>
 											</div>
 										</td>
@@ -549,7 +541,7 @@
 										<td>
 											<div class="d-flex px-2 py-1">
 												<div>
-													<img src="../assets/img/small-logos/logo-jira.svg"
+													<img src="./assets/img/small-logos/logo-jira.svg"
 														class="avatar avatar-sm me-3" alt="jira">
 												</div>
 												<div class="d-flex flex-column justify-content-center">
@@ -563,7 +555,7 @@
 													class="avatar avatar-xs rounded-circle"
 													data-bs-toggle="tooltip" data-bs-placement="bottom"
 													title="Ryan Tompson"> <img
-													src="../assets/img/team-4.jpg" alt="user5">
+													src="./assets/img/team-4.jpg" alt="user5">
 												</a>
 											</div>
 										</td>
@@ -588,7 +580,7 @@
 										<td>
 											<div class="d-flex px-2 py-1">
 												<div>
-													<img src="../assets/img/small-logos/logo-invision.svg"
+													<img src="./assets/img/small-logos/logo-invision.svg"
 														class="avatar avatar-sm me-3" alt="invision">
 												</div>
 												<div class="d-flex flex-column justify-content-center">
@@ -602,12 +594,12 @@
 													class="avatar avatar-xs rounded-circle"
 													data-bs-toggle="tooltip" data-bs-placement="bottom"
 													title="Ryan Tompson"> <img
-													src="../assets/img/team-1.jpg" alt="user6">
+													src="./assets/img/team-1.jpg" alt="user6">
 												</a> <a href="javascript:;"
 													class="avatar avatar-xs rounded-circle"
 													data-bs-toggle="tooltip" data-bs-placement="bottom"
 													title="Jessica Doe"> <img
-													src="../assets/img/team-4.jpg" alt="user7">
+													src="./assets/img/team-4.jpg" alt="user7">
 												</a>
 											</div>
 										</td>
@@ -637,7 +629,7 @@
 			<div class="col-lg-4 col-md-6">
 				<div class="card h-100">
 					<div class="card-header pb-0">
-						<h6>무제</h6>
+						<h6>Orders overview</h6>
 						<p class="text-sm">
 							<i class="fa fa-arrow-up text-success" aria-hidden="true"></i> <span
 								class="font-weight-bold">24%</span> this month
@@ -716,42 +708,10 @@
 				</div>
 			</div>
 		</div>
-		<footer class="footer pt-3  ">
-			<div class="container-fluid">
-				<div class="row align-items-center justify-content-lg-between">
-					<div class="col-lg-6 mb-lg-0 mb-4">
-						<div
-							class="copyright text-center text-sm text-muted text-lg-start">
-							©
-							<script>
-								document.write(new Date().getFullYear())
-							</script>
-							, made with <i class="fa fa-heart"></i> by <a
-								href="https://www.creative-tim.com" class="font-weight-bold"
-								target="_blank">Creative Tim</a> for a better web.
-						</div>
-					</div>
-					<div class="col-lg-6">
-						<ul
-							class="nav nav-footer justify-content-center justify-content-lg-end">
-							<li class="nav-item"><a href="https://www.creative-tim.com"
-								class="nav-link text-muted" target="_blank">Creative Tim</a></li>
-							<li class="nav-item"><a
-								href="https://www.creative-tim.com/presentation"
-								class="nav-link text-muted" target="_blank">About Us</a></li>
-							<li class="nav-item"><a
-								href="https://www.creative-tim.com/blog"
-								class="nav-link text-muted" target="_blank">Blog</a></li>
-							<li class="nav-item"><a
-								href="https://www.creative-tim.com/license"
-								class="nav-link pe-0 text-muted" target="_blank">License</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</footer>
-		</div>
 	</main>
+	
+	<!-------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+	
 	<div class="fixed-plugin">
 		<a class="fixed-plugin-button text-dark position-fixed px-3 py-2">
 			<i class="fa fa-cog py-2"> </i>
@@ -839,18 +799,19 @@
 		</div>
 	</div>
 	<!--   Core JS Files   -->
-	<script src="../assets/js/core/popper.min.js"></script>
-	<script src="../assets/js/core/bootstrap.min.js"></script>
-	<script src="../assets/js/plugins/perfect-scrollbar.min.js"></script>
-	<script src="../assets/js/plugins/smooth-scrollbar.min.js"></script>
-	<script src="../assets/js/plugins/chartjs.min.js"></script>
+
+	<script src="./assets/js/core/popper.min.js"></script>
+	<script src="./assets/js/core/bootstrap.min.js"></script>
+	<script src="./assets/js/plugins/perfect-scrollbar.min.js"></script>
+	<script src="./assets/js/plugins/smooth-scrollbar.min.js"></script>
+	<script src="./assets/js/plugins/chartjs.min.js"></script>
 	<script>
 		var ctx = document.getElementById("chart-bars").getContext("2d");
 
 		new Chart(ctx, {
 			type : "bar",
 			data : {
-				labels : ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct",
+				labels : [ "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct",
 						"Nov", "Dec" ],
 				datasets : [ {
 					label : "Sales",
@@ -1011,7 +972,7 @@
 					},
 				},
 			},
-		});
+		});   
 	</script>
 	<script>
 		var win = navigator.platform.indexOf('Win') > -1;
@@ -1026,7 +987,6 @@
 	<!-- Github buttons -->
 	<script async defer src="https://buttons.github.io/buttons.js"></script>
 	<!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
-	<script src="../assets/js/soft-ui-dashboard.min.js?v=1.0.7"></script>
+	<script src="./assets/js/soft-ui-dashboard.min.js?v=1.0.7"></script>
 </body>
-
 </html>
