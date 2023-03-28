@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.smhrd3.model.CompanyDTO;
 import com.smhrd3.model.ConsumptionDTO;
 import com.smhrd3.model.CreditDTO;
 import com.smhrd3.model.DataDAO;
@@ -27,7 +28,7 @@ public class selectYearJN extends HttpServlet {
 		String temp = request.getParameter("year");
 		int year = Integer.parseInt(temp);
 		
-		request.setAttribute("year", year);
+		request.setAttribute("year", temp);
 		
 		CreditDTO cre_dto = new CreditDTO();
 		cre_dto.setConsumption_yearmonth(temp);
@@ -40,6 +41,9 @@ public class selectYearJN extends HttpServlet {
 		
 		TravelPurposeDTO tp_dto = new TravelPurposeDTO();
 		tp_dto.setPurpose_year(temp);
+		
+		CompanyDTO com_dto = new CompanyDTO();
+		com_dto.setCompany_year(year);
 		
 		// 메소드 실행을 위한 DAO 가져오기
 		DataDAO dao = new DataDAO();
@@ -67,6 +71,9 @@ public class selectYearJN extends HttpServlet {
 		if (tpList != null) {
 			request.setAttribute("tpList", tpList);
 		}
+		
+		// 전라남도 동반유형 키워드
+		
 		
 		// 전라남도 페이지로 데이터들 보내기
 		RequestDispatcher rd = request.getRequestDispatcher("전남.jsp");

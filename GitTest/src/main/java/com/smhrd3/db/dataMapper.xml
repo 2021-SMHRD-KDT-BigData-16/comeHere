@@ -21,4 +21,8 @@
 		select purpose_yearmonth ,sum(travel_count) as sum_count, travel_purpose from tb_travel_purpose where travel_area = '전라남도' and purpose_yearmonth like '%'||#{purpose_year}||'%' and not travel_purpose in ('역사유적', '반려동물', '휴식/힐링', '체험') group by travel_purpose, purpose_yearmonth order by purpose_yearmonth
 	</select>
 	
+	<select id="selectCompanyJN" parameterType="com.smhrd3.model.CompanyDTO" resultType="com.smhrd3.model.CompanyDTO">
+		
+	</select>
+	
 </mapper>	
