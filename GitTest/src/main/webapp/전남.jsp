@@ -341,8 +341,8 @@
 
 				        var options = {
 				          chart: {
-				            title: '',
-				            subtitle: '',
+				            title: ' ',
+				            subtitle: ' ',
 				          }
 				        };
 
