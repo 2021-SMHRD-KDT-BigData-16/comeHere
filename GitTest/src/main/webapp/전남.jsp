@@ -732,18 +732,18 @@
 									data.addColumn('number', '<%=tpList.get(2).getTravel_purpose()%>');
 									data.addColumn('number', '<%=tpList.get(3).getTravel_purpose()%>');
 									data.addRows([ 
-											[ 1, <%=tpList.get(0).getTravel_count()%>, <%=tpList.get(1).getTravel_count()%>, <%=tpList.get(2).getTravel_count()%>, <%=tpList.get(3).getTravel_count()%> ],
-											[ 2, <%=tpList.get(4).getTravel_count()%>, <%=tpList.get(5).getTravel_count()%>, <%=tpList.get(6).getTravel_count()%>, <%=tpList.get(7).getTravel_count()%> ],
-											[ 3, <%=tpList.get(8).getTravel_count()%>, <%=tpList.get(9).getTravel_count()%>, <%=tpList.get(10).getTravel_count()%>, <%=tpList.get(11).getTravel_count()%> ],
-											[ 4, <%=tpList.get(12).getTravel_count()%>, <%=tpList.get(13).getTravel_count()%>, <%=tpList.get(14).getTravel_count()%>, <%=tpList.get(15).getTravel_count()%> ],
-											[ 5, <%=tpList.get(16).getTravel_count()%>, <%=tpList.get(17).getTravel_count()%>, <%=tpList.get(18).getTravel_count()%>, <%=tpList.get(19).getTravel_count()%> ],
-											[ 6, <%=tpList.get(20).getTravel_count()%>, <%=tpList.get(21).getTravel_count()%>, <%=tpList.get(22).getTravel_count()%>, <%=tpList.get(23).getTravel_count()%> ],
-											[ 7, <%=tpList.get(24).getTravel_count()%>, <%=tpList.get(25).getTravel_count()%>, <%=tpList.get(26).getTravel_count()%>, <%=tpList.get(27).getTravel_count()%> ],
-											[ 8, <%=tpList.get(28).getTravel_count()%>, <%=tpList.get(29).getTravel_count()%>, <%=tpList.get(30).getTravel_count()%>, <%=tpList.get(31).getTravel_count()%> ],
-											[ 9, <%=tpList.get(32).getTravel_count()%>, <%=tpList.get(33).getTravel_count()%>, <%=tpList.get(34).getTravel_count()%>, <%=tpList.get(35).getTravel_count()%> ],
-											[ 10, <%=tpList.get(36).getTravel_count()%>, <%=tpList.get(37).getTravel_count()%>, <%=tpList.get(38).getTravel_count()%>, <%=tpList.get(39).getTravel_count()%> ],
-											[ 11, <%=tpList.get(40).getTravel_count()%>, <%=tpList.get(41).getTravel_count()%>, <%=tpList.get(42).getTravel_count()%>, <%=tpList.get(43).getTravel_count()%> ],
-											[ 12, <%=tpList.get(44).getTravel_count()%>, <%=tpList.get(45).getTravel_count()%>, <%=tpList.get(46).getTravel_count()%>, <%=tpList.get(47).getTravel_count()%> ] 
+											[ 1, <%=tpList.get(0).getSum_count()%>, <%=tpList.get(1).getSum_count()%>, <%=tpList.get(2).getSum_count()%>, <%=tpList.get(3).getSum_count()%> ],
+											[ 2, <%=tpList.get(4).getSum_count()%>, <%=tpList.get(5).getSum_count()%>, <%=tpList.get(6).getSum_count()%>, <%=tpList.get(7).getSum_count()%> ],
+											[ 3, <%=tpList.get(8).getSum_count()%>, <%=tpList.get(9).getSum_count()%>, <%=tpList.get(10).getSum_count()%>, <%=tpList.get(11).getSum_count()%> ],
+											[ 4, <%=tpList.get(12).getSum_count()%>, <%=tpList.get(13).getSum_count()%>, <%=tpList.get(14).getSum_count()%>, <%=tpList.get(15).getSum_count()%> ],
+											[ 5, <%=tpList.get(16).getSum_count()%>, <%=tpList.get(17).getSum_count()%>, <%=tpList.get(18).getSum_count()%>, <%=tpList.get(19).getSum_count()%> ],
+											[ 6, <%=tpList.get(20).getSum_count()%>, <%=tpList.get(21).getSum_count()%>, <%=tpList.get(22).getSum_count()%>, <%=tpList.get(23).getSum_count()%> ],
+											[ 7, <%=tpList.get(24).getSum_count()%>, <%=tpList.get(25).getSum_count()%>, <%=tpList.get(26).getSum_count()%>, <%=tpList.get(27).getSum_count()%> ],
+											[ 8, <%=tpList.get(28).getSum_count()%>, <%=tpList.get(29).getSum_count()%>, <%=tpList.get(30).getSum_count()%>, <%=tpList.get(31).getSum_count()%> ],
+											[ 9, <%=tpList.get(32).getSum_count()%>, <%=tpList.get(33).getSum_count()%>, <%=tpList.get(34).getSum_count()%>, <%=tpList.get(35).getSum_count()%> ],
+											[ 10, <%=tpList.get(36).getSum_count()%>, <%=tpList.get(37).getSum_count()%>, <%=tpList.get(38).getSum_count()%>, <%=tpList.get(39).getSum_count()%> ],
+											[ 11, <%=tpList.get(40).getSum_count()%>, <%=tpList.get(41).getSum_count()%>, <%=tpList.get(42).getSum_count()%>, <%=tpList.get(43).getSum_count()%> ],
+											[ 12, <%=tpList.get(44).getSum_count()%>, <%=tpList.get(45).getSum_count()%>, <%=tpList.get(46).getSum_count()%>, <%=tpList.get(47).getSum_count()%> ] 
 											]);
 
 									var options = {
