@@ -34,6 +34,14 @@
 	rel="stylesheet" />
 <link rel="stylesheet" href="./assets/css/CSS.css">
 </head>
+<style>
+	
+p{font-family: 'WandohopeR';}
+h5{font-family:'WandohopeR' ;}
+h3{font-family:'KimjungchulMyungjo-Bold' ;}
+h1{font-family:'KimjungchulMyungjo-Bold';}
+
+</style>
 <body class="g-sidenav-show  bg-gray-100">
 
 	<main

@@ -20,7 +20,7 @@ public class areaJN extends HttpServlet {
 			throws ServletException, IOException {
 		HttpSession session = request.getSession();
 		session.setAttribute("area", "전라남도");
-		RequestDispatcher rd = request.getRequestDispatcher("전남.jsp");
+		RequestDispatcher rd = request.getRequestDispatcher("JunNam.jsp");
 		rd.forward(request, response);
 	}
 
