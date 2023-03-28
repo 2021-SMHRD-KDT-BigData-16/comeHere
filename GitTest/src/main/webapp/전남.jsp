@@ -14,7 +14,7 @@
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link rel="apple-touch-icon" sizes="76x76"
 	href="./assets/img/apple-icon.png">
-<link rel="icon" type="image/png" href="../assets/img/favicon.png">
+<link rel="icon" type="image/png" href="./assets/img/favicon.png">
 <title>Soft UI Dashboard by Creative Tim</title>
 <!--     Fonts and icons     -->
 <link
@@ -235,21 +235,23 @@
 								<canvas id="chart-bars" class="chart-canvas" height="170"></canvas>
 							</div>
 						</div>
-					
+
 						<!-- 관광소비유형 -->
-						<h6 class="ms-2 mt-4 mb-0">관광소비유형(단위:100M원)</h6>
+						<h6 class="ms-2 mt-4 mb-0">관광소비유형(단위:1억원)</h6>
 						<p class="text-sm ms-2">
 							<span class="font-weight-bolder"></span>
 						</p>
 						<div class="container border-radius-lg">
 							<div class="row">
-								<% List<ConsumptionDTO> consumptionList = (List<ConsumptionDTO>) request.getAttribute("consumptionList");%>
+								<%
+								List<ConsumptionDTO> consumptionList = (List<ConsumptionDTO>) request.getAttribute("consumptionList");
+								%>
 								<div class="col-3 py-3 ps-0">
 									<div class="d-flex mb-2">
 										🏢
 										<p class="text-xs mt-1 mb-0 font-weight-bold"><%=consumptionList.get(0).getCunsumption_type1()%></p>
 									</div>
-									<h4 class="font-weight-bolder"><%= consumptionList.get(0).getSum_amount()/100000%></h4>
+									<h4 class="font-weight-bolder"><%=consumptionList.get(0).getSum_amount() / 100000%></h4>
 									<div class="progress w-75">
 										<div class="progress-bar bg-dark w-10" role="progressbar"
 											aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
@@ -260,7 +262,7 @@
 										🛒
 										<p class="text-xs mt-1 mb-0 font-weight-bold"><%=consumptionList.get(1).getCunsumption_type1()%></p>
 									</div>
-									<h4 class="font-weight-bolder"><%=consumptionList.get(1).getSum_amount()/100000%></h4>
+									<h4 class="font-weight-bolder"><%=consumptionList.get(1).getSum_amount() / 100000%></h4>
 									<div class="progress w-75">
 										<div class="progress-bar bg-dark w-50" role="progressbar"
 											aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
@@ -271,7 +273,7 @@
 										🎆
 										<p class="text-xs mt-1 mb-0 font-weight-bold"><%=consumptionList.get(2).getCunsumption_type1()%></p>
 									</div>
-									<h4 class="font-weight-bolder"><%=consumptionList.get(2).getSum_amount()/100000 %></h4>
+									<h4 class="font-weight-bolder"><%=consumptionList.get(2).getSum_amount() / 100000%></h4>
 									<div class="progress w-75">
 										<div class="progress-bar bg-dark w-30" role="progressbar"
 											aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
@@ -282,7 +284,7 @@
 										🍽
 										<p class="text-xs mt-1 mb-0 font-weight-bold"><%=consumptionList.get(3).getCunsumption_type1()%></p>
 									</div>
-									<h4 class="font-weight-bolder"><%=consumptionList.get(3).getSum_amount()/100000%></h4>
+									<h4 class="font-weight-bolder"><%=consumptionList.get(3).getSum_amount() / 100000%></h4>
 									<div class="progress w-75">
 										<div class="progress-bar bg-dark w-90" role="progressbar"
 											aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
@@ -302,7 +304,9 @@
 								class="font-weight-bold">4% more</span> in 2021
 						</p>
 					</div>
-					<%List<SNSDTO> snsList = (List)request.getAttribute("snsList"); %>
+					<%
+					List<SNSDTO> snsList = (List) request.getAttribute("snsList");
+					%>
 					<div class="card-body p-3">
 						<div class="chart">
 							<canvas id="chart-line" class="chart-canvas" height="300"></canvas>
@@ -314,65 +318,54 @@
 
 		<!-- 동반유형 키워드 언급량 -->
 		<div class="row my-4">
-			<div class="col-lg-8 col-md-6 mb-md-0 mb-4">
-				<div class="card">
-					<div class="card-header pb-0">
-						<div class="row">
-							<div class="col-lg-6 col-7">
-								<h3>동반유형 키워드 언급량</h3>
-								<p class="text-sm mb-0">
-									<i class="fa fa-check text-info" aria-hidden="true"></i><span
-										class="font-weight-bold ms-1">주요 국내 소셜미디어,커뮤니티의
-										'동반유형'관련 주요 키워드 순위를 제공</span>
-								</p>
-							</div>
-							<script type="text/javascript"
-								src="https://www.gstatic.com/charts/loader.js"></script>
-							<script type="text/javascript">
-								google.charts.load('current', {
-									'packages' : [ 'corechart' ]
-								});
-								google.charts.setOnLoadCallback(drawChart);
+			<div style="width: 50%; border-radius: 15px;">
 
-								function drawChart() {
-									var data = google.visualization
-											.arrayToDataTable([
-													[ 'Year', 'Sales',
-															'Expenses' ],
-													[ '2013', 1000, 400 ],
-													[ '2014', 1170, 460 ],
-													[ '2015', 660, 1120 ],
-													[ '2016', 1030, 540 ] ]);
+				<div
+					style="background-color: white; width: 100%; border-radius: 15px; height: 930px;">
+					<br>
+					<h3>&nbsp&nbsp&nbsp동반유형 키워드 언급량</h3>
+					<p class="text-sm mb-0">
+						&nbsp;<i class="fa fa-check text-info" aria-hidden="true"></i><span
+							class="font-weight-bold ms-1">&nbsp주요 국내 소셜미디어,커뮤니티의
+							'동반유형'관련 주요 키워드 순위를 제공</span>
+					</p>
 
-									var options = {
-										title : 'Company Performance',
-										hAxis : {
-											title : 'Year',
-											titleTextStyle : {
-												color : '#333'
-											}
-										},
-										vAxis : {
-											minValue : 0
-										}
-									};
-
-									var chart = new google.visualization.AreaChart(
-											document
-													.getElementById('chart_div'));
-									chart.draw(data, options);
-								}
-							</script>
-							<div>
-								<div id="chart_div" style="width: 100%; height: 500px;"></div>
-							</div>
-							<div class="col-lg-6 col-5 my-auto text-end">
-								<div class="dropdown float-lg-end pe-4"></div>
-							</div>
-						</div>
+						<script type="text/javascript"
+							src="https://www.gstatic.com/charts/loader.js"></script>
+						<script type="text/javascript">
+	      				google.charts.load('current', {'packages':['bar']});
+	      				google.charts.setOnLoadCallback(drawChart);
+	
+					      function drawChart() {
+					        var data = google.visualization.arrayToDataTable([
+					          ['Year', 'Sales', 'Expenses', 'Profit'],
+					          ['2014', 1000, 400, 200],
+					          ['2015', 1170, 460, 250],
+					          ['2016', 660, 1120, 300],
+					          ['2017', 1030, 540, 350]
+					        ]);
+					
+					        var options = {
+					          chart: {
+					            title: 'Company Performance',
+					            subtitle: 'Sales, Expenses, and Profit: 2014-2017',
+					          }
+					        };
+					
+					        var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
+					
+					        chart.draw(data, google.charts.Bar.convertOptions(options));
+					      }
+					    </script>
+					<body>
+						<div id="columnchart_material"
+							style="width: 800px; height: 500px;"></div>
+					</body>
+					<div class="col-lg-6 col-5 my-auto text-end">
+						<div class="dropdown float-lg-end pe-4"></div>
 					</div>
 					<div class="card-body px-0 pb-2">
-						<div class="table-responsive">
+						<div class="table-responsive" style="height: 38%;">
 							<table class="table align-items-center mb-0">
 								<thead>
 									<tr>
@@ -403,23 +396,23 @@
 												<a href="javascript:;"
 													class="avatar avatar-xs rounded-circle"
 													data-bs-toggle="tooltip" data-bs-placement="bottom"
-													title="Ryan Tompson"> <img
-													src="./assets/img/team-1.jpg" alt="team1">
+													title="Ryan Tompson"> <img src=./assets/img/team-1.jpg
+													" alt="team1">
 												</a> <a href="javascript:;"
 													class="avatar avatar-xs rounded-circle"
 													data-bs-toggle="tooltip" data-bs-placement="bottom"
-													title="Romina Hadid"> <img
-													src="./assets/img/team-2.jpg" alt="team2">
+													title="Romina Hadid"> <img src=./assets/img/team-2.jpg
+													" alt="team2">
 												</a> <a href="javascript:;"
 													class="avatar avatar-xs rounded-circle"
 													data-bs-toggle="tooltip" data-bs-placement="bottom"
 													title="Alexander Smith"> <img
-													src="./assets/img/team-3.jpg" alt="team3">
+													src=./assets/img/team-3.jpg " alt="team3">
 												</a> <a href="javascript:;"
 													class="avatar avatar-xs rounded-circle"
 													data-bs-toggle="tooltip" data-bs-placement="bottom"
-													title="Jessica Doe"> <img
-													src="./assets/img/team-4.jpg" alt="team4">
+													title="Jessica Doe"> <img src=./assets/img/team-4.jpg
+													" alt="team4">
 												</a>
 											</div>
 										</td>
@@ -453,13 +446,13 @@
 												<a href="javascript:;"
 													class="avatar avatar-xs rounded-circle"
 													data-bs-toggle="tooltip" data-bs-placement="bottom"
-													title="Romina Hadid"> <img
-													src="./assets/img/team-2.jpg" alt="team5">
+													title="Romina Hadid"> <img src=./assets/img/team-2.jpg
+													" alt="team5">
 												</a> <a href="javascript:;"
 													class="avatar avatar-xs rounded-circle"
 													data-bs-toggle="tooltip" data-bs-placement="bottom"
-													title="Jessica Doe"> <img
-													src="./assets/img/team-4.jpg" alt="team6">
+													title="Jessica Doe"> <img src=./assets/img/team-4.jpg
+													" alt="team6">
 												</a>
 											</div>
 										</td>
@@ -493,13 +486,13 @@
 												<a href="javascript:;"
 													class="avatar avatar-xs rounded-circle"
 													data-bs-toggle="tooltip" data-bs-placement="bottom"
-													title="Romina Hadid"> <img
-													src="./assets/img/team-3.jpg" alt="team8">
+													title="Romina Hadid"> <img src=./assets/img/team-3.jpg
+													" alt="team8">
 												</a> <a href="javascript:;"
 													class="avatar avatar-xs rounded-circle"
 													data-bs-toggle="tooltip" data-bs-placement="bottom"
-													title="Jessica Doe"> <img
-													src="./assets/img/team-1.jpg" alt="team9">
+													title="Jessica Doe"> <img src=./assets/img/team-1.jpg
+													" alt="team9">
 												</a>
 											</div>
 										</td>
@@ -533,23 +526,23 @@
 												<a href="javascript:;"
 													class="avatar avatar-xs rounded-circle"
 													data-bs-toggle="tooltip" data-bs-placement="bottom"
-													title="Ryan Tompson"> <img
-													src="./assets/img/team-4.jpg" alt="user1">
+													title="Ryan Tompson"> <img src=./assets/img/team-4.jpg
+													" alt="user1">
 												</a> <a href="javascript:;"
 													class="avatar avatar-xs rounded-circle"
 													data-bs-toggle="tooltip" data-bs-placement="bottom"
-													title="Romina Hadid"> <img
-													src="./assets/img/team-3.jpg" alt="user2">
+													title="Romina Hadid"> <img src=./assets/img/team-3.jpg
+													" alt="user2">
 												</a> <a href="javascript:;"
 													class="avatar avatar-xs rounded-circle"
 													data-bs-toggle="tooltip" data-bs-placement="bottom"
 													title="Alexander Smith"> <img
-													src="./assets/img/team-4.jpg" alt="user3">
+													src=./assets/img/team-4.jpg " alt="user3">
 												</a> <a href="javascript:;"
 													class="avatar avatar-xs rounded-circle"
 													data-bs-toggle="tooltip" data-bs-placement="bottom"
-													title="Jessica Doe"> <img
-													src="./assets/img/team-1.jpg" alt="user4">
+													title="Jessica Doe"> <img src=./assets/img/team-1.jpg
+													" alt="user4">
 												</a>
 											</div>
 										</td>
@@ -583,8 +576,8 @@
 												<a href="javascript:;"
 													class="avatar avatar-xs rounded-circle"
 													data-bs-toggle="tooltip" data-bs-placement="bottom"
-													title="Ryan Tompson"> <img
-													src="./assets/img/team-4.jpg" alt="user5">
+													title="Ryan Tompson"> <img src=./assets/img/team-4.jpg
+													" alt="user5">
 												</a>
 											</div>
 										</td>
@@ -606,45 +599,8 @@
 										</td>
 									</tr>
 									<tr>
-										<td>
-											<div class="d-flex px-2 py-1">
 
-												<div class="d-flex flex-column justify-content-center">
-													<h6 class="mb-0 text-sm">6</h6>
-												</div>
-											</div>
-										</td>
-										<td>
-											<div class="avatar-group mt-2">
-												<a href="javascript:;"
-													class="avatar avatar-xs rounded-circle"
-													data-bs-toggle="tooltip" data-bs-placement="bottom"
-													title="Ryan Tompson"> <img
-													src="./assets/img/team-1.jpg" alt="user6">
-												</a> <a href="javascript:;"
-													class="avatar avatar-xs rounded-circle"
-													data-bs-toggle="tooltip" data-bs-placement="bottom"
-													title="Jessica Doe"> <img
-													src="./assets/img/team-4.jpg" alt="user7">
-												</a>
-											</div>
-										</td>
-										<td class="align-middle text-center text-sm"><span
-											class="text-xs font-weight-bold"> $2,000 </span></td>
-										<td class="align-middle">
-											<div class="progress-wrapper w-75 mx-auto">
-												<div class="progress-info">
-													<div class="progress-percentage">
-														<span class="text-xs font-weight-bold">40%</span>
-													</div>
-												</div>
-												<div class="progress">
-													<div class="progress-bar bg-gradient-info w-40"
-														role="progressbar" aria-valuenow="40" aria-valuemin="0"
-														aria-valuemax="40"></div>
-												</div>
-											</div>
-										</td>
+
 									</tr>
 								</tbody>
 							</table>
@@ -655,25 +611,27 @@
 
 			<!-- 업종별 신용카드 소비액 추이 -->
 			<div class="col-lg-4 col-md-6">
-				<div class="card h-100">
-					<div class="card-header pb-0">
-						<h4>업종별 신용카드 소비액 추이_운송업제외(단위:1000원)</h4>
-						<script type="text/javascript"
-							src="https://www.gstatic.com/charts/loader.js"></script>
-						<%
-						List<CreditDTO> creditList = (List) request.getAttribute("creditList");
-						%>
-						<%
-						if (creditList != null) {
-						%>
-						<%
-						String type1 = creditList.get(0).consumption_type;
-						String type2 = creditList.get(1).consumption_type;
-						String type3 = creditList.get(2).consumption_type;
-						String type4 = creditList.get(3).consumption_type;
-						String type5 = creditList.get(4).consumption_type;
-						%>
-						<script type="text/javascript">
+				<%
+				List<CreditDTO> creditList = (List) request.getAttribute("creditList");
+				%>
+				<div
+					style="background-color: white; width: 920px; border-radius: 15px; height: 930px;">
+					<br>
+					<h4>&nbsp&nbsp&nbsp업종별 신용카드 소비액 추이_운송업제외(단위:1000원)</h4>
+					<script type="text/javascript"
+						src="https://www.gstatic.com/charts/loader.js"></script>
+
+					<%
+					if (creditList != null) {
+					%>
+					<%
+					String type1 = creditList.get(0).consumption_type;
+					String type2 = creditList.get(1).consumption_type;
+					String type3 = creditList.get(2).consumption_type;
+					String type4 = creditList.get(3).consumption_type;
+					String type5 = creditList.get(4).consumption_type;
+					%>
+					<script type="text/javascript">
 							google.charts.load('current', {
 								'packages' : [ 'corechart' ]
 							});
@@ -704,20 +662,22 @@
 							}
 						</script>
 
-						<div id="piechart"></div>
+					<div id="piechart"></div>
+					<%
+					}
+					%>
+
+
+					<!-- 여행유형/트렌드 -->
+					<div>
+						<h3>&nbsp&nbsp&nbsp여행유형/트렌드</h3>
+						<script type="text/javascript"
+							src="https://www.gstatic.com/charts/loader.js"></script>
 						<%
-						}
+						List<TravelPurposeDTO> tpList = (List) request.getAttribute("tpList");
+						if (tpList != null) {
 						%>
-
-
-						<!-- 여행유형/트렌드 -->
-						<div>
-							<h3>여행유형/트렌드</h3>
-							<script type="text/javascript"
-								src="https://www.gstatic.com/charts/loader.js"></script>
-							<%List<TravelPurposeDTO> tpList = (List)request.getAttribute("tpList");
-							if (tpList != null) {%>
-							<script type="text/javascript">
+						<script type="text/javascript">
 								google.charts.load('current', {
 									'packages' : [ 'line' ]
 								});
@@ -726,7 +686,7 @@
 								function drawChart() {
 
 									var data = new google.visualization.DataTable();
-									data.addColumn('number', '언급량');
+									data.addColumn('number', '월별');
 									data.addColumn('number', '<%=tpList.get(0).getTravel_purpose()%>');
 									data.addColumn('number', '<%=tpList.get(1).getTravel_purpose()%>');
 									data.addColumn('number', '<%=tpList.get(2).getTravel_purpose()%>');
@@ -751,8 +711,8 @@
 											title : '',
 											subtitle : ''
 										},
-										width : 500,
-										height : 500,
+										width : 900,
+										height : 390,
 										axes : {
 											x : {
 												0 : {
@@ -769,15 +729,17 @@
 											.convertOptions(options));
 								}
 							</script>
-							<%} %>
-							<div>
-								<div id="line_top_x"></div>
-							</div>
-
+						<%
+						}
+						%>
+						<div>
+							<div id="line_top_x"></div>
 						</div>
-					</div>
 
+					</div>
 				</div>
+
+
 
 			</div>
 	</main>
@@ -884,69 +846,76 @@
 				labels : [ "<%=consumptionList.get(0).getCunsumption_type1()%>",
 						   "<%=consumptionList.get(1).getCunsumption_type1()%>",
 						   "<%=consumptionList.get(2).getCunsumption_type1()%>",
-						   "<%=consumptionList.get(3).getCunsumption_type1()%>"],
-				datasets : [ {
-					label : "Sales",
-					tension : 0.4,
-					borderWidth : 0,
-					borderRadius : 4,
-					borderSkipped : false,
-					backgroundColor : "#fff",
-					data : [ <%= consumptionList.get(0).getSum_amount()/100000%>,
-							 <%= consumptionList.get(1).getSum_amount()/100000%>,
-							 <%= consumptionList.get(2).getSum_amount()/100000%>,
-							 <%= consumptionList.get(3).getSum_amount()/100000%>],
-					maxBarThickness : 6
-				}, ],
-			},
-			options : {
-				responsive : true,
-				maintainAspectRatio : false,
-				plugins : {
-					legend : {
-						display : false,
-					}
-				},
-				interaction : {
-					intersect : false,
-					mode : 'index',
-				},
-				scales : {
-					y : {
-						grid : {
-							drawBorder : false,
-							display : false,
-							drawOnChartArea : false,
-							drawTicks : false,
+						   "<%=consumptionList.get(3).getCunsumption_type1()%>
+		" ],
+						datasets : [
+								{
+									label : "Sales",
+									tension : 0.4,
+									borderWidth : 0,
+									borderRadius : 4,
+									borderSkipped : false,
+									backgroundColor : "#fff",
+									data : [
+	<%=consumptionList.get(0).getSum_amount() / 100000%>
+		,
+	<%=consumptionList.get(1).getSum_amount() / 100000%>
+		,
+	<%=consumptionList.get(2).getSum_amount() / 100000%>
+		,
+	<%=consumptionList.get(3).getSum_amount() / 100000%>
+		],
+									maxBarThickness : 6
+								}, ],
+					},
+					options : {
+						responsive : true,
+						maintainAspectRatio : false,
+						plugins : {
+							legend : {
+								display : false,
+							}
 						},
-						ticks : {
-							suggestedMin : 0,
-							suggestedMax : 500,
-							beginAtZero : true,
-							padding : 15,
-							font : {
-								size : 14,
-								family : "Open Sans",
-								style : 'normal',
-								lineHeight : 2
+						interaction : {
+							intersect : false,
+							mode : 'index',
+						},
+						scales : {
+							y : {
+								grid : {
+									drawBorder : false,
+									display : false,
+									drawOnChartArea : false,
+									drawTicks : false,
+								},
+								ticks : {
+									suggestedMin : 0,
+									suggestedMax : 500,
+									beginAtZero : true,
+									padding : 15,
+									font : {
+										size : 14,
+										family : "Open Sans",
+										style : 'normal',
+										lineHeight : 2
+									},
+									color : "#fff"
+								},
 							},
-							color : "#fff"
+							x : {
+								grid : {
+									drawBorder : false,
+									display : false,
+									drawOnChartArea : false,
+									drawTicks : false
+								},
+								ticks : {
+									display : false
+								},
+							},
 						},
 					},
-					x : {
-						grid : {
-							drawBorder : false,
-							display : false,
-							drawOnChartArea : false,
-							drawTicks : false
-						},
-						ticks : {
-							display : false
-						},
-					},
-				},
-			},
-		});
+				});
 		var ctx2 = document.getElementById("chart-line").getContext("2d");
 
 		var gradientStroke1 = ctx2.createLinearGradient(0, 230, 0, 50);
@@ -960,35 +929,49 @@
 		gradientStroke2.addColorStop(1, 'rgba(20,23,39,0.2)');
 		gradientStroke2.addColorStop(0.2, 'rgba(72,72,176,0.0)');
 		gradientStroke2.addColorStop(0, 'rgba(20,23,39,0)'); //purple colors
-		
+
 		new Chart(ctx2, {
 			type : "line",
 			data : {
 				labels : [ "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul",
 						"Aug", "Sep", "Oct", "Nov", "Dec" ],
-				datasets : [ {
-					label : "Mobile apps",
-					tension : 0.4,
-					borderWidth : 0,
-					pointRadius : 0,
-					borderColor : "#cb0c9f",
-					borderWidth : 3,
-					backgroundColor : gradientStroke1,
-					fill : true,
-					data : [ <%=snsList.get(0).getSns_search()%>,
-							 <%=snsList.get(1).getSns_search()%>,
-							 <%=snsList.get(2).getSns_search()%>,
-							 <%=snsList.get(3).getSns_search()%>,
-							 <%=snsList.get(4).getSns_search()%>,
-							 <%=snsList.get(5).getSns_search()%>,
-							 <%=snsList.get(6).getSns_search()%>,
-							 <%=snsList.get(7).getSns_search()%>,
-							 <%=snsList.get(8).getSns_search()%>,
-							 <%=snsList.get(9).getSns_search()%>,
-							 <%=snsList.get(10).getSns_search()%>,
-							 <%=snsList.get(11).getSns_search()%> ],
-					maxBarThickness : 6
-				}, ],
+				datasets : [
+						{
+							label : "Mobile apps",
+							tension : 0.4,
+							borderWidth : 0,
+							pointRadius : 0,
+							borderColor : "#cb0c9f",
+							borderWidth : 3,
+							backgroundColor : gradientStroke1,
+							fill : true,
+							data : [
+	<%=snsList.get(0).getSns_search()%>
+		,
+	<%=snsList.get(1).getSns_search()%>
+		,
+	<%=snsList.get(2).getSns_search()%>
+		,
+	<%=snsList.get(3).getSns_search()%>
+		,
+	<%=snsList.get(4).getSns_search()%>
+		,
+	<%=snsList.get(5).getSns_search()%>
+		,
+	<%=snsList.get(6).getSns_search()%>
+		,
+	<%=snsList.get(7).getSns_search()%>
+		,
+	<%=snsList.get(8).getSns_search()%>
+		,
+	<%=snsList.get(9).getSns_search()%>
+		,
+	<%=snsList.get(10).getSns_search()%>
+		,
+	<%=snsList.get(11).getSns_search()%>
+		],
+							maxBarThickness : 6
+						}, ],
 			},
 			options : {
 				responsive : true,
