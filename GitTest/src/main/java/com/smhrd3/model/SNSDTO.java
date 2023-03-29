@@ -6,8 +6,11 @@ public class SNSDTO {
 
     // 기준 연월 
     public String sns_yearmonth;
+    
+    // 선택 연도
+    public String sns_year;
 
-    // 검색량 
+	// 검색량 
     public int sns_search;
 
     // 지역 
@@ -54,6 +57,14 @@ public class SNSDTO {
 
 	public void setAdmin_id(String admin_id) {
 		this.admin_id = admin_id;
+	}
+
+    public String getSns_year() {
+		return sns_year;
+	}
+
+	public void setSns_year(String sns_year) {
+		this.sns_year = sns_year;
 	}
 
 	public SNSDTO(int sns_seq, String sns_yearmonth, int sns_search, String sns_are, String admin_id) {

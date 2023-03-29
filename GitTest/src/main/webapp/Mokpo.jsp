@@ -1,5 +1,13 @@
+<%@page import="com.smhrd3.model.CompanyDTO"%>
+<%@page import="com.smhrd3.model.TravelPurposeDTO"%>
+<%@page import="com.smhrd3.model.SNSDTO"%>
+<%@page import="com.smhrd3.model.CreditDTO"%>
+<%@page import="com.smhrd3.model.ConsumptionDTO"%>
+<%@page import="java.util.List"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,24 +15,34 @@
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link rel="apple-touch-icon" sizes="76x76"
-	href="../assets/img/apple-icon.png">
-<link rel="icon" type="image/png" href="../assets/img/favicon.png">
+	href="./assets/img/apple-icon.png">
+<link rel="icon" type="image/png" href="./assets/img/favicon.png">
 <title>Soft UI Dashboard by Creative Tim</title>
 <!--     Fonts and icons     -->
 <link
 	href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700"
 	rel="stylesheet" />
 <!-- Nucleo Icons -->
-<link href="../assets/css/nucleo-icons.css" rel="stylesheet" />
-<link href="../assets/css/nucleo-svg.css" rel="stylesheet" />
+<link href="./assets/css/nucleo-icons.css" rel="stylesheet" />
+<link href="./assets/css/nucleo-svg.css" rel="stylesheet" />
 <!-- Font Awesome Icons -->
 <script src="https://kit.fontawesome.com/42d5adcbca.js"
 	crossorigin="anonymous"></script>
-<link href="../assets/css/nucleo-svg.css" rel="stylesheet" />
+<link href="./assets/css/nucleo-svg.css" rel="stylesheet" />
 <!-- CSS Files -->
-<link id="pagestyle" href="../assets/css/soft-ui-dashboard.css?v=1.0.7"
+<link id="pagestyle" href="./assets/css/soft-ui-dashboard.css?v=1.0.7"
 	rel="stylesheet" />
+<link rel="stylesheet" href="./assets/css/CSS.css">
 </head>
+<style>
+	
+p{font-family: 'WandohopeR';}
+h1{font-family:'KimjungchulMyungjo-Bold';}
+h3{font-family:'KimjungchulMyungjo-Bold' ;}
+h4{font-family:'WandohopeR' ;}
+h5{font-family:'WandohopeR' ;}
+
+</style>
 <body class="g-sidenav-show  bg-gray-100">
 
 	<main
@@ -37,6 +55,7 @@
 				<div class="row">
 					<div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
 						<div class="card">
+						<a href="areaJN">
 							<div class="card-body p-3">
 								<div class="row">
 									<div class="col-8">
@@ -49,15 +68,16 @@
 										</div>
 									</div>
 									<div class="col-4 text-end">
-										<img src="../메인페이지 목업/assets/css/images/전라남도.jpg">
+										<img src="./assets2/css/images/전라남도.jpg">
 									</div>
 								</div>
 							</div>
+							</a>
 						</div>
 					</div>
 					<div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
 						<div class="card">
-							<a href="./광주.jsp">
+							<a href="areaGJ">
 								<div class="card-body p-3">
 									<div class="row">
 										<div class="col-8">
@@ -70,7 +90,7 @@
 											</div>
 										</div>
 										<div class="col-4 text-end">
-											<img src="../메인페이지 목업/assets/css/images/광주광역시.png">
+											<img src="./assets2/css/images/광주광역시.png">
 										</div>
 									</div>
 								</div>
@@ -79,7 +99,7 @@
 					</div>
 					<div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
 						<div class="card">
-							<a href="./담양.jsp">
+							<a href="areaDY">
 								<div class="card-body p-3">
 									<div class="row">
 										<div class="col-8">
@@ -92,7 +112,7 @@
 											</div>
 										</div>
 										<div class="col-4 text-end">
-											<img src="../메인페이지 목업/assets/css/images/담양.jpg">
+											<img src="./assets2/css/images/담양.jpg">
 										</div>
 									</div>
 								</div>
@@ -101,7 +121,7 @@
 					</div>
 					<div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
 						<div class="card">
-							<a href="./순천.jsp">
+							<a href="areaSC">
 								<div class="card-body p-3">
 									<div class="row">
 										<div class="col-8">
@@ -114,7 +134,7 @@
 											</div>
 										</div>
 										<div class="col-4 text-end">
-											<img src="../메인페이지 목업/assets/css/images/순천.jpg">
+											<img src="./assets2/css/images/순천.jpg">
 										</div>
 									</div>
 								</div>
@@ -123,7 +143,7 @@
 					</div>
 					<div class="col-xl-3 col-sm-6">
 						<div class="card">
-							<a href="./여수.jsp">
+							<a href="areaYS">
 								<div class="card-body p-3">
 									<div class="row">
 										<div class="col-8">
@@ -136,7 +156,7 @@
 											</div>
 										</div>
 										<div class="col-4 text-end">
-											<img src="../메인페이지 목업/assets/css/images/여수.jpg">
+											<img src="./assets2/css/images/여수.jpg">
 										</div>
 									</div>
 								</div>
@@ -145,10 +165,28 @@
 					</div>
 				</div>
 		</nav>
+
 		<div class="container-fluid py-1 px-3">
 			<h3 align="center">항구의 도시</h3>
 			<h1 align="center">목포</h1>
+			<%String year = (String)request.getAttribute("year");
+			if (year == null) {%>
+				<h4 style="position: relative; margin-left: 80%;">연도를 선택해주세요</h4>
+			<% } else {%>
+				<h4 style="position: relative; margin-left: 80%;">선택한 연도 : <%=year %></h4>
+			<%} %>
+			<form action="selectYear">
+				<h4>연도 선택 :</h4>
+				<select id="selectyear" name="year">
+					<option value="2018">2018</option>
+					<option value="2019">2019</option>
+					<option value="2020">2020</option>
+					<option value="2021">2021</option>
+					<option value="2022">2022</option>
+				</select> <input type="submit" value="선택">
+			</form>
 		</div>
+		<% if (year != null) { %>
 		<div class="row mt-4">
 			<div class="col-lg-7 mb-lg-0 mb-4">
 				<div class="card">
@@ -169,13 +207,13 @@
 							</div>
 							<div class="col-lg-5 ms-auto text-center mt-5 mt-lg-0">
 								<div class="bg-gradient-primary border-radius-lg h-100">
-									<img src="../assets/img/shapes/waves-white.svg"
+									<img src="./assets/img/shapes/waves-white.svg"
 										class="position-absolute h-100 w-50 top-0 d-lg-block d-none"
 										alt="waves">
 									<div
 										class="position-relative d-flex align-items-center justify-content-center h-100">
 										<img class="w-100 position-relative z-index-2 pt-4"
-											src="../assets/img/illustrations/rocket-white.png"
+											src="./assets/img/illustrations/rocket-white.png"
 											alt="rocket">
 									</div>
 								</div>
@@ -188,7 +226,7 @@
 				<div class="card h-100 p-3">
 					<div
 						class="overflow-hidden position-relative border-radius-lg bg-cover h-100"
-						style="background-image: url('../assets/img/ivancik.jpg');">
+						style="background-image: url('./assets/img/ivancik.jpg');">
 						<span class="mask bg-gradient-dark"></span>
 						<div
 							class="card-body position-relative z-index-1 d-flex flex-column h-100 p-3">
@@ -216,40 +254,43 @@
 								<canvas id="chart-bars" class="chart-canvas" height="170"></canvas>
 							</div>
 						</div>
-						<h6 class="ms-2 mt-4 mb-0">Active Users</h6>
+
+						<!-- 관광소비유형 -->
+						<h3 class="ms-2 mt-4 mb-0">관광소비유형(단위:1억)</h3>
 						<p class="text-sm ms-2">
-							(<span class="font-weight-bolder">+23%</span>) than last week
+							<span class="font-weight-bolder"></span>
 						</p>
 						<div class="container border-radius-lg">
 							<div class="row">
+								<% List<ConsumptionDTO> consumptionList = (List<ConsumptionDTO>) request.getAttribute("consumptionList");%>
 								<div class="col-3 py-3 ps-0">
 									<div class="d-flex mb-2">
-										🍽
-										<p class="text-xs mt-1 mb-0 font-weight-bold">Users</p>
+										🏢
+										<p class="text-xs mt-1 mb-0 font-weight-bold"><%=consumptionList.get(0).getCunsumption_type1()%></p>
 									</div>
-									<h4 class="font-weight-bolder">36K</h4>
+									<h4 class="font-weight-bolder"><%= consumptionList.get(0).getSum_amount()/100000%></h4>
 									<div class="progress w-75">
-										<div class="progress-bar bg-dark w-60" role="progressbar"
-											aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+										<div class="progress-bar bg-dark w-10" role="progressbar"
+											aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
 									</div>
 								</div>
 								<div class="col-3 py-3 ps-0">
 									<div class="d-flex mb-2">
 										🛒
-										<p class="text-xs mt-1 mb-0 font-weight-bold">Clicks</p>
+										<p class="text-xs mt-1 mb-0 font-weight-bold"><%=consumptionList.get(1).getCunsumption_type1()%></p>
 									</div>
-									<h4 class="font-weight-bolder">2m</h4>
+									<h4 class="font-weight-bolder"><%=consumptionList.get(1).getSum_amount()/100000%></h4>
 									<div class="progress w-75">
-										<div class="progress-bar bg-dark w-90" role="progressbar"
-											aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+										<div class="progress-bar bg-dark w-50" role="progressbar"
+											aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
 									</div>
 								</div>
 								<div class="col-3 py-3 ps-0">
 									<div class="d-flex mb-2">
 										🎆
-										<p class="text-xs mt-1 mb-0 font-weight-bold">Sales</p>
+										<p class="text-xs mt-1 mb-0 font-weight-bold"><%=consumptionList.get(2).getCunsumption_type1()%></p>
 									</div>
-									<h4 class="font-weight-bolder">435$</h4>
+									<h4 class="font-weight-bolder"><%=consumptionList.get(2).getSum_amount()/100000 %></h4>
 									<div class="progress w-75">
 										<div class="progress-bar bg-dark w-30" role="progressbar"
 											aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
@@ -257,13 +298,13 @@
 								</div>
 								<div class="col-3 py-3 ps-0">
 									<div class="d-flex mb-2">
-										🏢
-										<p class="text-xs mt-1 mb-0 font-weight-bold">Items</p>
+										🍽
+										<p class="text-xs mt-1 mb-0 font-weight-bold"><%=consumptionList.get(3).getCunsumption_type1()%></p>
 									</div>
-									<h4 class="font-weight-bolder">43</h4>
+									<h4 class="font-weight-bolder"><%=consumptionList.get(3).getSum_amount()/100000%></h4>
 									<div class="progress w-75">
-										<div class="progress-bar bg-dark w-50" role="progressbar"
-											aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+										<div class="progress-bar bg-dark w-90" role="progressbar"
+											aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
 									</div>
 								</div>
 							</div>
@@ -274,78 +315,98 @@
 			<div class="col-lg-7">
 				<div class="card z-index-2">
 					<div class="card-header pb-0">
-						<h6>Sales overview</h6>
+						<h3>SNS 언급량</h3>
 						<p class="text-sm">
 							<i class="fa fa-arrow-up text-success"></i> <span
-								class="font-weight-bold">4% more</span> in 2021
+								class="font-weight-bold">&nbsp&nbsp주요 국내 소셜미디어, 커뮤니티의 해당지역에 대한 관광 관련 언급량을 제공</span>
 						</p>
 					</div>
+					<%List<SNSDTO> snsList = (List)request.getAttribute("snsList"); %>
 					<div class="card-body p-3">
 						<div class="chart">
-							<canvas id="chart-line" class="chart-canvas" height="300"></canvas>
+							<canvas id="chart-line" class="chart-canvas" height="275"></canvas>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+
+
+		<!-- 동반유형 키워드 언급량 -->
 		<div class="row my-4">
-			<div class="col-lg-8 col-md-6 mb-md-0 mb-4">
-				<div class="card">
-					<div class="card-header pb-0">
-						<div class="row">
-							<div class="col-lg-6 col-7">
-								<h6>Projects</h6>
-								<p class="text-sm mb-0">
-									<i class="fa fa-check text-info" aria-hidden="true"></i> <span
-										class="font-weight-bold ms-1">30 done</span> this month
-								</p>
-							</div>
-							<div class="col-lg-6 col-5 my-auto text-end">
-								<div class="dropdown float-lg-end pe-4">
-									<a class="cursor-pointer" id="dropdownTable"
-										data-bs-toggle="dropdown" aria-expanded="false"> <i
-										class="fa fa-ellipsis-v text-secondary"></i>
-									</a>
-									<ul class="dropdown-menu px-2 py-3 ms-sm-n4 ms-n5"
-										aria-labelledby="dropdownTable">
-										<li><a class="dropdown-item border-radius-md"
-											href="javascript:;">Action</a></li>
-										<li><a class="dropdown-item border-radius-md"
-											href="javascript:;">Another action</a></li>
-										<li><a class="dropdown-item border-radius-md"
-											href="javascript:;">Something else here</a></li>
-									</ul>
-								</div>
-							</div>
-						</div>
+			<div style="width: 50%; border-radius: 15px;">
+
+				<div style="background-color: white; width: 100%; border-radius: 15px; height: 950px;">
+					<br>
+					<h3>&nbsp&nbsp동반유형 키워드 순위</h3>
+					<p class="text-sm mb-0">
+						&nbsp&nbsp&nbsp&nbsp<i class="fa fa-check text-info" aria-hidden="true"></i>
+						<span class="font-weight-bold ms-1">&nbsp주요 국내 소셜미디어,커뮤니티의 '동반유형' 관련 주요 키워드 순위를 제공</span>
+					</p>
+					<p></p><p></p><p></p>
+					<%List<CompanyDTO> comList = (List)request.getAttribute("comList");
+					if (comList != null) {%>
+					<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+					<script type="text/javascript">
+					  google.charts.load('current', {'packages':['bar']});
+				      google.charts.setOnLoadCallback(drawChart);
+
+				      function drawChart() {
+				        var data = google.visualization.arrayToDataTable([
+				          ['동반유형', '언급 건수'],
+				          ['<%=comList.get(0).getTravel_company()%>', <%=comList.get(0).getSum_count()%>],
+				          ['<%=comList.get(1).getTravel_company()%>', <%=comList.get(1).getSum_count()%>],
+				          ['<%=comList.get(2).getTravel_company()%>', <%=comList.get(2).getSum_count()%>],
+				          ['<%=comList.get(3).getTravel_company()%>', <%=comList.get(3).getSum_count()%>],
+				          ['<%=comList.get(4).getTravel_company()%>', <%=comList.get(4).getSum_count()%>],
+				          ['<%=comList.get(5).getTravel_company()%>', <%=comList.get(5).getSum_count()%>],
+				          ['<%=comList.get(6).getTravel_company()%>', <%=comList.get(6).getSum_count()%>]
+				        ]);
+
+				        var options = {
+				          chart: {
+				            title: '',
+				            subtitle: '',
+				          }
+				        };
+
+				        var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
+
+				        chart.draw(data, google.charts.Bar.convertOptions(options));
+				      }
+					    </script>
+					<div>
+						<div id="columnchart_material" style="width: 900px; height: 450px; margin-left: 30px"></div>
+					</div>	
+					
+					<!-- 동반유형 키워드 언급량 -->
+					<div class="col-lg-6 col-5 my-auto text-end">
+						<div class="dropdown float-lg-end pe-4"></div>
 					</div>
 					<div class="card-body px-0 pb-2">
-						<div class="table-responsive">
+						<div class="table-responsive" style="height: 38%;">
 							<table class="table align-items-center mb-0">
 								<thead>
 									<tr>
 										<th
-											class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Companies</th>
+											class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"><h6>순위</h6></th>
 										<th
-											class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Members</th>
+											class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2"><h6>분류</h6></th>
 										<th
-											class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Budget
+											class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"><h6>관련키워드</h6>
 										</th>
 										<th
 											class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-											Completion</th>
+											<h6>언급량</h6>
+										</th>
 									</tr>
 								</thead>
 								<tbody>
 									<tr>
 										<td>
 											<div class="d-flex px-2 py-1">
-												<div>
-													<img src="../assets/img/small-logos/logo-xd.svg"
-														class="avatar avatar-sm me-3" alt="xd">
-												</div>
 												<div class="d-flex flex-column justify-content-center">
-													<h6 class="mb-0 text-sm">Soft UI XD Version</h6>
+													<h6 class="mb-0 text-sm">1</h6>
 												</div>
 											</div>
 										</td>
@@ -354,38 +415,38 @@
 												<a href="javascript:;"
 													class="avatar avatar-xs rounded-circle"
 													data-bs-toggle="tooltip" data-bs-placement="bottom"
-													title="Ryan Tompson"> <img
-													src="../assets/img/team-1.jpg" alt="team1">
+													title="Ryan Tompson"> <img src=./assets/img/team-1.jpg
+													" alt="team1">
 												</a> <a href="javascript:;"
 													class="avatar avatar-xs rounded-circle"
 													data-bs-toggle="tooltip" data-bs-placement="bottom"
-													title="Romina Hadid"> <img
-													src="../assets/img/team-2.jpg" alt="team2">
+													title="Romina Hadid"> <img src=./assets/img/team-2.jpg
+													" alt="team2">
 												</a> <a href="javascript:;"
 													class="avatar avatar-xs rounded-circle"
 													data-bs-toggle="tooltip" data-bs-placement="bottom"
 													title="Alexander Smith"> <img
-													src="../assets/img/team-3.jpg" alt="team3">
+													src=./assets/img/team-3.jpg " alt="team3">
 												</a> <a href="javascript:;"
 													class="avatar avatar-xs rounded-circle"
 													data-bs-toggle="tooltip" data-bs-placement="bottom"
-													title="Jessica Doe"> <img
-													src="../assets/img/team-4.jpg" alt="team4">
+													title="Jessica Doe"> <img src=./assets/img/team-4.jpg
+													" alt="team4">
 												</a>
 											</div>
 										</td>
 										<td class="align-middle text-center text-sm"><span
-											class="text-xs font-weight-bold"> $14,000 </span></td>
+											class="text-xs font-weight-bold"> <%=comList.get(0).getTravel_company()%> </span></td>
 										<td class="align-middle">
 											<div class="progress-wrapper w-75 mx-auto">
 												<div class="progress-info">
 													<div class="progress-percentage">
-														<span class="text-xs font-weight-bold">60%</span>
+														<span class="text-xs font-weight-bold"><%=comList.get(0).getSum_count()%></span>
 													</div>
 												</div>
 												<div class="progress">
-													<div class="progress-bar bg-gradient-info w-60"
-														role="progressbar" aria-valuenow="60" aria-valuemin="0"
+													<div class="progress-bar bg-gradient-success w-100"
+														role="progressbar" aria-valuenow="100" aria-valuemin="0"
 														aria-valuemax="100"></div>
 												</div>
 											</div>
@@ -394,12 +455,8 @@
 									<tr>
 										<td>
 											<div class="d-flex px-2 py-1">
-												<div>
-													<img src="../assets/img/small-logos/logo-atlassian.svg"
-														class="avatar avatar-sm me-3" alt="atlassian">
-												</div>
 												<div class="d-flex flex-column justify-content-center">
-													<h6 class="mb-0 text-sm">Add Progress Track</h6>
+													<h6 class="mb-0 text-sm">2</h6>
 												</div>
 											</div>
 										</td>
@@ -408,27 +465,27 @@
 												<a href="javascript:;"
 													class="avatar avatar-xs rounded-circle"
 													data-bs-toggle="tooltip" data-bs-placement="bottom"
-													title="Romina Hadid"> <img
-													src="../assets/img/team-2.jpg" alt="team5">
+													title="Romina Hadid"> <img src=./assets/img/team-2.jpg
+													" alt="team5">
 												</a> <a href="javascript:;"
 													class="avatar avatar-xs rounded-circle"
 													data-bs-toggle="tooltip" data-bs-placement="bottom"
-													title="Jessica Doe"> <img
-													src="../assets/img/team-4.jpg" alt="team6">
+													title="Jessica Doe"> <img src=./assets/img/team-4.jpg
+													" alt="team6">
 												</a>
 											</div>
 										</td>
 										<td class="align-middle text-center text-sm"><span
-											class="text-xs font-weight-bold"> $3,000 </span></td>
+											class="text-xs font-weight-bold"> <%=comList.get(1).getTravel_company() %> </span></td>
 										<td class="align-middle">
 											<div class="progress-wrapper w-75 mx-auto">
 												<div class="progress-info">
 													<div class="progress-percentage">
-														<span class="text-xs font-weight-bold">10%</span>
+														<span class="text-xs font-weight-bold"><%=comList.get(1).getSum_count()%></span>
 													</div>
 												</div>
 												<div class="progress">
-													<div class="progress-bar bg-gradient-info w-10"
+													<div class="progress-bar bg-gradient-info w-40"
 														role="progressbar" aria-valuenow="10" aria-valuemin="0"
 														aria-valuemax="100"></div>
 												</div>
@@ -438,12 +495,8 @@
 									<tr>
 										<td>
 											<div class="d-flex px-2 py-1">
-												<div>
-													<img src="../assets/img/small-logos/logo-slack.svg"
-														class="avatar avatar-sm me-3" alt="team7">
-												</div>
 												<div class="d-flex flex-column justify-content-center">
-													<h6 class="mb-0 text-sm">Fix Platform Errors</h6>
+													<h6 class="mb-0 text-sm">3</h6>
 												</div>
 											</div>
 										</td>
@@ -452,28 +505,28 @@
 												<a href="javascript:;"
 													class="avatar avatar-xs rounded-circle"
 													data-bs-toggle="tooltip" data-bs-placement="bottom"
-													title="Romina Hadid"> <img
-													src="../assets/img/team-3.jpg" alt="team8">
+													title="Romina Hadid"> <img src=./assets/img/team-3.jpg
+													" alt="team8">
 												</a> <a href="javascript:;"
 													class="avatar avatar-xs rounded-circle"
 													data-bs-toggle="tooltip" data-bs-placement="bottom"
-													title="Jessica Doe"> <img
-													src="../assets/img/team-1.jpg" alt="team9">
+													title="Jessica Doe"> <img src=./assets/img/team-1.jpg
+													" alt="team9">
 												</a>
 											</div>
 										</td>
 										<td class="align-middle text-center text-sm"><span
-											class="text-xs font-weight-bold"> Not set </span></td>
+											class="text-xs font-weight-bold"> <%=comList.get(2).getTravel_company() %> </span></td>
 										<td class="align-middle">
 											<div class="progress-wrapper w-75 mx-auto">
 												<div class="progress-info">
 													<div class="progress-percentage">
-														<span class="text-xs font-weight-bold">100%</span>
+														<span class="text-xs font-weight-bold"><%=comList.get(2).getSum_count() %></span>
 													</div>
 												</div>
 												<div class="progress">
-													<div class="progress-bar bg-gradient-success w-100"
-														role="progressbar" aria-valuenow="100" aria-valuemin="0"
+													<div class="progress-bar bg-gradient-info w-30"
+														role="progressbar" aria-valuenow="10" aria-valuemin="0"
 														aria-valuemax="100"></div>
 												</div>
 											</div>
@@ -482,12 +535,8 @@
 									<tr>
 										<td>
 											<div class="d-flex px-2 py-1">
-												<div>
-													<img src="../assets/img/small-logos/logo-spotify.svg"
-														class="avatar avatar-sm me-3" alt="spotify">
-												</div>
 												<div class="d-flex flex-column justify-content-center">
-													<h6 class="mb-0 text-sm">Launch our Mobile App</h6>
+													<h6 class="mb-0 text-sm">4</h6>
 												</div>
 											</div>
 										</td>
@@ -496,38 +545,38 @@
 												<a href="javascript:;"
 													class="avatar avatar-xs rounded-circle"
 													data-bs-toggle="tooltip" data-bs-placement="bottom"
-													title="Ryan Tompson"> <img
-													src="../assets/img/team-4.jpg" alt="user1">
+													title="Ryan Tompson"> <img src=./assets/img/team-4.jpg
+													" alt="user1">
 												</a> <a href="javascript:;"
 													class="avatar avatar-xs rounded-circle"
 													data-bs-toggle="tooltip" data-bs-placement="bottom"
-													title="Romina Hadid"> <img
-													src="../assets/img/team-3.jpg" alt="user2">
+													title="Romina Hadid"> <img src=./assets/img/team-3.jpg
+													" alt="user2">
 												</a> <a href="javascript:;"
 													class="avatar avatar-xs rounded-circle"
 													data-bs-toggle="tooltip" data-bs-placement="bottom"
 													title="Alexander Smith"> <img
-													src="../assets/img/team-4.jpg" alt="user3">
+													src=./assets/img/team-4.jpg " alt="user3">
 												</a> <a href="javascript:;"
 													class="avatar avatar-xs rounded-circle"
 													data-bs-toggle="tooltip" data-bs-placement="bottom"
-													title="Jessica Doe"> <img
-													src="../assets/img/team-1.jpg" alt="user4">
+													title="Jessica Doe"> <img src=./assets/img/team-1.jpg
+													" alt="user4">
 												</a>
 											</div>
 										</td>
 										<td class="align-middle text-center text-sm"><span
-											class="text-xs font-weight-bold"> $20,500 </span></td>
+											class="text-xs font-weight-bold"> <%=comList.get(3).getTravel_company() %> </span></td>
 										<td class="align-middle">
 											<div class="progress-wrapper w-75 mx-auto">
 												<div class="progress-info">
 													<div class="progress-percentage">
-														<span class="text-xs font-weight-bold">100%</span>
+														<span class="text-xs font-weight-bold"><%=comList.get(3).getSum_count() %></span>
 													</div>
 												</div>
 												<div class="progress">
-													<div class="progress-bar bg-gradient-success w-100"
-														role="progressbar" aria-valuenow="100" aria-valuemin="0"
+													<div class="progress-bar bg-gradient-info w-20"
+														role="progressbar" aria-valuenow="10" aria-valuemin="0"
 														aria-valuemax="100"></div>
 												</div>
 											</div>
@@ -536,12 +585,8 @@
 									<tr>
 										<td>
 											<div class="d-flex px-2 py-1">
-												<div>
-													<img src="../assets/img/small-logos/logo-jira.svg"
-														class="avatar avatar-sm me-3" alt="jira">
-												</div>
 												<div class="d-flex flex-column justify-content-center">
-													<h6 class="mb-0 text-sm">Add the New Pricing Page</h6>
+													<h6 class="mb-0 text-sm">5</h6>
 												</div>
 											</div>
 										</td>
@@ -550,22 +595,22 @@
 												<a href="javascript:;"
 													class="avatar avatar-xs rounded-circle"
 													data-bs-toggle="tooltip" data-bs-placement="bottom"
-													title="Ryan Tompson"> <img
-													src="../assets/img/team-4.jpg" alt="user5">
+													title="Ryan Tompson"> <img src=./assets/img/team-4.jpg
+													" alt="user5">
 												</a>
 											</div>
 										</td>
 										<td class="align-middle text-center text-sm"><span
-											class="text-xs font-weight-bold"> $500 </span></td>
+											class="text-xs font-weight-bold"> <%=comList.get(4).getTravel_company() %> </span></td>
 										<td class="align-middle">
 											<div class="progress-wrapper w-75 mx-auto">
 												<div class="progress-info">
 													<div class="progress-percentage">
-														<span class="text-xs font-weight-bold">25%</span>
+														<span class="text-xs font-weight-bold"><%=comList.get(4).getSum_count() %></span>
 													</div>
 												</div>
 												<div class="progress">
-													<div class="progress-bar bg-gradient-info w-25"
+													<div class="progress-bar bg-gradient-info w-5"
 														role="progressbar" aria-valuenow="25" aria-valuemin="0"
 														aria-valuemax="25"></div>
 												</div>
@@ -573,173 +618,144 @@
 										</td>
 									</tr>
 									<tr>
-										<td>
-											<div class="d-flex px-2 py-1">
-												<div>
-													<img src="../assets/img/small-logos/logo-invision.svg"
-														class="avatar avatar-sm me-3" alt="invision">
-												</div>
-												<div class="d-flex flex-column justify-content-center">
-													<h6 class="mb-0 text-sm">Redesign New Online Shop</h6>
-												</div>
-											</div>
-										</td>
-										<td>
-											<div class="avatar-group mt-2">
-												<a href="javascript:;"
-													class="avatar avatar-xs rounded-circle"
-													data-bs-toggle="tooltip" data-bs-placement="bottom"
-													title="Ryan Tompson"> <img
-													src="../assets/img/team-1.jpg" alt="user6">
-												</a> <a href="javascript:;"
-													class="avatar avatar-xs rounded-circle"
-													data-bs-toggle="tooltip" data-bs-placement="bottom"
-													title="Jessica Doe"> <img
-													src="../assets/img/team-4.jpg" alt="user7">
-												</a>
-											</div>
-										</td>
-										<td class="align-middle text-center text-sm"><span
-											class="text-xs font-weight-bold"> $2,000 </span></td>
-										<td class="align-middle">
-											<div class="progress-wrapper w-75 mx-auto">
-												<div class="progress-info">
-													<div class="progress-percentage">
-														<span class="text-xs font-weight-bold">40%</span>
-													</div>
-												</div>
-												<div class="progress">
-													<div class="progress-bar bg-gradient-info w-40"
-														role="progressbar" aria-valuenow="40" aria-valuemin="0"
-														aria-valuemax="40"></div>
-												</div>
-											</div>
-										</td>
+
+
 									</tr>
 								</tbody>
 							</table>
 						</div>
 					</div>
+					<%} %>
 				</div>
 			</div>
+
+			<!-- 업종별 신용카드 소비액 추이 -->
 			<div class="col-lg-4 col-md-6">
-				<div class="card h-100">
-					<div class="card-header pb-0">
-						<h6>Orders overview</h6>
-						<p class="text-sm">
-							<i class="fa fa-arrow-up text-success" aria-hidden="true"></i> <span
-								class="font-weight-bold">24%</span> this month
-						</p>
-					</div>
-					<div class="card-body p-3">
-						<div class="timeline timeline-one-side">
-							<div class="timeline-block mb-3">
-								<span class="timeline-step"> <i
-									class="ni ni-bell-55 text-success text-gradient"></i>
-								</span>
-								<div class="timeline-content">
-									<h6 class="text-dark text-sm font-weight-bold mb-0">$2400,
-										Design changes</h6>
-									<p class="text-secondary font-weight-bold text-xs mt-1 mb-0">22
-										DEC 7:20 PM</p>
-								</div>
-							</div>
-							<div class="timeline-block mb-3">
-								<span class="timeline-step"> <i
-									class="ni ni-html5 text-danger text-gradient"></i>
-								</span>
-								<div class="timeline-content">
-									<h6 class="text-dark text-sm font-weight-bold mb-0">New
-										order #1832412</h6>
-									<p class="text-secondary font-weight-bold text-xs mt-1 mb-0">21
-										DEC 11 PM</p>
-								</div>
-							</div>
-							<div class="timeline-block mb-3">
-								<span class="timeline-step"> <i
-									class="ni ni-cart text-info text-gradient"></i>
-								</span>
-								<div class="timeline-content">
-									<h6 class="text-dark text-sm font-weight-bold mb-0">Server
-										payments for April</h6>
-									<p class="text-secondary font-weight-bold text-xs mt-1 mb-0">21
-										DEC 9:34 PM</p>
-								</div>
-							</div>
-							<div class="timeline-block mb-3">
-								<span class="timeline-step"> <i
-									class="ni ni-credit-card text-warning text-gradient"></i>
-								</span>
-								<div class="timeline-content">
-									<h6 class="text-dark text-sm font-weight-bold mb-0">New
-										card added for order #4395133</h6>
-									<p class="text-secondary font-weight-bold text-xs mt-1 mb-0">20
-										DEC 2:20 AM</p>
-								</div>
-							</div>
-							<div class="timeline-block mb-3">
-								<span class="timeline-step"> <i
-									class="ni ni-key-25 text-primary text-gradient"></i>
-								</span>
-								<div class="timeline-content">
-									<h6 class="text-dark text-sm font-weight-bold mb-0">Unlock
-										packages for development</h6>
-									<p class="text-secondary font-weight-bold text-xs mt-1 mb-0">18
-										DEC 4:54 AM</p>
-								</div>
-							</div>
-							<div class="timeline-block">
-								<span class="timeline-step"> <i
-									class="ni ni-money-coins text-dark text-gradient"></i>
-								</span>
-								<div class="timeline-content">
-									<h6 class="text-dark text-sm font-weight-bold mb-0">New
-										order #9583120</h6>
-									<p class="text-secondary font-weight-bold text-xs mt-1 mb-0">17
-										DEC</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<footer class="footer pt-3  ">
-			<div class="container-fluid">
-				<div class="row align-items-center justify-content-lg-between">
-					<div class="col-lg-6 mb-lg-0 mb-4">
-						<div
-							class="copyright text-center text-sm text-muted text-lg-start">
-							©
-							<script>
-								document.write(new Date().getFullYear())
+				<% List<CreditDTO> creditList = (List) request.getAttribute("creditList"); %>
+				<div
+					style="background-color: white; width: 920px; border-radius: 15px; height: 930px;">
+					<br>
+					<h3>&nbsp&nbsp&nbsp업종별 신용카드 소비액 추이(단위:1,000원)</h3>
+					<script type="text/javascript"
+						src="https://www.gstatic.com/charts/loader.js"></script>
+
+					<%
+					if (creditList != null) {
+					%>
+					<%
+					String type1 = creditList.get(0).consumption_type;
+					String type2 = creditList.get(1).consumption_type;
+					String type3 = creditList.get(2).consumption_type;
+					String type4 = creditList.get(3).consumption_type;
+					String type5 = creditList.get(4).consumption_type;
+					%>
+					<script type="text/javascript">
+							google.charts.load('current', {
+								'packages' : [ 'corechart' ]
+							});
+							google.charts.setOnLoadCallback(drawChart);
+							
+							function drawChart() {	
+								
+								var data = google.visualization.arrayToDataTable([
+							          ['Task', 'Hours per Day'],
+							          ['<%=type1%>', <%=creditList.get(0).sum_amount%>],
+							          ['<%=type2%>', <%=creditList.get(1).sum_amount%>],
+							          ['<%=type3%>', <%=creditList.get(2).sum_amount%>],
+							          ['<%=type4%>', <%=creditList.get(3).sum_amount%>],
+							          ['<%=type5%>', <%=creditList.get(4).sum_amount%>],
+							        ]);
+								
+
+								var options = {
+									title : '',
+									width : "100%",
+									height : 400
+								};
+
+								var chart = new google.visualization.PieChart(
+										document.getElementById('piechart'));
+
+								chart.draw(data, options);
+							}
+						</script>
+
+					<div id="piechart"></div>
+					<%
+					}
+					%>
+
+
+					<!-- 여행유형/트렌드 -->
+					<div>
+						<h3>&nbsp&nbsp&nbsp여행유형/트렌드</h3>
+						<script type="text/javascript"
+							src="https://www.gstatic.com/charts/loader.js"></script>
+						<%List<TravelPurposeDTO> tpList = (List)request.getAttribute("tpList");
+							if (tpList != null) {%>
+							<script type="text/javascript">
+								google.charts.load('current', {
+									'packages' : [ 'line' ]
+								});
+								google.charts.setOnLoadCallback(drawChart);
+
+								function drawChart() {
+
+									var data = new google.visualization.DataTable();
+									data.addColumn('number', '월별');
+									data.addColumn('number', '<%=tpList.get(0).getTravel_purpose()%>');
+									data.addColumn('number', '<%=tpList.get(1).getTravel_purpose()%>');
+									data.addColumn('number', '<%=tpList.get(2).getTravel_purpose()%>');
+									data.addColumn('number', '<%=tpList.get(3).getTravel_purpose()%>');
+									data.addRows([ 
+											[ 1, <%=tpList.get(0).getSum_count()%>, <%=tpList.get(1).getSum_count()%>, <%=tpList.get(2).getSum_count()%>, <%=tpList.get(3).getSum_count()%> ],
+											[ 2, <%=tpList.get(4).getSum_count()%>, <%=tpList.get(5).getSum_count()%>, <%=tpList.get(6).getSum_count()%>, <%=tpList.get(7).getSum_count()%> ],
+											[ 3, <%=tpList.get(8).getSum_count()%>, <%=tpList.get(9).getSum_count()%>, <%=tpList.get(10).getSum_count()%>, <%=tpList.get(11).getSum_count()%> ],
+											[ 4, <%=tpList.get(12).getSum_count()%>, <%=tpList.get(13).getSum_count()%>, <%=tpList.get(14).getSum_count()%>, <%=tpList.get(15).getSum_count()%> ],
+											[ 5, <%=tpList.get(16).getSum_count()%>, <%=tpList.get(17).getSum_count()%>, <%=tpList.get(18).getSum_count()%>, <%=tpList.get(19).getSum_count()%> ],
+											[ 6, <%=tpList.get(20).getSum_count()%>, <%=tpList.get(21).getSum_count()%>, <%=tpList.get(22).getSum_count()%>, <%=tpList.get(23).getSum_count()%> ],
+											[ 7, <%=tpList.get(24).getSum_count()%>, <%=tpList.get(25).getSum_count()%>, <%=tpList.get(26).getSum_count()%>, <%=tpList.get(27).getSum_count()%> ],
+											[ 8, <%=tpList.get(28).getSum_count()%>, <%=tpList.get(29).getSum_count()%>, <%=tpList.get(30).getSum_count()%>, <%=tpList.get(31).getSum_count()%> ],
+											[ 9, <%=tpList.get(32).getSum_count()%>, <%=tpList.get(33).getSum_count()%>, <%=tpList.get(34).getSum_count()%>, <%=tpList.get(35).getSum_count()%> ],
+											[ 10, <%=tpList.get(36).getSum_count()%>, <%=tpList.get(37).getSum_count()%>, <%=tpList.get(38).getSum_count()%>, <%=tpList.get(39).getSum_count()%> ],
+											[ 11, <%=tpList.get(40).getSum_count()%>, <%=tpList.get(41).getSum_count()%>, <%=tpList.get(42).getSum_count()%>, <%=tpList.get(43).getSum_count()%> ],
+											[ 12, <%=tpList.get(44).getSum_count()%>, <%=tpList.get(45).getSum_count()%>, <%=tpList.get(46).getSum_count()%>, <%=tpList.get(47).getSum_count()%> ] 
+											]);
+
+									var options = {
+										chart : {
+											title : '',
+											subtitle : ''
+										},
+										width : 900,
+										height : 390,
+										axes : {
+											x : {
+												0 : {
+													side : 'top'
+												}
+											}
+										}
+									};
+
+									var chart = new google.charts.Line(document
+											.getElementById('line_top_x'));
+
+									chart.draw(data, google.charts.Line
+											.convertOptions(options));
+								}
 							</script>
-							, made with <i class="fa fa-heart"></i> by <a
-								href="https://www.creative-tim.com" class="font-weight-bold"
-								target="_blank">Creative Tim</a> for a better web.
+							<%} %>
+						<div>
+							<div id="line_top_x"></div>
 						</div>
-					</div>
-					<div class="col-lg-6">
-						<ul
-							class="nav nav-footer justify-content-center justify-content-lg-end">
-							<li class="nav-item"><a href="https://www.creative-tim.com"
-								class="nav-link text-muted" target="_blank">Creative Tim</a></li>
-							<li class="nav-item"><a
-								href="https://www.creative-tim.com/presentation"
-								class="nav-link text-muted" target="_blank">About Us</a></li>
-							<li class="nav-item"><a
-								href="https://www.creative-tim.com/blog"
-								class="nav-link text-muted" target="_blank">Blog</a></li>
-							<li class="nav-item"><a
-								href="https://www.creative-tim.com/license"
-								class="nav-link pe-0 text-muted" target="_blank">License</a></li>
-						</ul>
 					</div>
 				</div>
 			</div>
-		</footer>
-		</div>
 	</main>
+
+	<!--------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
 	<div class="fixed-plugin">
 		<a class="fixed-plugin-button text-dark position-fixed px-3 py-2">
 			<i class="fa fa-cog py-2"> </i>
@@ -827,27 +843,31 @@
 		</div>
 	</div>
 	<!--   Core JS Files   -->
-	<script src="../assets/js/core/popper.min.js"></script>
-	<script src="../assets/js/core/bootstrap.min.js"></script>
-	<script src="../assets/js/plugins/perfect-scrollbar.min.js"></script>
-	<script src="../assets/js/plugins/smooth-scrollbar.min.js"></script>
-	<script src="../assets/js/plugins/chartjs.min.js"></script>
+	<script src="./assets/js/core/popper.min.js"></script>
+	<script src="./assets/js/core/bootstrap.min.js"></script>
+	<script src="./assets/js/plugins/perfect-scrollbar.min.js"></script>
+	<script src="./assets/js/plugins/smooth-scrollbar.min.js"></script>
+	<script src="./assets/js/plugins/chartjs.min.js"></script>
 	<script>
 		var ctx = document.getElementById("chart-bars").getContext("2d");
-
 		new Chart(ctx, {
 			type : "bar",
 			data : {
-				labels : [ "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct",
-						"Nov", "Dec" ],
+				labels : [ "<%=consumptionList.get(0).getCunsumption_type1()%>",
+						   "<%=consumptionList.get(1).getCunsumption_type1()%>",
+						   "<%=consumptionList.get(2).getCunsumption_type1()%>",
+						   "<%=consumptionList.get(3).getCunsumption_type1()%>"],
 				datasets : [ {
-					label : "Sales",
+					label : "",
 					tension : 0.4,
 					borderWidth : 0,
 					borderRadius : 4,
 					borderSkipped : false,
 					backgroundColor : "#fff",
-					data : [ 450, 200, 100, 220, 500, 100, 400, 230, 500 ],
+					data : [ <%= consumptionList.get(0).getSum_amount()/100000%>,
+							 <%= consumptionList.get(1).getSum_amount()/100000%>,
+							 <%= consumptionList.get(2).getSum_amount()/100000%>,
+							 <%= consumptionList.get(3).getSum_amount()/100000%>],
 					maxBarThickness : 6
 				}, ],
 			},
@@ -899,7 +919,7 @@
 				},
 			},
 		});
-
+		// SNS 언급량 그래프
 		var ctx2 = document.getElementById("chart-line").getContext("2d");
 
 		var gradientStroke1 = ctx2.createLinearGradient(0, 230, 0, 50);
@@ -913,14 +933,14 @@
 		gradientStroke2.addColorStop(1, 'rgba(20,23,39,0.2)');
 		gradientStroke2.addColorStop(0.2, 'rgba(72,72,176,0.0)');
 		gradientStroke2.addColorStop(0, 'rgba(20,23,39,0)'); //purple colors
-
+		
 		new Chart(ctx2, {
 			type : "line",
 			data : {
-				labels : [ "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct",
-						"Nov", "Dec" ],
+				labels : [ "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul",
+						"Aug", "Sep", "Oct", "Nov", "Dec" ],
 				datasets : [ {
-					label : "Mobile apps",
+					label : "언급량",
 					tension : 0.4,
 					borderWidth : 0,
 					pointRadius : 0,
@@ -928,19 +948,18 @@
 					borderWidth : 3,
 					backgroundColor : gradientStroke1,
 					fill : true,
-					data : [ 50, 40, 300, 220, 500, 250, 400, 230, 500 ],
-					maxBarThickness : 6
-
-				}, {
-					label : "Websites",
-					tension : 0.4,
-					borderWidth : 0,
-					pointRadius : 0,
-					borderColor : "#3A416F",
-					borderWidth : 3,
-					backgroundColor : gradientStroke2,
-					fill : true,
-					data : [ 30, 90, 40, 140, 290, 290, 340, 230, 400 ],
+					data : [ <%=snsList.get(0).getSns_search()%>,
+							 <%=snsList.get(1).getSns_search()%>,
+							 <%=snsList.get(2).getSns_search()%>,
+							 <%=snsList.get(3).getSns_search()%>,
+							 <%=snsList.get(4).getSns_search()%>,
+							 <%=snsList.get(5).getSns_search()%>,
+							 <%=snsList.get(6).getSns_search()%>,
+							 <%=snsList.get(7).getSns_search()%>,
+							 <%=snsList.get(8).getSns_search()%>,
+							 <%=snsList.get(9).getSns_search()%>,
+							 <%=snsList.get(10).getSns_search()%>,
+							 <%=snsList.get(11).getSns_search()%> ],
 					maxBarThickness : 6
 				}, ],
 			},
@@ -1014,6 +1033,8 @@
 	<!-- Github buttons -->
 	<script async defer src="https://buttons.github.io/buttons.js"></script>
 	<!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
-	<script src="../assets/js/soft-ui-dashboard.min.js?v=1.0.7"></script>
+	<script src="./assets/js/soft-ui-dashboard.min.js?v=1.0.7"></script>
+	<%} %>
 </body>
+
 </html>

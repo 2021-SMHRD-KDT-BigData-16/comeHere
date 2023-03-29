@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+#selectyear {
+	width: 100px;
+	height: 45px;
+	font-size: 30px;
+}
+
+h4 {
+	display: inline;
+}
+
+form {
+	position: relative;
+	margin-left: 80%;
+}
+
+.delbtn {
+	background-color: rgba(0, 0, 1, 0);
+	color: aliceblue;
+	font-size: 4em;
+	margin-top: 3%;
+	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	border: solid white;
+}
+
+.copyright {
+	font-size: 20px;
+}

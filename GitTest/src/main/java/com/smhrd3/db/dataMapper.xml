@@ -2,17 +2,27 @@
 <!DOCTYPE mapper
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
-  
-<!-- 1) mapper 태그 안쪽에 SQL쿼리문들을 작성 -->
-<!-- namespace : 식별자(mapper 파일이 여러개였을 때 중복되지 않게만 작성 -->
+
 <mapper namespace="com.smhrd.model.MemberDAO">
-  <!-- 
-  	id : 쿼리문을 구분할 수 있는 식별자(메소드명과 동일하게 사용)
-  	parameterType = : DAO에서부터 받아오는 매개변수의 자료형 지정
-  					  (풀네임을 작성해야함! >> package명까지)
-  	resultType : SQL 구문을 실행하고 나서 결과값을 java내부에서 어떤 자료형으로 받아올건지 지정
-  				 (풀네임을 작성해야함) ** select구문 작성할 때 꼭 써주기!! **
-   -->
- 
-  
-</mapper>
+
+	<select id="selectConsumption" parameterType="com.smhrd3.model.ConsumptionDTO" resultType="com.smhrd3.model.ConsumptionDTO">
+		select sum(cunsumption_amount) as sum_amount, cunsumption_type1 from tb_consumption where cunsumption_area = #{cunsumption_area} and cunsumption_year = #{cunsumption_year} and not cunsumption_type1 in ('운송업', '여행업') group by cunsumption_type1
+	</select>
+
+	<select id="selectCredit" parameterType="com.smhrd3.model.CreditDTO" resultType="com.smhrd3.model.CreditDTO">
+		select sum(consumption_amount) as sum_amount, consumption_type from tb_credit where consumption_area = #{consumption_area} and consumption_yearmonth like '%'||#{consumption_yearmonth}||'%' and not consumption_type in ('전체', '운송업') group by consumption_type
+	</select>
+	
+	<select id="selectSNS" parameterType="com.smhrd3.model.SNSDTO" resultType="com.smhrd3.model.SNSDTO">
+		select sns_yearmonth, sns_search from tb_sns where sns_yearmonth like '%'||#{sns_year}||'%' and sns_are = #{sns_are}
+	</select>
+	
+	<select id="selecttp" parameterType="com.smhrd3.model.TravelPurposeDTO" resultType="com.smhrd3.model.TravelPurposeDTO">
+		select purpose_yearmonth ,sum(travel_count) as sum_count, travel_purpose from tb_travel_purpose where travel_area = #{travel_area} and purpose_yearmonth like '%'||#{purpose_year}||'%' and not travel_purpose in ('역사유적', '반려동물', '휴식/힐링', '체험') group by travel_purpose, purpose_yearmonth order by purpose_yearmonth
+	</select>
+	
+	<select id="selectCompany" parameterType="com.smhrd3.model.CompanyDTO" resultType="com.smhrd3.model.CompanyDTO">
+		select sum(travel_count) as sum_count, travel_company from tb_travel_company where travel_area = #{travel_area} and travel_yearmonth like '%'||#{company_year}||'%' and not travel_company in ('싱글', '학생') group by travel_company order by sum_count desc
+	</select>
+	
+</mapper>	

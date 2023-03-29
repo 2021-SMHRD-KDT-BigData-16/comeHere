@@ -3,11 +3,14 @@ package com.smhrd3.model;
 public class CreditDTO {
 	// 소비 순번 
     public int consumption_seq;
+    
+    // 합산 
+    public int sum_amount;
 
     // 연월 
     public String consumption_yearmonth;
 
-    // 소비액 
+	// 소비액 
     public int consumption_amount;
 
     // 지역 
@@ -41,6 +44,14 @@ public class CreditDTO {
 
 	public void setConsumption_amount(int consumption_amount) {
 		this.consumption_amount = consumption_amount;
+	}
+	
+	public int getSum_amount() {
+		return sum_amount;
+	}
+
+	public void setSum_amount(int sum_amount) {
+		this.sum_amount = sum_amount;
 	}
 
 	public String getConsumption_area() {
