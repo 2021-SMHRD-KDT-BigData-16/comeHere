@@ -54,7 +54,7 @@ h5{font-family:'WandohopeR' ;}
 				<div class="row">
 					<div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
 						<div class="card">
-							<a href="./전남.jsp">
+							<a href="areaJN">
 								<div class="card-body p-3">
 									<div class="row">
 										<div class="col-8">
@@ -76,7 +76,7 @@ h5{font-family:'WandohopeR' ;}
 					</div>
 					<div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
 						<div class="card">
-							<a href="./광주.jsp">
+							<a href="areaGJ">
 								<div class="card-body p-3">
 									<div class="row">
 										<div class="col-8">
@@ -98,7 +98,7 @@ h5{font-family:'WandohopeR' ;}
 					</div>
 					<div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
 						<div class="card">
-							<a href="./담양.jsp">
+							<a href="areaDY">
 								<div class="card-body p-3">
 									<div class="row">
 										<div class="col-8">
@@ -120,7 +120,7 @@ h5{font-family:'WandohopeR' ;}
 					</div>
 					<div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
 						<div class="card">
-							<a href="./목포.jsp">
+							<a href="areaMP">
 								<div class="card-body p-3">
 									<div class="row">
 										<div class="col-8">
@@ -142,7 +142,7 @@ h5{font-family:'WandohopeR' ;}
 					</div>
 					<div class="col-xl-3 col-sm-6">
 						<div class="card">
-							<a href="./순천.jsp">
+							<a href="areaSC">
 								<div class="card-body p-3">
 									<div class="row">
 										<div class="col-8">
@@ -168,7 +168,7 @@ h5{font-family:'WandohopeR' ;}
 		<div class="container-fluid py-1 px-3">
 			<h3 align="center">문화의 도시</h3>
 			<h1 align="center">여수</h1>
-			<form action="selectYearYS">
+			<form action="selectYear">
 				<h4>연도 선택 :</h4>
 				<select id="selectyear" name="year">
 					<option value="2018">2018</option>
