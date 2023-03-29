@@ -33,6 +33,15 @@
 	rel="stylesheet" />
 <link rel="stylesheet" href="./assets/css/CSS.css">
 </head>
+<style>
+	
+p{font-family: 'WandohopeR';}
+h1{font-family:'KimjungchulMyungjo-Bold';}
+h3{font-family:'KimjungchulMyungjo-Bold' ;}
+h4{font-family:'WandohopeR' ;}
+h5{font-family:'WandohopeR' ;}
+
+</style>
 <body class="g-sidenav-show  bg-gray-100">
 
 	<main
@@ -241,7 +250,7 @@
 						</div>
 
 						<!-- 관광소비유형 -->
-						<h3 class="ms-2 mt-4 mb-0">관광소비유형(단위:1억)</h3>
+						<h3 class="ms-2 mt-4 mb-0">관광소비유형</h3><h5>(단위:1억)</h5>
 						<p class="text-sm ms-2">
 							<span class="font-weight-bolder"></span>
 						</p>
