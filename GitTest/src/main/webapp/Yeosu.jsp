@@ -38,6 +38,7 @@
 	
 p{font-family: 'WandohopeR';}
 h1{font-family:'KimjungchulMyungjo-Bold';}
+h2{font-family:'KimjungchulMyungjo-Bold' ;}
 h3{font-family:'KimjungchulMyungjo-Bold' ;}
 h4{font-family:'WandohopeR' ;}
 h5{font-family:'WandohopeR' ;}
@@ -169,12 +170,14 @@ h5{font-family:'WandohopeR' ;}
 		<div class="container-fluid py-1 px-3">
 			<h3 align="center">문화의 도시</h3>
 			<h1 align="center">여수</h1>
+			<br>
 			<%String year = (String)request.getAttribute("year");
 			if (year == null) {%>
-				<h4 style="position: relative; margin-left: 80%;">연도를 선택해주세요</h4>
+				<h2 style="position: relative; margin-left: 42.5%; color: black;">연도를 선택해주세요.</h2>
 			<% } else {%>
-				<h4 style="position: relative; margin-left: 80%;">선택한 연도 : <%=year %></h4>
+				<h2 style="position: relative; margin-left: 47.2%; color: black;"><%=year %>년</h2>
 			<%} %>
+			<br>
 			<form action="selectYear">
 				<h4>연도 선택 :</h4>
 				<select id="selectyear" name="year">
