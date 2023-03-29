@@ -54,6 +54,7 @@ h5{font-family:'WandohopeR' ;}
 				<div class="row">
 					<div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
 						<div class="card">
+						<a href="areaJN">
 							<div class="card-body p-3">
 								<div class="row">
 									<div class="col-8">
@@ -70,11 +71,12 @@ h5{font-family:'WandohopeR' ;}
 									</div>
 								</div>
 							</div>
+							</a>
 						</div>
 					</div>
 					<div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
 						<div class="card">
-							<a href="./광주.jsp">
+							<a href="areaGJ">
 								<div class="card-body p-3">
 									<div class="row">
 										<div class="col-8">
@@ -96,7 +98,7 @@ h5{font-family:'WandohopeR' ;}
 					</div>
 					<div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
 						<div class="card">
-							<a href="./담양.jsp">
+							<a href="areaDY">
 								<div class="card-body p-3">
 									<div class="row">
 										<div class="col-8">
@@ -118,7 +120,7 @@ h5{font-family:'WandohopeR' ;}
 					</div>
 					<div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
 						<div class="card">
-							<a href="./순천.jsp">
+							<a href="areaSC">
 								<div class="card-body p-3">
 									<div class="row">
 										<div class="col-8">
@@ -140,7 +142,7 @@ h5{font-family:'WandohopeR' ;}
 					</div>
 					<div class="col-xl-3 col-sm-6">
 						<div class="card">
-							<a href="./여수.jsp">
+							<a href="areaYS">
 								<div class="card-body p-3">
 									<div class="row">
 										<div class="col-8">
