@@ -38,6 +38,7 @@
 	
 p{font-family: 'WandohopeR';}
 h1{font-family:'KimjungchulMyungjo-Bold';}
+h2{font-family:'KimjungchulMyungjo-Bold' ;}
 h3{font-family:'KimjungchulMyungjo-Bold' ;}
 h4{font-family:'WandohopeR' ;}
 h5{font-family:'WandohopeR' ;}
@@ -168,6 +169,14 @@ h5{font-family:'WandohopeR' ;}
 		<div class="container-fluid py-1 px-3">
 			<h3 align="center">생명의 땅</h3>
 			<h1 align="center">전라남도</h1>
+			<br>
+			<%String year = (String)request.getAttribute("year");
+			if (year == null) {%>
+				<h2 style="position: relative; margin-left: 42.5%; color: black;">연도를 선택해주세요.</h2>
+			<% } else {%>
+				<h2 style="position: relative; margin-left: 47.2%; color: black;"><%=year %>년</h2>
+			<%} %>
+			<br>
 			
 			<form action="selectYear">
 				<h4>연도 선택 :</h4>
@@ -179,12 +188,7 @@ h5{font-family:'WandohopeR' ;}
 					<option value="2022">2022</option>
 				</select> <input type="submit" value="선택">
 			</form>
-			<%String year = (String)request.getAttribute("year");
-			if (year == null) {%>
-				<h4 style="position: relative; margin-left: 80%;">연도를 선택해주세요</h4>
-			<% } else {%>
-				<h4 style="position: relative; margin-left: 80%;">선택한 연도 : <%=year %></h4>
-			<%} %>
+			
 		</div>
 		<% if (year != null) { %>
 		<div class="row mt-4">
@@ -484,11 +488,7 @@ h5{font-family:'WandohopeR' ;}
 														<span class="text-xs font-weight-bold"><%=comList.get(1).getSum_count()%></span>
 													</div>
 												</div>
-												<div class="progress">
-													<div class="progress-bar bg-gradient-info w-40"
-														role="progressbar" aria-valuenow="10" aria-valuemin="0"
-														aria-valuemax="100"></div>
-												</div>
+												
 											</div>
 										</td>
 									</tr>
@@ -523,11 +523,6 @@ h5{font-family:'WandohopeR' ;}
 													<div class="progress-percentage">
 														<span class="text-xs font-weight-bold"><%=comList.get(2).getSum_count() %></span>
 													</div>
-												</div>
-												<div class="progress">
-													<div class="progress-bar bg-gradient-info w-30"
-														role="progressbar" aria-valuenow="10" aria-valuemin="0"
-														aria-valuemax="100"></div>
 												</div>
 											</div>
 										</td>
@@ -573,11 +568,6 @@ h5{font-family:'WandohopeR' ;}
 													<div class="progress-percentage">
 														<span class="text-xs font-weight-bold"><%=comList.get(3).getSum_count() %></span>
 													</div>
-												</div>
-												<div class="progress">
-													<div class="progress-bar bg-gradient-info w-20"
-														role="progressbar" aria-valuenow="10" aria-valuemin="0"
-														aria-valuemax="100"></div>
 												</div>
 											</div>
 										</td>
