@@ -54,7 +54,7 @@ h1{font-family:'KimjungchulMyungjo-Bold';}
 				<div class="row">
 					<div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
 						<div class="card">
-							<a href="./광주.jsp">
+							<a href="areaGJ">
 								<div class="card-body p-3">
 									<div class="row">
 										<div class="col-8">
@@ -75,7 +75,7 @@ h1{font-family:'KimjungchulMyungjo-Bold';}
 					</div>
 					<div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
 						<div class="card">
-							<a href="./담양.jsp">
+							<a href="areaDY">
 								<div class="card-body p-3">
 									<div class="row">
 										<div class="col-8">
@@ -97,7 +97,7 @@ h1{font-family:'KimjungchulMyungjo-Bold';}
 					</div>
 					<div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
 						<div class="card">
-							<a href="./목포.jsp">
+							<a href="areaMP">
 								<div class="card-body p-3">
 									<div class="row">
 										<div class="col-8">
@@ -119,7 +119,7 @@ h1{font-family:'KimjungchulMyungjo-Bold';}
 					</div>
 					<div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
 						<div class="card">
-							<a href="./순천.jsp">
+							<a href="areaSC">
 								<div class="card-body p-3">
 									<div class="row">
 										<div class="col-8">
@@ -141,7 +141,7 @@ h1{font-family:'KimjungchulMyungjo-Bold';}
 					</div>
 					<div class="col-xl-3 col-sm-6">
 						<div class="card">
-							<a href="./여수.jsp">
+							<a href="areaYS">
 								<div class="card-body p-3">
 									<div class="row">
 										<div class="col-8">
@@ -168,7 +168,7 @@ h1{font-family:'KimjungchulMyungjo-Bold';}
 			<h3 align="center">생명의 땅</h3>
 			<h1 align="center">전라남도</h1>
 			
-			<form action="selectYearJN">
+			<form action="selectYear">
 				<h4>연도 선택 :</h4>
 				<select id="selectyear" name="year">
 					<option value="2018">2018</option>
@@ -179,13 +179,13 @@ h1{font-family:'KimjungchulMyungjo-Bold';}
 				</select> <input type="submit" value="선택">
 			</form>
 			<%String year = (String)request.getAttribute("year");
-			if (year != null) {%>
-				<h4 style="position: relative; margin-left: 80%;">선택한 연도 : <%=year %></h4>
-			<% } else {%>
+			if (year == null) {%>
 				<h4 style="position: relative; margin-left: 80%;">연도를 선택해주세요</h4>
+			<% } else {%>
+				<h4 style="position: relative; margin-left: 80%;">선택한 연도 : <%=year %></h4>
 			<%} %>
 		</div>
-		
+		<% if (year != null) { %>
 		<div class="row mt-4">
 			<div class="col-lg-7 mb-lg-0 mb-4">
 				<div class="card">
@@ -475,12 +475,12 @@ h1{font-family:'KimjungchulMyungjo-Bold';}
 											</div>
 										</td>
 										<td class="align-middle text-center text-sm"><span
-											class="text-xs font-weight-bold"> <%=comList.get(4).getTravel_company() %> </span></td>
+											class="text-xs font-weight-bold"> <%=comList.get(1).getTravel_company() %> </span></td>
 										<td class="align-middle">
 											<div class="progress-wrapper w-75 mx-auto">
 												<div class="progress-info">
 													<div class="progress-percentage">
-														<span class="text-xs font-weight-bold"><%=comList.get(4).getSum_count()%></span>
+														<span class="text-xs font-weight-bold"><%=comList.get(1).getSum_count()%></span>
 													</div>
 												</div>
 												<div class="progress">
@@ -515,12 +515,12 @@ h1{font-family:'KimjungchulMyungjo-Bold';}
 											</div>
 										</td>
 										<td class="align-middle text-center text-sm"><span
-											class="text-xs font-weight-bold"> <%=comList.get(5).getTravel_company() %> </span></td>
+											class="text-xs font-weight-bold"> <%=comList.get(2).getTravel_company() %> </span></td>
 										<td class="align-middle">
 											<div class="progress-wrapper w-75 mx-auto">
 												<div class="progress-info">
 													<div class="progress-percentage">
-														<span class="text-xs font-weight-bold"><%=comList.get(5).getSum_count() %></span>
+														<span class="text-xs font-weight-bold"><%=comList.get(2).getSum_count() %></span>
 													</div>
 												</div>
 												<div class="progress">
@@ -565,12 +565,12 @@ h1{font-family:'KimjungchulMyungjo-Bold';}
 											</div>
 										</td>
 										<td class="align-middle text-center text-sm"><span
-											class="text-xs font-weight-bold"> <%=comList.get(1).getTravel_company() %> </span></td>
+											class="text-xs font-weight-bold"> <%=comList.get(3).getTravel_company() %> </span></td>
 										<td class="align-middle">
 											<div class="progress-wrapper w-75 mx-auto">
 												<div class="progress-info">
 													<div class="progress-percentage">
-														<span class="text-xs font-weight-bold"><%=comList.get(1).getSum_count() %></span>
+														<span class="text-xs font-weight-bold"><%=comList.get(3).getSum_count() %></span>
 													</div>
 												</div>
 												<div class="progress">
@@ -600,12 +600,12 @@ h1{font-family:'KimjungchulMyungjo-Bold';}
 											</div>
 										</td>
 										<td class="align-middle text-center text-sm"><span
-											class="text-xs font-weight-bold"> <%=comList.get(3).getTravel_company() %> </span></td>
+											class="text-xs font-weight-bold"> <%=comList.get(4).getTravel_company() %> </span></td>
 										<td class="align-middle">
 											<div class="progress-wrapper w-75 mx-auto">
 												<div class="progress-info">
 													<div class="progress-percentage">
-														<span class="text-xs font-weight-bold"><%=comList.get(3).getSum_count() %></span>
+														<span class="text-xs font-weight-bold"><%=comList.get(4).getSum_count() %></span>
 													</div>
 												</div>
 												<div class="progress">
@@ -1033,5 +1033,6 @@ h1{font-family:'KimjungchulMyungjo-Bold';}
 	<script async defer src="https://buttons.github.io/buttons.js"></script>
 	<!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
 	<script src="./assets/js/soft-ui-dashboard.min.js?v=1.0.7"></script>
+	<%} %>
 </body>
 </html>
