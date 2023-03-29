@@ -290,7 +290,7 @@ h5{font-family:'WandohopeR' ;}
 								</div>
 								<div class="col-3 py-3 ps-0">
 									<div class="d-flex mb-2">
-										🎆
+										🌊
 										<p class="text-xs mt-1 mb-0 font-weight-bold"><%=consumptionList.get(2).getCunsumption_type1()%></p>
 									</div>
 									<h4 class="font-weight-bolder"><%=consumptionList.get(2).getSum_amount()/100000 %></h4>
