@@ -175,7 +175,13 @@ h5{font-family:'WandohopeR' ;}
 		<div class="container-fluid py-1 px-3">
 			<h3 align="center">미식의 도시</h3>
 			<h1 align="center">담양</h1>
-				<form action="selectYear">
+				<%String year = (String)request.getAttribute("year");
+			if (year == null) {%>
+				<h4 style="position: relative; margin-left: 80%;">연도를 선택해주세요</h4>
+			<% } else {%>
+				<h4 style="position: relative; margin-left: 80%;">선택한 연도 : <%=year %></h4>
+			<%} %>
+			<form action="selectYear">
 				<h4>연도 선택 :</h4>
 				<select id="selectyear" name="year">
 					<option value="2018">2018</option>
@@ -185,12 +191,6 @@ h5{font-family:'WandohopeR' ;}
 					<option value="2022">2022</option>
 				</select> <input type="submit" value="선택">
 			</form>
-			<%String year = (String)request.getAttribute("year");
-			if (year == null) {%>
-				<h4 style="position: relative; margin-left: 80%;">연도를 선택해주세요</h4>
-			<% } else {%>
-				<h4 style="position: relative; margin-left: 80%;">선택한 연도 : <%=year %></h4>
-			<%} %>
 		</div>
 		<% if (year != null) { %>
 		<div class="row mt-4">
