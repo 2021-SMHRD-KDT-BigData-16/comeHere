@@ -945,7 +945,7 @@ h5{font-family:'WandohopeR' ;}
 				labels : [ "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul",
 						"Aug", "Sep", "Oct", "Nov", "Dec" ],
 				datasets : [ {
-					label : "Mobile apps",
+					label : "언급량",
 					tension : 0.4,
 					borderWidth : 0,
 					pointRadius : 0,
