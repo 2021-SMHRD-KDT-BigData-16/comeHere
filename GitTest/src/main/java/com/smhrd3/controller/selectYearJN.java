@@ -89,7 +89,7 @@ public class selectYearJN extends HttpServlet {
 		}
 		
 		// 전라남도 페이지로 데이터들 보내기
-		RequestDispatcher rd = request.getRequestDispatcher("전남.jsp");
+		RequestDispatcher rd = request.getRequestDispatcher("JunNam.jsp");
 		rd.forward(request, response);
 
 	}

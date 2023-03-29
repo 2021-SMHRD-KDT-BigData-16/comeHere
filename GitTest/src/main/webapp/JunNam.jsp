@@ -37,9 +37,10 @@
 <style>
 	
 p{font-family: 'WandohopeR';}
-h5{font-family:'WandohopeR' ;}
-h3{font-family:'KimjungchulMyungjo-Bold' ;}
 h1{font-family:'KimjungchulMyungjo-Bold';}
+h3{font-family:'KimjungchulMyungjo-Bold' ;}
+h4{font-family:'WandohopeR' ;}
+h5{font-family:'WandohopeR' ;}
 
 </style>
 <body class="g-sidenav-show  bg-gray-100">
