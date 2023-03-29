@@ -1,3 +1,4 @@
+<%@page import="com.smhrd3.model.CompanyDTO"%>
 <%@page import="com.smhrd3.model.TravelPurposeDTO"%>
 <%@page import="com.smhrd3.model.SNSDTO"%>
 <%@page import="com.smhrd3.model.CreditDTO"%>

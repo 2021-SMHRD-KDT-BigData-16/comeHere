@@ -1,3 +1,4 @@
+<%@page import="com.smhrd3.model.CompanyDTO"%>
 <%@page import="com.smhrd3.model.TravelPurposeDTO"%>
 <%@page import="com.smhrd3.model.SNSDTO"%>
 <%@page import="com.smhrd3.model.CreditDTO"%>
@@ -231,7 +232,7 @@ h5{font-family:'WandohopeR' ;}
 				<div class="card h-100 p-3">
 					<div
 						class="overflow-hidden position-relative border-radius-lg bg-cover h-100"
-						style="background-image: url('../assets/img/ivancik.jpg');">
+						style="background-image: url('./assets/img/ivancik.jpg');">
 						<span class="mask bg-gradient-dark"></span>
 						<div
 							class="card-body position-relative z-index-1 d-flex flex-column h-100 p-3">
@@ -259,7 +260,7 @@ h5{font-family:'WandohopeR' ;}
 								<canvas id="chart-bars" class="chart-canvas" height="170"></canvas>
 							</div>
 						</div>
-						
+
 						<!-- 관광소비유형 -->
 						<h3 class="ms-2 mt-4 mb-0">관광소비유형(단위:1억)</h3>
 						<p class="text-sm ms-2">
@@ -329,7 +330,7 @@ h5{font-family:'WandohopeR' ;}
 					<%List<SNSDTO> snsList = (List)request.getAttribute("snsList"); %>
 					<div class="card-body p-3">
 						<div class="chart">
-							<canvas id="chart-line" class="chart-canvas" height="300"></canvas>
+							<canvas id="chart-line" class="chart-canvas" height="275"></canvas>
 						</div>
 					</div>
 				</div>
@@ -337,8 +338,8 @@ h5{font-family:'WandohopeR' ;}
 		</div>
 
 
-			<!-- 동반유형 키워드 언급량 -->
-			<div class="row my-4">
+		<!-- 동반유형 키워드 언급량 -->
+		<div class="row my-4">
 			<div style="width: 50%; border-radius: 15px;">
 
 				<div style="background-color: white; width: 100%; border-radius: 15px; height: 950px;">
@@ -383,7 +384,6 @@ h5{font-family:'WandohopeR' ;}
 					<div>
 						<div id="columnchart_material" style="width: 900px; height: 450px; margin-left: 30px"></div>
 					</div>	
-					
 					
 					<!-- 동반유형 키워드 언급량 -->
 					<div class="col-lg-6 col-5 my-auto text-end">
@@ -451,8 +451,8 @@ h5{font-family:'WandohopeR' ;}
 													</div>
 												</div>
 												<div class="progress">
-													<div class="progress-bar bg-gradient-info w-60"
-														role="progressbar" aria-valuenow="60" aria-valuemin="0"
+													<div class="progress-bar bg-gradient-success w-100"
+														role="progressbar" aria-valuenow="100" aria-valuemin="0"
 														aria-valuemax="100"></div>
 												</div>
 											</div>
@@ -491,7 +491,7 @@ h5{font-family:'WandohopeR' ;}
 													</div>
 												</div>
 												<div class="progress">
-													<div class="progress-bar bg-gradient-info w-10"
+													<div class="progress-bar bg-gradient-info w-40"
 														role="progressbar" aria-valuenow="10" aria-valuemin="0"
 														aria-valuemax="100"></div>
 												</div>
@@ -531,8 +531,8 @@ h5{font-family:'WandohopeR' ;}
 													</div>
 												</div>
 												<div class="progress">
-													<div class="progress-bar bg-gradient-success w-100"
-														role="progressbar" aria-valuenow="100" aria-valuemin="0"
+													<div class="progress-bar bg-gradient-info w-30"
+														role="progressbar" aria-valuenow="10" aria-valuemin="0"
 														aria-valuemax="100"></div>
 												</div>
 											</div>
@@ -581,8 +581,8 @@ h5{font-family:'WandohopeR' ;}
 													</div>
 												</div>
 												<div class="progress">
-													<div class="progress-bar bg-gradient-success w-100"
-														role="progressbar" aria-valuenow="100" aria-valuemin="0"
+													<div class="progress-bar bg-gradient-info w-20"
+														role="progressbar" aria-valuenow="10" aria-valuemin="0"
 														aria-valuemax="100"></div>
 												</div>
 											</div>
@@ -616,7 +616,7 @@ h5{font-family:'WandohopeR' ;}
 													</div>
 												</div>
 												<div class="progress">
-													<div class="progress-bar bg-gradient-info w-25"
+													<div class="progress-bar bg-gradient-info w-5"
 														role="progressbar" aria-valuenow="25" aria-valuemin="0"
 														aria-valuemax="25"></div>
 												</div>
@@ -624,19 +624,20 @@ h5{font-family:'WandohopeR' ;}
 										</td>
 									</tr>
 									<tr>
+
+
 									</tr>
 								</tbody>
 							</table>
 						</div>
 					</div>
+					<%} %>
 				</div>
 			</div>
 
 			<!-- 업종별 신용카드 소비액 추이 -->
 			<div class="col-lg-4 col-md-6">
-				<%
-				List<CreditDTO> creditList = (List) request.getAttribute("creditList");
-				%>
+				<% List<CreditDTO> creditList = (List) request.getAttribute("creditList"); %>
 				<div
 					style="background-color: white; width: 920px; border-radius: 15px; height: 930px;">
 					<br>
@@ -761,7 +762,7 @@ h5{font-family:'WandohopeR' ;}
 
 	<!--------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
-		<div class="fixed-plugin">
+	<div class="fixed-plugin">
 		<a class="fixed-plugin-button text-dark position-fixed px-3 py-2">
 			<i class="fa fa-cog py-2"> </i>
 		</a>
@@ -1041,4 +1042,5 @@ h5{font-family:'WandohopeR' ;}
 	<script src="./assets/js/soft-ui-dashboard.min.js?v=1.0.7"></script>
 	<%} %>
 </body>
+
 </html>

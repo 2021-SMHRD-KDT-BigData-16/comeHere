@@ -484,11 +484,7 @@ h5{font-family:'WandohopeR' ;}
 														<span class="text-xs font-weight-bold"><%=comList.get(1).getSum_count()%></span>
 													</div>
 												</div>
-												<div class="progress">
-													<div class="progress-bar bg-gradient-info w-40"
-														role="progressbar" aria-valuenow="10" aria-valuemin="0"
-														aria-valuemax="100"></div>
-												</div>
+												
 											</div>
 										</td>
 									</tr>
@@ -523,11 +519,6 @@ h5{font-family:'WandohopeR' ;}
 													<div class="progress-percentage">
 														<span class="text-xs font-weight-bold"><%=comList.get(2).getSum_count() %></span>
 													</div>
-												</div>
-												<div class="progress">
-													<div class="progress-bar bg-gradient-info w-30"
-														role="progressbar" aria-valuenow="10" aria-valuemin="0"
-														aria-valuemax="100"></div>
 												</div>
 											</div>
 										</td>
@@ -573,11 +564,6 @@ h5{font-family:'WandohopeR' ;}
 													<div class="progress-percentage">
 														<span class="text-xs font-weight-bold"><%=comList.get(3).getSum_count() %></span>
 													</div>
-												</div>
-												<div class="progress">
-													<div class="progress-bar bg-gradient-info w-20"
-														role="progressbar" aria-valuenow="10" aria-valuemin="0"
-														aria-valuemax="100"></div>
 												</div>
 											</div>
 										</td>
