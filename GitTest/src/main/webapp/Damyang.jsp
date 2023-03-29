@@ -184,8 +184,14 @@ h5{font-family:'WandohopeR' ;}
 					<option value="2022">2022</option>
 				</select> <input type="submit" value="선택">
 			</form>
+			<%String year = (String)request.getAttribute("year");
+			if (year == null) {%>
+				<h4 style="position: relative; margin-left: 80%;">연도를 선택해주세요</h4>
+			<% } else {%>
+				<h4 style="position: relative; margin-left: 80%;">선택한 연도 : <%=year %></h4>
+			<%} %>
 		</div>
-		
+		<% if (year != null) { %>
 		<div class="row mt-4">
 			<div class="col-lg-7 mb-lg-0 mb-4">
 				<div class="card">
@@ -343,7 +349,8 @@ h5{font-family:'WandohopeR' ;}
 						<span class="font-weight-bold ms-1">&nbsp주요 국내 소셜미디어,커뮤니티의 '동반유형' 관련 주요 키워드 순위를 제공</span>
 					</p>
 					<p></p><p></p><p></p>
-
+					<%List<CompanyDTO> comList = (List)request.getAttribute("comList");
+					if (comList != null) {%>
 					<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 					<script type="text/javascript">
 					  google.charts.load('current', {'packages':['bar']});
@@ -351,11 +358,14 @@ h5{font-family:'WandohopeR' ;}
 
 				      function drawChart() {
 				        var data = google.visualization.arrayToDataTable([
-				          ['Year', 'Sales', 'Expenses', 'Profit'],
-				          ['2014', 1000, 400, 200],
-				          ['2015', 1170, 460, 250],
-				          ['2016', 660, 1120, 300],
-				          ['2017', 1030, 540, 350]
+				          ['동반유형', '언급 건수'],
+				          ['<%=comList.get(0).getTravel_company()%>', <%=comList.get(0).getSum_count()%>],
+				          ['<%=comList.get(1).getTravel_company()%>', <%=comList.get(1).getSum_count()%>],
+				          ['<%=comList.get(2).getTravel_company()%>', <%=comList.get(2).getSum_count()%>],
+				          ['<%=comList.get(3).getTravel_company()%>', <%=comList.get(3).getSum_count()%>],
+				          ['<%=comList.get(4).getTravel_company()%>', <%=comList.get(4).getSum_count()%>],
+				          ['<%=comList.get(5).getTravel_company()%>', <%=comList.get(5).getSum_count()%>],
+				          ['<%=comList.get(6).getTravel_company()%>', <%=comList.get(6).getSum_count()%>]
 				        ]);
 
 				        var options = {
@@ -371,7 +381,7 @@ h5{font-family:'WandohopeR' ;}
 				      }
 					    </script>
 					<div>
-						<div id="columnchart_material" style="width: 850px; height: 450px;"></div>
+						<div id="columnchart_material" style="width: 900px; height: 450px; margin-left: 30px"></div>
 					</div>	
 					
 					
@@ -432,12 +442,12 @@ h5{font-family:'WandohopeR' ;}
 											</div>
 										</td>
 										<td class="align-middle text-center text-sm"><span
-											class="text-xs font-weight-bold"> $14,000 </span></td>
+											class="text-xs font-weight-bold"> <%=comList.get(0).getTravel_company()%> </span></td>
 										<td class="align-middle">
 											<div class="progress-wrapper w-75 mx-auto">
 												<div class="progress-info">
 													<div class="progress-percentage">
-														<span class="text-xs font-weight-bold">60%</span>
+														<span class="text-xs font-weight-bold"><%=comList.get(0).getSum_count()%></span>
 													</div>
 												</div>
 												<div class="progress">
@@ -472,12 +482,12 @@ h5{font-family:'WandohopeR' ;}
 											</div>
 										</td>
 										<td class="align-middle text-center text-sm"><span
-											class="text-xs font-weight-bold"> $3,000 </span></td>
+											class="text-xs font-weight-bold"> <%=comList.get(1).getTravel_company() %> </span></td>
 										<td class="align-middle">
 											<div class="progress-wrapper w-75 mx-auto">
 												<div class="progress-info">
 													<div class="progress-percentage">
-														<span class="text-xs font-weight-bold">10%</span>
+														<span class="text-xs font-weight-bold"><%=comList.get(1).getSum_count()%></span>
 													</div>
 												</div>
 												<div class="progress">
@@ -512,12 +522,12 @@ h5{font-family:'WandohopeR' ;}
 											</div>
 										</td>
 										<td class="align-middle text-center text-sm"><span
-											class="text-xs font-weight-bold"> Not set </span></td>
+											class="text-xs font-weight-bold"> <%=comList.get(2).getTravel_company() %> </span></td>
 										<td class="align-middle">
 											<div class="progress-wrapper w-75 mx-auto">
 												<div class="progress-info">
 													<div class="progress-percentage">
-														<span class="text-xs font-weight-bold">100%</span>
+														<span class="text-xs font-weight-bold"><%=comList.get(2).getSum_count() %></span>
 													</div>
 												</div>
 												<div class="progress">
@@ -562,12 +572,12 @@ h5{font-family:'WandohopeR' ;}
 											</div>
 										</td>
 										<td class="align-middle text-center text-sm"><span
-											class="text-xs font-weight-bold"> $20,500 </span></td>
+											class="text-xs font-weight-bold"> <%=comList.get(3).getTravel_company() %> </span></td>
 										<td class="align-middle">
 											<div class="progress-wrapper w-75 mx-auto">
 												<div class="progress-info">
 													<div class="progress-percentage">
-														<span class="text-xs font-weight-bold">100%</span>
+														<span class="text-xs font-weight-bold"><%=comList.get(3).getSum_count() %></span>
 													</div>
 												</div>
 												<div class="progress">
@@ -597,12 +607,12 @@ h5{font-family:'WandohopeR' ;}
 											</div>
 										</td>
 										<td class="align-middle text-center text-sm"><span
-											class="text-xs font-weight-bold"> $500 </span></td>
+											class="text-xs font-weight-bold"> <%=comList.get(4).getTravel_company() %> </span></td>
 										<td class="align-middle">
 											<div class="progress-wrapper w-75 mx-auto">
 												<div class="progress-info">
 													<div class="progress-percentage">
-														<span class="text-xs font-weight-bold">25%</span>
+														<span class="text-xs font-weight-bold"><%=comList.get(4).getSum_count() %></span>
 													</div>
 												</div>
 												<div class="progress">
@@ -1029,5 +1039,6 @@ h5{font-family:'WandohopeR' ;}
 	<script async defer src="https://buttons.github.io/buttons.js"></script>
 	<!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
 	<script src="./assets/js/soft-ui-dashboard.min.js?v=1.0.7"></script>
+	<%} %>
 </body>
 </html>

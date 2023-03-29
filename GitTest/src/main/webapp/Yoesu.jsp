@@ -168,7 +168,7 @@ h5{font-family:'WandohopeR' ;}
 		<div class="container-fluid py-1 px-3">
 			<h3 align="center">문화의 도시</h3>
 			<h1 align="center">여수</h1>
-			<form action="selectYearYS">
+			<form action="selectYear">
 				<h4>연도 선택 :</h4>
 				<select id="selectyear" name="year">
 					<option value="2018">2018</option>
@@ -178,8 +178,14 @@ h5{font-family:'WandohopeR' ;}
 					<option value="2022">2022</option>
 				</select> <input type="submit" value="선택">
 			</form>
+			<%String year = (String)request.getAttribute("year");
+			if (year == null) {%>
+				<h4 style="position: relative; margin-left: 80%;">연도를 선택해주세요</h4>
+			<% } else {%>
+				<h4 style="position: relative; margin-left: 80%;">선택한 연도 : <%=year %></h4>
+			<%} %>
 		</div>
-
+		<% if (year != null) { %>
 		<div class="row mt-4">
 			<div class="col-lg-7 mb-lg-0 mb-4">
 				<div class="card">
@@ -219,7 +225,7 @@ h5{font-family:'WandohopeR' ;}
 				<div class="card h-100 p-3">
 					<div
 						class="overflow-hidden position-relative border-radius-lg bg-cover h-100"
-						style="background-image: url('../assets/img/ivancik.jpg');">
+						style="background-image: url('./assets/img/ivancik.jpg');">
 						<span class="mask bg-gradient-dark"></span>
 						<div
 							class="card-body position-relative z-index-1 d-flex flex-column h-100 p-3">
@@ -238,7 +244,6 @@ h5{font-family:'WandohopeR' ;}
 				</div>
 			</div>
 		</div>
-
 		<div class="row mt-4">
 			<div class="col-lg-5 mb-lg-0 mb-4">
 				<div class="card z-index-2">
@@ -256,15 +261,13 @@ h5{font-family:'WandohopeR' ;}
 						</p>
 						<div class="container border-radius-lg">
 							<div class="row">
-								<%
-								List<ConsumptionDTO> consumptionList = (List<ConsumptionDTO>) request.getAttribute("consumptionList");
-								%>
+								<% List<ConsumptionDTO> consumptionList = (List<ConsumptionDTO>) request.getAttribute("consumptionList");%>
 								<div class="col-3 py-3 ps-0">
 									<div class="d-flex mb-2">
 										🏢
 										<p class="text-xs mt-1 mb-0 font-weight-bold"><%=consumptionList.get(0).getCunsumption_type1()%></p>
 									</div>
-									<h4 class="font-weight-bolder"><%=consumptionList.get(0).getSum_amount() / 100000%></h4>
+									<h4 class="font-weight-bolder"><%= consumptionList.get(0).getSum_amount()/100000%></h4>
 									<div class="progress w-75">
 										<div class="progress-bar bg-dark w-10" role="progressbar"
 											aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
@@ -275,7 +278,7 @@ h5{font-family:'WandohopeR' ;}
 										🛒
 										<p class="text-xs mt-1 mb-0 font-weight-bold"><%=consumptionList.get(1).getCunsumption_type1()%></p>
 									</div>
-									<h4 class="font-weight-bolder"><%=consumptionList.get(1).getSum_amount() / 100000%></h4>
+									<h4 class="font-weight-bolder"><%=consumptionList.get(1).getSum_amount()/100000%></h4>
 									<div class="progress w-75">
 										<div class="progress-bar bg-dark w-50" role="progressbar"
 											aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
@@ -286,7 +289,7 @@ h5{font-family:'WandohopeR' ;}
 										🎆
 										<p class="text-xs mt-1 mb-0 font-weight-bold"><%=consumptionList.get(2).getCunsumption_type1()%></p>
 									</div>
-									<h4 class="font-weight-bolder"><%=consumptionList.get(2).getSum_amount() / 100000%></h4>
+									<h4 class="font-weight-bolder"><%=consumptionList.get(2).getSum_amount()/100000 %></h4>
 									<div class="progress w-75">
 										<div class="progress-bar bg-dark w-30" role="progressbar"
 											aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
@@ -297,7 +300,7 @@ h5{font-family:'WandohopeR' ;}
 										🍽
 										<p class="text-xs mt-1 mb-0 font-weight-bold"><%=consumptionList.get(3).getCunsumption_type1()%></p>
 									</div>
-									<h4 class="font-weight-bolder"><%=consumptionList.get(3).getSum_amount() / 100000%></h4>
+									<h4 class="font-weight-bolder"><%=consumptionList.get(3).getSum_amount()/100000%></h4>
 									<div class="progress w-75">
 										<div class="progress-bar bg-dark w-90" role="progressbar"
 											aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
@@ -314,16 +317,13 @@ h5{font-family:'WandohopeR' ;}
 						<h3>SNS 언급량</h3>
 						<p class="text-sm">
 							<i class="fa fa-arrow-up text-success"></i> <span
-								class="font-weight-bold">&nbsp&nbsp주요 국내 소셜미디어, 커뮤니티의
-								해당지역에 대한 관광 관련 언급량을 제공</span>
+								class="font-weight-bold">&nbsp&nbsp주요 국내 소셜미디어, 커뮤니티의 해당지역에 대한 관광 관련 언급량을 제공</span>
 						</p>
 					</div>
-					<%
-					List<SNSDTO> snsList = (List) request.getAttribute("snsList");
-					%>
+					<%List<SNSDTO> snsList = (List)request.getAttribute("snsList"); %>
 					<div class="card-body p-3">
 						<div class="chart">
-							<canvas id="chart-line" class="chart-canvas" height="300"></canvas>
+							<canvas id="chart-line" class="chart-canvas" height="275"></canvas>
 						</div>
 					</div>
 				</div>
@@ -335,32 +335,31 @@ h5{font-family:'WandohopeR' ;}
 		<div class="row my-4">
 			<div style="width: 50%; border-radius: 15px;">
 
-				<div
-					style="background-color: white; width: 100%; border-radius: 15px; height: 950px;">
+				<div style="background-color: white; width: 100%; border-radius: 15px; height: 950px;">
 					<br>
 					<h3>&nbsp&nbsp동반유형 키워드 순위</h3>
 					<p class="text-sm mb-0">
-						&nbsp&nbsp&nbsp&nbsp<i class="fa fa-check text-info"
-							aria-hidden="true"></i> <span class="font-weight-bold ms-1">&nbsp주요
-							국내 소셜미디어,커뮤니티의 '동반유형' 관련 주요 키워드 순위를 제공</span>
+						&nbsp&nbsp&nbsp&nbsp<i class="fa fa-check text-info" aria-hidden="true"></i>
+						<span class="font-weight-bold ms-1">&nbsp주요 국내 소셜미디어,커뮤니티의 '동반유형' 관련 주요 키워드 순위를 제공</span>
 					</p>
-					<p></p>
-					<p></p>
-					<p></p>
-
-					<script type="text/javascript"
-						src="https://www.gstatic.com/charts/loader.js"></script>
+					<p></p><p></p><p></p>
+					<%List<CompanyDTO> comList = (List)request.getAttribute("comList");
+					if (comList != null) {%>
+					<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 					<script type="text/javascript">
 					  google.charts.load('current', {'packages':['bar']});
 				      google.charts.setOnLoadCallback(drawChart);
 
 				      function drawChart() {
 				        var data = google.visualization.arrayToDataTable([
-				          ['Year', 'Sales', 'Expenses', 'Profit'],
-				          ['2014', 1000, 400, 200],
-				          ['2015', 1170, 460, 250],
-				          ['2016', 660, 1120, 300],
-				          ['2017', 1030, 540, 350]
+				          ['동반유형', '언급 건수'],
+				          ['<%=comList.get(0).getTravel_company()%>', <%=comList.get(0).getSum_count()%>],
+				          ['<%=comList.get(1).getTravel_company()%>', <%=comList.get(1).getSum_count()%>],
+				          ['<%=comList.get(2).getTravel_company()%>', <%=comList.get(2).getSum_count()%>],
+				          ['<%=comList.get(3).getTravel_company()%>', <%=comList.get(3).getSum_count()%>],
+				          ['<%=comList.get(4).getTravel_company()%>', <%=comList.get(4).getSum_count()%>],
+				          ['<%=comList.get(5).getTravel_company()%>', <%=comList.get(5).getSum_count()%>],
+				          ['<%=comList.get(6).getTravel_company()%>', <%=comList.get(6).getSum_count()%>]
 				        ]);
 
 				        var options = {
@@ -376,11 +375,9 @@ h5{font-family:'WandohopeR' ;}
 				      }
 					    </script>
 					<div>
-						<div id="columnchart_material"
-							style="width: 850px; height: 450px;"></div>
-					</div>
-
-
+						<div id="columnchart_material" style="width: 900px; height: 450px; margin-left: 30px"></div>
+					</div>	
+					
 					<!-- 동반유형 키워드 언급량 -->
 					<div class="col-lg-6 col-5 my-auto text-end">
 						<div class="dropdown float-lg-end pe-4"></div>
@@ -438,17 +435,17 @@ h5{font-family:'WandohopeR' ;}
 											</div>
 										</td>
 										<td class="align-middle text-center text-sm"><span
-											class="text-xs font-weight-bold"> $14,000 </span></td>
+											class="text-xs font-weight-bold"> <%=comList.get(0).getTravel_company()%> </span></td>
 										<td class="align-middle">
 											<div class="progress-wrapper w-75 mx-auto">
 												<div class="progress-info">
 													<div class="progress-percentage">
-														<span class="text-xs font-weight-bold">60%</span>
+														<span class="text-xs font-weight-bold"><%=comList.get(0).getSum_count()%></span>
 													</div>
 												</div>
 												<div class="progress">
-													<div class="progress-bar bg-gradient-info w-60"
-														role="progressbar" aria-valuenow="60" aria-valuemin="0"
+													<div class="progress-bar bg-gradient-success w-100"
+														role="progressbar" aria-valuenow="100" aria-valuemin="0"
 														aria-valuemax="100"></div>
 												</div>
 											</div>
@@ -478,16 +475,16 @@ h5{font-family:'WandohopeR' ;}
 											</div>
 										</td>
 										<td class="align-middle text-center text-sm"><span
-											class="text-xs font-weight-bold"> $3,000 </span></td>
+											class="text-xs font-weight-bold"> <%=comList.get(1).getTravel_company() %> </span></td>
 										<td class="align-middle">
 											<div class="progress-wrapper w-75 mx-auto">
 												<div class="progress-info">
 													<div class="progress-percentage">
-														<span class="text-xs font-weight-bold">10%</span>
+														<span class="text-xs font-weight-bold"><%=comList.get(1).getSum_count()%></span>
 													</div>
 												</div>
 												<div class="progress">
-													<div class="progress-bar bg-gradient-info w-10"
+													<div class="progress-bar bg-gradient-info w-40"
 														role="progressbar" aria-valuenow="10" aria-valuemin="0"
 														aria-valuemax="100"></div>
 												</div>
@@ -518,17 +515,17 @@ h5{font-family:'WandohopeR' ;}
 											</div>
 										</td>
 										<td class="align-middle text-center text-sm"><span
-											class="text-xs font-weight-bold"> Not set </span></td>
+											class="text-xs font-weight-bold"> <%=comList.get(2).getTravel_company() %> </span></td>
 										<td class="align-middle">
 											<div class="progress-wrapper w-75 mx-auto">
 												<div class="progress-info">
 													<div class="progress-percentage">
-														<span class="text-xs font-weight-bold">100%</span>
+														<span class="text-xs font-weight-bold"><%=comList.get(2).getSum_count() %></span>
 													</div>
 												</div>
 												<div class="progress">
-													<div class="progress-bar bg-gradient-success w-100"
-														role="progressbar" aria-valuenow="100" aria-valuemin="0"
+													<div class="progress-bar bg-gradient-info w-30"
+														role="progressbar" aria-valuenow="10" aria-valuemin="0"
 														aria-valuemax="100"></div>
 												</div>
 											</div>
@@ -568,17 +565,17 @@ h5{font-family:'WandohopeR' ;}
 											</div>
 										</td>
 										<td class="align-middle text-center text-sm"><span
-											class="text-xs font-weight-bold"> $20,500 </span></td>
+											class="text-xs font-weight-bold"> <%=comList.get(3).getTravel_company() %> </span></td>
 										<td class="align-middle">
 											<div class="progress-wrapper w-75 mx-auto">
 												<div class="progress-info">
 													<div class="progress-percentage">
-														<span class="text-xs font-weight-bold">100%</span>
+														<span class="text-xs font-weight-bold"><%=comList.get(3).getSum_count() %></span>
 													</div>
 												</div>
 												<div class="progress">
-													<div class="progress-bar bg-gradient-success w-100"
-														role="progressbar" aria-valuenow="100" aria-valuemin="0"
+													<div class="progress-bar bg-gradient-info w-20"
+														role="progressbar" aria-valuenow="10" aria-valuemin="0"
 														aria-valuemax="100"></div>
 												</div>
 											</div>
@@ -603,16 +600,16 @@ h5{font-family:'WandohopeR' ;}
 											</div>
 										</td>
 										<td class="align-middle text-center text-sm"><span
-											class="text-xs font-weight-bold"> $500 </span></td>
+											class="text-xs font-weight-bold"> <%=comList.get(4).getTravel_company() %> </span></td>
 										<td class="align-middle">
 											<div class="progress-wrapper w-75 mx-auto">
 												<div class="progress-info">
 													<div class="progress-percentage">
-														<span class="text-xs font-weight-bold">25%</span>
+														<span class="text-xs font-weight-bold"><%=comList.get(4).getSum_count() %></span>
 													</div>
 												</div>
 												<div class="progress">
-													<div class="progress-bar bg-gradient-info w-25"
+													<div class="progress-bar bg-gradient-info w-5"
 														role="progressbar" aria-valuenow="25" aria-valuemin="0"
 														aria-valuemax="25"></div>
 												</div>
@@ -627,14 +624,13 @@ h5{font-family:'WandohopeR' ;}
 							</table>
 						</div>
 					</div>
+					<%} %>
 				</div>
 			</div>
 
 			<!-- 업종별 신용카드 소비액 추이 -->
 			<div class="col-lg-4 col-md-6">
-				<%
-				List<CreditDTO> creditList = (List) request.getAttribute("creditList");
-				%>
+				<% List<CreditDTO> creditList = (List) request.getAttribute("creditList"); %>
 				<div
 					style="background-color: white; width: 920px; border-radius: 15px; height: 930px;">
 					<br>
@@ -694,11 +690,9 @@ h5{font-family:'WandohopeR' ;}
 						<h3>&nbsp&nbsp&nbsp여행유형/트렌드</h3>
 						<script type="text/javascript"
 							src="https://www.gstatic.com/charts/loader.js"></script>
-						<%
-						List<TravelPurposeDTO> tpList = (List) request.getAttribute("tpList");
-						if (tpList != null) {
-						%>
-						<script type="text/javascript">
+						<%List<TravelPurposeDTO> tpList = (List)request.getAttribute("tpList");
+							if (tpList != null) {%>
+							<script type="text/javascript">
 								google.charts.load('current', {
 									'packages' : [ 'line' ]
 								});
@@ -750,9 +744,7 @@ h5{font-family:'WandohopeR' ;}
 											.convertOptions(options));
 								}
 							</script>
-						<%
-						}
-						%>
+							<%} %>
 						<div>
 							<div id="line_top_x"></div>
 						</div>
@@ -863,76 +855,69 @@ h5{font-family:'WandohopeR' ;}
 				labels : [ "<%=consumptionList.get(0).getCunsumption_type1()%>",
 						   "<%=consumptionList.get(1).getCunsumption_type1()%>",
 						   "<%=consumptionList.get(2).getCunsumption_type1()%>",
-						   "<%=consumptionList.get(3).getCunsumption_type1()%>
-		" ],
-						datasets : [
-								{
-									label : "Sales",
-									tension : 0.4,
-									borderWidth : 0,
-									borderRadius : 4,
-									borderSkipped : false,
-									backgroundColor : "#fff",
-									data : [
-	<%=consumptionList.get(0).getSum_amount() / 100000%>
-		,
-	<%=consumptionList.get(1).getSum_amount() / 100000%>
-		,
-	<%=consumptionList.get(2).getSum_amount() / 100000%>
-		,
-	<%=consumptionList.get(3).getSum_amount() / 100000%>
-		],
-									maxBarThickness : 6
-								}, ],
-					},
-					options : {
-						responsive : true,
-						maintainAspectRatio : false,
-						plugins : {
-							legend : {
-								display : false,
-							}
+						   "<%=consumptionList.get(3).getCunsumption_type1()%>"],
+				datasets : [ {
+					label : "Sales",
+					tension : 0.4,
+					borderWidth : 0,
+					borderRadius : 4,
+					borderSkipped : false,
+					backgroundColor : "#fff",
+					data : [ <%= consumptionList.get(0).getSum_amount()/100000%>,
+							 <%= consumptionList.get(1).getSum_amount()/100000%>,
+							 <%= consumptionList.get(2).getSum_amount()/100000%>,
+							 <%= consumptionList.get(3).getSum_amount()/100000%>],
+					maxBarThickness : 6
+				}, ],
+			},
+			options : {
+				responsive : true,
+				maintainAspectRatio : false,
+				plugins : {
+					legend : {
+						display : false,
+					}
+				},
+				interaction : {
+					intersect : false,
+					mode : 'index',
+				},
+				scales : {
+					y : {
+						grid : {
+							drawBorder : false,
+							display : false,
+							drawOnChartArea : false,
+							drawTicks : false,
 						},
-						interaction : {
-							intersect : false,
-							mode : 'index',
-						},
-						scales : {
-							y : {
-								grid : {
-									drawBorder : false,
-									display : false,
-									drawOnChartArea : false,
-									drawTicks : false,
-								},
-								ticks : {
-									suggestedMin : 0,
-									suggestedMax : 500,
-									beginAtZero : true,
-									padding : 15,
-									font : {
-										size : 14,
-										family : "Open Sans",
-										style : 'normal',
-										lineHeight : 2
-									},
-									color : "#fff"
-								},
+						ticks : {
+							suggestedMin : 0,
+							suggestedMax : 500,
+							beginAtZero : true,
+							padding : 15,
+							font : {
+								size : 14,
+								family : "Open Sans",
+								style : 'normal',
+								lineHeight : 2
 							},
-							x : {
-								grid : {
-									drawBorder : false,
-									display : false,
-									drawOnChartArea : false,
-									drawTicks : false
-								},
-								ticks : {
-									display : false
-								},
-							},
+							color : "#fff"
 						},
 					},
-				});
+					x : {
+						grid : {
+							drawBorder : false,
+							display : false,
+							drawOnChartArea : false,
+							drawTicks : false
+						},
+						ticks : {
+							display : false
+						},
+					},
+				},
+			},
+		});
 		// SNS 언급량 그래프
 		var ctx2 = document.getElementById("chart-line").getContext("2d");
 
@@ -947,49 +932,35 @@ h5{font-family:'WandohopeR' ;}
 		gradientStroke2.addColorStop(1, 'rgba(20,23,39,0.2)');
 		gradientStroke2.addColorStop(0.2, 'rgba(72,72,176,0.0)');
 		gradientStroke2.addColorStop(0, 'rgba(20,23,39,0)'); //purple colors
-
+		
 		new Chart(ctx2, {
 			type : "line",
 			data : {
 				labels : [ "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul",
 						"Aug", "Sep", "Oct", "Nov", "Dec" ],
-				datasets : [
-						{
-							label : "Mobile apps",
-							tension : 0.4,
-							borderWidth : 0,
-							pointRadius : 0,
-							borderColor : "#cb0c9f",
-							borderWidth : 3,
-							backgroundColor : gradientStroke1,
-							fill : true,
-							data : [
-	<%=snsList.get(0).getSns_search()%>
-		,
-	<%=snsList.get(1).getSns_search()%>
-		,
-	<%=snsList.get(2).getSns_search()%>
-		,
-	<%=snsList.get(3).getSns_search()%>
-		,
-	<%=snsList.get(4).getSns_search()%>
-		,
-	<%=snsList.get(5).getSns_search()%>
-		,
-	<%=snsList.get(6).getSns_search()%>
-		,
-	<%=snsList.get(7).getSns_search()%>
-		,
-	<%=snsList.get(8).getSns_search()%>
-		,
-	<%=snsList.get(9).getSns_search()%>
-		,
-	<%=snsList.get(10).getSns_search()%>
-		,
-	<%=snsList.get(11).getSns_search()%>
-		],
-							maxBarThickness : 6
-						}, ],
+				datasets : [ {
+					label : "Mobile apps",
+					tension : 0.4,
+					borderWidth : 0,
+					pointRadius : 0,
+					borderColor : "#cb0c9f",
+					borderWidth : 3,
+					backgroundColor : gradientStroke1,
+					fill : true,
+					data : [ <%=snsList.get(0).getSns_search()%>,
+							 <%=snsList.get(1).getSns_search()%>,
+							 <%=snsList.get(2).getSns_search()%>,
+							 <%=snsList.get(3).getSns_search()%>,
+							 <%=snsList.get(4).getSns_search()%>,
+							 <%=snsList.get(5).getSns_search()%>,
+							 <%=snsList.get(6).getSns_search()%>,
+							 <%=snsList.get(7).getSns_search()%>,
+							 <%=snsList.get(8).getSns_search()%>,
+							 <%=snsList.get(9).getSns_search()%>,
+							 <%=snsList.get(10).getSns_search()%>,
+							 <%=snsList.get(11).getSns_search()%> ],
+					maxBarThickness : 6
+				}, ],
 			},
 			options : {
 				responsive : true,
@@ -1062,5 +1033,7 @@ h5{font-family:'WandohopeR' ;}
 	<script async defer src="https://buttons.github.io/buttons.js"></script>
 	<!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
 	<script src="./assets/js/soft-ui-dashboard.min.js?v=1.0.7"></script>
+	<%} %>
 </body>
+
 </html>
