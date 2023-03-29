@@ -1,3 +1,4 @@
+<%@page import="com.smhrd3.model.CompanyDTO"%>
 <%@page import="com.smhrd3.model.TravelPurposeDTO"%>
 <%@page import="com.smhrd3.model.SNSDTO"%>
 <%@page import="com.smhrd3.model.CreditDTO"%>
@@ -857,7 +858,7 @@ h5{font-family:'WandohopeR' ;}
 						   "<%=consumptionList.get(2).getCunsumption_type1()%>",
 						   "<%=consumptionList.get(3).getCunsumption_type1()%>"],
 				datasets : [ {
-					label : "Sales",
+					label : "",
 					tension : 0.4,
 					borderWidth : 0,
 					borderRadius : 4,
