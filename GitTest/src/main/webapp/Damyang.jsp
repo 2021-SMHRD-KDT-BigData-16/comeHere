@@ -33,6 +33,7 @@
 <link id="pagestyle" href="./assets/css/soft-ui-dashboard.css?v=1.0.7"
    rel="stylesheet" />
 <link rel="stylesheet" href="./assets/css/CSS.css">
+<script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
 </head>
 <style>
 	
@@ -345,7 +346,7 @@ h5{font-family:'WandohopeR' ;}
       <div class="row my-4">
          <div style="width: 50%; border-radius: 15px;">
 
-            <div style="background-color: white; width: 100%; border-radius: 15px; height: 950px;">
+            <div style="background-color: white; width: 100%; border-radius: 15px; height: 930px;">
                <br>
                <h3>&nbsp&nbsp동반유형 키워드 순위</h3>
                <p class="text-sm mb-0">
