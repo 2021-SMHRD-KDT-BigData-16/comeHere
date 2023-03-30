@@ -290,7 +290,7 @@ span {
 						</div>
 
 						<!-- 관광소비유형 -->
-						<h3 class="ms-2 mt-4 mb-0">관광소비유형</h3>
+						<h3 class="ms-2 mt-4 mb-0">관광소비유형(%)</h3>
 						<p class="text-sm ms-2">
 							<span class="font-weight-bolder"></span>
 						</p>
@@ -300,13 +300,18 @@ span {
 								<%
 								List<ConsumptionDTO> consumptionList = (List<ConsumptionDTO>) request.getAttribute("consumptionList");
 								
+								 double num1 = consumptionList.get(0).getSum_amount();
+								 double num2 = consumptionList.get(1).getSum_amount();
+								 double num3 = consumptionList.get(2).getSum_amount();
+								 double num4 = consumptionList.get(3).getSum_amount();
+								
 								%>
 								<div class="col-3 py-3 ps-0">
 									<div class="d-flex mb-2">
 										🏢
 										<p class="text-xs mt-1 mb-0 font-weight-bold"><%=consumptionList.get(0).getCunsumption_type1()%></p>
 									</div>
-									<h4 class="font-weight-bolder"><%= consumptionList.get(0).getSum_amount()/100000%></h4>
+									<h4 class="font-weight-bolder"><%= Math.round((num1/(num1+num2+num3+num4))*100)%></h4>
 									<div class="progress w-75">
 										<div class="progress-bar bg-dark w-10" role="progressbar"
 											aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
@@ -317,7 +322,7 @@ span {
 										🛒
 										<p class="text-xs mt-1 mb-0 font-weight-bold"><%=consumptionList.get(1).getCunsumption_type1()%></p>
 									</div>
-									<h4 class="font-weight-bolder"><%=consumptionList.get(1).getSum_amount()/100000%></h4>
+									<h4 class="font-weight-bolder"><%=Math.round((num2/(num1+num2+num3+num4))*100)%></h4>
 									<div class="progress w-75">
 										<div class="progress-bar bg-dark w-50" role="progressbar"
 											aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
@@ -328,7 +333,7 @@ span {
 										🌊
 										<p class="text-xs mt-1 mb-0 font-weight-bold"><%=consumptionList.get(2).getCunsumption_type1()%></p>
 									</div>
-									<h4 class="font-weight-bolder"><%=consumptionList.get(2).getSum_amount()/100000 %></h4>
+									<h4 class="font-weight-bolder"><%=Math.round((num3/(num1+num2+num3+num4))*100)%></h4>
 									<div class="progress w-75">
 										<div class="progress-bar bg-dark w-30" role="progressbar"
 											aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
@@ -339,7 +344,7 @@ span {
 										🍽
 										<p class="text-xs mt-1 mb-0 font-weight-bold"><%=consumptionList.get(3).getCunsumption_type1()%></p>
 									</div>
-									<h4 class="font-weight-bolder"><%=consumptionList.get(3).getSum_amount()/100000%></h4>
+									<h4 class="font-weight-bolder"><%=Math.round((num4/(num1+num2+num3+num4))*100)%></h4>
 									<div class="progress w-75">
 										<div class="progress-bar bg-dark w-90" role="progressbar"
 											aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
@@ -910,6 +915,7 @@ span {
 	<script src="./assets/js/plugins/chartjs.min.js"></script>
 	<script>
 		var ctx = document.getElementById("chart-bars").getContext("2d");
+		
 		new Chart(ctx, {
 			type : "bar",
 			data : {
@@ -924,11 +930,11 @@ span {
 					borderRadius : 4,
 					borderSkipped : false,
 					backgroundColor : "#fff",
-					data : [ <%= consumptionList.get(0).getSum_amount()/100000%>,
-							 <%= consumptionList.get(1).getSum_amount()/100000%>,
-							 <%= consumptionList.get(2).getSum_amount()/100000%>,
-							 <%= consumptionList.get(3).getSum_amount()/100000%>],
-					maxBarThickness : 6
+					data : [ <%= (num1/(num1+num2+num3+num4))*100%>,
+							 <%= (num2/(num1+num2+num3+num4))*100%>,
+							 <%= (num3/(num1+num2+num3+num4))*100%>,
+							 <%= (num4/(num1+num2+num3+num4))*100%>],
+					maxBarThickness : 20
 				}, ],
 			},
 			options : {
