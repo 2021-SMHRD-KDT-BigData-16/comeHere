@@ -248,7 +248,7 @@ span {
 								<div
 									class="position-relative d-flex align-items-center justify-content-center h-100">
 									<img class="w-100 position-relative z-index-2 pt-4"
-										src="./assets/img/namdo.jpg" alt="rocket">
+										src="./assets/img/namdo.jpg" alt="namdo">
 								</div>
 							</div>
 						</div>
