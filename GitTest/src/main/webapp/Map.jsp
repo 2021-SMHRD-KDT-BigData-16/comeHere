@@ -203,8 +203,8 @@ h5 {
 
 	<div class="a">
 		<form action="map">
-			<button id="back" onclick="history.back()"
-				style="position: absolute; right: 1365px; width : 150px;">이전 페이지</button>
+			<% String moveURL= (String)request.getAttribute("moveURL"); %>
+			<button id="back" type="button" onclick = "location.href='<%= moveURL %>'">이전 페이지</button>
 			<div style="top: 8px; position: absolute;">
 				<input type="radio" name="관광지" value="인기 관광지">인기 관광지
 				&nbsp;
@@ -295,7 +295,7 @@ h5 {
         var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
             mapOption = {
         		<%String area = (String) request.getSession().getAttribute("area");
-if (area.equals("광주")) {%>
+				if (area.equals("광주")) {%>
                 	center: new kakao.maps.LatLng(35.176526445801024, 126.86876961961522), // 지도의 중심좌표
                 <%} else if (area.equals("목포")) {%>
                 	center: new kakao.maps.LatLng(34.80669672817822, 126.40576752194544), // 지도의 중심좌표
