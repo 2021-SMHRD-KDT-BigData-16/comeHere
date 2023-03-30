@@ -214,19 +214,18 @@ span {font-family: 'KimjungchulMyungjo-Bold';}
 								</div>
 							</div>
 							<div class="col-lg-5 ms-auto text-center mt-5 mt-lg-0">
-								
-									<img src="./assets/img/shapes/waves-white.svg"
-										class="position-absolute h-100 w-50 top-0 d-lg-block d-none"
-										alt="waves">
-									<div
-										class="position-relative d-flex align-items-center justify-content-center h-100">
-										<img class="w-100 position-relative z-index-2 pt-4"
-											src="./assets/img/yeosu6.jpg"
-											alt="rocket">
-									</div>
-								
+
+								<img src="./assets/img/shapes/waves-white.svg"
+									class="position-absolute h-100 w-50 top-0 d-lg-block d-none"
+									alt="waves">
+								<div
+									class="position-relative d-flex align-items-center justify-content-center h-100">
+									<img class="w-100 position-relative z-index-2 pt-4"
+										src="./assets/img/namdo.jpg" alt="rocket">
+								</div>
 							</div>
 						</div>
+
 					</div>
 				</div>
 			</div>
@@ -234,12 +233,12 @@ span {font-family: 'KimjungchulMyungjo-Bold';}
 				<div class="card h-100 p-3">
 					<div
 						class="overflow-hidden position-relative border-radius-lg bg-cover h-100"
-						style="background-image: url('./assets/img/yeosu5.jpg');">
+						style="background-image: url('./assets/img/seryangji.jpg');">
 						<span class="mask bg-gradient-suggest"></span>
 						<div
 							class="card-body position-relative z-index-1 d-flex flex-column h-100 p-3">
-							<h5 class="text-white font-weight-bolder mb-4 pt-2">Work
-								with the rockets</h5>
+							<h5 class="text-white font-weight-bolder mb-4 pt-2">주영래 바보
+								명청이</h5>
 							<p class="text-white">Wealth creation is an evolutionarily
 								recent positive-sum game. It is all about who take the
 								opportunity first.</p>
@@ -270,7 +269,11 @@ span {font-family: 'KimjungchulMyungjo-Bold';}
 						</p>
 						<div class="container border-radius-lg">
 							<div class="row">
-								<% List<ConsumptionDTO> consumptionList = (List<ConsumptionDTO>) request.getAttribute("consumptionList");%>
+
+								<%
+								List<ConsumptionDTO> consumptionList = (List<ConsumptionDTO>) request.getAttribute("consumptionList");
+								
+								%>
 								<div class="col-3 py-3 ps-0">
 									<div class="d-flex mb-2">
 										🏢
@@ -340,7 +343,63 @@ span {font-family: 'KimjungchulMyungjo-Bold';}
 		</div>
 
 
+
 		<!-- 동반유형 키워드 언급량 -->
+		<div class="row my-4">
+			<div style="width: 50%; border-radius: 15px;">
+
+				<div
+					style="background-color: white; width: 100%; border-radius: 15px; height: 930px;">
+					<br>
+					<h3>&nbsp&nbsp동반유형 키워드 순위</h3>
+					<p class="text-sm mb-0">
+						&nbsp&nbsp&nbsp&nbsp<i class="fa fa-check text-info"
+							aria-hidden="true"></i> <span class="font-weight-bold ms-1">&nbsp주요
+							국내 소셜미디어,커뮤니티의 '동반유형' 관련 주요 키워드 순위를 제공</span>
+					</p>
+					<p></p>
+					<p></p>
+					<p></p>
+					<%
+					List<CompanyDTO> comList = (List) request.getAttribute("comList");
+					if (comList != null) {
+					%>
+					<script type="text/javascript"
+						src="https://www.gstatic.com/charts/loader.js"></script>
+					<script type="text/javascript">
+					  google.charts.load('current', {'packages':['bar']});
+				      google.charts.setOnLoadCallback(drawChart);
+
+				      function drawChart() {
+				        var data = google.visualization.arrayToDataTable([
+				          ['동반유형', '언급 건수'],
+				          ['<%=comList.get(0).getTravel_company()%>', <%=comList.get(0).getSum_count()%>],
+				          ['<%=comList.get(1).getTravel_company()%>', <%=comList.get(1).getSum_count()%>],
+				          ['<%=comList.get(2).getTravel_company()%>', <%=comList.get(2).getSum_count()%>],
+				          ['<%=comList.get(3).getTravel_company()%>', <%=comList.get(3).getSum_count()%>],
+				          ['<%=comList.get(4).getTravel_company()%>', <%=comList.get(4).getSum_count()%>],
+				          ['<%=comList.get(5).getTravel_company()%>', <%=comList.get(5).getSum_count()%>],
+				          ['<%=comList.get(6).getTravel_company()%>', <%=comList.get(6).getSum_count()%>]
+				        ]);
+
+				        var options = {
+				          chart: {
+				            title: '',
+				            subtitle: '',
+				          }
+				        };
+
+				        var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
+
+				        chart.draw(data, google.charts.Bar.convertOptions(options));
+				      }
+					    </script>
+					<div>
+						<div id="columnchart_material"
+							style="width: 900px; height: 450px; margin-left: 30px"></div>
+					</div>
+
+					<!-- 동반유형 키워드 언급량 -->
 					<div class="col-lg-6 col-5 my-auto text-end">
 						<div class="dropdown float-lg-end pe-4"></div>
 					</div>
@@ -599,7 +658,9 @@ span {font-family: 'KimjungchulMyungjo-Bold';}
 
 			<!-- 업종별 신용카드 소비액 추이 -->
 			<div class="col-lg-4 col-md-6">
-				<% List<CreditDTO> creditList = (List) request.getAttribute("creditList"); %>
+				<%
+				List<CreditDTO> creditList = (List) request.getAttribute("creditList");
+				%>
 				<div
 					style="background-color: white; width: 920px; border-radius: 15px; height: 930px;">
 					<br>
@@ -659,9 +720,11 @@ span {font-family: 'KimjungchulMyungjo-Bold';}
 						<h3>&nbsp&nbsp&nbsp여행유형/트렌드</h3>
 						<script type="text/javascript"
 							src="https://www.gstatic.com/charts/loader.js"></script>
-						<%List<TravelPurposeDTO> tpList = (List)request.getAttribute("tpList");
-							if (tpList != null) {%>
-							<script type="text/javascript">
+						<%
+						List<TravelPurposeDTO> tpList = (List) request.getAttribute("tpList");
+						if (tpList != null) {
+						%>
+						<script type="text/javascript">
 								google.charts.load('current', {
 									'packages' : [ 'line' ]
 								});
@@ -713,7 +776,9 @@ span {font-family: 'KimjungchulMyungjo-Bold';}
 											.convertOptions(options));
 								}
 							</script>
-							<%} %>
+						<%
+						}
+						%>
 						<div>
 							<div id="line_top_x"></div>
 						</div>
@@ -1002,7 +1067,8 @@ span {font-family: 'KimjungchulMyungjo-Bold';}
 	<script async defer src="https://buttons.github.io/buttons.js"></script>
 	<!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
 	<script src="./assets/js/soft-ui-dashboard.min.js?v=1.0.7"></script>
-	<%} %>
+	<%
+	}
+	%>
 </body>
-
 </html>
