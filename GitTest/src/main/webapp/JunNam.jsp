@@ -459,7 +459,23 @@ span {
 										</td>
 										<td>
 											<div class="avatar-group mt-2">
-												<img src="./assets/img/family.png" alt="team2">
+												<% String imgURL = null; %>
+												<% if (((String)comList.get(0).getTravel_company()).equals("기타가족")) {
+													imgURL = "family.png";
+												} else if (((String)comList.get(0).getTravel_company()).equals("자녀")) {
+													imgURL = "boy.png";
+												} else if (((String)comList.get(0).getTravel_company()).equals("부모님")) {
+													imgURL = "parents.png";
+												} else if (((String)comList.get(0).getTravel_company()).equals("연인")) {
+													imgURL = "couple.png";
+												} else if (((String)comList.get(0).getTravel_company()).equals("친구")) {
+													imgURL = "buddy.png";
+												} else if (((String)comList.get(0).getTravel_company()).equals("회사동료")) {
+													imgURL = "company.png";
+												} else if (((String)comList.get(0).getTravel_company()).equals("배우자")) {
+													imgURL = "wedding.png";
+												}%>
+												<img src="./assets/img/<%=imgURL%>" alt="team2">
 											</div>
 										</td>
 										<td class="align-middle text-center text-sm"><span
@@ -482,6 +498,21 @@ span {
 									</tr>
 									<tr>
 										<td>
+												<% if (((String)comList.get(1).getTravel_company()).equals("기타가족")) {
+													imgURL = "family.png";
+												} else if (((String)comList.get(1).getTravel_company()).equals("자녀")) {
+													imgURL = "boy.png";
+												} else if (((String)comList.get(1).getTravel_company()).equals("부모님")) {
+													imgURL = "parents.png";
+												} else if (((String)comList.get(1).getTravel_company()).equals("연인")) {
+													imgURL = "couple.png";
+												} else if (((String)comList.get(1).getTravel_company()).equals("친구")){
+													imgURL = "buddy.png";
+												} else if (((String)comList.get(1).getTravel_company()).equals("회사동료")) {
+													imgURL = "company.png";
+												} else if (((String)comList.get(1).getTravel_company()).equals("배우자")) {
+													imgURL = "wedding.png";
+												}%>
 											<div class="d-flex px-2 py-1">
 												<div class="d-flex flex-column justify-content-center">
 													<h6 class="mb-0 text-sm">2</h6>
@@ -490,7 +521,7 @@ span {
 										</td>
 										<td>
 											<div class="avatar-group mt-2">
-												<img src="./assets/img/boy.png
+												<img src="./assets/img/<%=imgURL%>
 													" alt="team6">
 											</div>
 										</td>
@@ -510,6 +541,21 @@ span {
 									</tr>
 									<tr>
 										<td>
+												<% if (((String)comList.get(2).getTravel_company()).equals("기타가족")) {
+													imgURL = "family.png";
+												} else if (((String)comList.get(2).getTravel_company()).equals("자녀")) {
+													imgURL = "boy.png";
+												} else if (((String)comList.get(2).getTravel_company()).equals("부모님")) {
+													imgURL = "parents.png";
+												} else if (((String)comList.get(2).getTravel_company()).equals("연인")) {
+													imgURL = "couple.png";
+												} else if (((String)comList.get(2).getTravel_company()).equals("친구")) {
+													imgURL = "buddy.png";
+												} else if (((String)comList.get(2).getTravel_company()).equals("회사동료")) {
+													imgURL = "company.png";
+												} else if (((String)comList.get(2).getTravel_company()).equals("배우자")) {
+													imgURL = "wedding.png";
+												}%>
 											<div class="d-flex px-2 py-1">
 												<div class="d-flex flex-column justify-content-center">
 													<h6 class="mb-0 text-sm">3</h6>
@@ -519,7 +565,7 @@ span {
 										<td>
 											<div class="avatar-group mt-2">
 
-												<img src="./assets/img/parents.png
+												<img src="./assets/img/<%=imgURL%>
 													"
 													alt="team9">
 											</div>
@@ -539,13 +585,28 @@ span {
 									</tr>
 									<tr>
 										<td>
+												<% if (((String)comList.get(3).getTravel_company()).equals("기타가족")) {
+													imgURL = "family.png";
+												} else if (((String)comList.get(3).getTravel_company()).equals("자녀")) {
+													imgURL = "boy.png";
+												} else if (((String)comList.get(3).getTravel_company()).equals("부모님")) {
+													imgURL = "parents.png";
+												} else if (((String)comList.get(3).getTravel_company()).equals("연인")) {
+													imgURL = "couple.png";
+												} else if (((String)comList.get(3).getTravel_company()).equals("친구")) {
+													imgURL = "buddy.png";
+												} else if (((String)comList.get(3).getTravel_company()).equals("회사동료")) {
+													imgURL = "company.png";
+												} else if (((String)comList.get(3).getTravel_company()).equals("배우자")) {
+													imgURL = "wedding.png";
+												}%>
 											<div class="d-flex px-2 py-1">
 												<div class="d-flex flex-column justify-content-center">
 													<h6 class="mb-0 text-sm">4</h6>
 												</div>
 											</div>
 										</td>
-										<td><img src="./assets/img/couple.png
+										<td><img src="./assets/img/<%=imgURL%>
 													"
 											alt="user4">
 
@@ -565,6 +626,21 @@ span {
 									</tr>
 									<tr>
 										<td>
+												<% if (((String)comList.get(4).getTravel_company()).equals("기타가족")) {
+													imgURL = "family.png";
+												} else if (((String)comList.get(4).getTravel_company()).equals("자녀")) {
+													imgURL = "boy.png";
+												} else if (((String)comList.get(4).getTravel_company()).equals("부모님")) {
+													imgURL = "parents.png";
+												} else if (((String)comList.get(4).getTravel_company()).equals("연인")) {
+													imgURL = "couple.png";
+												} else if (((String)comList.get(4).getTravel_company()).equals("친구")) {
+													imgURL = "buddy.png";
+												} else if (((String)comList.get(4).getTravel_company()).equals("회사동료")) {
+													imgURL = "company.png";
+												} else if (((String)comList.get(4).getTravel_company()).equals("배우자")) {
+													imgURL = "wedding.png";
+												}%>
 											<div class="d-flex px-2 py-1">
 												<div class="d-flex flex-column justify-content-center">
 													<h6 class="mb-0 text-sm">5</h6>
@@ -573,7 +649,7 @@ span {
 										</td>
 										<td>
 											<div class="avatar-group mt-2">
-												<img src="./assets/img/buddy.png" alt="user5">
+												<img src="./assets/img/<%=imgURL%>" alt="user5">
 
 											</div>
 										</td>

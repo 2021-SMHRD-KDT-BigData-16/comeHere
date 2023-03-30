@@ -341,53 +341,6 @@ span {font-family: 'KimjungchulMyungjo-Bold';}
 
 
 		<!-- 동반유형 키워드 언급량 -->
-		<div class="row my-4">
-			<div style="width: 50%; border-radius: 15px;">
-
-				<div style="background-color: white; width: 100%; border-radius: 15px; height: 930px;">
-					<br>
-					<h3>&nbsp&nbsp동반유형 키워드 순위</h3>
-					<p class="text-sm mb-0">
-						&nbsp&nbsp&nbsp&nbsp<i class="fa fa-check text-info" aria-hidden="true"></i>
-						<span class="font-weight-bold ms-1">&nbsp주요 국내 소셜미디어,커뮤니티의 '동반유형' 관련 주요 키워드 순위를 제공</span>
-					</p>
-					<p></p><p></p><p></p>
-					<%List<CompanyDTO> comList = (List)request.getAttribute("comList");
-					if (comList != null) {%>
-					<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-					<script type="text/javascript">
-					  google.charts.load('current', {'packages':['bar']});
-				      google.charts.setOnLoadCallback(drawChart);
-
-				      function drawChart() {
-				        var data = google.visualization.arrayToDataTable([
-				          ['동반유형', '언급 건수'],
-				          ['<%=comList.get(0).getTravel_company()%>', <%=comList.get(0).getSum_count()%>],
-				          ['<%=comList.get(1).getTravel_company()%>', <%=comList.get(1).getSum_count()%>],
-				          ['<%=comList.get(2).getTravel_company()%>', <%=comList.get(2).getSum_count()%>],
-				          ['<%=comList.get(3).getTravel_company()%>', <%=comList.get(3).getSum_count()%>],
-				          ['<%=comList.get(4).getTravel_company()%>', <%=comList.get(4).getSum_count()%>],
-				          ['<%=comList.get(5).getTravel_company()%>', <%=comList.get(5).getSum_count()%>],
-				          ['<%=comList.get(6).getTravel_company()%>', <%=comList.get(6).getSum_count()%>]
-				        ]);
-
-				        var options = {
-				          chart: {
-				            title: '',
-				            subtitle: '',
-				          }
-				        };
-
-				        var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
-
-				        chart.draw(data, google.charts.Bar.convertOptions(options));
-				      }
-					    </script>
-					<div>
-						<div id="columnchart_material" style="width: 900px; height: 450px; margin-left: 30px"></div>
-					</div>	
-					
-					<!-- 동반유형 키워드 언급량 -->
 					<div class="col-lg-6 col-5 my-auto text-end">
 						<div class="dropdown float-lg-end pe-4"></div>
 					</div>
@@ -420,13 +373,28 @@ span {font-family: 'KimjungchulMyungjo-Bold';}
 										</td>
 										<td>
 											<div class="avatar-group mt-2">
-													<img src="./assets/img/family.png
-													" alt="team4">
-												
+												<% String imgURL = null; %>
+												<% if (((String)comList.get(0).getTravel_company()).equals("기타가족")) {
+													imgURL = "family.png";
+												} else if (((String)comList.get(0).getTravel_company()).equals("자녀")) {
+													imgURL = "boy.png";
+												} else if (((String)comList.get(0).getTravel_company()).equals("부모님")) {
+													imgURL = "parents.png";
+												} else if (((String)comList.get(0).getTravel_company()).equals("연인")) {
+													imgURL = "couple.png";
+												} else if (((String)comList.get(0).getTravel_company()).equals("친구")) {
+													imgURL = "buddy.png";
+												} else if (((String)comList.get(0).getTravel_company()).equals("회사동료")) {
+													imgURL = "company.png";
+												} else if (((String)comList.get(0).getTravel_company()).equals("배우자")) {
+													imgURL = "wedding.png";
+												}%>
+												<img src="./assets/img/<%=imgURL%>" alt="team2">
 											</div>
 										</td>
 										<td class="align-middle text-center text-sm"><span
-											class="text-xs font-weight-bold"> <%=comList.get(0).getTravel_company()%> </span></td>
+											class="text-xs font-weight-bold"> <%=comList.get(0).getTravel_company()%>
+										</span></td>
 										<td class="align-middle">
 											<div class="progress-wrapper w-75 mx-auto">
 												<div class="progress-info">
@@ -444,6 +412,21 @@ span {font-family: 'KimjungchulMyungjo-Bold';}
 									</tr>
 									<tr>
 										<td>
+												<% if (((String)comList.get(1).getTravel_company()).equals("기타가족")) {
+													imgURL = "family.png";
+												} else if (((String)comList.get(1).getTravel_company()).equals("자녀")) {
+													imgURL = "boy.png";
+												} else if (((String)comList.get(1).getTravel_company()).equals("부모님")) {
+													imgURL = "parents.png";
+												} else if (((String)comList.get(1).getTravel_company()).equals("연인")) {
+													imgURL = "couple.png";
+												} else if (((String)comList.get(1).getTravel_company()).equals("친구")){
+													imgURL = "buddy.png";
+												} else if (((String)comList.get(1).getTravel_company()).equals("회사동료")) {
+													imgURL = "company.png";
+												} else if (((String)comList.get(1).getTravel_company()).equals("배우자")) {
+													imgURL = "wedding.png";
+												}%>
 											<div class="d-flex px-2 py-1">
 												<div class="d-flex flex-column justify-content-center">
 													<h6 class="mb-0 text-sm">2</h6>
@@ -452,12 +435,13 @@ span {font-family: 'KimjungchulMyungjo-Bold';}
 										</td>
 										<td>
 											<div class="avatar-group mt-2">
-												<img src="./assets/img/buddy.png
+												<img src="./assets/img/<%=imgURL%>
 													" alt="team6">
 											</div>
 										</td>
 										<td class="align-middle text-center text-sm"><span
-											class="text-xs font-weight-bold"> <%=comList.get(1).getTravel_company() %> </span></td>
+											class="text-xs font-weight-bold"> <%=comList.get(1).getTravel_company()%>
+										</span></td>
 										<td class="align-middle">
 											<div class="progress-wrapper w-75 mx-auto">
 												<div class="progress-info">
@@ -465,16 +449,27 @@ span {font-family: 'KimjungchulMyungjo-Bold';}
 														<span class="text-xs font-weight-bold"><%=comList.get(1).getSum_count()%></span>
 													</div>
 												</div>
-												<div class="progress">
-													<div class="progress-bar bg-gradient-info w-40"
-														role="progressbar" aria-valuenow="10" aria-valuemin="0"
-														aria-valuemax="100"></div>
-												</div>
+
 											</div>
 										</td>
 									</tr>
 									<tr>
 										<td>
+												<% if (((String)comList.get(2).getTravel_company()).equals("기타가족")) {
+													imgURL = "family.png";
+												} else if (((String)comList.get(2).getTravel_company()).equals("자녀")) {
+													imgURL = "boy.png";
+												} else if (((String)comList.get(2).getTravel_company()).equals("부모님")) {
+													imgURL = "parents.png";
+												} else if (((String)comList.get(2).getTravel_company()).equals("연인")) {
+													imgURL = "couple.png";
+												} else if (((String)comList.get(2).getTravel_company()).equals("친구")) {
+													imgURL = "buddy.png";
+												} else if (((String)comList.get(2).getTravel_company()).equals("회사동료")) {
+													imgURL = "company.png";
+												} else if (((String)comList.get(2).getTravel_company()).equals("배우자")) {
+													imgURL = "wedding.png";
+												}%>
 											<div class="d-flex px-2 py-1">
 												<div class="d-flex flex-column justify-content-center">
 													<h6 class="mb-0 text-sm">3</h6>
@@ -483,62 +478,83 @@ span {font-family: 'KimjungchulMyungjo-Bold';}
 										</td>
 										<td>
 											<div class="avatar-group mt-2">
-												<img src="./assets/img/parents.png
-													" alt="team9">
-												
+
+												<img src="./assets/img/<%=imgURL%>
+													"
+													alt="team9">
 											</div>
 										</td>
 										<td class="align-middle text-center text-sm"><span
-											class="text-xs font-weight-bold"> <%=comList.get(2).getTravel_company() %> </span></td>
+											class="text-xs font-weight-bold"> <%=comList.get(2).getTravel_company()%>
+										</span></td>
 										<td class="align-middle">
 											<div class="progress-wrapper w-75 mx-auto">
 												<div class="progress-info">
 													<div class="progress-percentage">
-														<span class="text-xs font-weight-bold"><%=comList.get(2).getSum_count() %></span>
+														<span class="text-xs font-weight-bold"><%=comList.get(2).getSum_count()%></span>
 													</div>
-												</div>
-												<div class="progress">
-													<div class="progress-bar bg-gradient-info w-30"
-														role="progressbar" aria-valuenow="10" aria-valuemin="0"
-														aria-valuemax="100"></div>
 												</div>
 											</div>
 										</td>
 									</tr>
 									<tr>
 										<td>
+												<% if (((String)comList.get(3).getTravel_company()).equals("기타가족")) {
+													imgURL = "family.png";
+												} else if (((String)comList.get(3).getTravel_company()).equals("자녀")) {
+													imgURL = "boy.png";
+												} else if (((String)comList.get(3).getTravel_company()).equals("부모님")) {
+													imgURL = "parents.png";
+												} else if (((String)comList.get(3).getTravel_company()).equals("연인")) {
+													imgURL = "couple.png";
+												} else if (((String)comList.get(3).getTravel_company()).equals("친구")) {
+													imgURL = "buddy.png";
+												} else if (((String)comList.get(3).getTravel_company()).equals("회사동료")) {
+													imgURL = "company.png";
+												} else if (((String)comList.get(3).getTravel_company()).equals("배우자")) {
+													imgURL = "wedding.png";
+												}%>
 											<div class="d-flex px-2 py-1">
 												<div class="d-flex flex-column justify-content-center">
 													<h6 class="mb-0 text-sm">4</h6>
 												</div>
 											</div>
 										</td>
-										<td>
-											<div class="avatar-group mt-2">
-												<img src="./assets/img/couple.png
-													" alt="user4">
-											
-											</div>
-										</td>
+										<td><img src="./assets/img/<%=imgURL%>
+													"
+											alt="user4">
+
+											</div></td>
 										<td class="align-middle text-center text-sm"><span
-											class="text-xs font-weight-bold"> <%=comList.get(3).getTravel_company() %> </span></td>
+											class="text-xs font-weight-bold"> <%=comList.get(3).getTravel_company()%>
+										</span></td>
 										<td class="align-middle">
 											<div class="progress-wrapper w-75 mx-auto">
 												<div class="progress-info">
 													<div class="progress-percentage">
-														<span class="text-xs font-weight-bold"><%=comList.get(3).getSum_count() %></span>
+														<span class="text-xs font-weight-bold"><%=comList.get(3).getSum_count()%></span>
 													</div>
-												</div>
-												<div class="progress">
-													<div class="progress-bar bg-gradient-info w-20"
-														role="progressbar" aria-valuenow="10" aria-valuemin="0"
-														aria-valuemax="100"></div>
 												</div>
 											</div>
 										</td>
 									</tr>
 									<tr>
 										<td>
+												<% if (((String)comList.get(4).getTravel_company()).equals("기타가족")) {
+													imgURL = "family.png";
+												} else if (((String)comList.get(4).getTravel_company()).equals("자녀")) {
+													imgURL = "boy.png";
+												} else if (((String)comList.get(4).getTravel_company()).equals("부모님")) {
+													imgURL = "parents.png";
+												} else if (((String)comList.get(4).getTravel_company()).equals("연인")) {
+													imgURL = "couple.png";
+												} else if (((String)comList.get(4).getTravel_company()).equals("친구")) {
+													imgURL = "buddy.png";
+												} else if (((String)comList.get(4).getTravel_company()).equals("회사동료")) {
+													imgURL = "company.png";
+												} else if (((String)comList.get(4).getTravel_company()).equals("배우자")) {
+													imgURL = "wedding.png";
+												}%>
 											<div class="d-flex px-2 py-1">
 												<div class="d-flex flex-column justify-content-center">
 													<h6 class="mb-0 text-sm">5</h6>
@@ -547,18 +563,18 @@ span {font-family: 'KimjungchulMyungjo-Bold';}
 										</td>
 										<td>
 											<div class="avatar-group mt-2">
-												<img src="./assets/img/wedding.png
-													" alt="user5">
-												
+												<img src="./assets/img/<%=imgURL%>" alt="user5">
+
 											</div>
 										</td>
 										<td class="align-middle text-center text-sm"><span
-											class="text-xs font-weight-bold"> <%=comList.get(4).getTravel_company() %> </span></td>
+											class="text-xs font-weight-bold"> <%=comList.get(4).getTravel_company()%>
+										</span></td>
 										<td class="align-middle">
 											<div class="progress-wrapper w-75 mx-auto">
 												<div class="progress-info">
 													<div class="progress-percentage">
-														<span class="text-xs font-weight-bold"><%=comList.get(4).getSum_count() %></span>
+														<span class="text-xs font-weight-bold"><%=comList.get(4).getSum_count()%></span>
 													</div>
 												</div>
 												<div class="progress">
@@ -575,7 +591,9 @@ span {font-family: 'KimjungchulMyungjo-Bold';}
 							</table>
 						</div>
 					</div>
-					<%} %>
+					<%
+					}
+					%>
 				</div>
 			</div>
 
