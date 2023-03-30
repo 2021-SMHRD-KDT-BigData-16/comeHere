@@ -419,27 +419,8 @@ h5{font-family:'WandohopeR' ;}
 										</td>
 										<td>
 											<div class="avatar-group mt-2">
-												<a href="javascript:;"
-													class="avatar avatar-xs rounded-circle"
-													data-bs-toggle="tooltip" data-bs-placement="bottom"
-													title="Ryan Tompson"> <img src=./assets/img/team-1.jpg
-													" alt="team1">
-												</a> <a href="javascript:;"
-													class="avatar avatar-xs rounded-circle"
-													data-bs-toggle="tooltip" data-bs-placement="bottom"
-													title="Romina Hadid"> <img src=./assets/img/team-2.jpg
-													" alt="team2">
-												</a> <a href="javascript:;"
-													class="avatar avatar-xs rounded-circle"
-													data-bs-toggle="tooltip" data-bs-placement="bottom"
-													title="Alexander Smith"> <img
-													src=./assets/img/team-3.jpg " alt="team3">
-												</a> <a href="javascript:;"
-													class="avatar avatar-xs rounded-circle"
-													data-bs-toggle="tooltip" data-bs-placement="bottom"
-													title="Jessica Doe"> <img src=./assets/img/team-4.jpg
+												<img src=./assets/img/family.png
 													" alt="team4">
-												</a>
 											</div>
 										</td>
 										<td class="align-middle text-center text-sm"><span
@@ -469,17 +450,8 @@ h5{font-family:'WandohopeR' ;}
 										</td>
 										<td>
 											<div class="avatar-group mt-2">
-												<a href="javascript:;"
-													class="avatar avatar-xs rounded-circle"
-													data-bs-toggle="tooltip" data-bs-placement="bottom"
-													title="Romina Hadid"> <img src=./assets/img/team-2.jpg
-													" alt="team5">
-												</a> <a href="javascript:;"
-													class="avatar avatar-xs rounded-circle"
-													data-bs-toggle="tooltip" data-bs-placement="bottom"
-													title="Jessica Doe"> <img src=./assets/img/team-4.jpg
+												<img src="./assets/img/buddy.png
 													" alt="team6">
-												</a>
 											</div>
 										</td>
 										<td class="align-middle text-center text-sm"><span
@@ -509,17 +481,8 @@ h5{font-family:'WandohopeR' ;}
 										</td>
 										<td>
 											<div class="avatar-group mt-2">
-												<a href="javascript:;"
-													class="avatar avatar-xs rounded-circle"
-													data-bs-toggle="tooltip" data-bs-placement="bottom"
-													title="Romina Hadid"> <img src=./assets/img/team-3.jpg
-													" alt="team8">
-												</a> <a href="javascript:;"
-													class="avatar avatar-xs rounded-circle"
-													data-bs-toggle="tooltip" data-bs-placement="bottom"
-													title="Jessica Doe"> <img src=./assets/img/team-1.jpg
+												<img src="./assets/img/parents.png
 													" alt="team9">
-												</a>
 											</div>
 										</td>
 										<td class="align-middle text-center text-sm"><span
@@ -549,27 +512,8 @@ h5{font-family:'WandohopeR' ;}
 										</td>
 										<td>
 											<div class="avatar-group mt-2">
-												<a href="javascript:;"
-													class="avatar avatar-xs rounded-circle"
-													data-bs-toggle="tooltip" data-bs-placement="bottom"
-													title="Ryan Tompson"> <img src=./assets/img/team-4.jpg
-													" alt="user1">
-												</a> <a href="javascript:;"
-													class="avatar avatar-xs rounded-circle"
-													data-bs-toggle="tooltip" data-bs-placement="bottom"
-													title="Romina Hadid"> <img src=./assets/img/team-3.jpg
-													" alt="user2">
-												</a> <a href="javascript:;"
-													class="avatar avatar-xs rounded-circle"
-													data-bs-toggle="tooltip" data-bs-placement="bottom"
-													title="Alexander Smith"> <img
-													src=./assets/img/team-4.jpg " alt="user3">
-												</a> <a href="javascript:;"
-													class="avatar avatar-xs rounded-circle"
-													data-bs-toggle="tooltip" data-bs-placement="bottom"
-													title="Jessica Doe"> <img src=./assets/img/team-1.jpg
+												<img src="./assets/img/wedding.png
 													" alt="user4">
-												</a>
 											</div>
 										</td>
 										<td class="align-middle text-center text-sm"><span
@@ -599,12 +543,8 @@ h5{font-family:'WandohopeR' ;}
 										</td>
 										<td>
 											<div class="avatar-group mt-2">
-												<a href="javascript:;"
-													class="avatar avatar-xs rounded-circle"
-													data-bs-toggle="tooltip" data-bs-placement="bottom"
-													title="Ryan Tompson"> <img src=./assets/img/team-4.jpg
+												<img src="./assets/img/company.png
 													" alt="user5">
-												</a>
 											</div>
 										</td>
 										<td class="align-middle text-center text-sm"><span

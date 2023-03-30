@@ -546,7 +546,7 @@ h5{font-family:'WandohopeR' ;}
 										</td>
 										<td>
 											<div class="avatar-group mt-2">
-												<img src="./assets/img/couple.png
+												<img src="./assets/img/wedding.png
 													" alt="user5">
 												
 											</div>
