@@ -292,28 +292,16 @@ h5 {
 						</p>
 						<div class="container border-radius-lg">
 							<div class="row">
-								<%
-								List<ConsumptionDTO> consumptionList = (List<ConsumptionDTO>) request.getAttribute("consumptionList");
-								int first = (int) consumptionList.get(0).getSum_amount() / 100000;
-								int twice = (int) consumptionList.get(1).getSum_amount() / 100000;
-								int third = (int) consumptionList.get(2).getSum_amount() / 100000;
-								int fourth = (int) consumptionList.get(3).getSum_amount() / 100000;
-								int sum = first + twice + third + fourth;
-								int firstPc = (first / sum) * 100;
-								int twicePc = (twice / sum) * 100;
-								int thirdPc = (third / sum) * 100;
-								int fourthPc = (fourth / sum) * 100;
-								%>
+								<% List<ConsumptionDTO> consumptionList = (List<ConsumptionDTO>) request.getAttribute("consumptionList");%>
 								<div class="col-3 py-3 ps-0">
 									<div class="d-flex mb-2">
 										🏢
 										<p class="text-xs mt-1 mb-0 font-weight-bold"><%=consumptionList.get(0).getCunsumption_type1()%></p>
 									</div>
-									<h4 class="font-weight-bolder"><%=first%></h4>
+									<h4 class="font-weight-bolder"><%= consumptionList.get(0).getSum_amount()/100000%></h4>
 									<div class="progress w-75">
-										<div class="progress-bar bg-dark w-<%=firstPc%>"
-											role="progressbar" aria-valuenow="<%=firstPc%>"
-											aria-valuemin="0" aria-valuemax="100"></div>
+										<div class="progress-bar bg-dark w-10" role="progressbar"
+											aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
 									</div>
 								</div>
 								<div class="col-3 py-3 ps-0">
@@ -321,11 +309,10 @@ h5 {
 										🛒
 										<p class="text-xs mt-1 mb-0 font-weight-bold"><%=consumptionList.get(1).getCunsumption_type1()%></p>
 									</div>
-									<h4 class="font-weight-bolder"><%=twice%></h4>
+									<h4 class="font-weight-bolder"><%=consumptionList.get(1).getSum_amount()/100000%></h4>
 									<div class="progress w-75">
-										<div class="progress-bar bg-dark w-<%=twicePc%>"
-											role="progressbar" aria-valuenow="<%=twicePc%>"
-											aria-valuemin="0" aria-valuemax="100"></div>
+										<div class="progress-bar bg-dark w-50" role="progressbar"
+											aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
 									</div>
 								</div>
 								<div class="col-3 py-3 ps-0">
@@ -333,11 +320,10 @@ h5 {
 										🌊
 										<p class="text-xs mt-1 mb-0 font-weight-bold"><%=consumptionList.get(2).getCunsumption_type1()%></p>
 									</div>
-									<h4 class="font-weight-bolder"><%=third%></h4>
+									<h4 class="font-weight-bolder"><%=consumptionList.get(2).getSum_amount()/100000 %></h4>
 									<div class="progress w-75">
-										<div class="progress-bar bg-dark w-<%=thirdPc%>"
-											role="progressbar" aria-valuenow="<%=thirdPc%>"
-											aria-valuemin="0" aria-valuemax="100"></div>
+										<div class="progress-bar bg-dark w-30" role="progressbar"
+											aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
 									</div>
 								</div>
 								<div class="col-3 py-3 ps-0">
@@ -345,11 +331,10 @@ h5 {
 										🍽
 										<p class="text-xs mt-1 mb-0 font-weight-bold"><%=consumptionList.get(3).getCunsumption_type1()%></p>
 									</div>
-									<h4 class="font-weight-bolder"><%=fourth%></h4>
+									<h4 class="font-weight-bolder"><%=consumptionList.get(3).getSum_amount()/100000%></h4>
 									<div class="progress w-75">
-										<div class="progress-bar bg-dark w-<%=fourthPc%>"
-											role="progressbar" aria-valuenow="<%=fourthPc%>"
-											aria-valuemin="0" aria-valuemax="100"></div>
+										<div class="progress-bar bg-dark w-90" role="progressbar"
+											aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
 									</div>
 								</div>
 							</div>
@@ -363,13 +348,10 @@ h5 {
 						<h3>SNS 언급량</h3>
 						<p class="text-sm">
 							<i class="fa fa-arrow-up text-success"></i> <span
-								class="font-weight-bold">&nbsp&nbsp주요 국내 소셜미디어, 커뮤니티의
-								해당지역에 대한 관광 관련 언급량을 제공</span>
+								class="font-weight-bold">&nbsp&nbsp주요 국내 소셜미디어, 커뮤니티의 해당지역에 대한 관광 관련 언급량을 제공</span>
 						</p>
 					</div>
-					<%
-					List<SNSDTO> snsList = (List) request.getAttribute("snsList");
-					%>
+					<%List<SNSDTO> snsList = (List)request.getAttribute("snsList"); %>
 					<div class="card-body p-3">
 						<div class="chart">
 							<canvas id="chart-line" class="chart-canvas" height="275"></canvas>
@@ -378,6 +360,7 @@ h5 {
 				</div>
 			</div>
 		</div>
+
 
 
 		<!-- 동반유형 키워드 언급량 -->
@@ -849,76 +832,69 @@ h5 {
 				labels : [ "<%=consumptionList.get(0).getCunsumption_type1()%>",
 						   "<%=consumptionList.get(1).getCunsumption_type1()%>",
 						   "<%=consumptionList.get(2).getCunsumption_type1()%>",
-						   "<%=consumptionList.get(3).getCunsumption_type1()%>
-		" ],
-						datasets : [
-								{
-									label : "",
-									tension : 0.4,
-									borderWidth : 0,
-									borderRadius : 4,
-									borderSkipped : false,
-									backgroundColor : "#fff",
-									data : [
-	<%=consumptionList.get(0).getSum_amount() / 100000%>
-		,
-	<%=consumptionList.get(1).getSum_amount() / 100000%>
-		,
-	<%=consumptionList.get(2).getSum_amount() / 100000%>
-		,
-	<%=consumptionList.get(3).getSum_amount() / 100000%>
-		],
-									maxBarThickness : 6
-								}, ],
-					},
-					options : {
-						responsive : true,
-						maintainAspectRatio : false,
-						plugins : {
-							legend : {
-								display : false,
-							}
+						   "<%=consumptionList.get(3).getCunsumption_type1()%>"],
+				datasets : [ {
+					label : "",
+					tension : 0.4,
+					borderWidth : 0,
+					borderRadius : 4,
+					borderSkipped : false,
+					backgroundColor : "#fff",
+					data : [ <%= consumptionList.get(0).getSum_amount()/100000%>,
+							 <%= consumptionList.get(1).getSum_amount()/100000%>,
+							 <%= consumptionList.get(2).getSum_amount()/100000%>,
+							 <%= consumptionList.get(3).getSum_amount()/100000%>],
+					maxBarThickness : 6
+				}, ],
+			},
+			options : {
+				responsive : true,
+				maintainAspectRatio : false,
+				plugins : {
+					legend : {
+						display : false,
+					}
+				},
+				interaction : {
+					intersect : false,
+					mode : 'index',
+				},
+				scales : {
+					y : {
+						grid : {
+							drawBorder : false,
+							display : false,
+							drawOnChartArea : false,
+							drawTicks : false,
 						},
-						interaction : {
-							intersect : false,
-							mode : 'index',
-						},
-						scales : {
-							y : {
-								grid : {
-									drawBorder : false,
-									display : false,
-									drawOnChartArea : false,
-									drawTicks : false,
-								},
-								ticks : {
-									suggestedMin : 0,
-									suggestedMax : 500,
-									beginAtZero : true,
-									padding : 15,
-									font : {
-										size : 14,
-										family : "Open Sans",
-										style : 'normal',
-										lineHeight : 2
-									},
-									color : "#fff"
-								},
+						ticks : {
+							suggestedMin : 0,
+							suggestedMax : 500,
+							beginAtZero : true,
+							padding : 15,
+							font : {
+								size : 14,
+								family : "Open Sans",
+								style : 'normal',
+								lineHeight : 2
 							},
-							x : {
-								grid : {
-									drawBorder : false,
-									display : false,
-									drawOnChartArea : false,
-									drawTicks : false
-								},
-								ticks : {
-									display : false
-								},
-							},
+							color : "#fff"
 						},
 					},
-				});
+					x : {
+						grid : {
+							drawBorder : false,
+							display : false,
+							drawOnChartArea : false,
+							drawTicks : false
+						},
+						ticks : {
+							display : false
+						},
+					},
+				},
+			},
+		});
 		// SNS 언급량 그래프
 		var ctx2 = document.getElementById("chart-line").getContext("2d");
 
@@ -933,49 +909,35 @@ h5 {
 		gradientStroke2.addColorStop(1, 'rgba(20,23,39,0.2)');
 		gradientStroke2.addColorStop(0.2, 'rgba(72,72,176,0.0)');
 		gradientStroke2.addColorStop(0, 'rgba(20,23,39,0)'); //purple colors
-
+		
 		new Chart(ctx2, {
 			type : "line",
 			data : {
 				labels : [ "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul",
 						"Aug", "Sep", "Oct", "Nov", "Dec" ],
-				datasets : [
-						{
-							label : "언급량",
-							tension : 0.4,
-							borderWidth : 0,
-							pointRadius : 0,
-							borderColor : "#cb0c9f",
-							borderWidth : 3,
-							backgroundColor : gradientStroke1,
-							fill : true,
-							data : [
-	<%=snsList.get(0).getSns_search()%>
-		,
-	<%=snsList.get(1).getSns_search()%>
-		,
-	<%=snsList.get(2).getSns_search()%>
-		,
-	<%=snsList.get(3).getSns_search()%>
-		,
-	<%=snsList.get(4).getSns_search()%>
-		,
-	<%=snsList.get(5).getSns_search()%>
-		,
-	<%=snsList.get(6).getSns_search()%>
-		,
-	<%=snsList.get(7).getSns_search()%>
-		,
-	<%=snsList.get(8).getSns_search()%>
-		,
-	<%=snsList.get(9).getSns_search()%>
-		,
-	<%=snsList.get(10).getSns_search()%>
-		,
-	<%=snsList.get(11).getSns_search()%>
-		],
-							maxBarThickness : 6
-						}, ],
+				datasets : [ {
+					label : "언급량",
+					tension : 0.4,
+					borderWidth : 0,
+					pointRadius : 0,
+					borderColor : "#cb0c9f",
+					borderWidth : 3,
+					backgroundColor : gradientStroke1,
+					fill : true,
+					data : [ <%=snsList.get(0).getSns_search()%>,
+							 <%=snsList.get(1).getSns_search()%>,
+							 <%=snsList.get(2).getSns_search()%>,
+							 <%=snsList.get(3).getSns_search()%>,
+							 <%=snsList.get(4).getSns_search()%>,
+							 <%=snsList.get(5).getSns_search()%>,
+							 <%=snsList.get(6).getSns_search()%>,
+							 <%=snsList.get(7).getSns_search()%>,
+							 <%=snsList.get(8).getSns_search()%>,
+							 <%=snsList.get(9).getSns_search()%>,
+							 <%=snsList.get(10).getSns_search()%>,
+							 <%=snsList.get(11).getSns_search()%> ],
+					maxBarThickness : 6
+				}, ],
 			},
 			options : {
 				responsive : true,
