@@ -43,6 +43,7 @@ h2{font-family:'KimjungchulMyungjo-Bold' ;}
 h3{font-family:'KimjungchulMyungjo-Bold' ;}
 h4{font-family:'WandohopeR' ;}
 h5{font-family:'WandohopeR' ;}
+span {font-family: 'KimjungchulMyungjo-Bold';}
 
 </style>
 <body class="g-sidenav-show  bg-gray-100">
@@ -263,7 +264,7 @@ h5{font-family:'WandohopeR' ;}
 						</div>
 
 						<!-- 관광소비유형 -->
-						<h3 class="ms-2 mt-4 mb-0">관광소비유형(단위:1억)</h3>
+						<h3 class="ms-2 mt-4 mb-0">관광소비유형</h3>
 						<p class="text-sm ms-2">
 							<span class="font-weight-bolder"></span>
 						</p>
@@ -569,8 +570,6 @@ h5{font-family:'WandohopeR' ;}
 										</td>
 									</tr>
 									<tr>
-
-
 									</tr>
 								</tbody>
 							</table>
@@ -586,7 +585,7 @@ h5{font-family:'WandohopeR' ;}
 				<div
 					style="background-color: white; width: 920px; border-radius: 15px; height: 930px;">
 					<br>
-					<h3>&nbsp&nbsp&nbsp업종별 신용카드 소비액 추이(단위:1,000원)</h3>
+					<span style="font-size: 200%;">&nbsp&nbsp&nbsp업종별 신용카드 소비액 추이</span><span style="font-size: 100%;">(단위:1,000원)</span>
 					<script type="text/javascript"
 						src="https://www.gstatic.com/charts/loader.js"></script>
 
