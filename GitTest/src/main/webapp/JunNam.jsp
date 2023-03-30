@@ -37,9 +37,11 @@
 <style>
 	
 p{font-family: 'WandohopeR';}
-h5{font-family:'WandohopeR' ;}
-h3{font-family:'KimjungchulMyungjo-Bold' ;}
 h1{font-family:'KimjungchulMyungjo-Bold';}
+h2{font-family:'KimjungchulMyungjo-Bold' ;}
+h3{font-family:'KimjungchulMyungjo-Bold' ;}
+h4{font-family:'WandohopeR' ;}
+h5{font-family:'WandohopeR' ;}
 
 </style>
 <body class="g-sidenav-show  bg-gray-100">
@@ -54,7 +56,7 @@ h1{font-family:'KimjungchulMyungjo-Bold';}
 				<div class="row">
 					<div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
 						<div class="card">
-							<a href="./광주.jsp">
+							<a href="areaGJ">
 								<div class="card-body p-3">
 									<div class="row">
 										<div class="col-8">
@@ -75,7 +77,7 @@ h1{font-family:'KimjungchulMyungjo-Bold';}
 					</div>
 					<div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
 						<div class="card">
-							<a href="./담양.jsp">
+							<a href="areaDY">
 								<div class="card-body p-3">
 									<div class="row">
 										<div class="col-8">
@@ -97,7 +99,7 @@ h1{font-family:'KimjungchulMyungjo-Bold';}
 					</div>
 					<div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
 						<div class="card">
-							<a href="./목포.jsp">
+							<a href="areaMP">
 								<div class="card-body p-3">
 									<div class="row">
 										<div class="col-8">
@@ -119,7 +121,7 @@ h1{font-family:'KimjungchulMyungjo-Bold';}
 					</div>
 					<div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
 						<div class="card">
-							<a href="./순천.jsp">
+							<a href="areaSC">
 								<div class="card-body p-3">
 									<div class="row">
 										<div class="col-8">
@@ -141,7 +143,7 @@ h1{font-family:'KimjungchulMyungjo-Bold';}
 					</div>
 					<div class="col-xl-3 col-sm-6">
 						<div class="card">
-							<a href="./여수.jsp">
+							<a href="areaYS">
 								<div class="card-body p-3">
 									<div class="row">
 										<div class="col-8">
@@ -167,8 +169,16 @@ h1{font-family:'KimjungchulMyungjo-Bold';}
 		<div class="container-fluid py-1 px-3">
 			<h3 align="center">생명의 땅</h3>
 			<h1 align="center">전라남도</h1>
+			<br>
+			<%String year = (String)request.getAttribute("year");
+			if (year == null) {%>
+				<h2 style="position: relative; margin-left: 42.5%; color: black;">연도를 선택해주세요.</h2>
+			<% } else {%>
+				<h2 style="position: relative; margin-left: 47.2%; color: black;"><%=year %>년</h2>
+			<%} %>
+			<br>
 			
-			<form action="selectYearJN">
+			<form action="selectYear">
 				<h4>연도 선택 :</h4>
 				<select id="selectyear" name="year">
 					<option value="2018">2018</option>
@@ -178,14 +188,9 @@ h1{font-family:'KimjungchulMyungjo-Bold';}
 					<option value="2022">2022</option>
 				</select> <input type="submit" value="선택">
 			</form>
-			<%String year = (String)request.getAttribute("year");
-			if (year != null) {%>
-				<h4 style="position: relative; margin-left: 80%;">선택한 연도 : <%=year %></h4>
-			<% } else {%>
-				<h4 style="position: relative; margin-left: 80%;">연도를 선택해주세요</h4>
-			<%} %>
+			
 		</div>
-		
+		<% if (year != null) { %>
 		<div class="row mt-4">
 			<div class="col-lg-7 mb-lg-0 mb-4">
 				<div class="card">
@@ -205,19 +210,19 @@ h1{font-family:'KimjungchulMyungjo-Bold';}
 								</div>
 							</div>
 							<div class="col-lg-5 ms-auto text-center mt-5 mt-lg-0">
-								<div class="bg-gradient-primary border-radius-lg h-100">
+								
 									<img src="./assets/img/shapes/waves-white.svg"
 										class="position-absolute h-100 w-50 top-0 d-lg-block d-none"
 										alt="waves">
 									<div
 										class="position-relative d-flex align-items-center justify-content-center h-100">
 										<img class="w-100 position-relative z-index-2 pt-4"
-											src="./assets/img/illustrations/rocket-white.png"
+											src="./assets/img/namdo.jpg"
 											alt="rocket">
 									</div>
 								</div>
 							</div>
-						</div>
+					
 					</div>
 				</div>
 			</div>
@@ -225,12 +230,12 @@ h1{font-family:'KimjungchulMyungjo-Bold';}
 				<div class="card h-100 p-3">
 					<div
 						class="overflow-hidden position-relative border-radius-lg bg-cover h-100"
-						style="background-image: url('./assets/img/ivancik.jpg');">
-						<span class="mask bg-gradient-dark"></span>
+						style="background-image: url('./assets/img/seryangji.jpg');">
+						<span class="mask bg-gradient-suggest"></span>
 						<div
 							class="card-body position-relative z-index-1 d-flex flex-column h-100 p-3">
-							<h5 class="text-white font-weight-bolder mb-4 pt-2">Work
-								with the rockets</h5>
+							<h5 class="text-white font-weight-bolder mb-4 pt-2">
+								주영래 바보 명청이</h5>
 							<p class="text-white">Wealth creation is an evolutionarily
 								recent positive-sum game. It is all about who take the
 								opportunity first.</p>
@@ -261,16 +266,25 @@ h1{font-family:'KimjungchulMyungjo-Bold';}
 						</p>
 						<div class="container border-radius-lg">
 							<div class="row">
-								<% List<ConsumptionDTO> consumptionList = (List<ConsumptionDTO>) request.getAttribute("consumptionList");%>
+								<% List<ConsumptionDTO> consumptionList = (List<ConsumptionDTO>) request.getAttribute("consumptionList");
+								   int first = (int)consumptionList.get(0).getSum_amount()/100000;
+								   int twice = (int)consumptionList.get(1).getSum_amount()/100000;
+								   int third = (int)consumptionList.get(2).getSum_amount()/100000;
+								   int fourth = (int)consumptionList.get(3).getSum_amount()/100000;
+								   int sum = first + twice + third + fourth;
+								   int firstPc = (first / sum) * 100;
+								   int twicePc = (twice / sum) * 100;
+								   int thirdPc = (third / sum) * 100;
+								   int fourthPc = (fourth / sum) * 100;%>
 								<div class="col-3 py-3 ps-0">
 									<div class="d-flex mb-2">
 										🏢
 										<p class="text-xs mt-1 mb-0 font-weight-bold"><%=consumptionList.get(0).getCunsumption_type1()%></p>
 									</div>
-									<h4 class="font-weight-bolder"><%= consumptionList.get(0).getSum_amount()/100000%></h4>
+									<h4 class="font-weight-bolder"><%=first %></h4>
 									<div class="progress w-75">
-										<div class="progress-bar bg-dark w-10" role="progressbar"
-											aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+										<div class="progress-bar bg-dark w-<%=firstPc %>" role="progressbar"
+											aria-valuenow="<%=firstPc %>" aria-valuemin="0" aria-valuemax="100"></div>
 									</div>
 								</div>
 								<div class="col-3 py-3 ps-0">
@@ -278,21 +292,21 @@ h1{font-family:'KimjungchulMyungjo-Bold';}
 										🛒
 										<p class="text-xs mt-1 mb-0 font-weight-bold"><%=consumptionList.get(1).getCunsumption_type1()%></p>
 									</div>
-									<h4 class="font-weight-bolder"><%=consumptionList.get(1).getSum_amount()/100000%></h4>
+									<h4 class="font-weight-bolder"><%=twice%></h4>
 									<div class="progress w-75">
-										<div class="progress-bar bg-dark w-50" role="progressbar"
-											aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+										<div class="progress-bar bg-dark w-<%=twicePc %>" role="progressbar"
+											aria-valuenow="<%=twicePc %>" aria-valuemin="0" aria-valuemax="100"></div>
 									</div>
 								</div>
 								<div class="col-3 py-3 ps-0">
 									<div class="d-flex mb-2">
-										🎆
+										🌊									
 										<p class="text-xs mt-1 mb-0 font-weight-bold"><%=consumptionList.get(2).getCunsumption_type1()%></p>
 									</div>
-									<h4 class="font-weight-bolder"><%=consumptionList.get(2).getSum_amount()/100000 %></h4>
+									<h4 class="font-weight-bolder"><%=third %></h4>
 									<div class="progress w-75">
-										<div class="progress-bar bg-dark w-30" role="progressbar"
-											aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+										<div class="progress-bar bg-dark w-<%=thirdPc %>" role="progressbar"
+											aria-valuenow="<%=thirdPc %>" aria-valuemin="0" aria-valuemax="100"></div>
 									</div>
 								</div>
 								<div class="col-3 py-3 ps-0">
@@ -300,10 +314,10 @@ h1{font-family:'KimjungchulMyungjo-Bold';}
 										🍽
 										<p class="text-xs mt-1 mb-0 font-weight-bold"><%=consumptionList.get(3).getCunsumption_type1()%></p>
 									</div>
-									<h4 class="font-weight-bolder"><%=consumptionList.get(3).getSum_amount()/100000%></h4>
+									<h4 class="font-weight-bolder"><%=fourth%></h4>
 									<div class="progress w-75">
-										<div class="progress-bar bg-dark w-90" role="progressbar"
-											aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+										<div class="progress-bar bg-dark w-<%=fourthPc %>" role="progressbar"
+											aria-valuenow="<%=fourthPc %>" aria-valuemin="0" aria-valuemax="100"></div>
 									</div>
 								</div>
 							</div>
@@ -475,19 +489,15 @@ h1{font-family:'KimjungchulMyungjo-Bold';}
 											</div>
 										</td>
 										<td class="align-middle text-center text-sm"><span
-											class="text-xs font-weight-bold"> <%=comList.get(4).getTravel_company() %> </span></td>
+											class="text-xs font-weight-bold"> <%=comList.get(1).getTravel_company() %> </span></td>
 										<td class="align-middle">
 											<div class="progress-wrapper w-75 mx-auto">
 												<div class="progress-info">
 													<div class="progress-percentage">
-														<span class="text-xs font-weight-bold"><%=comList.get(4).getSum_count()%></span>
+														<span class="text-xs font-weight-bold"><%=comList.get(1).getSum_count()%></span>
 													</div>
 												</div>
-												<div class="progress">
-													<div class="progress-bar bg-gradient-info w-40"
-														role="progressbar" aria-valuenow="10" aria-valuemin="0"
-														aria-valuemax="100"></div>
-												</div>
+												
 											</div>
 										</td>
 									</tr>
@@ -515,18 +525,13 @@ h1{font-family:'KimjungchulMyungjo-Bold';}
 											</div>
 										</td>
 										<td class="align-middle text-center text-sm"><span
-											class="text-xs font-weight-bold"> <%=comList.get(5).getTravel_company() %> </span></td>
+											class="text-xs font-weight-bold"> <%=comList.get(2).getTravel_company() %> </span></td>
 										<td class="align-middle">
 											<div class="progress-wrapper w-75 mx-auto">
 												<div class="progress-info">
 													<div class="progress-percentage">
-														<span class="text-xs font-weight-bold"><%=comList.get(5).getSum_count() %></span>
+														<span class="text-xs font-weight-bold"><%=comList.get(2).getSum_count() %></span>
 													</div>
-												</div>
-												<div class="progress">
-													<div class="progress-bar bg-gradient-info w-30"
-														role="progressbar" aria-valuenow="10" aria-valuemin="0"
-														aria-valuemax="100"></div>
 												</div>
 											</div>
 										</td>
@@ -565,18 +570,13 @@ h1{font-family:'KimjungchulMyungjo-Bold';}
 											</div>
 										</td>
 										<td class="align-middle text-center text-sm"><span
-											class="text-xs font-weight-bold"> <%=comList.get(1).getTravel_company() %> </span></td>
+											class="text-xs font-weight-bold"> <%=comList.get(3).getTravel_company() %> </span></td>
 										<td class="align-middle">
 											<div class="progress-wrapper w-75 mx-auto">
 												<div class="progress-info">
 													<div class="progress-percentage">
-														<span class="text-xs font-weight-bold"><%=comList.get(1).getSum_count() %></span>
+														<span class="text-xs font-weight-bold"><%=comList.get(3).getSum_count() %></span>
 													</div>
-												</div>
-												<div class="progress">
-													<div class="progress-bar bg-gradient-info w-20"
-														role="progressbar" aria-valuenow="10" aria-valuemin="0"
-														aria-valuemax="100"></div>
 												</div>
 											</div>
 										</td>
@@ -600,12 +600,12 @@ h1{font-family:'KimjungchulMyungjo-Bold';}
 											</div>
 										</td>
 										<td class="align-middle text-center text-sm"><span
-											class="text-xs font-weight-bold"> <%=comList.get(3).getTravel_company() %> </span></td>
+											class="text-xs font-weight-bold"> <%=comList.get(4).getTravel_company() %> </span></td>
 										<td class="align-middle">
 											<div class="progress-wrapper w-75 mx-auto">
 												<div class="progress-info">
 													<div class="progress-percentage">
-														<span class="text-xs font-weight-bold"><%=comList.get(3).getSum_count() %></span>
+														<span class="text-xs font-weight-bold"><%=comList.get(4).getSum_count() %></span>
 													</div>
 												</div>
 												<div class="progress">
@@ -857,7 +857,7 @@ h1{font-family:'KimjungchulMyungjo-Bold';}
 						   "<%=consumptionList.get(2).getCunsumption_type1()%>",
 						   "<%=consumptionList.get(3).getCunsumption_type1()%>"],
 				datasets : [ {
-					label : "Sales",
+					label : "",
 					tension : 0.4,
 					borderWidth : 0,
 					borderRadius : 4,
@@ -939,7 +939,7 @@ h1{font-family:'KimjungchulMyungjo-Bold';}
 				labels : [ "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul",
 						"Aug", "Sep", "Oct", "Nov", "Dec" ],
 				datasets : [ {
-					label : "Mobile apps",
+					label : "언급량",
 					tension : 0.4,
 					borderWidth : 0,
 					pointRadius : 0,
@@ -1033,5 +1033,6 @@ h1{font-family:'KimjungchulMyungjo-Bold';}
 	<script async defer src="https://buttons.github.io/buttons.js"></script>
 	<!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
 	<script src="./assets/js/soft-ui-dashboard.min.js?v=1.0.7"></script>
+	<%} %>
 </body>
 </html>

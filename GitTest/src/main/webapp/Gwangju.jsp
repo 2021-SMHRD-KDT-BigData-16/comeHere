@@ -1,3 +1,4 @@
+<%@page import="com.smhrd3.model.CompanyDTO"%>
 <%@page import="com.smhrd3.model.TravelPurposeDTO"%>
 <%@page import="com.smhrd3.model.SNSDTO"%>
 <%@page import="com.smhrd3.model.CreditDTO"%>
@@ -33,6 +34,16 @@
 	rel="stylesheet" />
 <link rel="stylesheet" href="./assets/css/CSS.css">	
 </head>
+<style>
+	
+p{font-family: 'WandohopeR';}
+h1{font-family:'KimjungchulMyungjo-Bold';}
+h2{font-family:'KimjungchulMyungjo-Bold' ;}
+h3{font-family:'KimjungchulMyungjo-Bold' ;}
+h4{font-family:'WandohopeR' ;}
+h5{font-family:'WandohopeR' ;}
+
+</style>
 <body class="g-sidenav-show  bg-gray-100">
 
 	<main
@@ -45,7 +56,7 @@
 				<div class="row">
 					<div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
 						<div class="card">
-							<a href="./전남.jsp">
+							<a href="areaJN">
 								<div class="card-body p-3">
 									<div class="row">
 										<div class="col-8">
@@ -69,7 +80,7 @@
 					</div>
 					<div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
 						<div class="card">
-							<a href="./담양.jsp">
+							<a href="areaDY">
 								<div class="card-body p-3">
 									<div class="row">
 										<div class="col-8">
@@ -93,7 +104,7 @@
 					</div>
 					<div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
 						<div class="card">
-							<a href="./목포.jsp">
+							<a href="areaMP">
 								<div class="card-body p-3">
 									<div class="row">
 										<div class="col-8">
@@ -117,7 +128,7 @@
 					</div>
 					<div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
 						<div class="card">
-							<a href="./순천.jsp">
+							<a href="areaSC">
 								<div class="card-body p-3">
 									<div class="row">
 										<div class="col-8">
@@ -141,7 +152,7 @@
 					</div>
 					<div class="col-xl-3 col-sm-6">
 						<div class="card">
-							<a href="./여수.jsp">
+							<a href="areaYS">
 								<div class="card-body p-3">
 									<div class="row">
 										<div class="col-8">
@@ -169,7 +180,18 @@
 		<div class="container-fluid py-1 px-3">
 			<h3 align="center">문화의 도시</h3>
 			<h1 align="center">광주</h1>
-			<form action="selectYearGJ">
+			<br>
+			<%String year = (String)request.getAttribute("year");
+			if (year == null) {%>
+				<h2 style="position: relative; margin-left: 42.5%; color: black;">연도를 선택해주세요.</h2>
+			<% } else {%>
+				<h2 style="position: relative; margin-left: 47.2%; color: black;"><%=year %>년</h2>
+			<%} %>
+			<br>
+			<a href="Map.jsp">
+				<h3>인기관광지 및 지역 맛집</h3>
+			</a>
+			<form action="selectYear">
 				<h4>연도 선택 :</h4>
 				<select id="selectyear" name="year">
 					<option value="2018">2018</option>
@@ -180,7 +202,7 @@
 				</select> <input type="submit" value="선택">
 			</form>
 		</div>
-	
+		<% if (year != null) { %>
 		<div class="row mt-4">
 			<div class="col-lg-7 mb-lg-0 mb-4">
 				<div class="card">
@@ -188,7 +210,7 @@
 						<div class="row">
 							<div class="col-lg-6">
 								<div class="d-flex flex-column h-100">
-									<p class="mb-1 pt-2 text-bold">무제</p>
+									<p class="mb-1 pt-2 text-bold">Built by developers</p>
 									<h5 class="font-weight-bolder">Soft UI Dashboard</h5>
 									<p class="mb-5">From colors, cards, typography to complex
 										elements, you will find the full documentation.</p>
@@ -200,32 +222,32 @@
 								</div>
 							</div>
 							<div class="col-lg-5 ms-auto text-center mt-5 mt-lg-0">
-								<div class="bg-gradient-primary border-radius-lg h-100">
+								
 									<img src="./assets/img/shapes/waves-white.svg"
 										class="position-absolute h-100 w-50 top-0 d-lg-block d-none"
 										alt="waves">
 									<div
 										class="position-relative d-flex align-items-center justify-content-center h-100">
 										<img class="w-100 position-relative z-index-2 pt-4"
-											src="./assets/img/illustrations/rocket-white.png"
+											src="./assets/img/Gwangju_character.jpg"
 											alt="rocket">
 									</div>
-								</div>
+								
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-			
 			<div class="col-lg-5">
 				<div class="card h-100 p-3">
 					<div
 						class="overflow-hidden position-relative border-radius-lg bg-cover h-100"
-						style="background-image: url('../assets/img/ivancik.jpg');">
-						<span class="mask bg-gradient-dark"></span>
+						style="background-image: url('./assets/img/mudeung.jpg');">
+						<span class="mask bg-gradient-suggest"></span>
 						<div
 							class="card-body position-relative z-index-1 d-flex flex-column h-100 p-3">
-							<h5 class="text-white font-weight-bolder mb-4 pt-2">무제</h5>
+							<h5 class="text-white font-weight-bolder mb-4 pt-2">Work
+								with the rockets</h5>
 							<p class="text-white">Wealth creation is an evolutionarily
 								recent positive-sum game. It is all about who take the
 								opportunity first.</p>
@@ -239,7 +261,6 @@
 				</div>
 			</div>
 		</div>
-		
 		<div class="row mt-4">
 			<div class="col-lg-5 mb-lg-0 mb-4">
 				<div class="card z-index-2">
@@ -249,7 +270,7 @@
 								<canvas id="chart-bars" class="chart-canvas" height="170"></canvas>
 							</div>
 						</div>
-						
+
 						<!-- 관광소비유형 -->
 						<h3 class="ms-2 mt-4 mb-0">관광소비유형(단위:1억)</h3>
 						<p class="text-sm ms-2">
@@ -282,7 +303,7 @@
 								</div>
 								<div class="col-3 py-3 ps-0">
 									<div class="d-flex mb-2">
-										🎆
+										🌊
 										<p class="text-xs mt-1 mb-0 font-weight-bold"><%=consumptionList.get(2).getCunsumption_type1()%></p>
 									</div>
 									<h4 class="font-weight-bolder"><%=consumptionList.get(2).getSum_amount()/100000 %></h4>
@@ -307,7 +328,6 @@
 					</div>
 				</div>
 			</div>
-			
 			<div class="col-lg-7">
 				<div class="card z-index-2">
 					<div class="card-header pb-0">
@@ -320,12 +340,13 @@
 					<%List<SNSDTO> snsList = (List)request.getAttribute("snsList"); %>
 					<div class="card-body p-3">
 						<div class="chart">
-							<canvas id="chart-line" class="chart-canvas" height="300"></canvas>
+							<canvas id="chart-line" class="chart-canvas" height="275"></canvas>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+
 
 		<!-- 동반유형 키워드 언급량 -->
 		<div class="row my-4">
@@ -339,7 +360,8 @@
 						<span class="font-weight-bold ms-1">&nbsp주요 국내 소셜미디어,커뮤니티의 '동반유형' 관련 주요 키워드 순위를 제공</span>
 					</p>
 					<p></p><p></p><p></p>
-
+					<%List<CompanyDTO> comList = (List)request.getAttribute("comList");
+					if (comList != null) {%>
 					<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 					<script type="text/javascript">
 					  google.charts.load('current', {'packages':['bar']});
@@ -347,11 +369,14 @@
 
 				      function drawChart() {
 				        var data = google.visualization.arrayToDataTable([
-				          ['Year', 'Sales', 'Expenses', 'Profit'],
-				          ['2014', 1000, 400, 200],
-				          ['2015', 1170, 460, 250],
-				          ['2016', 660, 1120, 300],
-				          ['2017', 1030, 540, 350]
+				          ['동반유형', '언급 건수'],
+				          ['<%=comList.get(0).getTravel_company()%>', <%=comList.get(0).getSum_count()%>],
+				          ['<%=comList.get(1).getTravel_company()%>', <%=comList.get(1).getSum_count()%>],
+				          ['<%=comList.get(2).getTravel_company()%>', <%=comList.get(2).getSum_count()%>],
+				          ['<%=comList.get(3).getTravel_company()%>', <%=comList.get(3).getSum_count()%>],
+				          ['<%=comList.get(4).getTravel_company()%>', <%=comList.get(4).getSum_count()%>],
+				          ['<%=comList.get(5).getTravel_company()%>', <%=comList.get(5).getSum_count()%>],
+				          ['<%=comList.get(6).getTravel_company()%>', <%=comList.get(6).getSum_count()%>]
 				        ]);
 
 				        var options = {
@@ -367,9 +392,8 @@
 				      }
 					    </script>
 					<div>
-						<div id="columnchart_material" style="width: 850px; height: 450px;"></div>
+						<div id="columnchart_material" style="width: 900px; height: 450px; margin-left: 30px"></div>
 					</div>	
-					
 					
 					<!-- 동반유형 키워드 언급량 -->
 					<div class="col-lg-6 col-5 my-auto text-end">
@@ -428,17 +452,17 @@
 											</div>
 										</td>
 										<td class="align-middle text-center text-sm"><span
-											class="text-xs font-weight-bold"> $14,000 </span></td>
+											class="text-xs font-weight-bold"> <%=comList.get(0).getTravel_company()%> </span></td>
 										<td class="align-middle">
 											<div class="progress-wrapper w-75 mx-auto">
 												<div class="progress-info">
 													<div class="progress-percentage">
-														<span class="text-xs font-weight-bold">60%</span>
+														<span class="text-xs font-weight-bold"><%=comList.get(0).getSum_count()%></span>
 													</div>
 												</div>
 												<div class="progress">
-													<div class="progress-bar bg-gradient-info w-60"
-														role="progressbar" aria-valuenow="60" aria-valuemin="0"
+													<div class="progress-bar bg-gradient-success w-100"
+														role="progressbar" aria-valuenow="100" aria-valuemin="0"
 														aria-valuemax="100"></div>
 												</div>
 											</div>
@@ -468,16 +492,16 @@
 											</div>
 										</td>
 										<td class="align-middle text-center text-sm"><span
-											class="text-xs font-weight-bold"> $3,000 </span></td>
+											class="text-xs font-weight-bold"> <%=comList.get(1).getTravel_company() %> </span></td>
 										<td class="align-middle">
 											<div class="progress-wrapper w-75 mx-auto">
 												<div class="progress-info">
 													<div class="progress-percentage">
-														<span class="text-xs font-weight-bold">10%</span>
+														<span class="text-xs font-weight-bold"><%=comList.get(1).getSum_count()%></span>
 													</div>
 												</div>
 												<div class="progress">
-													<div class="progress-bar bg-gradient-info w-10"
+													<div class="progress-bar bg-gradient-info w-40"
 														role="progressbar" aria-valuenow="10" aria-valuemin="0"
 														aria-valuemax="100"></div>
 												</div>
@@ -508,17 +532,17 @@
 											</div>
 										</td>
 										<td class="align-middle text-center text-sm"><span
-											class="text-xs font-weight-bold"> Not set </span></td>
+											class="text-xs font-weight-bold"> <%=comList.get(2).getTravel_company() %> </span></td>
 										<td class="align-middle">
 											<div class="progress-wrapper w-75 mx-auto">
 												<div class="progress-info">
 													<div class="progress-percentage">
-														<span class="text-xs font-weight-bold">100%</span>
+														<span class="text-xs font-weight-bold"><%=comList.get(2).getSum_count() %></span>
 													</div>
 												</div>
 												<div class="progress">
-													<div class="progress-bar bg-gradient-success w-100"
-														role="progressbar" aria-valuenow="100" aria-valuemin="0"
+													<div class="progress-bar bg-gradient-info w-30"
+														role="progressbar" aria-valuenow="10" aria-valuemin="0"
 														aria-valuemax="100"></div>
 												</div>
 											</div>
@@ -558,17 +582,17 @@
 											</div>
 										</td>
 										<td class="align-middle text-center text-sm"><span
-											class="text-xs font-weight-bold"> $20,500 </span></td>
+											class="text-xs font-weight-bold"> <%=comList.get(3).getTravel_company() %> </span></td>
 										<td class="align-middle">
 											<div class="progress-wrapper w-75 mx-auto">
 												<div class="progress-info">
 													<div class="progress-percentage">
-														<span class="text-xs font-weight-bold">100%</span>
+														<span class="text-xs font-weight-bold"><%=comList.get(3).getSum_count() %></span>
 													</div>
 												</div>
 												<div class="progress">
-													<div class="progress-bar bg-gradient-success w-100"
-														role="progressbar" aria-valuenow="100" aria-valuemin="0"
+													<div class="progress-bar bg-gradient-info w-20"
+														role="progressbar" aria-valuenow="10" aria-valuemin="0"
 														aria-valuemax="100"></div>
 												</div>
 											</div>
@@ -593,16 +617,16 @@
 											</div>
 										</td>
 										<td class="align-middle text-center text-sm"><span
-											class="text-xs font-weight-bold"> $500 </span></td>
+											class="text-xs font-weight-bold"> <%=comList.get(4).getTravel_company() %> </span></td>
 										<td class="align-middle">
 											<div class="progress-wrapper w-75 mx-auto">
 												<div class="progress-info">
 													<div class="progress-percentage">
-														<span class="text-xs font-weight-bold">25%</span>
+														<span class="text-xs font-weight-bold"><%=comList.get(4).getSum_count() %></span>
 													</div>
 												</div>
 												<div class="progress">
-													<div class="progress-bar bg-gradient-info w-25"
+													<div class="progress-bar bg-gradient-info w-5"
 														role="progressbar" aria-valuenow="25" aria-valuemin="0"
 														aria-valuemax="25"></div>
 												</div>
@@ -610,19 +634,20 @@
 										</td>
 									</tr>
 									<tr>
+
+
 									</tr>
 								</tbody>
 							</table>
 						</div>
 					</div>
+					<%} %>
 				</div>
 			</div>
 
 			<!-- 업종별 신용카드 소비액 추이 -->
 			<div class="col-lg-4 col-md-6">
-				<%
-				List<CreditDTO> creditList = (List) request.getAttribute("creditList");
-				%>
+				<% List<CreditDTO> creditList = (List) request.getAttribute("creditList"); %>
 				<div
 					style="background-color: white; width: 920px; border-radius: 15px; height: 930px;">
 					<br>
@@ -746,7 +771,7 @@
 	</main>
 
 	<!--------------------------------------------------------------------------------------------------------------------------------------------------------------->
-	
+
 	<div class="fixed-plugin">
 		<a class="fixed-plugin-button text-dark position-fixed px-3 py-2">
 			<i class="fa fa-cog py-2"> </i>
@@ -849,7 +874,7 @@
 						   "<%=consumptionList.get(2).getCunsumption_type1()%>",
 						   "<%=consumptionList.get(3).getCunsumption_type1()%>"],
 				datasets : [ {
-					label : "Sales",
+					label : "",
 					tension : 0.4,
 					borderWidth : 0,
 					borderRadius : 4,
@@ -931,7 +956,7 @@
 				labels : [ "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul",
 						"Aug", "Sep", "Oct", "Nov", "Dec" ],
 				datasets : [ {
-					label : "Mobile apps",
+					label : "언급량",
 					tension : 0.4,
 					borderWidth : 0,
 					pointRadius : 0,
@@ -1025,5 +1050,7 @@
 	<script async defer src="https://buttons.github.io/buttons.js"></script>
 	<!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
 	<script src="./assets/js/soft-ui-dashboard.min.js?v=1.0.7"></script>
+	<%} %>
 </body>
+
 </html>

@@ -11,12 +11,12 @@ public class DataDAO {
 	
 	private SqlSessionFactory factory = SqlSessionManager.getFactory();
 
-	public List<ConsumptionDTO> consumptionDataJN(ConsumptionDTO consump_dto) {
+	public List<ConsumptionDTO> consumptionData(ConsumptionDTO consump_dto) {
 		List<ConsumptionDTO> consumptionList = null;
 		SqlSession session = factory.openSession(true);
 		
 		try {
-			consumptionList = session.selectList("selectConsumptionJN", consump_dto);
+			consumptionList = session.selectList("selectConsumption", consump_dto);
 		} finally {
 			session.close();
 		}
@@ -24,12 +24,12 @@ public class DataDAO {
 		return consumptionList;
 	}
 	
-	public List<CreditDTO> creditDataJN(CreditDTO credit_dto) {
+	public List<CreditDTO> creditData(CreditDTO credit_dto) {
 		List<CreditDTO> creditList = null;
 		SqlSession session = factory.openSession(true);
 		
 		try {
-			creditList = session.selectList("selectCreditJN", credit_dto);
+			creditList = session.selectList("selectCredit", credit_dto);
 		} finally {
 			session.close();
 		}
@@ -37,12 +37,12 @@ public class DataDAO {
 		return creditList;
 	}
 
-	public List<SNSDTO> snsDataJN(SNSDTO sns_dto) {
+	public List<SNSDTO> snsData(SNSDTO sns_dto) {
 		List<SNSDTO> snsList = null;
 		SqlSession session = factory.openSession(true);
 		
 		try {
-			snsList = session.selectList("selectSNSJN", sns_dto);
+			snsList = session.selectList("selectSNS", sns_dto);
 		} finally {
 			session.close();
 		}
@@ -51,12 +51,12 @@ public class DataDAO {
 		
 	}
 
-	public List<TravelPurposeDTO> travelPurposeJN(TravelPurposeDTO tp_dto) {
+	public List<TravelPurposeDTO> travelPurpose(TravelPurposeDTO tp_dto) {
 		List<TravelPurposeDTO> tpList = null;
 		SqlSession session = factory.openSession(true);
 		
 		try {
-			tpList = session.selectList("selecttpJN", tp_dto);
+			tpList = session.selectList("selecttp", tp_dto);
 		} finally {
 			session.close();
 		}
@@ -65,12 +65,12 @@ public class DataDAO {
 		
 	}
 
-	public List<CompanyDTO> companyJN(CompanyDTO com_dto) {
+	public List<CompanyDTO> company(CompanyDTO com_dto) {
 		List<CompanyDTO> comList = null;
 		SqlSession session = factory.openSession(true);
 		
 		try {
-			comList = session.selectList("selectCompanyJN", com_dto);
+			comList = session.selectList("selectCompany", com_dto);
 		} finally {
 			session.close();
 		}
