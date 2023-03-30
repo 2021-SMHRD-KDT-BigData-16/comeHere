@@ -197,6 +197,7 @@ span {
 			<h3 align="center">미식의 도시</h3>
 			<h1 align="center">담양</h1>
 			<br>
+<<<<<<< HEAD
 			<%
 			String year = (String) request.getAttribute("year");
 			if (year == null) {
@@ -213,6 +214,10 @@ span {
 			%>
 			<br> <a href="map">
 				<h3>인기관광지 및 지역 맛집</h3>
+=======
+			<a href="map">
+				<h3 style="margin-left: 81%;">인기관광지 및 지역 맛집</h3>
+>>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-BigData-16/comeHere
 			</a>
 			<form action="selectYear">
 				<h4>연도 선택 :</h4>

@@ -24910,15 +24910,17 @@ p,
 }
 
 .text-sm {
-  font-size: 0.875rem !important;
+  font-size: 1.2rem !important;
 }
 
 .text-xs {
-  font-size: 0.75rem !important;
+  font-size: 0.9rem !important;
+  text-align: center;
 }
 
 .text-xxs {
-  font-size: 0.65rem !important;
+  font-size: 1rem !important;
+  text-align: center;
 }
 
 p {

@@ -181,7 +181,7 @@ span {font-family: 'KimjungchulMyungjo-Bold';}
 			<%} %>
 			<br>
 			<a href="map">
-				<h3>인기관광지 및 지역 맛집</h3>
+				<h3 style="margin-left: 81%;">인기관광지 및 지역 맛집</h3>
 			</a>
 			<form action="selectYear">
 				<h4>연도 선택 :</h4>
@@ -221,7 +221,7 @@ span {font-family: 'KimjungchulMyungjo-Bold';}
 								<div
 									class="position-relative d-flex align-items-center justify-content-center h-100">
 									<img class="w-100 position-relative z-index-2 pt-4"
-										src="./assets/img/namdo.jpg" alt="rocket">
+										src="./assets/img/rumiddunge.jpg" alt="rocket">
 								</div>
 							</div>
 						</div>
@@ -233,7 +233,7 @@ span {font-family: 'KimjungchulMyungjo-Bold';}
 				<div class="card h-100 p-3">
 					<div
 						class="overflow-hidden position-relative border-radius-lg bg-cover h-100"
-						style="background-image: url('./assets/img/seryangji.jpg');">
+						style="background-image: url('./assets/img/5.jpg');">
 						<span class="mask bg-gradient-suggest"></span>
 						<div
 							class="card-body position-relative z-index-1 d-flex flex-column h-100 p-3">
