@@ -26,6 +26,22 @@ public class map extends HttpServlet {
 		HttpSession session = request.getSession();
 		String area = (String) session.getAttribute("area");
 		
+		// URL
+		String moveURL = null;
+		
+		// 선택 지역에 맞는 url 넣어주기
+		if (area.equals("광주")) {
+			moveURL = "Gwangju.jsp";
+		} else if (area.equals("목포")) {
+			moveURL = "Mokpo.jsp";
+		} else if (area.equals("여수")) {
+			moveURL = "Yeosu.jsp";
+		} else if (area.equals("순천")) {
+			moveURL = "Suncheon.jsp";
+		} else if (area.equals("담양")) {
+			moveURL = "Damyang.jsp";
+		}
+		
 		// 인기관광지 dto 가져오기
 		FavoriteTravelDTO f_dto = new FavoriteTravelDTO();
 		f_dto.setTravel_area(area);
@@ -50,6 +66,7 @@ public class map extends HttpServlet {
 		}
 		
 		request.setAttribute("loc", loc);
+		request.setAttribute("moveURL", moveURL);
 		
 		// 해당 지역 페이지로 데이터들 보내기
 		RequestDispatcher rd = request.getRequestDispatcher("Map.jsp");
