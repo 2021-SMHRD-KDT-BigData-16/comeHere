@@ -294,15 +294,7 @@ h5 {
 							<div class="row">
 								<%
 								List<ConsumptionDTO> consumptionList = (List<ConsumptionDTO>) request.getAttribute("consumptionList");
-								int first = (int) consumptionList.get(0).getSum_amount() / 100000;
-								int twice = (int) consumptionList.get(1).getSum_amount() / 100000;
-								int third = (int) consumptionList.get(2).getSum_amount() / 100000;
-								int fourth = (int) consumptionList.get(3).getSum_amount() / 100000;
-								int sum = first + twice + third + fourth;
-								int firstPc = (first / sum) * 100;
-								int twicePc = (twice / sum) * 100;
-								int thirdPc = (third / sum) * 100;
-								int fourthPc = (fourth / sum) * 100;
+								
 								%>
 								<div class="col-3 py-3 ps-0">
 									<div class="d-flex mb-2">
