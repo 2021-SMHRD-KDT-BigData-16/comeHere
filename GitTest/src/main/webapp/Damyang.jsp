@@ -211,8 +211,7 @@ span {
 			<%
 			}
 			%>
-			<br> <a href="map">
-				<h3>인기관광지 및 지역 맛집</h3>
+			<br>
 			<a href="map">
 				<h3 style="margin-left: 81%;">인기관광지 및 지역 맛집</h3>
 			</a>
