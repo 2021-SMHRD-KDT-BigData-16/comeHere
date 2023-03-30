@@ -204,11 +204,13 @@ h5 {
 	<div class="a">
 		<form action="map">
 			<button id="back" onclick="history.back()"
-				style="position: absolute; right: 1420px;">이전 페이지</button>
+				style="position: absolute; right: 1365px; width : 150px;">이전 페이지</button>
 			<div style="top: 8px; position: absolute;">
-				<input type="radio" name="관광지" value="인기 관광지">인기 관광지 <input
-					type="radio" name="관광지" value="지역 맛집">지역 맛집 <input
-					style="font-size: 20px;" type="submit" value="선택">
+				<input type="radio" name="관광지" value="인기 관광지">인기 관광지
+				&nbsp;
+				 <input type="radio" name="관광지" value="지역 맛집">지역 맛집
+					&nbsp;&nbsp; 
+					<input style="font-size: 20px;" type="submit" value="선택">
 			</div>
 		</form>
 	</div>
