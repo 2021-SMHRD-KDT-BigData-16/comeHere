@@ -79,4 +79,32 @@ public class DataDAO {
 		
 	}
 
+	public List<FavoriteTravelDTO> favoriteT(FavoriteTravelDTO f_dto) {
+		List<FavoriteTravelDTO> fList = null;
+		SqlSession session = factory.openSession(true);
+		
+		try {
+			fList = session.selectList("selectFavorite", f_dto);
+		} finally {
+			session.close();
+		}
+		
+		return fList;
+		
+	}
+
+	public List<RestaurantDTO> restaurant(RestaurantDTO r_dto) {
+		List<RestaurantDTO> rList = null;
+		SqlSession session = factory.openSession(true);
+		
+		try {
+			rList = session.selectList("selectRestaurant", r_dto);
+		} finally {
+			session.close();
+		}
+		
+		return rList;
+		
+	}
+
 }
