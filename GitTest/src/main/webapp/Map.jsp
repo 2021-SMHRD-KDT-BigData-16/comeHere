@@ -266,7 +266,7 @@ h5 {
 											} else if (loc.equals("지역 맛집")) {
 											for (int i = 0; i < 10; i++) {%>
 											<tr>
-												<td>
+												<td style="width:20px;">
 													<p class="text-xs font-weight-bold mb-0"><%=i + 1%></p>
 												</td>
 												<td>
