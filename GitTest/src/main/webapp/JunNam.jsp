@@ -266,16 +266,25 @@ h5{font-family:'WandohopeR' ;}
 						</p>
 						<div class="container border-radius-lg">
 							<div class="row">
-								<% List<ConsumptionDTO> consumptionList = (List<ConsumptionDTO>) request.getAttribute("consumptionList");%>
+								<% List<ConsumptionDTO> consumptionList = (List<ConsumptionDTO>) request.getAttribute("consumptionList");
+								   int first = (int)consumptionList.get(0).getSum_amount()/100000;
+								   int twice = (int)consumptionList.get(1).getSum_amount()/100000;
+								   int third = (int)consumptionList.get(2).getSum_amount()/100000;
+								   int fourth = (int)consumptionList.get(3).getSum_amount()/100000;
+								   int sum = first + twice + third + fourth;
+								   int firstPc = (first / sum) * 100;
+								   int twicePc = (twice / sum) * 100;
+								   int thirdPc = (third / sum) * 100;
+								   int fourthPc = (fourth / sum) * 100;%>
 								<div class="col-3 py-3 ps-0">
 									<div class="d-flex mb-2">
 										🏢
 										<p class="text-xs mt-1 mb-0 font-weight-bold"><%=consumptionList.get(0).getCunsumption_type1()%></p>
 									</div>
-									<h4 class="font-weight-bolder"><%= consumptionList.get(0).getSum_amount()/100000%></h4>
+									<h4 class="font-weight-bolder"><%=first %></h4>
 									<div class="progress w-75">
-										<div class="progress-bar bg-dark w-10" role="progressbar"
-											aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+										<div class="progress-bar bg-dark w-<%=firstPc %>" role="progressbar"
+											aria-valuenow="<%=firstPc %>" aria-valuemin="0" aria-valuemax="100"></div>
 									</div>
 								</div>
 								<div class="col-3 py-3 ps-0">
@@ -283,10 +292,10 @@ h5{font-family:'WandohopeR' ;}
 										🛒
 										<p class="text-xs mt-1 mb-0 font-weight-bold"><%=consumptionList.get(1).getCunsumption_type1()%></p>
 									</div>
-									<h4 class="font-weight-bolder"><%=consumptionList.get(1).getSum_amount()/100000%></h4>
+									<h4 class="font-weight-bolder"><%=twice%></h4>
 									<div class="progress w-75">
-										<div class="progress-bar bg-dark w-50" role="progressbar"
-											aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+										<div class="progress-bar bg-dark w-<%=twicePc %>" role="progressbar"
+											aria-valuenow="<%=twicePc %>" aria-valuemin="0" aria-valuemax="100"></div>
 									</div>
 								</div>
 								<div class="col-3 py-3 ps-0">
@@ -294,10 +303,10 @@ h5{font-family:'WandohopeR' ;}
 										🌊									
 										<p class="text-xs mt-1 mb-0 font-weight-bold"><%=consumptionList.get(2).getCunsumption_type1()%></p>
 									</div>
-									<h4 class="font-weight-bolder"><%=consumptionList.get(2).getSum_amount()/100000 %></h4>
+									<h4 class="font-weight-bolder"><%=third %></h4>
 									<div class="progress w-75">
-										<div class="progress-bar bg-dark w-30" role="progressbar"
-											aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+										<div class="progress-bar bg-dark w-<%=thirdPc %>" role="progressbar"
+											aria-valuenow="<%=thirdPc %>" aria-valuemin="0" aria-valuemax="100"></div>
 									</div>
 								</div>
 								<div class="col-3 py-3 ps-0">
@@ -305,10 +314,10 @@ h5{font-family:'WandohopeR' ;}
 										🍽
 										<p class="text-xs mt-1 mb-0 font-weight-bold"><%=consumptionList.get(3).getCunsumption_type1()%></p>
 									</div>
-									<h4 class="font-weight-bolder"><%=consumptionList.get(3).getSum_amount()/100000%></h4>
+									<h4 class="font-weight-bolder"><%=fourth%></h4>
 									<div class="progress w-75">
-										<div class="progress-bar bg-dark w-90" role="progressbar"
-											aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+										<div class="progress-bar bg-dark w-<%=fourthPc %>" role="progressbar"
+											aria-valuenow="<%=fourthPc %>" aria-valuemin="0" aria-valuemax="100"></div>
 									</div>
 								</div>
 							</div>
