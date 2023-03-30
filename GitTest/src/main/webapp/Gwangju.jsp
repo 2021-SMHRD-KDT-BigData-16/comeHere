@@ -189,7 +189,7 @@ h5{font-family:'WandohopeR' ;}
 				<h2 style="position: relative; margin-left: 47.2%; color: black;"><%=year %>년</h2>
 			<%} %>
 			<br>
-			<a href="Map.jsp">
+			<a href="map">
 				<h3>인기관광지 및 지역 맛집</h3>
 			</a>
 			<form action="selectYear">
