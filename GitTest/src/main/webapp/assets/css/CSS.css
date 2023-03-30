@@ -3,7 +3,7 @@
 #selectyear {
 	width: 100px;
 	height: 45px;
-	font-size: 30px;
+	font-size: 20px;
 }
 
 h4 {
@@ -12,7 +12,9 @@ h4 {
 
 form {
 	position: relative;
-	margin-left: 80%;
+	margin-left: 82%;
+	width:312px;
+	height:64px;
 }
 
 .delbtn {
@@ -27,3 +29,53 @@ form {
 .copyright {
 	font-size: 20px;
 }
+p{font-family: 'WandohopeR';}
+h1{font-family:'KimjungchulMyungjo-Bold';}
+h2{font-family:'KimjungchulMyungjo-Bold' ;}
+h3{font-family:'KimjungchulMyungjo-Bold' ;}
+h4{font-family:'WandohopeR' ;}
+h5{font-family:'WandohopeR' ;}
+
+input[type=submit] {
+border-top-left-radius : 10px;
+border-top-right-radius : 10px;
+border-bottom-left-radius : 10px;
+border-bottom-right-radius : 10px;
+margin-left:-3px;
+margin-top:-20px;
+border : 1px solid #3a416f;
+background-color : white;
+padding : 5px;
+height : 45px;
+width : 60px;
+}
+input[type=submit]:hover{
+color:white;
+background-color:#3a416f;}
+
+#selectyear {
+border-top-left-radius : 10px;
+border-top-right-radius : 10px;
+border-bottom-left-radius : 10px;
+border-bottom-right-radius : 10px;
+border : 1px solid #3a416f;
+background-color : white;
+padding : 5px;
+}
+
+#back{
+border-top-left-radius : 10px;
+border-top-right-radius : 10px;
+border-bottom-left-radius : 10px;
+border-bottom-right-radius : 10px;
+border : 1px solid #3a416f;
+background-color : white;
+padding : 5px;
+height : 45px;
+width : 120px;
+margin-right:95% !important;
+}
+
+#back:hover{
+color:white;
+background-color:#3a416f;}

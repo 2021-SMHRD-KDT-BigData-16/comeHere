@@ -179,7 +179,7 @@ h5{font-family:'WandohopeR' ;}
 			<%} %>
 			<br>
 			<a href="map">
-				<h3>인기관광지 및 지역 맛집</h3>
+				<h3 style="margin-left: 81%;">인기관광지 및 지역 맛집</h3>
 			</a>
 			<form action="selectYear">
 				<h4>연도 선택 :</h4>
