@@ -278,6 +278,7 @@ span {font-family: 'KimjungchulMyungjo-Bold';}
 								double num2 = consumptionList.get(1).getSum_amount();
 								double num3 = consumptionList.get(2).getSum_amount();
 								double num4 = consumptionList.get(3).getSum_amount();
+								
 								%>
 								<div class="col-3 py-3 ps-0">
 									<div class="d-flex mb-2">
