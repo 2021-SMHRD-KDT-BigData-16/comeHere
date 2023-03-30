@@ -378,8 +378,19 @@
     <script>
         var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
             mapOption = {
-                center: new kakao.maps.LatLng(35.176526445801024, 126.86876961961522), // 지도의 중심좌표
-                level: 10 // 지도의 확대 레벨
+        		<%String area = (String)request.getSession().getAttribute("area");
+        		if(area.equals("광주")) {%>
+                	center: new kakao.maps.LatLng(35.176526445801024, 126.86876961961522), // 지도의 중심좌표
+                <%} else if (area.equals("목포")) {%>
+                	center: new kakao.maps.LatLng(34.80669672817822, 126.40576752194544), // 지도의 중심좌표
+                <%} else if (area.equals("담양")) {%>
+                	center: new kakao.maps.LatLng(35.32400365304959, 126.99720654629182), // 지도의 중심좌표
+                <%} else if (area.equals("순천")) {%>
+                	center: new kakao.maps.LatLng(34.95113855753754, 127.4881392650499), // 지도의 중심좌표
+                <%} else if (area.equals("여수")) {%>
+                	center: new kakao.maps.LatLng(34.7644094466046, 127.66285261134806), // 지도의 중심좌표
+                <%}%>
+                level: 6 // 지도의 확대 레벨
             };
 
         // 지도를 생성합니다    
@@ -428,7 +439,7 @@
 
                     var coords = new kakao.maps.LatLng(result[0].y, result[0].x);
 
-                    function addMarker(position) {
+                   /*  function addMarker(position) {
 
                         // 마커를 생성합니다
                         var marker = new kakao.maps.Marker({
@@ -440,7 +451,7 @@
 
                         // 생성된 마커를 배열에 추가합니다
                         markers.push(marker);
-                    }
+                    } */
 
                     // 배열에 추가된 마커들을 지도에 표시하거나 삭제하는 함수입니다
                     function setMarkers(map) {
@@ -484,7 +495,7 @@
 
                     locList[i].addEventListener('mouseover', function () {
                     	console.log(m_name[i]);
-                        displayInfowindow(marker, m_name[i]);
+                        displayInfowindow(marker, m_name[i], coords);
                     });
 
                     locList[i].addEventListener('mouseout', function () {
@@ -511,16 +522,17 @@
             });
         }
 
-        function displayInfowindow(marker, m_name) {
-            var iwContent = `<div style="width:150px; text-align:center; padding:6px 0;">${m_name}</div>`;
+        function displayInfowindow(marker, m_name, coords) {
+            var iwContent = '<div style="width:150px; text-align:center; padding:6px 0;">'+m_name+'</div>';
 
             infowindow.setContent(iwContent);
             infowindow.open(map, marker);
+            map.setCenter(coords);
 
         }
 
         function mouseinfowindow(marker, m_name) {
-            var iwContent = `<div style="width:150px; text-align:center; padding:6px 0;">${m_name}</div>`;
+        	 var iwContent = '<div style="width:150px; text-align:center; padding:6px 0;">'+m_name+'</div>';
 
             infowindow.setContent(iwContent);
             infowindow.open(map, marker);

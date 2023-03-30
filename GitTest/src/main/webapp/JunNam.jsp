@@ -7,7 +7,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-	
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -33,16 +33,36 @@
 <link id="pagestyle" href="./assets/css/soft-ui-dashboard.css?v=1.0.7"
 	rel="stylesheet" />
 <link rel="stylesheet" href="./assets/css/CSS.css">
+<script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
 </head>
 <style>
-	
-p{font-family: 'WandohopeR';}
-h1{font-family:'KimjungchulMyungjo-Bold';}
-h2{font-family:'KimjungchulMyungjo-Bold' ;}
-h3{font-family:'KimjungchulMyungjo-Bold' ;}
-h4{font-family:'WandohopeR' ;}
-h5{font-family:'WandohopeR' ;}
+p {
+	font-family: 'WandohopeR';
+}
 
+h1 {
+	font-family: 'KimjungchulMyungjo-Bold';
+}
+
+h2 {
+	font-family: 'KimjungchulMyungjo-Bold';
+}
+
+h3 {
+	font-family: 'KimjungchulMyungjo-Bold';
+}
+
+h4 {
+	font-family: 'WandohopeR';
+}
+
+h5 {
+	font-family: 'WandohopeR';
+}
+
+span {
+	font-family: 'KimjungchulMyungjo-Bold';
+}
 </style>
 <body class="g-sidenav-show  bg-gray-100">
 
@@ -61,7 +81,8 @@ h5{font-family:'WandohopeR' ;}
 									<div class="row">
 										<div class="col-8">
 											<div class="numbers">
-												<p class="text-sm mb-0 text-capitalize font-weight-bold">문화의 도시</p>
+												<p class="text-sm mb-0 text-capitalize font-weight-bold">문화의
+													도시</p>
 												<h5 class="font-weight-bolder mb-0">
 													광주 <span class="text-success text-sm font-weight-bolder"></span>
 												</h5>
@@ -165,19 +186,27 @@ h5{font-family:'WandohopeR' ;}
 					</div>
 				</div>
 		</nav>
-		
+
 		<div class="container-fluid py-1 px-3">
 			<h3 align="center">생명의 땅</h3>
 			<h1 align="center">전라남도</h1>
 			<br>
-			<%String year = (String)request.getAttribute("year");
-			if (year == null) {%>
-				<h2 style="position: relative; margin-left: 42.5%; color: black;">연도를 선택해주세요.</h2>
-			<% } else {%>
-				<h2 style="position: relative; margin-left: 47.2%; color: black;"><%=year %>년</h2>
-			<%} %>
+			<%
+			String year = (String) request.getAttribute("year");
+			if (year == null) {
+			%>
+			<h2 style="position: relative; margin-left: 42.5%; color: black;">연도를
+				선택해주세요.</h2>
+			<%
+			} else {
+			%>
+			<h2 style="position: relative; margin-left: 47.2%; color: black;"><%=year%>년
+			</h2>
+			<%
+			}
+			%>
 			<br>
-			
+
 			<form action="selectYear">
 				<h4>연도 선택 :</h4>
 				<select id="selectyear" name="year">
@@ -188,9 +217,11 @@ h5{font-family:'WandohopeR' ;}
 					<option value="2022">2022</option>
 				</select> <input type="submit" value="선택">
 			</form>
-			
+
 		</div>
-		<% if (year != null) { %>
+		<%
+		if (year != null) {
+		%>
 		<div class="row mt-4">
 			<div class="col-lg-7 mb-lg-0 mb-4">
 				<div class="card">
@@ -210,19 +241,18 @@ h5{font-family:'WandohopeR' ;}
 								</div>
 							</div>
 							<div class="col-lg-5 ms-auto text-center mt-5 mt-lg-0">
-								
-									<img src="./assets/img/shapes/waves-white.svg"
-										class="position-absolute h-100 w-50 top-0 d-lg-block d-none"
-										alt="waves">
-									<div
-										class="position-relative d-flex align-items-center justify-content-center h-100">
-										<img class="w-100 position-relative z-index-2 pt-4"
-											src="./assets/img/namdo.jpg"
-											alt="rocket">
-									</div>
+
+								<img src="./assets/img/shapes/waves-white.svg"
+									class="position-absolute h-100 w-50 top-0 d-lg-block d-none"
+									alt="waves">
+								<div
+									class="position-relative d-flex align-items-center justify-content-center h-100">
+									<img class="w-100 position-relative z-index-2 pt-4"
+										src="./assets/img/namdo.jpg" alt="rocket">
 								</div>
 							</div>
-					
+						</div>
+
 					</div>
 				</div>
 			</div>
@@ -234,8 +264,8 @@ h5{font-family:'WandohopeR' ;}
 						<span class="mask bg-gradient-suggest"></span>
 						<div
 							class="card-body position-relative z-index-1 d-flex flex-column h-100 p-3">
-							<h5 class="text-white font-weight-bolder mb-4 pt-2">
-								주영래 바보 명청이</h5>
+							<h5 class="text-white font-weight-bolder mb-4 pt-2">주영래 바보
+								명청이</h5>
 							<p class="text-white">Wealth creation is an evolutionarily
 								recent positive-sum game. It is all about who take the
 								opportunity first.</p>
@@ -260,31 +290,26 @@ h5{font-family:'WandohopeR' ;}
 						</div>
 
 						<!-- 관광소비유형 -->
-						<h3 class="ms-2 mt-4 mb-0">관광소비유형(단위:1억)</h3>
+						<h3 class="ms-2 mt-4 mb-0">관광소비유형</h3>
 						<p class="text-sm ms-2">
 							<span class="font-weight-bolder"></span>
 						</p>
 						<div class="container border-radius-lg">
 							<div class="row">
-								<% List<ConsumptionDTO> consumptionList = (List<ConsumptionDTO>) request.getAttribute("consumptionList");
-								   int first = (int)consumptionList.get(0).getSum_amount()/100000;
-								   int twice = (int)consumptionList.get(1).getSum_amount()/100000;
-								   int third = (int)consumptionList.get(2).getSum_amount()/100000;
-								   int fourth = (int)consumptionList.get(3).getSum_amount()/100000;
-								   int sum = first + twice + third + fourth;
-								   int firstPc = (first / sum) * 100;
-								   int twicePc = (twice / sum) * 100;
-								   int thirdPc = (third / sum) * 100;
-								   int fourthPc = (fourth / sum) * 100;%>
+
+								<%
+								List<ConsumptionDTO> consumptionList = (List<ConsumptionDTO>) request.getAttribute("consumptionList");
+								
+								%>
 								<div class="col-3 py-3 ps-0">
 									<div class="d-flex mb-2">
 										🏢
 										<p class="text-xs mt-1 mb-0 font-weight-bold"><%=consumptionList.get(0).getCunsumption_type1()%></p>
 									</div>
-									<h4 class="font-weight-bolder"><%=first %></h4>
+									<h4 class="font-weight-bolder"><%= consumptionList.get(0).getSum_amount()/100000%></h4>
 									<div class="progress w-75">
-										<div class="progress-bar bg-dark w-<%=firstPc %>" role="progressbar"
-											aria-valuenow="<%=firstPc %>" aria-valuemin="0" aria-valuemax="100"></div>
+										<div class="progress-bar bg-dark w-10" role="progressbar"
+											aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
 									</div>
 								</div>
 								<div class="col-3 py-3 ps-0">
@@ -292,21 +317,21 @@ h5{font-family:'WandohopeR' ;}
 										🛒
 										<p class="text-xs mt-1 mb-0 font-weight-bold"><%=consumptionList.get(1).getCunsumption_type1()%></p>
 									</div>
-									<h4 class="font-weight-bolder"><%=twice%></h4>
+									<h4 class="font-weight-bolder"><%=consumptionList.get(1).getSum_amount()/100000%></h4>
 									<div class="progress w-75">
-										<div class="progress-bar bg-dark w-<%=twicePc %>" role="progressbar"
-											aria-valuenow="<%=twicePc %>" aria-valuemin="0" aria-valuemax="100"></div>
+										<div class="progress-bar bg-dark w-50" role="progressbar"
+											aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
 									</div>
 								</div>
 								<div class="col-3 py-3 ps-0">
 									<div class="d-flex mb-2">
-										🌊									
+										🌊
 										<p class="text-xs mt-1 mb-0 font-weight-bold"><%=consumptionList.get(2).getCunsumption_type1()%></p>
 									</div>
-									<h4 class="font-weight-bolder"><%=third %></h4>
+									<h4 class="font-weight-bolder"><%=consumptionList.get(2).getSum_amount()/100000 %></h4>
 									<div class="progress w-75">
-										<div class="progress-bar bg-dark w-<%=thirdPc %>" role="progressbar"
-											aria-valuenow="<%=thirdPc %>" aria-valuemin="0" aria-valuemax="100"></div>
+										<div class="progress-bar bg-dark w-30" role="progressbar"
+											aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
 									</div>
 								</div>
 								<div class="col-3 py-3 ps-0">
@@ -314,10 +339,10 @@ h5{font-family:'WandohopeR' ;}
 										🍽
 										<p class="text-xs mt-1 mb-0 font-weight-bold"><%=consumptionList.get(3).getCunsumption_type1()%></p>
 									</div>
-									<h4 class="font-weight-bolder"><%=fourth%></h4>
+									<h4 class="font-weight-bolder"><%=consumptionList.get(3).getSum_amount()/100000%></h4>
 									<div class="progress w-75">
-										<div class="progress-bar bg-dark w-<%=fourthPc %>" role="progressbar"
-											aria-valuenow="<%=fourthPc %>" aria-valuemin="0" aria-valuemax="100"></div>
+										<div class="progress-bar bg-dark w-90" role="progressbar"
+											aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
 									</div>
 								</div>
 							</div>
@@ -345,21 +370,29 @@ h5{font-family:'WandohopeR' ;}
 		</div>
 
 
+
 		<!-- 동반유형 키워드 언급량 -->
 		<div class="row my-4">
 			<div style="width: 50%; border-radius: 15px;">
 
-				<div style="background-color: white; width: 100%; border-radius: 15px; height: 950px;">
+				<div
+					style="background-color: white; width: 100%; border-radius: 15px; height: 930px;">
 					<br>
 					<h3>&nbsp&nbsp동반유형 키워드 순위</h3>
 					<p class="text-sm mb-0">
-						&nbsp&nbsp&nbsp&nbsp<i class="fa fa-check text-info" aria-hidden="true"></i>
-						<span class="font-weight-bold ms-1">&nbsp주요 국내 소셜미디어,커뮤니티의 '동반유형' 관련 주요 키워드 순위를 제공</span>
+						&nbsp&nbsp&nbsp&nbsp<i class="fa fa-check text-info"
+							aria-hidden="true"></i> <span class="font-weight-bold ms-1">&nbsp주요
+							국내 소셜미디어,커뮤니티의 '동반유형' 관련 주요 키워드 순위를 제공</span>
 					</p>
-					<p></p><p></p><p></p>
-					<%List<CompanyDTO> comList = (List)request.getAttribute("comList");
-					if (comList != null) {%>
-					<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+					<p></p>
+					<p></p>
+					<p></p>
+					<%
+					List<CompanyDTO> comList = (List) request.getAttribute("comList");
+					if (comList != null) {
+					%>
+					<script type="text/javascript"
+						src="https://www.gstatic.com/charts/loader.js"></script>
 					<script type="text/javascript">
 					  google.charts.load('current', {'packages':['bar']});
 				      google.charts.setOnLoadCallback(drawChart);
@@ -389,9 +422,10 @@ h5{font-family:'WandohopeR' ;}
 				      }
 					    </script>
 					<div>
-						<div id="columnchart_material" style="width: 900px; height: 450px; margin-left: 30px"></div>
-					</div>	
-					
+						<div id="columnchart_material"
+							style="width: 900px; height: 450px; margin-left: 30px"></div>
+					</div>
+
 					<!-- 동반유형 키워드 언급량 -->
 					<div class="col-lg-6 col-5 my-auto text-end">
 						<div class="dropdown float-lg-end pe-4"></div>
@@ -425,31 +459,28 @@ h5{font-family:'WandohopeR' ;}
 										</td>
 										<td>
 											<div class="avatar-group mt-2">
-												<a href="javascript:;"
-													class="avatar avatar-xs rounded-circle"
-													data-bs-toggle="tooltip" data-bs-placement="bottom"
-													title="Ryan Tompson"> <img src=./assets/img/team-1.jpg
-													" alt="team1">
-												</a> <a href="javascript:;"
-													class="avatar avatar-xs rounded-circle"
-													data-bs-toggle="tooltip" data-bs-placement="bottom"
-													title="Romina Hadid"> <img src=./assets/img/team-2.jpg
-													" alt="team2">
-												</a> <a href="javascript:;"
-													class="avatar avatar-xs rounded-circle"
-													data-bs-toggle="tooltip" data-bs-placement="bottom"
-													title="Alexander Smith"> <img
-													src=./assets/img/team-3.jpg " alt="team3">
-												</a> <a href="javascript:;"
-													class="avatar avatar-xs rounded-circle"
-													data-bs-toggle="tooltip" data-bs-placement="bottom"
-													title="Jessica Doe"> <img src=./assets/img/team-4.jpg
-													" alt="team4">
-												</a>
+												<% String imgURL = null; %>
+												<% if (((String)comList.get(0).getTravel_company()).equals("기타가족")) {
+													imgURL = "family.png";
+												} else if (((String)comList.get(0).getTravel_company()).equals("자녀")) {
+													imgURL = "boy.png";
+												} else if (((String)comList.get(0).getTravel_company()).equals("부모님")) {
+													imgURL = "parents.png";
+												} else if (((String)comList.get(0).getTravel_company()).equals("연인")) {
+													imgURL = "couple.png";
+												} else if (((String)comList.get(0).getTravel_company()).equals("친구")) {
+													imgURL = "buddy.png";
+												} else if (((String)comList.get(0).getTravel_company()).equals("회사동료")) {
+													imgURL = "company.png";
+												} else if (((String)comList.get(0).getTravel_company()).equals("배우자")) {
+													imgURL = "wedding.png";
+												}%>
+												<img src="./assets/img/<%=imgURL%>" alt="team2">
 											</div>
 										</td>
 										<td class="align-middle text-center text-sm"><span
-											class="text-xs font-weight-bold"> <%=comList.get(0).getTravel_company()%> </span></td>
+											class="text-xs font-weight-bold"> <%=comList.get(0).getTravel_company()%>
+										</span></td>
 										<td class="align-middle">
 											<div class="progress-wrapper w-75 mx-auto">
 												<div class="progress-info">
@@ -467,6 +498,21 @@ h5{font-family:'WandohopeR' ;}
 									</tr>
 									<tr>
 										<td>
+												<% if (((String)comList.get(1).getTravel_company()).equals("기타가족")) {
+													imgURL = "family.png";
+												} else if (((String)comList.get(1).getTravel_company()).equals("자녀")) {
+													imgURL = "boy.png";
+												} else if (((String)comList.get(1).getTravel_company()).equals("부모님")) {
+													imgURL = "parents.png";
+												} else if (((String)comList.get(1).getTravel_company()).equals("연인")) {
+													imgURL = "couple.png";
+												} else if (((String)comList.get(1).getTravel_company()).equals("친구")){
+													imgURL = "buddy.png";
+												} else if (((String)comList.get(1).getTravel_company()).equals("회사동료")) {
+													imgURL = "company.png";
+												} else if (((String)comList.get(1).getTravel_company()).equals("배우자")) {
+													imgURL = "wedding.png";
+												}%>
 											<div class="d-flex px-2 py-1">
 												<div class="d-flex flex-column justify-content-center">
 													<h6 class="mb-0 text-sm">2</h6>
@@ -475,21 +521,13 @@ h5{font-family:'WandohopeR' ;}
 										</td>
 										<td>
 											<div class="avatar-group mt-2">
-												<a href="javascript:;"
-													class="avatar avatar-xs rounded-circle"
-													data-bs-toggle="tooltip" data-bs-placement="bottom"
-													title="Romina Hadid"> <img src=./assets/img/team-2.jpg
-													" alt="team5">
-												</a> <a href="javascript:;"
-													class="avatar avatar-xs rounded-circle"
-													data-bs-toggle="tooltip" data-bs-placement="bottom"
-													title="Jessica Doe"> <img src=./assets/img/team-4.jpg
+												<img src="./assets/img/<%=imgURL%>
 													" alt="team6">
-												</a>
 											</div>
 										</td>
 										<td class="align-middle text-center text-sm"><span
-											class="text-xs font-weight-bold"> <%=comList.get(1).getTravel_company() %> </span></td>
+											class="text-xs font-weight-bold"> <%=comList.get(1).getTravel_company()%>
+										</span></td>
 										<td class="align-middle">
 											<div class="progress-wrapper w-75 mx-auto">
 												<div class="progress-info">
@@ -497,12 +535,27 @@ h5{font-family:'WandohopeR' ;}
 														<span class="text-xs font-weight-bold"><%=comList.get(1).getSum_count()%></span>
 													</div>
 												</div>
-												
+
 											</div>
 										</td>
 									</tr>
 									<tr>
 										<td>
+												<% if (((String)comList.get(2).getTravel_company()).equals("기타가족")) {
+													imgURL = "family.png";
+												} else if (((String)comList.get(2).getTravel_company()).equals("자녀")) {
+													imgURL = "boy.png";
+												} else if (((String)comList.get(2).getTravel_company()).equals("부모님")) {
+													imgURL = "parents.png";
+												} else if (((String)comList.get(2).getTravel_company()).equals("연인")) {
+													imgURL = "couple.png";
+												} else if (((String)comList.get(2).getTravel_company()).equals("친구")) {
+													imgURL = "buddy.png";
+												} else if (((String)comList.get(2).getTravel_company()).equals("회사동료")) {
+													imgURL = "company.png";
+												} else if (((String)comList.get(2).getTravel_company()).equals("배우자")) {
+													imgURL = "wedding.png";
+												}%>
 											<div class="d-flex px-2 py-1">
 												<div class="d-flex flex-column justify-content-center">
 													<h6 class="mb-0 text-sm">3</h6>
@@ -511,26 +564,20 @@ h5{font-family:'WandohopeR' ;}
 										</td>
 										<td>
 											<div class="avatar-group mt-2">
-												<a href="javascript:;"
-													class="avatar avatar-xs rounded-circle"
-													data-bs-toggle="tooltip" data-bs-placement="bottom"
-													title="Romina Hadid"> <img src=./assets/img/team-3.jpg
-													" alt="team8">
-												</a> <a href="javascript:;"
-													class="avatar avatar-xs rounded-circle"
-													data-bs-toggle="tooltip" data-bs-placement="bottom"
-													title="Jessica Doe"> <img src=./assets/img/team-1.jpg
-													" alt="team9">
-												</a>
+
+												<img src="./assets/img/<%=imgURL%>
+													"
+													alt="team9">
 											</div>
 										</td>
 										<td class="align-middle text-center text-sm"><span
-											class="text-xs font-weight-bold"> <%=comList.get(2).getTravel_company() %> </span></td>
+											class="text-xs font-weight-bold"> <%=comList.get(2).getTravel_company()%>
+										</span></td>
 										<td class="align-middle">
 											<div class="progress-wrapper w-75 mx-auto">
 												<div class="progress-info">
 													<div class="progress-percentage">
-														<span class="text-xs font-weight-bold"><%=comList.get(2).getSum_count() %></span>
+														<span class="text-xs font-weight-bold"><%=comList.get(2).getSum_count()%></span>
 													</div>
 												</div>
 											</div>
@@ -538,44 +585,40 @@ h5{font-family:'WandohopeR' ;}
 									</tr>
 									<tr>
 										<td>
+												<% if (((String)comList.get(3).getTravel_company()).equals("기타가족")) {
+													imgURL = "family.png";
+												} else if (((String)comList.get(3).getTravel_company()).equals("자녀")) {
+													imgURL = "boy.png";
+												} else if (((String)comList.get(3).getTravel_company()).equals("부모님")) {
+													imgURL = "parents.png";
+												} else if (((String)comList.get(3).getTravel_company()).equals("연인")) {
+													imgURL = "couple.png";
+												} else if (((String)comList.get(3).getTravel_company()).equals("친구")) {
+													imgURL = "buddy.png";
+												} else if (((String)comList.get(3).getTravel_company()).equals("회사동료")) {
+													imgURL = "company.png";
+												} else if (((String)comList.get(3).getTravel_company()).equals("배우자")) {
+													imgURL = "wedding.png";
+												}%>
 											<div class="d-flex px-2 py-1">
 												<div class="d-flex flex-column justify-content-center">
 													<h6 class="mb-0 text-sm">4</h6>
 												</div>
 											</div>
 										</td>
-										<td>
-											<div class="avatar-group mt-2">
-												<a href="javascript:;"
-													class="avatar avatar-xs rounded-circle"
-													data-bs-toggle="tooltip" data-bs-placement="bottom"
-													title="Ryan Tompson"> <img src=./assets/img/team-4.jpg
-													" alt="user1">
-												</a> <a href="javascript:;"
-													class="avatar avatar-xs rounded-circle"
-													data-bs-toggle="tooltip" data-bs-placement="bottom"
-													title="Romina Hadid"> <img src=./assets/img/team-3.jpg
-													" alt="user2">
-												</a> <a href="javascript:;"
-													class="avatar avatar-xs rounded-circle"
-													data-bs-toggle="tooltip" data-bs-placement="bottom"
-													title="Alexander Smith"> <img
-													src=./assets/img/team-4.jpg " alt="user3">
-												</a> <a href="javascript:;"
-													class="avatar avatar-xs rounded-circle"
-													data-bs-toggle="tooltip" data-bs-placement="bottom"
-													title="Jessica Doe"> <img src=./assets/img/team-1.jpg
-													" alt="user4">
-												</a>
-											</div>
-										</td>
+										<td><img src="./assets/img/<%=imgURL%>
+													"
+											alt="user4">
+
+											</div></td>
 										<td class="align-middle text-center text-sm"><span
-											class="text-xs font-weight-bold"> <%=comList.get(3).getTravel_company() %> </span></td>
+											class="text-xs font-weight-bold"> <%=comList.get(3).getTravel_company()%>
+										</span></td>
 										<td class="align-middle">
 											<div class="progress-wrapper w-75 mx-auto">
 												<div class="progress-info">
 													<div class="progress-percentage">
-														<span class="text-xs font-weight-bold"><%=comList.get(3).getSum_count() %></span>
+														<span class="text-xs font-weight-bold"><%=comList.get(3).getSum_count()%></span>
 													</div>
 												</div>
 											</div>
@@ -583,6 +626,21 @@ h5{font-family:'WandohopeR' ;}
 									</tr>
 									<tr>
 										<td>
+												<% if (((String)comList.get(4).getTravel_company()).equals("기타가족")) {
+													imgURL = "family.png";
+												} else if (((String)comList.get(4).getTravel_company()).equals("자녀")) {
+													imgURL = "boy.png";
+												} else if (((String)comList.get(4).getTravel_company()).equals("부모님")) {
+													imgURL = "parents.png";
+												} else if (((String)comList.get(4).getTravel_company()).equals("연인")) {
+													imgURL = "couple.png";
+												} else if (((String)comList.get(4).getTravel_company()).equals("친구")) {
+													imgURL = "buddy.png";
+												} else if (((String)comList.get(4).getTravel_company()).equals("회사동료")) {
+													imgURL = "company.png";
+												} else if (((String)comList.get(4).getTravel_company()).equals("배우자")) {
+													imgURL = "wedding.png";
+												}%>
 											<div class="d-flex px-2 py-1">
 												<div class="d-flex flex-column justify-content-center">
 													<h6 class="mb-0 text-sm">5</h6>
@@ -591,21 +649,18 @@ h5{font-family:'WandohopeR' ;}
 										</td>
 										<td>
 											<div class="avatar-group mt-2">
-												<a href="javascript:;"
-													class="avatar avatar-xs rounded-circle"
-													data-bs-toggle="tooltip" data-bs-placement="bottom"
-													title="Ryan Tompson"> <img src=./assets/img/team-4.jpg
-													" alt="user5">
-												</a>
+												<img src="./assets/img/<%=imgURL%>" alt="user5">
+
 											</div>
 										</td>
 										<td class="align-middle text-center text-sm"><span
-											class="text-xs font-weight-bold"> <%=comList.get(4).getTravel_company() %> </span></td>
+											class="text-xs font-weight-bold"> <%=comList.get(4).getTravel_company()%>
+										</span></td>
 										<td class="align-middle">
 											<div class="progress-wrapper w-75 mx-auto">
 												<div class="progress-info">
 													<div class="progress-percentage">
-														<span class="text-xs font-weight-bold"><%=comList.get(4).getSum_count() %></span>
+														<span class="text-xs font-weight-bold"><%=comList.get(4).getSum_count()%></span>
 													</div>
 												</div>
 												<div class="progress">
@@ -617,24 +672,26 @@ h5{font-family:'WandohopeR' ;}
 										</td>
 									</tr>
 									<tr>
-
-
 									</tr>
 								</tbody>
 							</table>
 						</div>
 					</div>
-					<%} %>
+					<%
+					}
+					%>
 				</div>
 			</div>
 
 			<!-- 업종별 신용카드 소비액 추이 -->
 			<div class="col-lg-4 col-md-6">
-				<% List<CreditDTO> creditList = (List) request.getAttribute("creditList"); %>
+				<%
+				List<CreditDTO> creditList = (List) request.getAttribute("creditList");
+				%>
 				<div
 					style="background-color: white; width: 920px; border-radius: 15px; height: 930px;">
 					<br>
-					<h3>&nbsp&nbsp&nbsp업종별 신용카드 소비액 추이(단위:1,000원)</h3>
+					<span style="font-size: 200%;">&nbsp&nbsp&nbsp업종별 신용카드 소비액 추이</span><span style="font-size: 100%;">(단위:1,000원)</span>
 					<script type="text/javascript"
 						src="https://www.gstatic.com/charts/loader.js"></script>
 
@@ -690,9 +747,11 @@ h5{font-family:'WandohopeR' ;}
 						<h3>&nbsp&nbsp&nbsp여행유형/트렌드</h3>
 						<script type="text/javascript"
 							src="https://www.gstatic.com/charts/loader.js"></script>
-						<%List<TravelPurposeDTO> tpList = (List)request.getAttribute("tpList");
-							if (tpList != null) {%>
-							<script type="text/javascript">
+						<%
+						List<TravelPurposeDTO> tpList = (List) request.getAttribute("tpList");
+						if (tpList != null) {
+						%>
+						<script type="text/javascript">
 								google.charts.load('current', {
 									'packages' : [ 'line' ]
 								});
@@ -744,7 +803,9 @@ h5{font-family:'WandohopeR' ;}
 											.convertOptions(options));
 								}
 							</script>
-							<%} %>
+						<%
+						}
+						%>
 						<div>
 							<div id="line_top_x"></div>
 						</div>
@@ -1033,6 +1094,8 @@ h5{font-family:'WandohopeR' ;}
 	<script async defer src="https://buttons.github.io/buttons.js"></script>
 	<!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
 	<script src="./assets/js/soft-ui-dashboard.min.js?v=1.0.7"></script>
-	<%} %>
+	<%
+	}
+	%>
 </body>
 </html>
