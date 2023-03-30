@@ -204,9 +204,7 @@ h5 {
 	<div class="a">
 		<form action="map">
 			<% String moveURL= (String)request.getAttribute("moveURL"); %>
-			<a href="<%=moveURL%>">
-				<button id="back">이전 페이지</button>
-			</a>
+			<button id="back" type="button" onclick = "location.href='<%= moveURL %>'">이전 페이지</button>
 			<div style="top: 8px; position: absolute;">
 				<input type="radio" name="관광지" value="인기 관광지">인기 관광지
 				&nbsp;
