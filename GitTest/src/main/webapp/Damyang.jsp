@@ -213,9 +213,9 @@ span {
 			%>
 			<br>
 			<a href="map">
-				<h3 id="popular" style="margin-left: 81%;">인기관광지 및 지역 맛집</h3>
+				<h3 id="popular" style="margin-left: 79%;">📍&nbsp;인기관광지 및 지역 맛집</h3>
 				<script >var text = document.querySelector('#popular');
-				text.onclick = function(){text.style.color='green';}</script>
+				text.onclick = function(){text.style.color='white';}</script>
 			</a>
 			<form action="selectYear" style="height: 40px;">
 				<h4>연도 선택 :</h4>

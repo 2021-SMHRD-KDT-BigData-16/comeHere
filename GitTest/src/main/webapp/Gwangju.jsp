@@ -188,8 +188,11 @@
 			}
 			%>
 			<br> <a href="map">
-				<h3 style="margin-left: 81%;">인기관광지 및 지역 맛집</h3>
-				</a>
+				<h3 id="popular" style="margin-left: 79%;">📍&nbsp;인기관광지 및 지역 맛집</h3>
+				<script >var text = document.querySelector('#popular');
+				text.onclick = function(){text.style.color='white';}</script>
+			</a>
+
 			<form action="selectYear" style="height: 40px;">
 				<h4>연도 선택 :</h4>
 				<select id="selectyear" name="year">
@@ -461,7 +464,7 @@
 												String imgURL = null;
 												%>
 												<%
-												if (((String) comList.get(0).getTravel_company()).equals("기타가족")) {
+												if (((String) comList.get(0).getTravel_company()).equals("가족")) {
 													imgURL = "family.png";
 												} else if (((String) comList.get(0).getTravel_company()).equals("자녀")) {
 													imgURL = "boy.png";
@@ -501,7 +504,7 @@
 									<tr>
 										<td>
 											<%
-											if (((String) comList.get(1).getTravel_company()).equals("기타가족")) {
+											if (((String) comList.get(1).getTravel_company()).equals("가족")) {
 												imgURL = "family.png";
 											} else if (((String) comList.get(1).getTravel_company()).equals("자녀")) {
 												imgURL = "boy.png";
@@ -550,7 +553,7 @@
 									<tr>
 										<td>
 											<%
-											if (((String) comList.get(2).getTravel_company()).equals("기타가족")) {
+											if (((String) comList.get(2).getTravel_company()).equals("가족")) {
 												imgURL = "family.png";
 											} else if (((String) comList.get(2).getTravel_company()).equals("자녀")) {
 												imgURL = "boy.png";
@@ -601,7 +604,7 @@
 									<tr>
 										<td>
 											<%
-											if (((String) comList.get(3).getTravel_company()).equals("기타가족")) {
+											if (((String) comList.get(3).getTravel_company()).equals("가족")) {
 												imgURL = "family.png";
 											} else if (((String) comList.get(3).getTravel_company()).equals("자녀")) {
 												imgURL = "boy.png";
@@ -649,7 +652,7 @@
 									<tr>
 										<td>
 											<%
-											if (((String) comList.get(4).getTravel_company()).equals("기타가족")) {
+											if (((String) comList.get(4).getTravel_company()).equals("가족")) {
 												imgURL = "family.png";
 											} else if (((String) comList.get(4).getTravel_company()).equals("자녀")) {
 												imgURL = "boy.png";
@@ -688,7 +691,7 @@
 													</div>
 												</div>
 												<div class="progress">
-													<div class="progress-bar bg-gradient-info w-5"
+													<div class="progress-bar bg-gradient-info w-60"
 														role="progressbar" aria-valuenow="25" aria-valuemin="0"
 														aria-valuemax="25"></div>
 												</div>
