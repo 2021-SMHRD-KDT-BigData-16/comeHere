@@ -172,6 +172,7 @@
 			<h3 align="center">문화의 도시</h3>
 			<h1 align="center">광주</h1>
 			<br>
+
 			<%
 			String year = (String) request.getAttribute("year");
 			if (year == null) {
@@ -188,7 +189,7 @@
 			%>
 			<br> <a href="map">
 				<h3 style="margin-left: 81%;">인기관광지 및 지역 맛집</h3>
-			</a>
+
 			<form action="selectYear" style="height: 40px;">
 				<h4>연도 선택 :</h4>
 				<select id="selectyear" name="year">
@@ -197,7 +198,10 @@
 					<option value="2020">2020</option>
 					<option value="2021">2021</option>
 					<option value="2022">2022</option>
-				</select> <input type="submit" value="선택">
+
+				</select>
+				<input type="submit" value="선택" class="jh">
+
 			</form>
 		</div>
 		<%

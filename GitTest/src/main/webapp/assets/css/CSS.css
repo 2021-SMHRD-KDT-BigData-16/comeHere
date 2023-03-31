@@ -37,6 +37,12 @@ h4{font-family:'WandohopeR' ;}
 h5{font-family:'WandohopeR' ;}
 span{font-family:'KimjungchulMyungjo-Bold';font-color : '#344767';}
 
+.jh{
+	position: absolute;
+	bottom : -5px;
+	left : 210px;
+}
+
 input[type=submit] {
 border-top-left-radius : 10px;
 border-top-right-radius : 10px;
@@ -76,9 +82,23 @@ height : 45px;
 width : 150px;
 margin-right:95%;
 position: absolute;
-right: 1365px;
+right: 1400px;
 }
 
 #back:hover{
 color:white;
 background-color:#3a416f;}
+
+#popular:hover{
+color:white;
+background-color:#3a416f;}
+
+#popular:hover{
+                background-color: chocolate;
+            }
+            
+
+
+
+
+
