@@ -181,9 +181,11 @@ span {font-family: 'KimjungchulMyungjo-Bold';}
 			<%} %>
 			<br>
 			<a href="map">
-				<h3 style="margin-left: 81%;">인기관광지 및 지역 맛집</h3>
+				<h3 id="popular" style="margin-left: 81%;">인기관광지 및 지역 맛집</h3>
+				<script >var text = document.querySelector('#popular');
+				text.onclick = function(){text.style.color='green';}</script>
 			</a>
-			<form action="selectYear">
+			<form action="selectYear" style="height: 40px;">
 				<h4>연도 선택 :</h4>
 				<select id="selectyear" name="year">
 					<option value="2018">2018</option>
@@ -191,7 +193,7 @@ span {font-family: 'KimjungchulMyungjo-Bold';}
 					<option value="2020">2020</option>
 					<option value="2021">2021</option>
 					<option value="2022">2022</option>
-				</select> <input type="submit" value="선택">
+				</select> <input type="submit" value="선택" class="jh">
 			</form>
 		</div>
 		<% if (year != null) { %>
@@ -511,7 +513,11 @@ span {font-family: 'KimjungchulMyungjo-Bold';}
 														<span class="text-xs font-weight-bold"><%=comList.get(1).getSum_count()%></span>
 													</div>
 												</div>
-
+												<div class="progress">
+													<div class="progress-bar bg-gradient-info w-5"
+														role="progressbar" aria-valuenow="25" aria-valuemin="0"
+														aria-valuemax="25">
+													</div>
 											</div>
 										</td>
 									</tr>
@@ -556,6 +562,11 @@ span {font-family: 'KimjungchulMyungjo-Bold';}
 														<span class="text-xs font-weight-bold"><%=comList.get(2).getSum_count()%></span>
 													</div>
 												</div>
+												<div class="progress">
+													<div class="progress-bar bg-gradient-info w-5"
+														role="progressbar" aria-valuenow="25" aria-valuemin="0"
+														aria-valuemax="25">
+													</div>
 											</div>
 										</td>
 									</tr>
@@ -597,6 +608,11 @@ span {font-family: 'KimjungchulMyungjo-Bold';}
 														<span class="text-xs font-weight-bold"><%=comList.get(3).getSum_count()%></span>
 													</div>
 												</div>
+												<div class="progress">
+													<div class="progress-bar bg-gradient-info w-5"
+														role="progressbar" aria-valuenow="25" aria-valuemin="0"
+														aria-valuemax="25">
+													</div>
 											</div>
 										</td>
 									</tr>

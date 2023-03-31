@@ -32,7 +32,7 @@
 <!-- CSS Files -->
 <link id="pagestyle" href="./assets/css/soft-ui-dashboard.css?v=1.0.7"
 	rel="stylesheet" />
-<link rel="stylesheet" href="./assets/css/CSS.css">	
+<link rel="stylesheet" href="./assets/css/CSS.css">
 <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
 </head>
 <body class="g-sidenav-show  bg-gray-100">
@@ -167,22 +167,30 @@
 					</div>
 				</div>
 		</nav>
-		
+
 		<div class="container-fluid py-1 px-3">
 			<h3 align="center">문화의 도시</h3>
 			<h1 align="center">광주</h1>
 			<br>
-			<%String year = (String)request.getAttribute("year");
-			if (year == null) {%>
-				<h2 style="position: relative; margin-left: 42.5%; color: black;">연도를 선택해주세요.</h2>
-			<% } else {%>
-				<h2 style="position: relative; margin-left: 47.2%; color: black;"><%=year %>년</h2>
-			<%} %>
-			<br>
-			<a href="map">
+
+			<%
+			String year = (String) request.getAttribute("year");
+			if (year == null) {
+			%>
+			<h2 style="position: relative; margin-left: 42.5%; color: black;">연도를
+				선택해주세요.</h2>
+			<%
+			} else {
+			%>
+			<h2 style="position: relative; margin-left: 47.2%; color: black;"><%=year%>년
+			</h2>
+			<%
+			}
+			%>
+			<br> <a href="map">
 				<h3 style="margin-left: 81%;">인기관광지 및 지역 맛집</h3>
-			</a>
-			<form action="selectYear">
+
+			<form action="selectYear" style="height: 40px;">
 				<h4>연도 선택 :</h4>
 				<select id="selectyear" name="year">
 					<option value="2018">2018</option>
@@ -190,11 +198,15 @@
 					<option value="2020">2020</option>
 					<option value="2021">2021</option>
 					<option value="2022">2022</option>
+
 				</select>
-				<input type="submit" value="선택">
+				<input type="submit" value="선택" class="jh">
+
 			</form>
 		</div>
-		<% if (year != null) { %>
+		<%
+		if (year != null) {
+		%>
 		<div class="row mt-4">
 			<div class="col-lg-7 mb-lg-0 mb-4">
 				<div class="card">
@@ -214,17 +226,16 @@
 								</div>
 							</div>
 							<div class="col-lg-5 ms-auto text-center mt-5 mt-lg-0">
-								
-									<img src="./assets/img/shapes/waves-white.svg"
-										class="position-absolute h-100 w-50 top-0 d-lg-block d-none"
-										alt="waves">
-									<div
-										class="position-relative d-flex align-items-center justify-content-center h-100">
-										<img class="w-100 position-relative z-index-2 pt-4"
-											src="./assets/img/Gwangju_character.jpg"
-											alt="rocket">
-									</div>
-								
+
+								<img src="./assets/img/shapes/waves-white.svg"
+									class="position-absolute h-100 w-50 top-0 d-lg-block d-none"
+									alt="waves">
+								<div
+									class="position-relative d-flex align-items-center justify-content-center h-100">
+									<img class="w-100 position-relative z-index-2 pt-4"
+										src="./assets/img/Gwangju_character.jpg" alt="rocket">
+								</div>
+
 							</div>
 						</div>
 					</div>
@@ -270,15 +281,15 @@
 						</p>
 						<div class="container border-radius-lg">
 							<div class="row">
-								<% List<ConsumptionDTO> consumptionList = (List<ConsumptionDTO>) request.getAttribute("consumptionList");
-								
+								<%
+								List<ConsumptionDTO> consumptionList = (List<ConsumptionDTO>) request.getAttribute("consumptionList");
+
 								double num1 = consumptionList.get(0).getSum_amount();
 								double num2 = consumptionList.get(1).getSum_amount();
 								double num3 = consumptionList.get(2).getSum_amount();
 								double num4 = consumptionList.get(3).getSum_amount();
-							
 								%>
-								
+
 								<div class="col-3 py-3 ps-0">
 									<div class="d-flex mb-2">
 										🏢
@@ -334,10 +345,13 @@
 						<h3>SNS 언급량</h3>
 						<p class="text-sm">
 							<i class="fa fa-arrow-up text-success"></i> <span
-								class="font-weight-bold">&nbsp&nbsp주요 국내 소셜미디어, 커뮤니티의 해당지역에 대한 관광 관련 언급량을 제공</span>
+								class="font-weight-bold">&nbsp&nbsp주요 국내 소셜미디어, 커뮤니티의
+								해당지역에 대한 관광 관련 언급량을 제공</span>
 						</p>
 					</div>
-					<%List<SNSDTO> snsList = (List)request.getAttribute("snsList"); %>
+					<%
+					List<SNSDTO> snsList = (List) request.getAttribute("snsList");
+					%>
 					<div class="card-body p-3">
 						<div class="chart">
 							<canvas id="chart-line" class="chart-canvas" height="275"></canvas>
@@ -352,17 +366,24 @@
 		<div class="row my-4">
 			<div style="width: 50%; border-radius: 15px;">
 
-				<div style="background-color: white; width: 100%; border-radius: 15px; height: 930px;">
+				<div
+					style="background-color: white; width: 100%; border-radius: 15px; height: 930px;">
 					<br>
 					<h3>&nbsp&nbsp동반유형 키워드 순위</h3>
 					<p class="text-sm mb-0">
-						&nbsp&nbsp&nbsp&nbsp<i class="fa fa-check text-info" aria-hidden="true"></i>
-						<span class="font-weight-bold ms-1">&nbsp주요 국내 소셜미디어,커뮤니티의 '동반유형' 관련 주요 키워드 순위를 제공</span>
+						&nbsp&nbsp&nbsp&nbsp<i class="fa fa-check text-info"
+							aria-hidden="true"></i> <span class="font-weight-bold ms-1">&nbsp주요
+							국내 소셜미디어,커뮤니티의 '동반유형' 관련 주요 키워드 순위를 제공</span>
 					</p>
-					<p></p><p></p><p></p>
-					<%List<CompanyDTO> comList = (List)request.getAttribute("comList");
-					if (comList != null) {%>
-					<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+					<p></p>
+					<p></p>
+					<p></p>
+					<%
+					List<CompanyDTO> comList = (List) request.getAttribute("comList");
+					if (comList != null) {
+					%>
+					<script type="text/javascript"
+						src="https://www.gstatic.com/charts/loader.js"></script>
 					<script type="text/javascript">
 					  google.charts.load('current', {'packages':['bar']});
 				      google.charts.setOnLoadCallback(drawChart);
@@ -392,9 +413,10 @@
 				      }
 					    </script>
 					<div>
-						<div id="columnchart_material" style="width: 900px; height: 450px; margin-left: 30px"></div>
-					</div>	
-					
+						<div id="columnchart_material"
+							style="width: 900px; height: 450px; margin-left: 30px"></div>
+					</div>
+
 					<!-- 동반유형 키워드 언급량 -->
 					<div class="col-lg-6 col-5 my-auto text-end">
 						<div class="dropdown float-lg-end pe-4"></div>
@@ -428,22 +450,26 @@
 										</td>
 										<td>
 											<div class="avatar-group mt-2">
-												<% String imgURL = null; %>
-												<% if (((String)comList.get(0).getTravel_company()).equals("기타가족")) {
+												<%
+												String imgURL = null;
+												%>
+												<%
+												if (((String) comList.get(0).getTravel_company()).equals("기타가족")) {
 													imgURL = "family.png";
-												} else if (((String)comList.get(0).getTravel_company()).equals("자녀")) {
+												} else if (((String) comList.get(0).getTravel_company()).equals("자녀")) {
 													imgURL = "boy.png";
-												} else if (((String)comList.get(0).getTravel_company()).equals("부모님")) {
+												} else if (((String) comList.get(0).getTravel_company()).equals("부모님")) {
 													imgURL = "parents.png";
-												} else if (((String)comList.get(0).getTravel_company()).equals("연인")) {
+												} else if (((String) comList.get(0).getTravel_company()).equals("연인")) {
 													imgURL = "couple.png";
-												} else if (((String)comList.get(0).getTravel_company()).equals("친구")) {
+												} else if (((String) comList.get(0).getTravel_company()).equals("친구")) {
 													imgURL = "buddy.png";
-												} else if (((String)comList.get(0).getTravel_company()).equals("회사동료")) {
+												} else if (((String) comList.get(0).getTravel_company()).equals("회사동료")) {
 													imgURL = "company.png";
-												} else if (((String)comList.get(0).getTravel_company()).equals("배우자")) {
+												} else if (((String) comList.get(0).getTravel_company()).equals("배우자")) {
 													imgURL = "wedding.png";
-												}%>
+												}
+												%>
 												<img src="./assets/img/<%=imgURL%>" alt="team2">
 											</div>
 										</td>
@@ -467,21 +493,23 @@
 									</tr>
 									<tr>
 										<td>
-												<% if (((String)comList.get(1).getTravel_company()).equals("기타가족")) {
-													imgURL = "family.png";
-												} else if (((String)comList.get(1).getTravel_company()).equals("자녀")) {
-													imgURL = "boy.png";
-												} else if (((String)comList.get(1).getTravel_company()).equals("부모님")) {
-													imgURL = "parents.png";
-												} else if (((String)comList.get(1).getTravel_company()).equals("연인")) {
-													imgURL = "couple.png";
-												} else if (((String)comList.get(1).getTravel_company()).equals("친구")){
-													imgURL = "buddy.png";
-												} else if (((String)comList.get(1).getTravel_company()).equals("회사동료")) {
-													imgURL = "company.png";
-												} else if (((String)comList.get(1).getTravel_company()).equals("배우자")) {
-													imgURL = "wedding.png";
-												}%>
+											<%
+											if (((String) comList.get(1).getTravel_company()).equals("기타가족")) {
+												imgURL = "family.png";
+											} else if (((String) comList.get(1).getTravel_company()).equals("자녀")) {
+												imgURL = "boy.png";
+											} else if (((String) comList.get(1).getTravel_company()).equals("부모님")) {
+												imgURL = "parents.png";
+											} else if (((String) comList.get(1).getTravel_company()).equals("연인")) {
+												imgURL = "couple.png";
+											} else if (((String) comList.get(1).getTravel_company()).equals("친구")) {
+												imgURL = "buddy.png";
+											} else if (((String) comList.get(1).getTravel_company()).equals("회사동료")) {
+												imgURL = "company.png";
+											} else if (((String) comList.get(1).getTravel_company()).equals("배우자")) {
+												imgURL = "wedding.png";
+											}
+											%>
 											<div class="d-flex px-2 py-1">
 												<div class="d-flex flex-column justify-content-center">
 													<h6 class="mb-0 text-sm">2</h6>
@@ -491,7 +519,8 @@
 										<td>
 											<div class="avatar-group mt-2">
 												<img src="./assets/img/<%=imgURL%>
-													" alt="team6">
+													"
+													alt="team6">
 											</div>
 										</td>
 										<td class="align-middle text-center text-sm"><span
@@ -504,27 +533,32 @@
 														<span class="text-xs font-weight-bold"><%=comList.get(1).getSum_count()%></span>
 													</div>
 												</div>
-
-											</div>
+												<div class="progress">
+													<div class="progress-bar bg-gradient-info w-5"
+														role="progressbar" aria-valuenow="25" aria-valuemin="0"
+														aria-valuemax="25"></div>
+												</div>
 										</td>
 									</tr>
 									<tr>
 										<td>
-												<% if (((String)comList.get(2).getTravel_company()).equals("기타가족")) {
-													imgURL = "family.png";
-												} else if (((String)comList.get(2).getTravel_company()).equals("자녀")) {
-													imgURL = "boy.png";
-												} else if (((String)comList.get(2).getTravel_company()).equals("부모님")) {
-													imgURL = "parents.png";
-												} else if (((String)comList.get(2).getTravel_company()).equals("연인")) {
-													imgURL = "couple.png";
-												} else if (((String)comList.get(2).getTravel_company()).equals("친구")) {
-													imgURL = "buddy.png";
-												} else if (((String)comList.get(2).getTravel_company()).equals("회사동료")) {
-													imgURL = "company.png";
-												} else if (((String)comList.get(2).getTravel_company()).equals("배우자")) {
-													imgURL = "wedding.png";
-												}%>
+											<%
+											if (((String) comList.get(2).getTravel_company()).equals("기타가족")) {
+												imgURL = "family.png";
+											} else if (((String) comList.get(2).getTravel_company()).equals("자녀")) {
+												imgURL = "boy.png";
+											} else if (((String) comList.get(2).getTravel_company()).equals("부모님")) {
+												imgURL = "parents.png";
+											} else if (((String) comList.get(2).getTravel_company()).equals("연인")) {
+												imgURL = "couple.png";
+											} else if (((String) comList.get(2).getTravel_company()).equals("친구")) {
+												imgURL = "buddy.png";
+											} else if (((String) comList.get(2).getTravel_company()).equals("회사동료")) {
+												imgURL = "company.png";
+											} else if (((String) comList.get(2).getTravel_company()).equals("배우자")) {
+												imgURL = "wedding.png";
+											}
+											%>
 											<div class="d-flex px-2 py-1">
 												<div class="d-flex flex-column justify-content-center">
 													<h6 class="mb-0 text-sm">3</h6>
@@ -549,26 +583,33 @@
 														<span class="text-xs font-weight-bold"><%=comList.get(2).getSum_count()%></span>
 													</div>
 												</div>
+												<div class="progress">
+													<div class="progress-bar bg-gradient-info w-5"
+														role="progressbar" aria-valuenow="25" aria-valuemin="0"
+														aria-valuemax="25">
+													</div>
 											</div>
 										</td>
 									</tr>
 									<tr>
 										<td>
-												<% if (((String)comList.get(3).getTravel_company()).equals("기타가족")) {
-													imgURL = "family.png";
-												} else if (((String)comList.get(3).getTravel_company()).equals("자녀")) {
-													imgURL = "boy.png";
-												} else if (((String)comList.get(3).getTravel_company()).equals("부모님")) {
-													imgURL = "parents.png";
-												} else if (((String)comList.get(3).getTravel_company()).equals("연인")) {
-													imgURL = "couple.png";
-												} else if (((String)comList.get(3).getTravel_company()).equals("친구")) {
-													imgURL = "buddy.png";
-												} else if (((String)comList.get(3).getTravel_company()).equals("회사동료")) {
-													imgURL = "company.png";
-												} else if (((String)comList.get(3).getTravel_company()).equals("배우자")) {
-													imgURL = "wedding.png";
-												}%>
+											<%
+											if (((String) comList.get(3).getTravel_company()).equals("기타가족")) {
+												imgURL = "family.png";
+											} else if (((String) comList.get(3).getTravel_company()).equals("자녀")) {
+												imgURL = "boy.png";
+											} else if (((String) comList.get(3).getTravel_company()).equals("부모님")) {
+												imgURL = "parents.png";
+											} else if (((String) comList.get(3).getTravel_company()).equals("연인")) {
+												imgURL = "couple.png";
+											} else if (((String) comList.get(3).getTravel_company()).equals("친구")) {
+												imgURL = "buddy.png";
+											} else if (((String) comList.get(3).getTravel_company()).equals("회사동료")) {
+												imgURL = "company.png";
+											} else if (((String) comList.get(3).getTravel_company()).equals("배우자")) {
+												imgURL = "wedding.png";
+											}
+											%>
 											<div class="d-flex px-2 py-1">
 												<div class="d-flex flex-column justify-content-center">
 													<h6 class="mb-0 text-sm">4</h6>
@@ -590,26 +631,33 @@
 														<span class="text-xs font-weight-bold"><%=comList.get(3).getSum_count()%></span>
 													</div>
 												</div>
+												<div class="progress">
+													<div class="progress-bar bg-gradient-info w-5"
+														role="progressbar" aria-valuenow="25" aria-valuemin="0"
+														aria-valuemax="25">
+													</div>
 											</div>
 										</td>
 									</tr>
 									<tr>
 										<td>
-												<% if (((String)comList.get(4).getTravel_company()).equals("기타가족")) {
-													imgURL = "family.png";
-												} else if (((String)comList.get(4).getTravel_company()).equals("자녀")) {
-													imgURL = "boy.png";
-												} else if (((String)comList.get(4).getTravel_company()).equals("부모님")) {
-													imgURL = "parents.png";
-												} else if (((String)comList.get(4).getTravel_company()).equals("연인")) {
-													imgURL = "couple.png";
-												} else if (((String)comList.get(4).getTravel_company()).equals("친구")) {
-													imgURL = "buddy.png";
-												} else if (((String)comList.get(4).getTravel_company()).equals("회사동료")) {
-													imgURL = "company.png";
-												} else if (((String)comList.get(4).getTravel_company()).equals("배우자")) {
-													imgURL = "wedding.png";
-												}%>
+											<%
+											if (((String) comList.get(4).getTravel_company()).equals("기타가족")) {
+												imgURL = "family.png";
+											} else if (((String) comList.get(4).getTravel_company()).equals("자녀")) {
+												imgURL = "boy.png";
+											} else if (((String) comList.get(4).getTravel_company()).equals("부모님")) {
+												imgURL = "parents.png";
+											} else if (((String) comList.get(4).getTravel_company()).equals("연인")) {
+												imgURL = "couple.png";
+											} else if (((String) comList.get(4).getTravel_company()).equals("친구")) {
+												imgURL = "buddy.png";
+											} else if (((String) comList.get(4).getTravel_company()).equals("회사동료")) {
+												imgURL = "company.png";
+											} else if (((String) comList.get(4).getTravel_company()).equals("배우자")) {
+												imgURL = "wedding.png";
+											}
+											%>
 											<div class="d-flex px-2 py-1">
 												<div class="d-flex flex-column justify-content-center">
 													<h6 class="mb-0 text-sm">5</h6>
@@ -654,11 +702,13 @@
 
 			<!-- 업종별 신용카드 소비액 추이 -->
 			<div class="col-lg-4 col-md-6">
-				<% List<CreditDTO> creditList = (List) request.getAttribute("creditList"); %>
+				<%
+				List<CreditDTO> creditList = (List) request.getAttribute("creditList");
+				%>
 				<div
 					style="background-color: white; width: 920px; border-radius: 15px; height: 930px;">
-					<br>
-					<span style="font-size: 200%; color : #344767;">&nbsp&nbsp&nbsp업종별 신용카드 소비액 추이</span><span style="font-size: 100%;">(단위:1,000원)</span>
+					<br> <span style="font-size: 200%; color: #344767;">&nbsp&nbsp&nbsp업종별
+						신용카드 소비액 추이</span><span style="font-size: 100%;">(단위:1,000원)</span>
 					<script type="text/javascript"
 						src="https://www.gstatic.com/charts/loader.js"></script>
 
@@ -714,9 +764,11 @@
 						<h3>&nbsp&nbsp&nbsp여행유형/트렌드</h3>
 						<script type="text/javascript"
 							src="https://www.gstatic.com/charts/loader.js"></script>
-						<%List<TravelPurposeDTO> tpList = (List)request.getAttribute("tpList");
-							if (tpList != null) {%>
-							<script type="text/javascript">
+						<%
+						List<TravelPurposeDTO> tpList = (List) request.getAttribute("tpList");
+						if (tpList != null) {
+						%>
+						<script type="text/javascript">
 								google.charts.load('current', {
 									'packages' : [ 'line' ]
 								});
@@ -768,7 +820,9 @@
 											.convertOptions(options));
 								}
 							</script>
-							<%} %>
+						<%
+						}
+						%>
 						<div>
 							<div id="line_top_x"></div>
 						</div>
@@ -879,20 +933,27 @@
 				labels : [ "<%=consumptionList.get(0).getCunsumption_type1()%>",
 						   "<%=consumptionList.get(1).getCunsumption_type1()%>",
 						   "<%=consumptionList.get(2).getCunsumption_type1()%>",
-						   "<%=consumptionList.get(3).getCunsumption_type1()%>"],
-				datasets : [ {
-					label : "",
-					tension : 0.4,
-					borderWidth : 0,
-					borderRadius : 4,
-					borderSkipped : false,
-					backgroundColor : "#fff",
-					data : [ <%=(num1/(num1+num2+num3+num4))*100%>,
-						 <%=(num2/(num1+num2+num3+num4))*100%>,
-						 <%=(num3/(num1+num2+num3+num4))*100%>,
-						 <%=(num4/(num1+num2+num3+num4))*100%>],
-				maxBarThickness : 20
-				}, ],
+						   "<%=consumptionList.get(3).getCunsumption_type1()%>
+		" ],
+						datasets : [
+								{
+									label : "",
+									tension : 0.4,
+									borderWidth : 0,
+									borderRadius : 4,
+									borderSkipped : false,
+									backgroundColor : "#fff",
+									data : [
+	<%=(num1 / (num1 + num2 + num3 + num4)) * 100%>
+		,
+	<%=(num2 / (num1 + num2 + num3 + num4)) * 100%>
+		,
+	<%=(num3 / (num1 + num2 + num3 + num4)) * 100%>
+		,
+	<%=(num4 / (num1 + num2 + num3 + num4)) * 100%>
+		],
+							maxBarThickness : 20
+						}, ],
 			},
 			options : {
 				responsive : true,
@@ -956,35 +1017,49 @@
 		gradientStroke2.addColorStop(1, 'rgba(20,23,39,0.2)');
 		gradientStroke2.addColorStop(0.2, 'rgba(72,72,176,0.0)');
 		gradientStroke2.addColorStop(0, 'rgba(20,23,39,0)'); //purple colors
-		
+
 		new Chart(ctx2, {
 			type : "line",
 			data : {
 				labels : [ "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul",
 						"Aug", "Sep", "Oct", "Nov", "Dec" ],
-				datasets : [ {
-					label : "언급량",
-					tension : 0.4,
-					borderWidth : 0,
-					pointRadius : 0,
-					borderColor : "#cb0c9f",
-					borderWidth : 3,
-					backgroundColor : gradientStroke1,
-					fill : true,
-					data : [ <%=snsList.get(0).getSns_search()%>,
-							 <%=snsList.get(1).getSns_search()%>,
-							 <%=snsList.get(2).getSns_search()%>,
-							 <%=snsList.get(3).getSns_search()%>,
-							 <%=snsList.get(4).getSns_search()%>,
-							 <%=snsList.get(5).getSns_search()%>,
-							 <%=snsList.get(6).getSns_search()%>,
-							 <%=snsList.get(7).getSns_search()%>,
-							 <%=snsList.get(8).getSns_search()%>,
-							 <%=snsList.get(9).getSns_search()%>,
-							 <%=snsList.get(10).getSns_search()%>,
-							 <%=snsList.get(11).getSns_search()%> ],
-					maxBarThickness : 6
-				}, ],
+				datasets : [
+						{
+							label : "언급량",
+							tension : 0.4,
+							borderWidth : 0,
+							pointRadius : 0,
+							borderColor : "#cb0c9f",
+							borderWidth : 3,
+							backgroundColor : gradientStroke1,
+							fill : true,
+							data : [
+	<%=snsList.get(0).getSns_search()%>
+		,
+	<%=snsList.get(1).getSns_search()%>
+		,
+	<%=snsList.get(2).getSns_search()%>
+		,
+	<%=snsList.get(3).getSns_search()%>
+		,
+	<%=snsList.get(4).getSns_search()%>
+		,
+	<%=snsList.get(5).getSns_search()%>
+		,
+	<%=snsList.get(6).getSns_search()%>
+		,
+	<%=snsList.get(7).getSns_search()%>
+		,
+	<%=snsList.get(8).getSns_search()%>
+		,
+	<%=snsList.get(9).getSns_search()%>
+		,
+	<%=snsList.get(10).getSns_search()%>
+		,
+	<%=snsList.get(11).getSns_search()%>
+		],
+							maxBarThickness : 6
+						}, ],
 			},
 			options : {
 				responsive : true,
@@ -1057,7 +1132,9 @@
 	<script async defer src="https://buttons.github.io/buttons.js"></script>
 	<!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
 	<script src="./assets/js/soft-ui-dashboard.min.js?v=1.0.7"></script>
-	<%} %>
+	<%
+	}
+	%>
 </body>
 
 </html>

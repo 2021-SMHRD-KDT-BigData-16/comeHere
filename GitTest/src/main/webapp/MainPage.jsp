@@ -37,7 +37,7 @@
 
 			<!-- Footer -->
 			<footer id="footer">
-				<i id="foot" class="fas fa-light fa-shoe-prints fa-rotate-270 fa-lg"
+				<i id="foot" class="fas fa-light fa-shoe-prints fa-rotate-270 fa-lg"ㄴㄴㄴㄴㄴ
 					, style="color: rgb(0, 0, 0)"></i> <span class="copyright">&nbsp
 					#김권민 #왕지강 #남하은 #주영래 #장이수<a href="http://html5up.net"></a>
 				</span>
