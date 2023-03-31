@@ -43,7 +43,7 @@
 
 		<!-- End Navbar -->
 		<nav id="km">
-			<div class="container-fluid py-4">
+			<div class="container-fluid py-4" style="height: 240px;">
 				<div class="row">
 					<div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
 						<div class="card">
@@ -182,7 +182,7 @@
 			<a href="map">
 				<h3 style="margin-left: 81%;">인기관광지 및 지역 맛집</h3>
 			</a>
-			<form action="selectYear">
+			<form action="selectYear" style="height: 40px;">
 				<h4>연도 선택 :</h4>
 				<select id="selectyear" name="year">
 					<option value="2018">2018</option>
