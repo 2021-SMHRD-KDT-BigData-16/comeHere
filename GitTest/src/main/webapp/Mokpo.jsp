@@ -54,7 +54,7 @@ span {font-family: 'KimjungchulMyungjo-Bold';}
 
 		<!-- End Navbar -->
 		<nav id="km">
-			<div class="container-fluid py-4" style="height: 240px;">
+			<div class="container-fluid py-4">
 				<div class="row">
 					<div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
 						<div class="card">
