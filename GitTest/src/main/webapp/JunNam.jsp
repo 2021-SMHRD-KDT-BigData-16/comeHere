@@ -479,16 +479,8 @@ span {
 										</td>
 										<td>
 											<div class="avatar-group mt-2">
-<<<<<<< HEAD
 												<% String imgURL = null; %>
 												<% if (((String)comList.get(0).getTravel_company()).equals("가족")) {
-=======
-												<%
-												String imgURL = null;
-												%>
-												<%
-												if (((String) comList.get(0).getTravel_company()).equals("기타가족")) {
->>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-BigData-16/comeHere.git
 													imgURL = "family.png";
 												} else if (((String) comList.get(0).getTravel_company()).equals("자녀")) {
 													imgURL = "boy.png";
@@ -543,25 +535,6 @@ span {
 												} else if (((String)comList.get(1).getTravel_company()).equals("배우자")) {
 													imgURL = "wedding.png";
 												}%>
-=======
-											<%
-											if (((String) comList.get(1).getTravel_company()).equals("기타가족")) {
-												imgURL = "family.png";
-											} else if (((String) comList.get(1).getTravel_company()).equals("자녀")) {
-												imgURL = "boy.png";
-											} else if (((String) comList.get(1).getTravel_company()).equals("부모님")) {
-												imgURL = "parents.png";
-											} else if (((String) comList.get(1).getTravel_company()).equals("연인")) {
-												imgURL = "couple.png";
-											} else if (((String) comList.get(1).getTravel_company()).equals("친구")) {
-												imgURL = "buddy.png";
-											} else if (((String) comList.get(1).getTravel_company()).equals("회사동료")) {
-												imgURL = "company.png";
-											} else if (((String) comList.get(1).getTravel_company()).equals("배우자")) {
-												imgURL = "wedding.png";
-											}
-											%>
->>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-BigData-16/comeHere.git
 											<div class="d-flex px-2 py-1">
 												<div class="d-flex flex-column justify-content-center">
 													<h6 class="mb-0 text-sm">2</h6>
@@ -594,7 +567,6 @@ span {
 									</tr>
 									<tr>
 										<td>
-<<<<<<< HEAD
 												<% if (((String)comList.get(2).getTravel_company()).equals("가족")) {
 													imgURL = "family.png";
 												} else if (((String)comList.get(2).getTravel_company()).equals("자녀")) {
@@ -610,25 +582,6 @@ span {
 												} else if (((String)comList.get(2).getTravel_company()).equals("배우자")) {
 													imgURL = "wedding.png";
 												}%>
-=======
-											<%
-											if (((String) comList.get(2).getTravel_company()).equals("기타가족")) {
-												imgURL = "family.png";
-											} else if (((String) comList.get(2).getTravel_company()).equals("자녀")) {
-												imgURL = "boy.png";
-											} else if (((String) comList.get(2).getTravel_company()).equals("부모님")) {
-												imgURL = "parents.png";
-											} else if (((String) comList.get(2).getTravel_company()).equals("연인")) {
-												imgURL = "couple.png";
-											} else if (((String) comList.get(2).getTravel_company()).equals("친구")) {
-												imgURL = "buddy.png";
-											} else if (((String) comList.get(2).getTravel_company()).equals("회사동료")) {
-												imgURL = "company.png";
-											} else if (((String) comList.get(2).getTravel_company()).equals("배우자")) {
-												imgURL = "wedding.png";
-											}
-											%>
->>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-BigData-16/comeHere.git
 											<div class="d-flex px-2 py-1">
 												<div class="d-flex flex-column justify-content-center">
 													<h6 class="mb-0 text-sm">3</h6>
@@ -664,7 +617,6 @@ span {
 									</tr>
 									<tr>
 										<td>
-<<<<<<< HEAD
 												<% if (((String)comList.get(3).getTravel_company()).equals("가족")) {
 													imgURL = "family.png";
 												} else if (((String)comList.get(3).getTravel_company()).equals("자녀")) {
@@ -680,25 +632,6 @@ span {
 												} else if (((String)comList.get(3).getTravel_company()).equals("배우자")) {
 													imgURL = "wedding.png";
 												}%>
-=======
-											<%
-											if (((String) comList.get(3).getTravel_company()).equals("기타가족")) {
-												imgURL = "family.png";
-											} else if (((String) comList.get(3).getTravel_company()).equals("자녀")) {
-												imgURL = "boy.png";
-											} else if (((String) comList.get(3).getTravel_company()).equals("부모님")) {
-												imgURL = "parents.png";
-											} else if (((String) comList.get(3).getTravel_company()).equals("연인")) {
-												imgURL = "couple.png";
-											} else if (((String) comList.get(3).getTravel_company()).equals("친구")) {
-												imgURL = "buddy.png";
-											} else if (((String) comList.get(3).getTravel_company()).equals("회사동료")) {
-												imgURL = "company.png";
-											} else if (((String) comList.get(3).getTravel_company()).equals("배우자")) {
-												imgURL = "wedding.png";
-											}
-											%>
->>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-BigData-16/comeHere.git
 											<div class="d-flex px-2 py-1">
 												<div class="d-flex flex-column justify-content-center">
 													<h6 class="mb-0 text-sm">4</h6>
@@ -731,7 +664,6 @@ span {
 									</tr>
 									<tr>
 										<td>
-<<<<<<< HEAD
 												<% if (((String)comList.get(4).getTravel_company()).equals("가족")) {
 													imgURL = "family.png";
 												} else if (((String)comList.get(4).getTravel_company()).equals("자녀")) {
@@ -747,25 +679,6 @@ span {
 												} else if (((String)comList.get(4).getTravel_company()).equals("배우자")) {
 													imgURL = "wedding.png";
 												}%>
-=======
-											<%
-											if (((String) comList.get(4).getTravel_company()).equals("기타가족")) {
-												imgURL = "family.png";
-											} else if (((String) comList.get(4).getTravel_company()).equals("자녀")) {
-												imgURL = "boy.png";
-											} else if (((String) comList.get(4).getTravel_company()).equals("부모님")) {
-												imgURL = "parents.png";
-											} else if (((String) comList.get(4).getTravel_company()).equals("연인")) {
-												imgURL = "couple.png";
-											} else if (((String) comList.get(4).getTravel_company()).equals("친구")) {
-												imgURL = "buddy.png";
-											} else if (((String) comList.get(4).getTravel_company()).equals("회사동료")) {
-												imgURL = "company.png";
-											} else if (((String) comList.get(4).getTravel_company()).equals("배우자")) {
-												imgURL = "wedding.png";
-											}
-											%>
->>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-BigData-16/comeHere.git
 											<div class="d-flex px-2 py-1">
 												<div class="d-flex flex-column justify-content-center">
 													<h6 class="mb-0 text-sm">5</h6>
