@@ -39,7 +39,7 @@ span{font-family:'KimjungchulMyungjo-Bold';font-color : '#344767';}
 
 .jh{
 	position: absolute;
-	bottom : 19px;
+	bottom : -5px;
 	left : 210px;
 }
 
@@ -82,7 +82,7 @@ height : 45px;
 width : 150px;
 margin-right:95%;
 position: absolute;
-right: 1365px;
+right: 1400px;
 }
 
 #back:hover{
@@ -98,11 +98,6 @@ background-color:#3a416f;}
             }
             
 
- body {
-  background-color: #727272;
-  padding: 40px 0 0 40px;
-  min-height: 200px;
-}
 
 
 
