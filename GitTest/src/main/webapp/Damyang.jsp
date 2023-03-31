@@ -217,7 +217,7 @@ span {
 				<script >var text = document.querySelector('#popular');
 				text.onclick = function(){text.style.color='green';}</script>
 			</a>
-			<form action="selectYear">
+			<form action="selectYear" style="height: 40px;">
 				<h4>연도 선택 :</h4>
 				<select id="selectyear" name="year">
 					<option value="2018">2018</option>
