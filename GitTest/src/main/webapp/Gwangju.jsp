@@ -189,7 +189,7 @@
 			%>
 			<br> <a href="map">
 				<h3 style="margin-left: 81%;">인기관광지 및 지역 맛집</h3>
-
+				</a>
 			<form action="selectYear" style="height: 40px;">
 				<h4>연도 선택 :</h4>
 				<select id="selectyear" name="year">
@@ -385,32 +385,39 @@
 					<script type="text/javascript"
 						src="https://www.gstatic.com/charts/loader.js"></script>
 					<script type="text/javascript">
-					  google.charts.load('current', {'packages':['bar']});
-				      google.charts.setOnLoadCallback(drawChart);
-
-				      function drawChart() {
-				        var data = google.visualization.arrayToDataTable([
-				          ['동반유형', '언급 건수'],
-				          ['<%=comList.get(0).getTravel_company()%>', <%=comList.get(0).getSum_count()%>],
-				          ['<%=comList.get(1).getTravel_company()%>', <%=comList.get(1).getSum_count()%>],
-				          ['<%=comList.get(2).getTravel_company()%>', <%=comList.get(2).getSum_count()%>],
-				          ['<%=comList.get(3).getTravel_company()%>', <%=comList.get(3).getSum_count()%>],
-				          ['<%=comList.get(4).getTravel_company()%>', <%=comList.get(4).getSum_count()%>],
-				          ['<%=comList.get(5).getTravel_company()%>', <%=comList.get(5).getSum_count()%>],
-				          ['<%=comList.get(6).getTravel_company()%>', <%=comList.get(6).getSum_count()%>]
-				        ]);
-
-				        var options = {
-				          chart: {
-				            title: '',
-				            subtitle: '',
-				          }
-				        };
-
-				        var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
-
-				        chart.draw(data, google.charts.Bar.convertOptions(options));
-				      }
+					setTimeout(() => {
+						chartCreate();
+					}, 500);
+				
+					function chartCreate(){
+						google.charts.load('current', {'packages':['bar']});
+					    google.charts.setOnLoadCallback(drawChart);
+																		
+						function drawChart(){
+							var data = google.visualization.arrayToDataTable([
+						         ['동반유형', '언급 건수'],
+						         ['<%=comList.get(0).getTravel_company()%>', <%=comList.get(0).getSum_count()%>],
+						      ['<%=comList.get(1).getTravel_company()%>', <%=comList.get(1).getSum_count()%>],
+						      ['<%=comList.get(2).getTravel_company()%>', <%=comList.get(2).getSum_count()%>],
+						      ['<%=comList.get(3).getTravel_company()%>', <%=comList.get(3).getSum_count()%>],
+						      ['<%=comList.get(4).getTravel_company()%>', <%=comList.get(4).getSum_count()%>],
+						      ['<%=comList.get(5).getTravel_company()%>', <%=comList.get(5).getSum_count()%>],
+						      ['<%=comList.get(6).getTravel_company()%>', <%=comList.get(6).getSum_count()%>]
+						       ]);
+												   
+						
+						      var options = {
+						        chart: {
+						          title: '',
+						          subtitle: '',
+						        }
+						      };
+						
+						      var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
+						
+						      chart.draw(data, google.charts.Bar.convertOptions(options));
+						}
+					}
 					    </script>
 					<div>
 						<div id="columnchart_material"
@@ -926,83 +933,76 @@
 	<script src="./assets/js/plugins/smooth-scrollbar.min.js"></script>
 	<script src="./assets/js/plugins/chartjs.min.js"></script>
 	<script>
-		var ctx = document.getElementById("chart-bars").getContext("2d");
-		new Chart(ctx, {
-			type : "bar",
-			data : {
-				labels : [ "<%=consumptionList.get(0).getCunsumption_type1()%>",
-						   "<%=consumptionList.get(1).getCunsumption_type1()%>",
-						   "<%=consumptionList.get(2).getCunsumption_type1()%>",
-						   "<%=consumptionList.get(3).getCunsumption_type1()%>
-		" ],
-						datasets : [
-								{
-									label : "",
-									tension : 0.4,
-									borderWidth : 0,
-									borderRadius : 4,
-									borderSkipped : false,
-									backgroundColor : "#fff",
-									data : [
-	<%=(num1 / (num1 + num2 + num3 + num4)) * 100%>
-		,
-	<%=(num2 / (num1 + num2 + num3 + num4)) * 100%>
-		,
-	<%=(num3 / (num1 + num2 + num3 + num4)) * 100%>
-		,
-	<%=(num4 / (num1 + num2 + num3 + num4)) * 100%>
-		],
-							maxBarThickness : 20
-						}, ],
+	var ctx = document.getElementById("chart-bars").getContext("2d");
+	new Chart(ctx, {
+		type : "bar",
+		data : {
+			labels : [ "<%=consumptionList.get(0).getCunsumption_type1()%>",
+					   "<%=consumptionList.get(1).getCunsumption_type1()%>",
+					   "<%=consumptionList.get(2).getCunsumption_type1()%>",
+					   "<%=consumptionList.get(3).getCunsumption_type1()%>"],
+			datasets : [ {
+				label : "",
+				tension : 0.4,
+				borderWidth : 0,
+				borderRadius : 4,
+				borderSkipped : false,
+				backgroundColor : "#fff",
+				data : [ <%= (num1/(num1+num2+num3+num4))*100%>,
+						 <%= (num2/(num1+num2+num3+num4))*100%>,
+						 <%= (num3/(num1+num2+num3+num4))*100%>,
+						 <%= (num4/(num1+num2+num3+num4))*100%>],
+				maxBarThickness : 20
+			}, ],
+		},
+		options : {
+			responsive : true,
+			maintainAspectRatio : false,
+			plugins : {
+				legend : {
+					display : false,
+				}
 			},
-			options : {
-				responsive : true,
-				maintainAspectRatio : false,
-				plugins : {
-					legend : {
+			interaction : {
+				intersect : false,
+				mode : 'index',
+			},
+			scales : {
+				y : {
+					grid : {
+						drawBorder : false,
 						display : false,
-					}
-				},
-				interaction : {
-					intersect : false,
-					mode : 'index',
-				},
-				scales : {
-					y : {
-						grid : {
-							drawBorder : false,
-							display : false,
-							drawOnChartArea : false,
-							drawTicks : false,
-						},
-						ticks : {
-							suggestedMin : 0,
-							suggestedMax : 500,
-							beginAtZero : true,
-							padding : 15,
-							font : {
-								size : 14,
-								family : "Open Sans",
-								style : 'normal',
-								lineHeight : 2
-							},
-							color : "#fff"
-						},
+						drawOnChartArea : false,
+						drawTicks : false,
 					},
-					x : {
-						grid : {
-							drawBorder : false,
-							display : false,
-							drawOnChartArea : false,
-							drawTicks : false
+					ticks : {
+						suggestedMin : 0,
+						suggestedMax : 500,
+						beginAtZero : true,
+						padding : 15,
+						font : {
+							size : 14,
+							family : "Open Sans",
+							style : 'normal',
+							lineHeight : 2
 						},
-						ticks : {
-							display : false
-						},
+						color : "#fff"
+					},
+				},
+				x : {
+					grid : {
+						drawBorder : false,
+						display : false,
+						drawOnChartArea : false,
+						drawTicks : false
+					},
+					ticks : {
+						display : false
 					},
 				},
 			},
-		});
+		},
+	});
 		// SNS 언급량 그래프
 		var ctx2 = document.getElementById("chart-line").getContext("2d");
 

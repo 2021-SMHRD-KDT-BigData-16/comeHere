@@ -519,7 +519,6 @@ span {
 									</tr>
 									<tr>
 										<td>
-<<<<<<< HEAD
 												<% if (((String)comList.get(1).getTravel_company()).equals("가족")) {
 													imgURL = "family.png";
 												} else if (((String)comList.get(1).getTravel_company()).equals("자녀")) {
@@ -947,84 +946,76 @@ span {
 	<script src="./assets/js/plugins/smooth-scrollbar.min.js"></script>
 	<script src="./assets/js/plugins/chartjs.min.js"></script>
 	<script>
-		var ctx = document.getElementById("chart-bars").getContext("2d");
-		
-		new Chart(ctx, {
-			type : "bar",
-			data : {
-				labels : [ "<%=consumptionList.get(0).getCunsumption_type1()%>",
-						   "<%=consumptionList.get(1).getCunsumption_type1()%>",
-						   "<%=consumptionList.get(2).getCunsumption_type1()%>",
-						   "<%=consumptionList.get(3).getCunsumption_type1()%>
-		" ],
-						datasets : [
-								{
-									label : "",
-									tension : 0.4,
-									borderWidth : 0,
-									borderRadius : 4,
-									borderSkipped : false,
-									backgroundColor : "#fff",
-									data : [
-	<%=(num1 / (num1 + num2 + num3 + num4)) * 100%>
-		,
-	<%=(num2 / (num1 + num2 + num3 + num4)) * 100%>
-		,
-	<%=(num3 / (num1 + num2 + num3 + num4)) * 100%>
-		,
-	<%=(num4 / (num1 + num2 + num3 + num4)) * 100%>
-		],
-							maxBarThickness : 20
-						}, ],
+	var ctx = document.getElementById("chart-bars").getContext("2d");
+	new Chart(ctx, {
+		type : "bar",
+		data : {
+			labels : [ "<%=consumptionList.get(0).getCunsumption_type1()%>",
+					   "<%=consumptionList.get(1).getCunsumption_type1()%>",
+					   "<%=consumptionList.get(2).getCunsumption_type1()%>",
+					   "<%=consumptionList.get(3).getCunsumption_type1()%>"],
+			datasets : [ {
+				label : "",
+				tension : 0.4,
+				borderWidth : 0,
+				borderRadius : 4,
+				borderSkipped : false,
+				backgroundColor : "#fff",
+				data : [ <%= (num1/(num1+num2+num3+num4))*100%>,
+						 <%= (num2/(num1+num2+num3+num4))*100%>,
+						 <%= (num3/(num1+num2+num3+num4))*100%>,
+						 <%= (num4/(num1+num2+num3+num4))*100%>],
+				maxBarThickness : 20
+			}, ],
+		},
+		options : {
+			responsive : true,
+			maintainAspectRatio : false,
+			plugins : {
+				legend : {
+					display : false,
+				}
 			},
-			options : {
-				responsive : true,
-				maintainAspectRatio : false,
-				plugins : {
-					legend : {
+			interaction : {
+				intersect : false,
+				mode : 'index',
+			},
+			scales : {
+				y : {
+					grid : {
+						drawBorder : false,
 						display : false,
-					}
-				},
-				interaction : {
-					intersect : false,
-					mode : 'index',
-				},
-				scales : {
-					y : {
-						grid : {
-							drawBorder : false,
-							display : false,
-							drawOnChartArea : false,
-							drawTicks : false,
-						},
-						ticks : {
-							suggestedMin : 0,
-							suggestedMax : 500,
-							beginAtZero : true,
-							padding : 15,
-							font : {
-								size : 14,
-								family : "Open Sans",
-								style : 'normal',
-								lineHeight : 2
-							},
-							color : "#fff"
-						},
+						drawOnChartArea : false,
+						drawTicks : false,
 					},
-					x : {
-						grid : {
-							drawBorder : false,
-							display : false,
-							drawOnChartArea : false,
-							drawTicks : false
+					ticks : {
+						suggestedMin : 0,
+						suggestedMax : 500,
+						beginAtZero : true,
+						padding : 15,
+						font : {
+							size : 14,
+							family : "Open Sans",
+							style : 'normal',
+							lineHeight : 2
 						},
-						ticks : {
-							display : false
-						},
+						color : "#fff"
+					},
+				},
+				x : {
+					grid : {
+						drawBorder : false,
+						display : false,
+						drawOnChartArea : false,
+						drawTicks : false
+					},
+					ticks : {
+						display : false
 					},
 				},
 			},
-		});
+		},
+	});
 		// SNS 언급량 그래프
 		var ctx2 = document.getElementById("chart-line").getContext("2d");
 
