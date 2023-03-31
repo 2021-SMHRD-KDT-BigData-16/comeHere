@@ -215,7 +215,7 @@ span {
 					<option value="2020">2020</option>
 					<option value="2021">2021</option>
 					<option value="2022">2022</option>
-				</select> <input type="submit" value="선택">
+				</select> <input type="submit" value="선택" class="jh">
 			</form>
 
 		</div>
