@@ -52,7 +52,7 @@
 		window.ontouchmove = function() {
 			return false;
 		}
-		window.onorientationchange = function() {
+		window.onorientationchange = function() { 
 			document.body.scrollTop = 0;
 		}
 	</script>

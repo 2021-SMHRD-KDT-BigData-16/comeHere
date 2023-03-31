@@ -5,7 +5,13 @@
 	height: 45px;
 	font-size: 20px;
 }
+div#columnchart_material path {
+	fill: rgb(203, 153, 255) !important;
+}
 
+div#columnchart_material rect+rect {
+	fill: rgb(203, 153, 255) !important;
+}
 h4 {
 	display: inline;
 }

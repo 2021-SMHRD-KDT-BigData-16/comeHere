@@ -63,6 +63,7 @@ h5 {
 span {
 	font-family: 'KimjungchulMyungjo-Bold';
 }
+g {}
 </style>
 <body class="g-sidenav-show  bg-gray-100">
 
@@ -195,12 +196,12 @@ span {
 			String year = (String) request.getAttribute("year");
 			if (year == null) {
 			%>
-			<h2 style="position: relative; margin-left: 42.5%; color: black;">연도를
+			<h2 style="position: relative; margin-left: 42.5%; color: color: #bc5679;">연도를
 				선택해주세요.</h2>
 			<%
 			} else {
 			%>
-			<h2 style="position: relative; margin-left: 47.2%; color: black;"><%=year%>년
+			<h2 style="position: relative; margin-left: 47.2%; color: color: #bc5679;"><%=year%>년
 			</h2>
 			<%
 			}
@@ -383,7 +384,7 @@ span {
 			<div style="width: 50%; border-radius: 15px;">
 
 				<div
-					style="background-color: white; width: 100%; border-radius: 15px; height: 930px;">
+					style="background-color: white; width: 100%; border-radius: 15px; height: 100%;">
 					<br>
 					<h3>&nbsp&nbsp동반유형 키워드 순위</h3>
 					<p class="text-sm mb-0">
@@ -413,14 +414,14 @@ span {
 																			
 							function drawChart(){
 								var data = google.visualization.arrayToDataTable([
-							         ['동반유형', '언급 건수'],
-							         ['<%=comList.get(0).getTravel_company()%>', <%=comList.get(0).getSum_count()%>],
-							      ['<%=comList.get(1).getTravel_company()%>', <%=comList.get(1).getSum_count()%>],
-							      ['<%=comList.get(2).getTravel_company()%>', <%=comList.get(2).getSum_count()%>],
-							      ['<%=comList.get(3).getTravel_company()%>', <%=comList.get(3).getSum_count()%>],
-							      ['<%=comList.get(4).getTravel_company()%>', <%=comList.get(4).getSum_count()%>],
-							      ['<%=comList.get(5).getTravel_company()%>', <%=comList.get(5).getSum_count()%>],
-							      ['<%=comList.get(6).getTravel_company()%>', <%=comList.get(6).getSum_count()%>]
+							         ['동반유형', '언급 건수', { role: "style" }],
+							         ['<%=comList.get(0).getTravel_company()%>', <%=comList.get(0).getSum_count()%>, 'color: #bc5679'],
+							      ['<%=comList.get(1).getTravel_company()%>', <%=comList.get(1).getSum_count()%>, 'color: #bc5679'],
+							      ['<%=comList.get(2).getTravel_company()%>', <%=comList.get(2).getSum_count()%>, 'color: #bc5679'],
+							      ['<%=comList.get(3).getTravel_company()%>', <%=comList.get(3).getSum_count()%>, 'color: #bc5679'],
+							      ['<%=comList.get(4).getTravel_company()%>', <%=comList.get(4).getSum_count()%>, 'color: #bc5679'],
+							      ['<%=comList.get(5).getTravel_company()%>', <%=comList.get(5).getSum_count()%>, 'color: #bc5679'],
+							      ['<%=comList.get(6).getTravel_company()%>', <%=comList.get(6).getSum_count()%>, 'color: #bc5679']
 							       ]);
 													   
 							
@@ -442,10 +443,9 @@ span {
 						
 					    </script>
 					<div>
-						<div id="columnchart_material"
-							style="width: 900px; height: 450px; margin-left: 30px"></div>
+						<div id="columnchart_material" style="width: 900px; height: 450px; margin-left: 30px"></div>
 					</div>
-
+					
 					<!-- 동반유형 키워드 언급량 -->
 					<div class="col-lg-6 col-5 my-auto text-end">
 						<div class="dropdown float-lg-end pe-4"></div>
