@@ -453,6 +453,16 @@ g {}
 					<div class="card-body px-0 pb-2">
 						<div class="table-responsive" style="height: 38%;">
 							<table class="table align-items-center mb-0">
+							<%
+					double gage1 = comList.get(0).getSum_count();
+					double gage2 = comList.get(1).getSum_count();
+					double gage3 = comList.get(2).getSum_count();
+					double gage4 = comList.get(3).getSum_count();
+					double gage5 = comList.get(4).getSum_count();
+					
+					double sum = gage1+gage2+gage3+gage4+gage5;
+					
+					%>
 								<thead>
 									<tr>
 										<th
@@ -510,7 +520,7 @@ g {}
 													</div>
 												</div>
 												<div class="progress">
-													<div class="progress-bar bg-gradient-success w-100"
+													<div class="progress-bar bg-gradient-success w-<%=(int)(gage1/sum*100)%>"                     
 														role="progressbar" aria-valuenow="100" aria-valuemin="0"
 														aria-valuemax="100"></div>
 												</div>
@@ -558,7 +568,7 @@ g {}
 													</div>
 												</div>
 												<div class="progress">
-													<div class="progress-bar bg-gradient-info w-5"
+													<div class="progress-bar bg-gradient-info w-<%=(int)(gage2/(sum)*100)%>"
 														role="progressbar" aria-valuenow="25" aria-valuemin="0"
 														aria-valuemax="25"></div>
 												</div>
@@ -606,7 +616,7 @@ g {}
 													</div>
 												</div>
 													<div class="progress">
-													<div class="progress-bar bg-gradient-info w-5"
+													<div class="progress-bar bg-gradient-info w-<%=(int)(gage3/(sum)*100)%>"
 														role="progressbar" aria-valuenow="25" aria-valuemin="0"
 														aria-valuemax="25">
 													</div>
@@ -653,7 +663,7 @@ g {}
 													</div>
 												</div>
 												<div class="progress">
-													<div class="progress-bar bg-gradient-info w-5"
+													<div class="progress-bar bg-gradient-info w-<%=(int)(gage4/(sum)*100)%>"
 														role="progressbar" aria-valuenow="25" aria-valuemin="0"
 														aria-valuemax="25"></div>
 												</div>
@@ -701,7 +711,7 @@ g {}
 													</div>
 												</div>
 												<div class="progress">
-													<div class="progress-bar bg-gradient-info w-5"
+													<div class="progress-bar bg-gradient-info w-<%=(int)(gage5/(sum)*100)%>"
 														role="progressbar" aria-valuenow="25" aria-valuemin="0"
 														aria-valuemax="25"></div>
 												</div>

@@ -215,7 +215,7 @@ span {
 			<a href="map">
 				<h3 id="popular" style="margin-left: 79%;">📍&nbsp;인기관광지 및 지역 맛집</h3>
 				<script >var text = document.querySelector('#popular');
-				text.onclick = function(){text.style.color='white';}</script>
+				</script>
 			</a>
 			<form action="selectYear" style="height: 40px;">
 				<h4>연도 선택 :</h4>
@@ -453,6 +453,16 @@ span {
 					<div class="card-body px-0 pb-2">
 						<div class="table-responsive" style="height: 38%;">
 							<table class="table align-items-center mb-0">
+					<%
+					double gage1 = comList.get(0).getSum_count();
+					double gage2 = comList.get(1).getSum_count();
+					double gage3 = comList.get(2).getSum_count();
+					double gage4 = comList.get(3).getSum_count();
+					double gage5 = comList.get(4).getSum_count();
+					
+					double sum = gage1+gage2+gage3+gage4+gage5;
+					
+					%>
 								<thead>
 									<tr>
 										<th
@@ -479,26 +489,22 @@ span {
 										</td>
 										<td>
 											<div class="avatar-group mt-2">
-												<%
-												String imgURL = null;
-												%>
-												<%
-												if (((String) comList.get(0).getTravel_company()).equals("가족")) {
+												<% String imgURL = null; %>
+												<% if (((String)comList.get(0).getTravel_company()).equals("가족")) {
 													imgURL = "family.png";
-												} else if (((String) comList.get(0).getTravel_company()).equals("자녀")) {
+												} else if (((String)comList.get(0).getTravel_company()).equals("자녀")) {
 													imgURL = "boy.png";
-												} else if (((String) comList.get(0).getTravel_company()).equals("부모님")) {
+												} else if (((String)comList.get(0).getTravel_company()).equals("부모님")) {
 													imgURL = "parents.png";
-												} else if (((String) comList.get(0).getTravel_company()).equals("연인")) {
+												} else if (((String)comList.get(0).getTravel_company()).equals("연인")) {
 													imgURL = "couple.png";
-												} else if (((String) comList.get(0).getTravel_company()).equals("친구")) {
+												} else if (((String)comList.get(0).getTravel_company()).equals("친구")) {
 													imgURL = "buddy.png";
-												} else if (((String) comList.get(0).getTravel_company()).equals("회사동료")) {
+												} else if (((String)comList.get(0).getTravel_company()).equals("회사동료")) {
 													imgURL = "company.png";
-												} else if (((String) comList.get(0).getTravel_company()).equals("배우자")) {
+												} else if (((String)comList.get(0).getTravel_company()).equals("배우자")) {
 													imgURL = "wedding.png";
-												}
-												%>
+												}%>
 												<img src="./assets/img/<%=imgURL%>" alt="team2">
 											</div>
 										</td>
@@ -513,7 +519,7 @@ span {
 													</div>
 												</div>
 												<div class="progress">
-													<div class="progress-bar bg-gradient-success w-100"
+													<div class="progress-bar bg-gradient-success w-<%=(int)(gage1/sum*100)%>"
 														role="progressbar" aria-valuenow="100" aria-valuemin="0"
 														aria-valuemax="100"></div>
 												</div>
@@ -522,23 +528,21 @@ span {
 									</tr>
 									<tr>
 										<td>
-											<%
-											if (((String) comList.get(1).getTravel_company()).equals("가족")) {
-												imgURL = "family.png";
-											} else if (((String) comList.get(1).getTravel_company()).equals("자녀")) {
-												imgURL = "boy.png";
-											} else if (((String) comList.get(1).getTravel_company()).equals("부모님")) {
-												imgURL = "parents.png";
-											} else if (((String) comList.get(1).getTravel_company()).equals("연인")) {
-												imgURL = "couple.png";
-											} else if (((String) comList.get(1).getTravel_company()).equals("친구")) {
-												imgURL = "buddy.png";
-											} else if (((String) comList.get(1).getTravel_company()).equals("회사동료")) {
-												imgURL = "company.png";
-											} else if (((String) comList.get(1).getTravel_company()).equals("배우자")) {
-												imgURL = "wedding.png";
-											}
-											%>
+												<% if (((String)comList.get(1).getTravel_company()).equals("가족")) {
+													imgURL = "family.png";
+												} else if (((String)comList.get(1).getTravel_company()).equals("자녀")) {
+													imgURL = "boy.png";
+												} else if (((String)comList.get(1).getTravel_company()).equals("부모님")) {
+													imgURL = "parents.png";
+												} else if (((String)comList.get(1).getTravel_company()).equals("연인")) {
+													imgURL = "couple.png";
+												} else if (((String)comList.get(1).getTravel_company()).equals("친구")){
+													imgURL = "buddy.png";
+												} else if (((String)comList.get(1).getTravel_company()).equals("회사동료")) {
+													imgURL = "company.png";
+												} else if (((String)comList.get(1).getTravel_company()).equals("배우자")) {
+													imgURL = "wedding.png";
+												}%>
 											<div class="d-flex px-2 py-1">
 												<div class="d-flex flex-column justify-content-center">
 													<h6 class="mb-0 text-sm">2</h6>
@@ -548,8 +552,7 @@ span {
 										<td>
 											<div class="avatar-group mt-2">
 												<img src="./assets/img/<%=imgURL%>
-													"
-													alt="team6">
+													" alt="team6">
 											</div>
 										</td>
 										<td class="align-middle text-center text-sm"><span
@@ -563,7 +566,7 @@ span {
 													</div>
 												</div>
 												<div class="progress">
-													<div class="progress-bar bg-gradient-info w-5"
+													<div class="progress-bar bg-gradient-info w-<%=(int)(gage2/(sum)*100)%>"
 														role="progressbar" aria-valuenow="25" aria-valuemin="0"
 														aria-valuemax="25">
 													</div>
@@ -572,23 +575,21 @@ span {
 									</tr>
 									<tr>
 										<td>
-											<%
-											if (((String) comList.get(2).getTravel_company()).equals("가족")) {
-												imgURL = "family.png";
-											} else if (((String) comList.get(2).getTravel_company()).equals("자녀")) {
-												imgURL = "boy.png";
-											} else if (((String) comList.get(2).getTravel_company()).equals("부모님")) {
-												imgURL = "parents.png";
-											} else if (((String) comList.get(2).getTravel_company()).equals("연인")) {
-												imgURL = "couple.png";
-											} else if (((String) comList.get(2).getTravel_company()).equals("친구")) {
-												imgURL = "buddy.png";
-											} else if (((String) comList.get(2).getTravel_company()).equals("회사동료")) {
-												imgURL = "company.png";
-											} else if (((String) comList.get(2).getTravel_company()).equals("배우자")) {
-												imgURL = "wedding.png";
-											}
-											%>
+												<% if (((String)comList.get(2).getTravel_company()).equals("가족")) {
+													imgURL = "family.png";
+												} else if (((String)comList.get(2).getTravel_company()).equals("자녀")) {
+													imgURL = "boy.png";
+												} else if (((String)comList.get(2).getTravel_company()).equals("부모님")) {
+													imgURL = "parents.png";
+												} else if (((String)comList.get(2).getTravel_company()).equals("연인")) {
+													imgURL = "couple.png";
+												} else if (((String)comList.get(2).getTravel_company()).equals("친구")) {
+													imgURL = "buddy.png";
+												} else if (((String)comList.get(2).getTravel_company()).equals("회사동료")) {
+													imgURL = "company.png";
+												} else if (((String)comList.get(2).getTravel_company()).equals("배우자")) {
+													imgURL = "wedding.png";
+												}%>
 											<div class="d-flex px-2 py-1">
 												<div class="d-flex flex-column justify-content-center">
 													<h6 class="mb-0 text-sm">3</h6>
@@ -614,7 +615,7 @@ span {
 													</div>
 												</div>
 												<div class="progress">
-													<div class="progress-bar bg-gradient-info w-5"
+													<div class="progress-bar bg-gradient-info w-<%=(int)(gage3/(sum)*100)%>"
 														role="progressbar" aria-valuenow="25" aria-valuemin="0"
 														aria-valuemax="25">
 													</div>
@@ -623,23 +624,21 @@ span {
 									</tr>
 									<tr>
 										<td>
-											<%
-											if (((String) comList.get(3).getTravel_company()).equals("가족")) {
-												imgURL = "family.png";
-											} else if (((String) comList.get(3).getTravel_company()).equals("자녀")) {
-												imgURL = "boy.png";
-											} else if (((String) comList.get(3).getTravel_company()).equals("부모님")) {
-												imgURL = "parents.png";
-											} else if (((String) comList.get(3).getTravel_company()).equals("연인")) {
-												imgURL = "couple.png";
-											} else if (((String) comList.get(3).getTravel_company()).equals("친구")) {
-												imgURL = "buddy.png";
-											} else if (((String) comList.get(3).getTravel_company()).equals("회사동료")) {
-												imgURL = "company.png";
-											} else if (((String) comList.get(3).getTravel_company()).equals("배우자")) {
-												imgURL = "wedding.png";
-											}
-											%>
+												<% if (((String)comList.get(3).getTravel_company()).equals("가족")) {
+													imgURL = "family.png";
+												} else if (((String)comList.get(3).getTravel_company()).equals("자녀")) {
+													imgURL = "boy.png";
+												} else if (((String)comList.get(3).getTravel_company()).equals("부모님")) {
+													imgURL = "parents.png";
+												} else if (((String)comList.get(3).getTravel_company()).equals("연인")) {
+													imgURL = "couple.png";
+												} else if (((String)comList.get(3).getTravel_company()).equals("친구")) {
+													imgURL = "buddy.png";
+												} else if (((String)comList.get(3).getTravel_company()).equals("회사동료")) {
+													imgURL = "company.png";
+												} else if (((String)comList.get(3).getTravel_company()).equals("배우자")) {
+													imgURL = "wedding.png";
+												}%>
 											<div class="d-flex px-2 py-1">
 												<div class="d-flex flex-column justify-content-center">
 													<h6 class="mb-0 text-sm">4</h6>
@@ -662,7 +661,7 @@ span {
 													</div>
 												</div>
 												<div class="progress">
-													<div class="progress-bar bg-gradient-info w-5"
+													<div class="progress-bar bg-gradient-info w-<%=(int)(gage4/(sum)*100)%>"
 														role="progressbar" aria-valuenow="25" aria-valuemin="0"
 														aria-valuemax="25">
 													</div>
@@ -671,23 +670,21 @@ span {
 									</tr>
 									<tr>
 										<td>
-											<%
-											if (((String) comList.get(4).getTravel_company()).equals("가족")) {
-												imgURL = "family.png";
-											} else if (((String) comList.get(4).getTravel_company()).equals("자녀")) {
-												imgURL = "boy.png";
-											} else if (((String) comList.get(4).getTravel_company()).equals("부모님")) {
-												imgURL = "parents.png";
-											} else if (((String) comList.get(4).getTravel_company()).equals("연인")) {
-												imgURL = "couple.png";
-											} else if (((String) comList.get(4).getTravel_company()).equals("친구")) {
-												imgURL = "buddy.png";
-											} else if (((String) comList.get(4).getTravel_company()).equals("회사동료")) {
-												imgURL = "company.png";
-											} else if (((String) comList.get(4).getTravel_company()).equals("배우자")) {
-												imgURL = "wedding.png";
-											}
-											%>
+												<% if (((String)comList.get(4).getTravel_company()).equals("가족")) {
+													imgURL = "family.png";
+												} else if (((String)comList.get(4).getTravel_company()).equals("자녀")) {
+													imgURL = "boy.png";
+												} else if (((String)comList.get(4).getTravel_company()).equals("부모님")) {
+													imgURL = "parents.png";
+												} else if (((String)comList.get(4).getTravel_company()).equals("연인")) {
+													imgURL = "couple.png";
+												} else if (((String)comList.get(4).getTravel_company()).equals("친구")) {
+													imgURL = "buddy.png";
+												} else if (((String)comList.get(4).getTravel_company()).equals("회사동료")) {
+													imgURL = "company.png";
+												} else if (((String)comList.get(4).getTravel_company()).equals("배우자")) {
+													imgURL = "wedding.png";
+												}%>
 											<div class="d-flex px-2 py-1">
 												<div class="d-flex flex-column justify-content-center">
 													<h6 class="mb-0 text-sm">5</h6>
@@ -711,7 +708,7 @@ span {
 													</div>
 												</div>
 												<div class="progress">
-													<div class="progress-bar bg-gradient-info w-5"
+													<div class="progress-bar bg-gradient-info w-<%=(int)(gage5/(sum)*100)%>"
 														role="progressbar" aria-valuenow="25" aria-valuemin="0"
 														aria-valuemax="25"></div>
 												</div>
@@ -729,6 +726,7 @@ span {
 					%>
 				</div>
 			</div>
+
 
 			<!-- 업종별 신용카드 소비액 추이 -->
 			<div class="col-lg-4 col-md-6">
