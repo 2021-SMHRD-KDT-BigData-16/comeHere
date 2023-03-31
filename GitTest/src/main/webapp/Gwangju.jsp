@@ -454,7 +454,7 @@
 												String imgURL = null;
 												%>
 												<%
-												if (((String) comList.get(0).getTravel_company()).equals("기타가족")) {
+												if (((String) comList.get(0).getTravel_company()).equals("가족")) {
 													imgURL = "family.png";
 												} else if (((String) comList.get(0).getTravel_company()).equals("자녀")) {
 													imgURL = "boy.png";
@@ -494,7 +494,7 @@
 									<tr>
 										<td>
 											<%
-											if (((String) comList.get(1).getTravel_company()).equals("기타가족")) {
+											if (((String) comList.get(1).getTravel_company()).equals("가족")) {
 												imgURL = "family.png";
 											} else if (((String) comList.get(1).getTravel_company()).equals("자녀")) {
 												imgURL = "boy.png";
@@ -543,7 +543,7 @@
 									<tr>
 										<td>
 											<%
-											if (((String) comList.get(2).getTravel_company()).equals("기타가족")) {
+											if (((String) comList.get(2).getTravel_company()).equals("가족")) {
 												imgURL = "family.png";
 											} else if (((String) comList.get(2).getTravel_company()).equals("자녀")) {
 												imgURL = "boy.png";
@@ -594,7 +594,7 @@
 									<tr>
 										<td>
 											<%
-											if (((String) comList.get(3).getTravel_company()).equals("기타가족")) {
+											if (((String) comList.get(3).getTravel_company()).equals("가족")) {
 												imgURL = "family.png";
 											} else if (((String) comList.get(3).getTravel_company()).equals("자녀")) {
 												imgURL = "boy.png";
@@ -642,7 +642,7 @@
 									<tr>
 										<td>
 											<%
-											if (((String) comList.get(4).getTravel_company()).equals("기타가족")) {
+											if (((String) comList.get(4).getTravel_company()).equals("가족")) {
 												imgURL = "family.png";
 											} else if (((String) comList.get(4).getTravel_company()).equals("자녀")) {
 												imgURL = "boy.png";
