@@ -104,7 +104,7 @@ public class selectYear extends HttpServlet {
 			request.setAttribute("tpList", tpList);
 		}
 		
-		// 해당 지역 동반유형 키워드
+		// 해당 지역 동반유형 가져오기
 		List<CompanyDTO> comList = dao.company(com_dto);
 		if (comList != null) {
 			request.setAttribute("comList", comList);

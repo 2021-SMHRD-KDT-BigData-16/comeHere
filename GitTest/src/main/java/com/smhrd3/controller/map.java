@@ -23,6 +23,8 @@ public class map extends HttpServlet {
 	
 	protected void service(HttpServletRequest request, HttpServletResponse response) 
 			throws ServletException, IOException {
+		
+		// 해당 지역 가져오기
 		HttpSession session = request.getSession();
 		String area = (String) session.getAttribute("area");
 		
@@ -50,6 +52,7 @@ public class map extends HttpServlet {
 		RestaurantDTO r_dto = new RestaurantDTO();
 		r_dto.setRestaurant_area(area);
 		
+		// dao가져오기
 		DataDAO dao = new DataDAO();
 		
 		String loc = request.getParameter("관광지");
