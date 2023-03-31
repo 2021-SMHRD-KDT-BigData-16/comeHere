@@ -263,7 +263,7 @@ span {font-family: 'KimjungchulMyungjo-Bold';}
 						</div>
 
 						<!-- 관광소비유형 -->
-						<h3 class="ms-2 mt-4 mb-0">관광소비유형</h3>
+						<h3 class="ms-2 mt-4 mb-0">관광소비유형(%)</h3>
 						<p class="text-sm ms-2">
 							<span class="font-weight-bolder"></span>
 						</p>
@@ -373,32 +373,39 @@ span {font-family: 'KimjungchulMyungjo-Bold';}
 					<script type="text/javascript"
 						src="https://www.gstatic.com/charts/loader.js"></script>
 					<script type="text/javascript">
-					  google.charts.load('current', {'packages':['bar']});
-				      google.charts.setOnLoadCallback(drawChart);
-
-				      function drawChart() {
-				        var data = google.visualization.arrayToDataTable([
-				          ['동반유형', '언급 건수'],
-				          ['<%=comList.get(0).getTravel_company()%>', <%=comList.get(0).getSum_count()%>],
-				          ['<%=comList.get(1).getTravel_company()%>', <%=comList.get(1).getSum_count()%>],
-				          ['<%=comList.get(2).getTravel_company()%>', <%=comList.get(2).getSum_count()%>],
-				          ['<%=comList.get(3).getTravel_company()%>', <%=comList.get(3).getSum_count()%>],
-				          ['<%=comList.get(4).getTravel_company()%>', <%=comList.get(4).getSum_count()%>],
-				          ['<%=comList.get(5).getTravel_company()%>', <%=comList.get(5).getSum_count()%>],
-				          ['<%=comList.get(6).getTravel_company()%>', <%=comList.get(6).getSum_count()%>]
-				        ]);
-
-				        var options = {
-				          chart: {
-				            title: '',
-				            subtitle: '',
-				          }
-				        };
-
-				        var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
-
-				        chart.draw(data, google.charts.Bar.convertOptions(options));
-				      }
+					setTimeout(() => {
+						chartCreate();
+					}, 500);
+				
+					function chartCreate(){
+						google.charts.load('current', {'packages':['bar']});
+					    google.charts.setOnLoadCallback(drawChart);
+																		
+						function drawChart(){
+							var data = google.visualization.arrayToDataTable([
+						         ['동반유형', '언급 건수'],
+						         ['<%=comList.get(0).getTravel_company()%>', <%=comList.get(0).getSum_count()%>],
+						      ['<%=comList.get(1).getTravel_company()%>', <%=comList.get(1).getSum_count()%>],
+						      ['<%=comList.get(2).getTravel_company()%>', <%=comList.get(2).getSum_count()%>],
+						      ['<%=comList.get(3).getTravel_company()%>', <%=comList.get(3).getSum_count()%>],
+						      ['<%=comList.get(4).getTravel_company()%>', <%=comList.get(4).getSum_count()%>],
+						      ['<%=comList.get(5).getTravel_company()%>', <%=comList.get(5).getSum_count()%>],
+						      ['<%=comList.get(6).getTravel_company()%>', <%=comList.get(6).getSum_count()%>]
+						       ]);
+												   
+						
+						      var options = {
+						        chart: {
+						          title: '',
+						          subtitle: '',
+						        }
+						      };
+						
+						      var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
+						
+						      chart.draw(data, google.charts.Bar.convertOptions(options));
+						}
+					}
 					    </script>
 					<div>
 						<div id="columnchart_material"
@@ -439,7 +446,7 @@ span {font-family: 'KimjungchulMyungjo-Bold';}
 										<td>
 											<div class="avatar-group mt-2">
 												<% String imgURL = null; %>
-												<% if (((String)comList.get(0).getTravel_company()).equals("기타가족")) {
+												<% if (((String)comList.get(0).getTravel_company()).equals("가족")) {
 													imgURL = "family.png";
 												} else if (((String)comList.get(0).getTravel_company()).equals("자녀")) {
 													imgURL = "boy.png";
@@ -477,7 +484,7 @@ span {font-family: 'KimjungchulMyungjo-Bold';}
 									</tr>
 									<tr>
 										<td>
-												<% if (((String)comList.get(1).getTravel_company()).equals("기타가족")) {
+												<% if (((String)comList.get(1).getTravel_company()).equals("가족")) {
 													imgURL = "family.png";
 												} else if (((String)comList.get(1).getTravel_company()).equals("자녀")) {
 													imgURL = "boy.png";
@@ -520,7 +527,7 @@ span {font-family: 'KimjungchulMyungjo-Bold';}
 									</tr>
 									<tr>
 										<td>
-												<% if (((String)comList.get(2).getTravel_company()).equals("기타가족")) {
+												<% if (((String)comList.get(2).getTravel_company()).equals("가족")) {
 													imgURL = "family.png";
 												} else if (((String)comList.get(2).getTravel_company()).equals("자녀")) {
 													imgURL = "boy.png";
@@ -564,7 +571,7 @@ span {font-family: 'KimjungchulMyungjo-Bold';}
 									</tr>
 									<tr>
 										<td>
-												<% if (((String)comList.get(3).getTravel_company()).equals("기타가족")) {
+												<% if (((String)comList.get(3).getTravel_company()).equals("가족")) {
 													imgURL = "family.png";
 												} else if (((String)comList.get(3).getTravel_company()).equals("자녀")) {
 													imgURL = "boy.png";
@@ -605,7 +612,7 @@ span {font-family: 'KimjungchulMyungjo-Bold';}
 									</tr>
 									<tr>
 										<td>
-												<% if (((String)comList.get(4).getTravel_company()).equals("기타가족")) {
+												<% if (((String)comList.get(4).getTravel_company()).equals("가족")) {
 													imgURL = "family.png";
 												} else if (((String)comList.get(4).getTravel_company()).equals("자녀")) {
 													imgURL = "boy.png";
