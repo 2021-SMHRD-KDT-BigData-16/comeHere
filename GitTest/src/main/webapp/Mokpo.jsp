@@ -503,7 +503,11 @@ span {font-family: 'KimjungchulMyungjo-Bold';}
 														<span class="text-xs font-weight-bold"><%=comList.get(1).getSum_count()%></span>
 													</div>
 												</div>
-
+												<div class="progress">
+													<div class="progress-bar bg-gradient-info w-5"
+														role="progressbar" aria-valuenow="25" aria-valuemin="0"
+														aria-valuemax="25">
+													</div>
 											</div>
 										</td>
 									</tr>
@@ -548,6 +552,11 @@ span {font-family: 'KimjungchulMyungjo-Bold';}
 														<span class="text-xs font-weight-bold"><%=comList.get(2).getSum_count()%></span>
 													</div>
 												</div>
+												<div class="progress">
+													<div class="progress-bar bg-gradient-info w-5"
+														role="progressbar" aria-valuenow="25" aria-valuemin="0"
+														aria-valuemax="25">
+													</div>
 											</div>
 										</td>
 									</tr>
@@ -589,6 +598,11 @@ span {font-family: 'KimjungchulMyungjo-Bold';}
 														<span class="text-xs font-weight-bold"><%=comList.get(3).getSum_count()%></span>
 													</div>
 												</div>
+												<div class="progress">
+													<div class="progress-bar bg-gradient-info w-5"
+														role="progressbar" aria-valuenow="25" aria-valuemin="0"
+														aria-valuemax="25">
+													</div>
 											</div>
 										</td>
 									</tr>
