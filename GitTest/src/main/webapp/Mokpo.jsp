@@ -36,15 +36,36 @@
 <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
 </head>
 <style>
-	
-p{font-family: 'WandohopeR';}
-h1{font-family:'KimjungchulMyungjo-Bold';}
-h2{font-family:'KimjungchulMyungjo-Bold' ;}
-h3{font-family:'KimjungchulMyungjo-Bold' ;}
-h4{font-family:'WandohopeR' ;}
-h5{font-family:'WandohopeR' ;}
-span {font-family: 'KimjungchulMyungjo-Bold';}
+p {
+	font-family: 'WandohopeR';
+}
 
+h1 {
+	font-family: 'KimjungchulMyungjo-Bold';
+}
+
+h2 {
+	font-family: 'KimjungchulMyungjo-Bold';
+}
+
+h3 {
+	font-family: 'KimjungchulMyungjo-Bold';
+}
+
+h4 {
+	font-family: 'WandohopeR';
+}
+
+h5 {
+	font-family: 'WandohopeR';
+}
+
+h6 {
+	font-family: 'KimjungchulMyungjo-Bold';
+}
+span {
+	font-family: 'KimjungchulMyungjo-Bold';
+}
 </style>
 <body class="g-sidenav-show  bg-gray-100">
 
@@ -58,23 +79,23 @@ span {font-family: 'KimjungchulMyungjo-Bold';}
 				<div class="row">
 					<div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
 						<div class="card">
-						<a href="areaJN">
-							<div class="card-body p-3">
-								<div class="row">
-									<div class="col-8">
-										<div class="numbers">
-											<p class="text-sm mb-0 text-capitalize font-weight-bold">생명의
-												땅</p>
-											<h5 class="font-weight-bolder mb-0">
-												전남 <span class="text-success text-sm font-weight-bolder"></span>
-											</h5>
+							<a href="areaJN">
+								<div class="card-body p-3">
+									<div class="row">
+										<div class="col-8">
+											<div class="numbers">
+												<p class="text-sm mb-0 text-capitalize font-weight-bold">생명의
+													땅</p>
+												<h5 class="font-weight-bolder mb-0">
+													전남 <span class="text-success text-sm font-weight-bolder"></span>
+												</h5>
+											</div>
+										</div>
+										<div class="col-4 text-end">
+											<img src="./assets2/css/images/전라남도.jpg">
 										</div>
 									</div>
-									<div class="col-4 text-end">
-										<img src="./assets2/css/images/전라남도.jpg">
-									</div>
 								</div>
-							</div>
 							</a>
 						</div>
 					</div>
@@ -168,7 +189,7 @@ span {font-family: 'KimjungchulMyungjo-Bold';}
 					</div>
 				</div>
 		</nav>
-
+		
 		<div class="container-fluid py-1 px-3">
 			<h3 align="center">항구의 도시</h3>
 			<h1 align="center">목포</h1>
@@ -196,7 +217,9 @@ span {font-family: 'KimjungchulMyungjo-Bold';}
 				</select> <input type="submit" value="선택" class="jh">
 			</form>
 		</div>
-		<% if (year != null) { %>
+		<%
+		if (year != null) {
+		%>
 		<div class="row mt-4">
 			<div class="col-lg-7 mb-lg-0 mb-4">
 				<div class="card">
@@ -204,29 +227,31 @@ span {font-family: 'KimjungchulMyungjo-Bold';}
 						<div class="row">
 							<div class="col-lg-6">
 								<div class="d-flex flex-column h-100">
-									<p class="mb-1 pt-2 text-bold">Built by developers</p>
-									<h5 class="font-weight-bolder">Soft UI Dashboard</h5>
-									<p class="mb-5">From colors, cards, typography to complex
-										elements, you will find the full documentation.</p>
-									<a
-										class="text-body text-sm font-weight-bold mb-0 icon-move-right mt-auto"
-										href="javascript:;"> Read More <i
-										class="fas fa-arrow-right text-sm ms-1" aria-hidden="true"></i>
-									</a>
+
+									<h3 class="font-weight-bolder">다양한 테마로 과거와 현재를 즐기는 도시</h3>
+
+									<h6>
+										목포는 아름다운 바다 경관을 자랑하지만 다른 볼거리도 많은 매력적인 도시입니다. <br> 근대역사관을
+										통해 근대 역사의 아픔을 간접적으로 체험 할 수 있으며, 드라마 1987의 촬영지로 잘 알려진
+										시화골목에 가면 70~80년대 거리의 풍경을 그대로 느끼실 수 있습니다. <br> 또한 해양문화 축제가
+										열리는 평화광장에 가시면 젊은이들의 활기를 느끼실 수 있고, 9시가 되면 폭죽과 함께 춤추는
+										바다분수의 아름관경을 보실수 있습니다.
+										</h6>
+						
+
 								</div>
 							</div>
 							<div class="col-lg-5 ms-auto text-center mt-5 mt-lg-0">
-								
-									<img src="./assets/img/shapes/waves-white.svg"
-										class="position-absolute h-100 w-50 top-0 d-lg-block d-none"
-										alt="waves">
-									<div
-										class="position-relative d-flex align-items-center justify-content-center h-100">
-										<img class="w-100 position-relative z-index-2 pt-4"
-											src="./assets/img/mokpo_img.jpg"
-											alt="rocket">
-									</div>
-								
+
+								<img src="./assets/img/shapes/waves-white.svg"
+									class="position-absolute h-100 w-50 top-0 d-lg-block d-none"
+									alt="waves">
+								<div
+									class="position-relative d-flex align-items-center justify-content-center h-100">
+									<img class="w-100 position-relative z-index-2 pt-4"
+										src="./assets/img/mokpo_img.jpg" alt="rocket">
+								</div>
+
 							</div>
 						</div>
 					</div>
@@ -240,16 +265,20 @@ span {font-family: 'KimjungchulMyungjo-Bold';}
 						<span class="mask bg-gradient-suggest"></span>
 						<div
 							class="card-body position-relative z-index-1 d-flex flex-column h-100 p-3">
-							<h5 class="text-white font-weight-bolder mb-4 pt-2">Work
-								with the rockets</h5>
-							<p class="text-white">Wealth creation is an evolutionarily
-								recent positive-sum game. It is all about who take the
-								opportunity first.</p>
-							<a
-								class="text-white text-sm font-weight-bold mb-0 icon-move-right mt-auto"
-								href="javascript:;"> Read More <i
-								class="fas fa-arrow-right text-sm ms-1" aria-hidden="true"></i>
-							</a>
+							<h3 class="text-white">제안 방향</h3>
+							<h6 class="text-white font-weight-bolder mb-4 pt-2">
+							1. 자연환경을 활용하기 <br> 
+							유달산의 사계절 다른 모습을 활용하여 서로다른 테마를 주제로 이벤트 및 축제를 유치.<br> <br>
+							
+							2. 과거를 느낄수 있는 다양한 관광지 <br>
+							근대역사관을 통해 일제시대의 아픔과, 드라마 응답하라 1987 촬영지인 시화골목등을 적극 활용하여 관광객들이 과거를 느낄수 있는 테마를 조성.  <br><br>
+							
+							3. 축제, 춤추는 바다분수를 적극 활용 <br>
+							해양문화축제와 함께 어우러진 바다분수의 아름다운 바다모습을 홍보 및 포차거리의 활기찬 모습을 활용.
+							
+							
+								</h6>
+
 						</div>
 					</div>
 				</div>
@@ -272,20 +301,20 @@ span {font-family: 'KimjungchulMyungjo-Bold';}
 						</p>
 						<div class="container border-radius-lg">
 							<div class="row">
-								<% List<ConsumptionDTO> consumptionList = (List<ConsumptionDTO>) request.getAttribute("consumptionList");
-								
-								 double num1 = consumptionList.get(0).getSum_amount();
-								 double num2 = consumptionList.get(1).getSum_amount();
-								 double num3 = consumptionList.get(2).getSum_amount();
-								 double num4 = consumptionList.get(3).getSum_amount();
-								 
+								<%
+								List<ConsumptionDTO> consumptionList = (List<ConsumptionDTO>) request.getAttribute("consumptionList");
+
+								double num1 = consumptionList.get(0).getSum_amount();
+								double num2 = consumptionList.get(1).getSum_amount();
+								double num3 = consumptionList.get(2).getSum_amount();
+								double num4 = consumptionList.get(3).getSum_amount();
 								%>
 								<div class="col-3 py-3 ps-0">
 									<div class="d-flex mb-2">
 										🏢
 										<p class="text-xs mt-1 mb-0 font-weight-bold"><%=consumptionList.get(0).getCunsumption_type1()%></p>
 									</div>
-									<h4 class="font-weight-bolder"><%=Math.round((num1/(num1+num2+num3+num4))*100)%></h4>
+									<h4 class="font-weight-bolder"><%=Math.round((num1 / (num1 + num2 + num3 + num4)) * 100)%></h4>
 									<div class="progress w-75">
 										<div class="progress-bar bg-dark w-<%=Math.round((num1/(num1+num2+num3+num4))*100)%>" role="progressbar"
 											aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
@@ -296,7 +325,7 @@ span {font-family: 'KimjungchulMyungjo-Bold';}
 										🛒
 										<p class="text-xs mt-1 mb-0 font-weight-bold"><%=consumptionList.get(1).getCunsumption_type1()%></p>
 									</div>
-									<h4 class="font-weight-bolder"><%=Math.round((num2/(num1+num2+num3+num4))*100)%></h4>
+									<h4 class="font-weight-bolder"><%=Math.round((num2 / (num1 + num2 + num3 + num4)) * 100)%></h4>
 									<div class="progress w-75">
 										<div class="progress-bar bg-dark w-<%=Math.round((num2/(num1+num2+num3+num4))*100)%>" role="progressbar"
 											aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
@@ -307,7 +336,7 @@ span {font-family: 'KimjungchulMyungjo-Bold';}
 										🌊
 										<p class="text-xs mt-1 mb-0 font-weight-bold"><%=consumptionList.get(2).getCunsumption_type1()%></p>
 									</div>
-									<h4 class="font-weight-bolder"><%=Math.round((num3/(num1+num2+num3+num4))*100)%></h4>
+									<h4 class="font-weight-bolder"><%=Math.round((num3 / (num1 + num2 + num3 + num4)) * 100)%></h4>
 									<div class="progress w-75">
 										<div class="progress-bar bg-dark w-30" role="progressbar"
 											aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
@@ -318,7 +347,7 @@ span {font-family: 'KimjungchulMyungjo-Bold';}
 										🍽
 										<p class="text-xs mt-1 mb-0 font-weight-bold"><%=consumptionList.get(3).getCunsumption_type1()%></p>
 									</div>
-									<h4 class="font-weight-bolder"><%=Math.round((num4/(num1+num2+num3+num4))*100)%></h4>
+									<h4 class="font-weight-bolder"><%=Math.round((num4 / (num1 + num2 + num3 + num4)) * 100)%></h4>
 									<div class="progress w-75">
 										<div class="progress-bar bg-dark w-<%=Math.round((num4/(num1+num2+num3+num4))*100)%>" role="progressbar"
 											aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
@@ -334,11 +363,14 @@ span {font-family: 'KimjungchulMyungjo-Bold';}
 					<div class="card-header pb-0">
 						<h3>SNS 언급량</h3>
 						<p class="text-sm">
-							<i class="fa fa-arrow-up text-success"></i> 
-							<span class="font-weight-bold">&nbsp&nbsp주요 국내 소셜미디어, 커뮤니티의 해당지역에 대한 관광 관련 언급량을 제공</span>
+							<i class="fa fa-arrow-up text-success"></i> <span
+								class="font-weight-bold">&nbsp&nbsp주요 국내 소셜미디어, 커뮤니티의
+								해당지역에 대한 관광 관련 언급량을 제공</span>
 						</p>
 					</div>
-					<%List<SNSDTO> snsList = (List)request.getAttribute("snsList"); %>
+					<%
+					List<SNSDTO> snsList = (List) request.getAttribute("snsList");
+					%>
 					<div class="card-body p-3">
 						<div class="chart">
 							<canvas id="chart-line" class="chart-canvas" height="275"></canvas>
@@ -353,17 +385,24 @@ span {font-family: 'KimjungchulMyungjo-Bold';}
 		<div class="row my-4">
 			<div style="width: 50%; border-radius: 15px;">
 
-				<div style="background-color: white; width: 100%; border-radius: 15px; height: 930px;">
+				<div
+					style="background-color: white; width: 100%; border-radius: 15px; height: 930px;">
 					<br>
 					<h3>&nbsp&nbsp동반유형 키워드 순위</h3>
 					<p class="text-sm mb-0">
-						&nbsp&nbsp&nbsp&nbsp<i class="fa fa-check text-info" aria-hidden="true"></i>
-						<span class="font-weight-bold ms-1">&nbsp주요 국내 소셜미디어,커뮤니티의 '동반유형' 관련 주요 키워드 순위를 제공</span>
+						&nbsp&nbsp&nbsp&nbsp<i class="fa fa-check text-info"
+							aria-hidden="true"></i> <span class="font-weight-bold ms-1">&nbsp주요
+							국내 소셜미디어,커뮤니티의 '동반유형' 관련 주요 키워드 순위를 제공</span>
 					</p>
-					<p></p><p></p><p></p>
-					<%List<CompanyDTO> comList = (List)request.getAttribute("comList");
-					if (comList != null) {%>
-					<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+					<p></p>
+					<p></p>
+					<p></p>
+					<%
+					List<CompanyDTO> comList = (List) request.getAttribute("comList");
+					if (comList != null) {
+					%>
+					<script type="text/javascript"
+						src="https://www.gstatic.com/charts/loader.js"></script>
 					<script type="text/javascript">
 					
 					setTimeout(() => {
@@ -401,9 +440,10 @@ span {font-family: 'KimjungchulMyungjo-Bold';}
 					}
 					    </script>
 					<div>
-						<div id="columnchart_material" style="width: 900px; height: 450px; margin-left: 30px"></div>
-					</div>	
-					
+						<div id="columnchart_material"
+							style="width: 900px; height: 450px; margin-left: 30px"></div>
+					</div>
+
 					<!-- 동반유형 키워드 언급량 -->
 					<div class="col-lg-6 col-5 my-auto text-end">
 						<div class="dropdown float-lg-end pe-4"></div>
@@ -411,16 +451,15 @@ span {font-family: 'KimjungchulMyungjo-Bold';}
 					<div class="card-body px-0 pb-2">
 						<div class="table-responsive" style="height: 38%;">
 							<table class="table align-items-center mb-0">
-					<%
-					double gage1 = comList.get(0).getSum_count();
-					double gage2 = comList.get(1).getSum_count();
-					double gage3 = comList.get(2).getSum_count();
-					double gage4 = comList.get(3).getSum_count();
-					double gage5 = comList.get(4).getSum_count();
-					
-					double sum = gage1+gage2+gage3+gage4+gage5;
-					
-					%>
+								<%
+								double gage1 = comList.get(0).getSum_count();
+								double gage2 = comList.get(1).getSum_count();
+								double gage3 = comList.get(2).getSum_count();
+								double gage4 = comList.get(3).getSum_count();
+								double gage5 = comList.get(4).getSum_count();
+
+								double sum = gage1 + gage2 + gage3 + gage4 + gage5;
+								%>
 								<thead>
 									<tr>
 										<th
@@ -447,22 +486,26 @@ span {font-family: 'KimjungchulMyungjo-Bold';}
 										</td>
 										<td>
 											<div class="avatar-group mt-2">
-												<% String imgURL = null; %>
-												<% if (((String)comList.get(0).getTravel_company()).equals("가족")) {
+												<%
+												String imgURL = null;
+												%>
+												<%
+												if (((String) comList.get(0).getTravel_company()).equals("가족")) {
 													imgURL = "family.png";
-												} else if (((String)comList.get(0).getTravel_company()).equals("자녀")) {
+												} else if (((String) comList.get(0).getTravel_company()).equals("자녀")) {
 													imgURL = "boy.png";
-												} else if (((String)comList.get(0).getTravel_company()).equals("부모님")) {
+												} else if (((String) comList.get(0).getTravel_company()).equals("부모님")) {
 													imgURL = "parents.png";
-												} else if (((String)comList.get(0).getTravel_company()).equals("연인")) {
+												} else if (((String) comList.get(0).getTravel_company()).equals("연인")) {
 													imgURL = "couple.png";
-												} else if (((String)comList.get(0).getTravel_company()).equals("친구")) {
+												} else if (((String) comList.get(0).getTravel_company()).equals("친구")) {
 													imgURL = "buddy.png";
-												} else if (((String)comList.get(0).getTravel_company()).equals("회사동료")) {
+												} else if (((String) comList.get(0).getTravel_company()).equals("회사동료")) {
 													imgURL = "company.png";
-												} else if (((String)comList.get(0).getTravel_company()).equals("배우자")) {
+												} else if (((String) comList.get(0).getTravel_company()).equals("배우자")) {
 													imgURL = "wedding.png";
-												}%>
+												}
+												%>
 												<img src="./assets/img/<%=imgURL%>" alt="team2">
 											</div>
 										</td>
@@ -477,7 +520,8 @@ span {font-family: 'KimjungchulMyungjo-Bold';}
 													</div>
 												</div>
 												<div class="progress">
-													<div class="progress-bar bg-gradient-success w-<%=(int)(gage1/sum*100)%>"
+													<div
+														class="progress-bar bg-gradient-success w-<%=(int) (gage1 / sum * 100)%>"
 														role="progressbar" aria-valuenow="100" aria-valuemin="0"
 														aria-valuemax="100"></div>
 												</div>
@@ -486,21 +530,23 @@ span {font-family: 'KimjungchulMyungjo-Bold';}
 									</tr>
 									<tr>
 										<td>
-												<% if (((String)comList.get(1).getTravel_company()).equals("가족")) {
-													imgURL = "family.png";
-												} else if (((String)comList.get(1).getTravel_company()).equals("자녀")) {
-													imgURL = "boy.png";
-												} else if (((String)comList.get(1).getTravel_company()).equals("부모님")) {
-													imgURL = "parents.png";
-												} else if (((String)comList.get(1).getTravel_company()).equals("연인")) {
-													imgURL = "couple.png";
-												} else if (((String)comList.get(1).getTravel_company()).equals("친구")){
-													imgURL = "buddy.png";
-												} else if (((String)comList.get(1).getTravel_company()).equals("회사동료")) {
-													imgURL = "company.png";
-												} else if (((String)comList.get(1).getTravel_company()).equals("배우자")) {
-													imgURL = "wedding.png";
-												}%>
+											<%
+											if (((String) comList.get(1).getTravel_company()).equals("가족")) {
+												imgURL = "family.png";
+											} else if (((String) comList.get(1).getTravel_company()).equals("자녀")) {
+												imgURL = "boy.png";
+											} else if (((String) comList.get(1).getTravel_company()).equals("부모님")) {
+												imgURL = "parents.png";
+											} else if (((String) comList.get(1).getTravel_company()).equals("연인")) {
+												imgURL = "couple.png";
+											} else if (((String) comList.get(1).getTravel_company()).equals("친구")) {
+												imgURL = "buddy.png";
+											} else if (((String) comList.get(1).getTravel_company()).equals("회사동료")) {
+												imgURL = "company.png";
+											} else if (((String) comList.get(1).getTravel_company()).equals("배우자")) {
+												imgURL = "wedding.png";
+											}
+											%>
 											<div class="d-flex px-2 py-1">
 												<div class="d-flex flex-column justify-content-center">
 													<h6 class="mb-0 text-sm">2</h6>
@@ -510,7 +556,8 @@ span {font-family: 'KimjungchulMyungjo-Bold';}
 										<td>
 											<div class="avatar-group mt-2">
 												<img src="./assets/img/<%=imgURL%>
-													" alt="team6">
+													"
+													alt="team6">
 											</div>
 										</td>
 										<td class="align-middle text-center text-sm"><span
@@ -524,30 +571,32 @@ span {font-family: 'KimjungchulMyungjo-Bold';}
 													</div>
 												</div>
 												<div class="progress">
-													<div class="progress-bar bg-gradient-info w-<%=(int)(gage2/(sum)*100)%>"
+													<div
+														class="progress-bar bg-gradient-info w-<%=(int) (gage2 / (sum) * 100)%>"
 														role="progressbar" aria-valuenow="25" aria-valuemin="0"
-														aria-valuemax="25">
-													</div>
-											</div>
+														aria-valuemax="25"></div>
+												</div>
 										</td>
 									</tr>
 									<tr>
 										<td>
-												<% if (((String)comList.get(2).getTravel_company()).equals("가족")) {
-													imgURL = "family.png";
-												} else if (((String)comList.get(2).getTravel_company()).equals("자녀")) {
-													imgURL = "boy.png";
-												} else if (((String)comList.get(2).getTravel_company()).equals("부모님")) {
-													imgURL = "parents.png";
-												} else if (((String)comList.get(2).getTravel_company()).equals("연인")) {
-													imgURL = "couple.png";
-												} else if (((String)comList.get(2).getTravel_company()).equals("친구")) {
-													imgURL = "buddy.png";
-												} else if (((String)comList.get(2).getTravel_company()).equals("회사동료")) {
-													imgURL = "company.png";
-												} else if (((String)comList.get(2).getTravel_company()).equals("배우자")) {
-													imgURL = "wedding.png";
-												}%>
+											<%
+											if (((String) comList.get(2).getTravel_company()).equals("가족")) {
+												imgURL = "family.png";
+											} else if (((String) comList.get(2).getTravel_company()).equals("자녀")) {
+												imgURL = "boy.png";
+											} else if (((String) comList.get(2).getTravel_company()).equals("부모님")) {
+												imgURL = "parents.png";
+											} else if (((String) comList.get(2).getTravel_company()).equals("연인")) {
+												imgURL = "couple.png";
+											} else if (((String) comList.get(2).getTravel_company()).equals("친구")) {
+												imgURL = "buddy.png";
+											} else if (((String) comList.get(2).getTravel_company()).equals("회사동료")) {
+												imgURL = "company.png";
+											} else if (((String) comList.get(2).getTravel_company()).equals("배우자")) {
+												imgURL = "wedding.png";
+											}
+											%>
 											<div class="d-flex px-2 py-1">
 												<div class="d-flex flex-column justify-content-center">
 													<h6 class="mb-0 text-sm">3</h6>
@@ -573,30 +622,32 @@ span {font-family: 'KimjungchulMyungjo-Bold';}
 													</div>
 												</div>
 												<div class="progress">
-													<div class="progress-bar bg-gradient-info w-<%=(int)(gage3/(sum)*100)%>"
+													<div
+														class="progress-bar bg-gradient-info w-<%=(int) (gage3 / (sum) * 100)%>"
 														role="progressbar" aria-valuenow="25" aria-valuemin="0"
-														aria-valuemax="25">
-													</div>
-											</div>
+														aria-valuemax="25"></div>
+												</div>
 										</td>
 									</tr>
 									<tr>
 										<td>
-												<% if (((String)comList.get(3).getTravel_company()).equals("가족")) {
-													imgURL = "family.png";
-												} else if (((String)comList.get(3).getTravel_company()).equals("자녀")) {
-													imgURL = "boy.png";
-												} else if (((String)comList.get(3).getTravel_company()).equals("부모님")) {
-													imgURL = "parents.png";
-												} else if (((String)comList.get(3).getTravel_company()).equals("연인")) {
-													imgURL = "couple.png";
-												} else if (((String)comList.get(3).getTravel_company()).equals("친구")) {
-													imgURL = "buddy.png";
-												} else if (((String)comList.get(3).getTravel_company()).equals("회사동료")) {
-													imgURL = "company.png";
-												} else if (((String)comList.get(3).getTravel_company()).equals("배우자")) {
-													imgURL = "wedding.png";
-												}%>
+											<%
+											if (((String) comList.get(3).getTravel_company()).equals("가족")) {
+												imgURL = "family.png";
+											} else if (((String) comList.get(3).getTravel_company()).equals("자녀")) {
+												imgURL = "boy.png";
+											} else if (((String) comList.get(3).getTravel_company()).equals("부모님")) {
+												imgURL = "parents.png";
+											} else if (((String) comList.get(3).getTravel_company()).equals("연인")) {
+												imgURL = "couple.png";
+											} else if (((String) comList.get(3).getTravel_company()).equals("친구")) {
+												imgURL = "buddy.png";
+											} else if (((String) comList.get(3).getTravel_company()).equals("회사동료")) {
+												imgURL = "company.png";
+											} else if (((String) comList.get(3).getTravel_company()).equals("배우자")) {
+												imgURL = "wedding.png";
+											}
+											%>
 											<div class="d-flex px-2 py-1">
 												<div class="d-flex flex-column justify-content-center">
 													<h6 class="mb-0 text-sm">4</h6>
@@ -619,30 +670,32 @@ span {font-family: 'KimjungchulMyungjo-Bold';}
 													</div>
 												</div>
 												<div class="progress">
-													<div class="progress-bar bg-gradient-info w-<%=(int)(gage4/(sum)*100)%>"
+													<div
+														class="progress-bar bg-gradient-info w-<%=(int) (gage4 / (sum) * 100)%>"
 														role="progressbar" aria-valuenow="25" aria-valuemin="0"
-														aria-valuemax="25">
-													</div>
-											</div>
+														aria-valuemax="25"></div>
+												</div>
 										</td>
 									</tr>
 									<tr>
 										<td>
-												<% if (((String)comList.get(4).getTravel_company()).equals("가족")) {
-													imgURL = "family.png";
-												} else if (((String)comList.get(4).getTravel_company()).equals("자녀")) {
-													imgURL = "boy.png";
-												} else if (((String)comList.get(4).getTravel_company()).equals("부모님")) {
-													imgURL = "parents.png";
-												} else if (((String)comList.get(4).getTravel_company()).equals("연인")) {
-													imgURL = "couple.png";
-												} else if (((String)comList.get(4).getTravel_company()).equals("친구")) {
-													imgURL = "buddy.png";
-												} else if (((String)comList.get(4).getTravel_company()).equals("회사동료")) {
-													imgURL = "company.png";
-												} else if (((String)comList.get(4).getTravel_company()).equals("배우자")) {
-													imgURL = "wedding.png";
-												}%>
+											<%
+											if (((String) comList.get(4).getTravel_company()).equals("가족")) {
+												imgURL = "family.png";
+											} else if (((String) comList.get(4).getTravel_company()).equals("자녀")) {
+												imgURL = "boy.png";
+											} else if (((String) comList.get(4).getTravel_company()).equals("부모님")) {
+												imgURL = "parents.png";
+											} else if (((String) comList.get(4).getTravel_company()).equals("연인")) {
+												imgURL = "couple.png";
+											} else if (((String) comList.get(4).getTravel_company()).equals("친구")) {
+												imgURL = "buddy.png";
+											} else if (((String) comList.get(4).getTravel_company()).equals("회사동료")) {
+												imgURL = "company.png";
+											} else if (((String) comList.get(4).getTravel_company()).equals("배우자")) {
+												imgURL = "wedding.png";
+											}
+											%>
 											<div class="d-flex px-2 py-1">
 												<div class="d-flex flex-column justify-content-center">
 													<h6 class="mb-0 text-sm">5</h6>
@@ -666,7 +719,8 @@ span {font-family: 'KimjungchulMyungjo-Bold';}
 													</div>
 												</div>
 												<div class="progress">
-													<div class="progress-bar bg-gradient-info w-<%=(int)(gage5/(sum)*100)%>"
+													<div
+														class="progress-bar bg-gradient-info w-<%=(int) (gage5 / (sum) * 100)%>"
 														role="progressbar" aria-valuenow="25" aria-valuemin="0"
 														aria-valuemax="25"></div>
 												</div>
@@ -687,11 +741,13 @@ span {font-family: 'KimjungchulMyungjo-Bold';}
 
 			<!-- 업종별 신용카드 소비액 추이 -->
 			<div class="col-lg-4 col-md-6">
-				<% List<CreditDTO> creditList = (List) request.getAttribute("creditList"); %>
+				<%
+				List<CreditDTO> creditList = (List) request.getAttribute("creditList");
+				%>
 				<div
 					style="background-color: white; width: 920px; border-radius: 15px; height: 930px;">
-					<br>
-					<span style="font-size: 200%; color : #344767;">&nbsp&nbsp&nbsp업종별 신용카드 소비액 추이</span><span style="font-size: 100%;">(단위:1,000원)</span>
+					<br> <span style="font-size: 200%; color: #344767;">&nbsp&nbsp&nbsp업종별
+						신용카드 소비액 추이</span><span style="font-size: 100%;">(단위:1,000원)</span>
 					<script type="text/javascript"
 						src="https://www.gstatic.com/charts/loader.js"></script>
 
@@ -747,9 +803,11 @@ span {font-family: 'KimjungchulMyungjo-Bold';}
 						<h3>&nbsp&nbsp&nbsp여행유형/트렌드</h3>
 						<script type="text/javascript"
 							src="https://www.gstatic.com/charts/loader.js"></script>
-						<%List<TravelPurposeDTO> tpList = (List)request.getAttribute("tpList");
-							if (tpList != null) {%>
-							<script type="text/javascript">
+						<%
+						List<TravelPurposeDTO> tpList = (List) request.getAttribute("tpList");
+						if (tpList != null) {
+						%>
+						<script type="text/javascript">
 								google.charts.load('current', {
 									'packages' : [ 'line' ]
 								});
@@ -801,7 +859,9 @@ span {font-family: 'KimjungchulMyungjo-Bold';}
 											.convertOptions(options));
 								}
 							</script>
-							<%} %>
+						<%
+						}
+						%>
 						<div>
 							<div id="line_top_x"></div>
 						</div>
@@ -920,10 +980,10 @@ span {font-family: 'KimjungchulMyungjo-Bold';}
 					borderRadius : 4,
 					borderSkipped : false,
 					backgroundColor : "#fff",
-					data : [ <%= (num1/(num1+num2+num3+num4))*100%>,
-							 <%= (num2/(num1+num2+num3+num4))*100%>,
-							 <%= (num3/(num1+num2+num3+num4))*100%>,
-							 <%= (num4/(num1+num2+num3+num4))*100%>],
+					data : [ <%=(num1 / (num1 + num2 + num3 + num4)) * 100%>,
+							 <%=(num2 / (num1 + num2 + num3 + num4)) * 100%>,
+							 <%=(num3 / (num1 + num2 + num3 + num4)) * 100%>,
+							 <%=(num4 / (num1 + num2 + num3 + num4)) * 100%>],
 					maxBarThickness : 20
 				}, ],
 			},
@@ -1090,7 +1150,9 @@ span {font-family: 'KimjungchulMyungjo-Bold';}
 	<script async defer src="https://buttons.github.io/buttons.js"></script>
 	<!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
 	<script src="./assets/js/soft-ui-dashboard.min.js?v=1.0.7"></script>
-	<%} %>
+	<%
+	}
+	%>
 </body>
 
 </html>
