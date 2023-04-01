@@ -189,30 +189,23 @@ span {
 					</div>
 				</div>
 		</nav>
-
+		
 		<div class="container-fluid py-1 px-3">
 			<h3 align="center">항구의 도시</h3>
 			<h1 align="center">목포</h1>
 			<br>
-			<%
-			String year = (String) request.getAttribute("year");
-			if (year == null) {
-			%>
-			<h2 style="position: relative; margin-left: 42.5%; color: black;">연도를
-				선택해주세요.</h2>
-			<%
-			} else {
-			%>
-			<h2 style="position: relative; margin-left: 47.2%; color: black;"><%=year%>년
-			</h2>
-			<%
-			}
-			%>
-			<br> <a href="map">
-				<h3 id="popular" style="margin-left: 79%;">📍&nbsp;인기관광지 및 지역
-					맛집</h3> <script>var text = document.querySelector('#popular');
+			<%String year = (String)request.getAttribute("year");
+			if (year == null) {%>
+				<h2 style="position: relative; margin-left: 42.5%; color: black;">연도를 선택해주세요.</h2>
+			<% } else {%>
+				<h2 style="position: relative; margin-left: 47.2%; color: black;"><%=year %>년</h2>
+			<%} %>
+			<br>
+			
+				<h3 id="popular" style="margin-left: 79%;"><a href="map">📍&nbsp;인기관광지 및 지역 맛집</a></h3>
+				<script >var text = document.querySelector('#popular');
 				</script>
-			</a>
+			
 			<form action="selectYear" style="height: 40px;">
 				<h4>연도 선택 :</h4>
 				<select id="selectyear" name="year">
@@ -323,7 +316,7 @@ span {
 									</div>
 									<h4 class="font-weight-bolder"><%=Math.round((num1 / (num1 + num2 + num3 + num4)) * 100)%></h4>
 									<div class="progress w-75">
-										<div class="progress-bar bg-dark w-10" role="progressbar"
+										<div class="progress-bar bg-dark w-<%=Math.round((num1/(num1+num2+num3+num4))*100)%>" role="progressbar"
 											aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
 									</div>
 								</div>
@@ -334,7 +327,7 @@ span {
 									</div>
 									<h4 class="font-weight-bolder"><%=Math.round((num2 / (num1 + num2 + num3 + num4)) * 100)%></h4>
 									<div class="progress w-75">
-										<div class="progress-bar bg-dark w-50" role="progressbar"
+										<div class="progress-bar bg-dark w-<%=Math.round((num2/(num1+num2+num3+num4))*100)%>" role="progressbar"
 											aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
 									</div>
 								</div>
@@ -356,7 +349,7 @@ span {
 									</div>
 									<h4 class="font-weight-bolder"><%=Math.round((num4 / (num1 + num2 + num3 + num4)) * 100)%></h4>
 									<div class="progress w-75">
-										<div class="progress-bar bg-dark w-90" role="progressbar"
+										<div class="progress-bar bg-dark w-<%=Math.round((num4/(num1+num2+num3+num4))*100)%>" role="progressbar"
 											aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
 									</div>
 								</div>

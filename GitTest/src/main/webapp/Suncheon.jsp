@@ -43,6 +43,7 @@ h2{font-family:'KimjungchulMyungjo-Bold' ;}
 h3{font-family:'KimjungchulMyungjo-Bold' ;}
 h4{font-family:'WandohopeR' ;}
 h5{font-family:'WandohopeR' ;}
+h6{font-family:'KimjungchulMyungjo-Bold' ;}
 span {font-family: 'KimjungchulMyungjo-Bold';}
 
 </style>
@@ -180,11 +181,11 @@ span {font-family: 'KimjungchulMyungjo-Bold';}
 				<h2 style="position: relative; margin-left: 47.2%; color: black;"><%=year %>년</h2>
 			<%} %>
 			<br>
-			<a href="map">
-				<h3 id="popular" style="margin-left: 79%;">📍&nbsp;인기관광지 및 지역 맛집</h3>
+			
+				<h3 id="popular" style="margin-left: 79%;"><a href="map">📍&nbsp;인기관광지 및 지역 맛집</a></h3>
 				<script >var text = document.querySelector('#popular');
 				</script>
-			</a>
+			
 			<form action="selectYear" style="height: 40px;">
 				<h4>연도 선택 :</h4>
 				<select id="selectyear" name="year">
@@ -204,15 +205,11 @@ span {font-family: 'KimjungchulMyungjo-Bold';}
 						<div class="row">
 							<div class="col-lg-6">
 								<div class="d-flex flex-column h-100">
-									<p class="mb-1 pt-2 text-bold">Built by developers</p>
-									<h5 class="font-weight-bolder">Soft UI Dashboard</h5>
-									<p class="mb-5">From colors, cards, typography to complex
-										elements, you will find the full documentation.</p>
-									<a
-										class="text-body text-sm font-weight-bold mb-0 icon-move-right mt-auto"
-										href="javascript:;"> Read More <i
-										class="fas fa-arrow-right text-sm ms-1" aria-hidden="true"></i>
-									</a>
+									<h3 lass="font-weight-bolder">자연과 문화, 쇼핑 등 <br>다양한 즐길 거리가 있는 매력적인 도시</h3>
+									<br>
+									<h6>대한민국 내 최초로 도시재생 사업을 추진하여 도심 지역의 문화 유산을 보존하고, 교통체증 문제를 해결하는 등 도시환경 개선에 많은 노력을 기울이고 있는 자연에 특화되어있다.<br>
+													교통이 편리한 위치에 있어 다른 지역과의 이동이 용이하고 또한 대중교통이 발달되어 있어 여행객들이 편리하게 이동할 수 있다.<br>
+													매력적인 측면이 많아 다양한 즐길 거리가 있어 방문객들에게 좋은 기억을 남기는 도시이다.</h6>
 								</div>
 							</div>
 							<div class="col-lg-5 ms-auto text-center mt-5 mt-lg-0">
@@ -223,7 +220,7 @@ span {font-family: 'KimjungchulMyungjo-Bold';}
 								<div
 									class="position-relative d-flex align-items-center justify-content-center h-100">
 									<img class="w-100 position-relative z-index-2 pt-4"
-										src="./assets/img/rumiddunge.jpg" alt="rocket">
+										src="./assets/img/rumiddunge.jpg" alt="rumiddunge">
 								</div>
 							</div>
 						</div>
@@ -239,19 +236,18 @@ span {font-family: 'KimjungchulMyungjo-Bold';}
 						<span class="mask bg-gradient-suggest"></span>
 						<div
 							class="card-body position-relative z-index-1 d-flex flex-column h-100 p-3">
-							<h5 class="text-white font-weight-bolder mb-4 pt-2">주영래 바보
-								명청이</h5>
-							<p class="text-white">Wealth creation is an evolutionarily
-								recent positive-sum game. It is all about who take the
-								opportunity first.</p>
-							<a
-								class="text-white text-sm font-weight-bold mb-0 icon-move-right mt-auto"
-								href="javascript:;"> Read More <i
-								class="fas fa-arrow-right text-sm ms-1" aria-hidden="true"></i>
-							</a>
+							<h3 class="text-white font-weight-bolder">제안방향</h3>
+							<h6 class="text-white font-weight-bolder mb-4 pt-2">
+							<br>
+							1.순천의 자연경관을 적극 활용하기<br>
+							순천만습지나 순천만국가정원 등의 관광자원을 적극적으로 활용하기. 관광객이 자연과 함께 즐길 수 있는 체험 프로그램, 생태여행 등의 새로운 관광상품을 개발하기.<br>
+							<br>
+						    2.지역 문화자원을 활용하기<br>
+                            낙안읍성민속마을, 선암사, 송광사등 전통문화와 역사유산이 풍부한 지역. 이러한 문화자원을 활용해 지역특색 있는 문화체험 프로그램, 전통공예 체험, 역사유적 관광 등의 새로운 관광상품을 개발하기.<br>
+                           	<br>
+                            </h6>
 						</div>
 					</div>
-				</div>
 			</div>
 		</div>
 		<div class="row mt-4">
@@ -289,7 +285,7 @@ span {font-family: 'KimjungchulMyungjo-Bold';}
 									</div>
 									<h4 class="font-weight-bolder"><%=Math.round((num1 / (num1 + num2 + num3 + num4)) * 100)%></h4>
 									<div class="progress w-75">
-										<div class="progress-bar bg-dark w-10" role="progressbar"
+										<div class="progress-bar bg-dark w-<%=Math.round((num1 / (num1 + num2 + num3 + num4)) * 100)%>" role="progressbar"
 											aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
 									</div>
 								</div>
@@ -300,7 +296,7 @@ span {font-family: 'KimjungchulMyungjo-Bold';}
 									</div>
 									<h4 class="font-weight-bolder"><%=Math.round((num2 / (num1 + num2 + num3 + num4)) * 100)%></h4>
 									<div class="progress w-75">
-										<div class="progress-bar bg-dark w-50" role="progressbar"
+										<div class="progress-bar bg-dark w-<%=Math.round((num2 / (num1 + num2 + num3 + num4)) * 100)%>" role="progressbar"
 											aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
 									</div>
 								</div>
@@ -311,7 +307,7 @@ span {font-family: 'KimjungchulMyungjo-Bold';}
 									</div>
 									<h4 class="font-weight-bolder"><%=Math.round((num3 / (num1 + num2 + num3 + num4)) * 100)%></h4>
 									<div class="progress w-75">
-										<div class="progress-bar bg-dark w-30" role="progressbar"
+										<div class="progress-bar bg-dark w-<%=Math.round((num3 / (num1 + num2 + num3 + num4)) * 100)%>" role="progressbar"
 											aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
 									</div>
 								</div>
@@ -322,7 +318,7 @@ span {font-family: 'KimjungchulMyungjo-Bold';}
 									</div>
 									<h4 class="font-weight-bolder"><%=Math.round((num4 / (num1 + num2 + num3 + num4)) * 100)%></h4>
 									<div class="progress w-75">
-										<div class="progress-bar bg-dark w-90" role="progressbar"
+										<div class="progress-bar bg-dark w-<%=Math.round((num4 / (num1 + num2 + num3 + num4)) * 100)%>" role="progressbar"
 											aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
 									</div>
 								</div>
