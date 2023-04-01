@@ -217,15 +217,12 @@
 						<div class="row">
 							<div class="col-lg-6">
 								<div class="d-flex flex-column h-100">
-									<p class="mb-1 pt-2 text-bold">Built by developers</p>
-									<h5 class="font-weight-bolder">Soft UI Dashboard</h5>
-									<p class="mb-5">From colors, cards, typography to complex
-										elements, you will find the full documentation.</p>
-									<a
-										class="text-body text-sm font-weight-bold mb-0 icon-move-right mt-auto"
-										href="javascript:;"> Read More <i
-										class="fas fa-arrow-right text-sm ms-1" aria-hidden="true"></i>
-									</a>
+									<h3 class="font-weight-bolder">문화 예술의 중심 광주</h3><br>
+									<h6>5.18 민주화 운동의 중심지로 역사적 사건들이 일어난 도시<br>
+많은 축제와 전시회, 공연등이 열리고 있다. (광주 비엔날레, 광주 월드뮤직페스티벌, 광주 영화제)<br>
+도시 중심부와 자연의 조화로운 공간을 유지하고 있다.<br>
+문화 예술의 도시임에도 불구하고 문화예술분야의 언급량이 낮음(다른 카테고리 대비 언급량)</h6>
+									
 								</div>
 							</div>
 							<div class="col-lg-5 ms-auto text-center mt-5 mt-lg-0">
@@ -252,16 +249,16 @@
 						<span class="mask bg-gradient-suggest"></span>
 						<div
 							class="card-body position-relative z-index-1 d-flex flex-column h-100 p-3">
-							<h5 class="text-white font-weight-bolder mb-4 pt-2">Work
-								with the rockets</h5>
-							<p class="text-white">Wealth creation is an evolutionarily
-								recent positive-sum game. It is all about who take the
-								opportunity first.</p>
-							<a
-								class="text-white text-sm font-weight-bold mb-0 icon-move-right mt-auto"
-								href="javascript:;"> Read More <i
-								class="fas fa-arrow-right text-sm ms-1" aria-hidden="true"></i>
-							</a>
+							<h5 class="text-white font-weight-bolder mb-4 pt-2">제안 방향
+							</h5>
+							<h6 style="color: white;">1. 인프라 확충<br>
+ 							일부 축제장은 인프라가 부족해 관람객들의 편의성을 높일 수 있는 시설이 부족한 경우가 있습니다.<br>
+							 축제장 인근에 주차장, 음식점, 화장실 등 편의시설을 개선하고 확충함으로써 관람객들의 편의성을 높일 수 있습니다.<br><br>
+							
+							2. 참여도 부족 <br>
+							지역주민의 참여도가 낮아 축제의 활기가 떨어지는 경우가 있습니다.<br>
+							지역주민들이 적극적으로 참여할 수 있도록 문화예술 프로그램, 체험형 프로그램, 푸드트럭 축제 등 다양한 프로그램을 제공할 수 있습니다.
+							</h6>>
 						</div>
 					</div>
 				</div>
