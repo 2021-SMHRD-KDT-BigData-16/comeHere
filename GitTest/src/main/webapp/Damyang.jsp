@@ -1,3 +1,4 @@
+<%@page import="org.apache.ibatis.reflection.SystemMetaObject"%>
 <%@page import="com.smhrd3.model.CompanyDTO"%>
 <%@page import="com.smhrd3.model.TravelPurposeDTO"%>
 <%@page import="com.smhrd3.model.SNSDTO"%>
@@ -63,6 +64,11 @@ h5 {
 span {
 	font-family: 'KimjungchulMyungjo-Bold';
 }
+
+h6 {
+	font-family: 'KimjungchulMyungjo-Bold';
+}
+
 </style>
 <body class="g-sidenav-show  bg-gray-100">
 
@@ -212,11 +218,11 @@ span {
 			}
 			%>
 			<br>
-			<a href="map">
-				<h3 id="popular" style="margin-left: 79%;">📍&nbsp;인기관광지 및 지역 맛집</h3>
+			
+				<h3 id="popular" style="margin-left: 79%;"><a href="map">📍&nbsp;인기관광지 및 지역 맛집</a></h3>
 				<script >var text = document.querySelector('#popular');
 				</script>
-			</a>
+			
 			<form action="selectYear" style="height: 40px;">
 				<h4>연도 선택 :</h4>
 				<select id="selectyear" name="year">
@@ -238,15 +244,16 @@ span {
 						<div class="row">
 							<div class="col-lg-6">
 								<div class="d-flex flex-column h-100">
-									<p class="mb-1 pt-2 text-bold">Built by developers</p>
-									<h5 class="font-weight-bolder">Soft UI Dashboard</h5>
-									<p class="mb-5">From colors, cards, typography to complex
-										elements, you will find the full documentation.</p>
-									<a
-										class="text-body text-sm font-weight-bold mb-0 icon-move-right mt-auto"
-										href="javascript:;"> Read More <i
-										class="fas fa-arrow-right text-sm ms-1" aria-hidden="true"></i>
-									</a>
+								<br>
+									<h3 class="font-weight-bolder">미식의 도시</h3>
+									<br>
+									<h6>
+									담양은 대한민국 전라남도 남부에 위치한 지방 중심 도시입니다. <br>
+									미식의 도시라는 명칭에 걸맞게 식음료업(약 87%)의 비중이 압도적으로 높습니다. <br>
+									대한민국에서 가장 넓은 계곡으로 유명한 담양계곡이 있으며, 또한 대나무숲으로 유명한 죽녹원과
+									한밭의 수려함을 자랑하는 담양호가 있습니다.<br>
+									담양은 멋있는 관광지와 맛있는 음식으로 가족들(약 60%)과 많이 방문합니다. 
+									</h6>
 								</div>
 							</div>
 							<div class="col-lg-5 ms-auto text-center mt-5 mt-lg-0">
@@ -273,16 +280,14 @@ span {
 						<span class="mask bg-gradient-suggest"></span>
 						<div
 							class="card-body position-relative z-index-1 d-flex flex-column h-100 p-3">
-							<h5 class="text-white font-weight-bolder mb-4 pt-2">Work
-								with the rockets</h5>
-							<p class="text-white">Wealth creation is an evolutionarily
-								recent positive-sum game. It is all about who take the
-								opportunity first.</p>
-							<a
-								class="text-white text-sm font-weight-bold mb-0 icon-move-right mt-auto"
-								href="javascript:;"> Read More <i
-								class="fas fa-arrow-right text-sm ms-1" aria-hidden="true"></i>
-							</a>
+							<h3 class="text-white font-weight-bolder mb-4 pt-2">제안방향</h3>
+							<h6 style="color: white;">1. 담양 관광지 활용 <br>
+				죽녹원, 메타프로방스, 메타세쿼이아 가로수길 등 담양의 관광지 또한 매우 예쁘지만,
+			사람들의 관심을 끌만한 컨텐츠가 부족하기 때문에 재미있는 컨텐츠를 만들어 사람들의 시선을 끌어보는 것이 좋을 것 같습니다. <br> <br>
+				2. 담양 축제 활용 <br>
+				2019 개최 이후 4년만에 코로나로 인해 진행되지 못했던 전남 담양 대나무 축제가 
+				2023년부터는 다시 개최되므로 앞으로 축제를 활용하는 것이 좋을 것 같습니다. <br>
+				</h6>
 						</div>
 					</div>
 				</div>
