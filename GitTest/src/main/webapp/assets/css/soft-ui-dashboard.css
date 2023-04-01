@@ -1683,7 +1683,7 @@ progress {
   }
 
   .col-lg-7 {
-    flex: 0 0 auto;
+  	 flex: 0 0 auto;
     width: 58.333333%;
   }
 
@@ -8439,7 +8439,7 @@ fieldset:disabled .btn {
 }
 
 .d-flex {
-  display: flex !important;
+  display: flex;
 }
 
 .d-inline-flex {
@@ -21258,7 +21258,7 @@ fieldset:disabled .btn {
 .card.card-background .card-body .content-center,
 .card.card-background .card-body .content-left {
   min-height: 330px;
-  max-width: 450px;
+  max-width: 700px;
   padding-top: 60px;
   padding-bottom: 60px;
 }

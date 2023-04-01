@@ -63,7 +63,10 @@ h5 {
 span {
 	font-family: 'KimjungchulMyungjo-Bold';
 }
-g {}
+#imgJN {
+	margin-left: 200px;
+	width: 350px !important;
+} 
 </style>
 <body class="g-sidenav-show  bg-gray-100">
 
@@ -224,61 +227,37 @@ g {}
 		if (year != null) {
 		%>
 		<div class="row mt-4">
-			<div class="col-lg-7 mb-lg-0 mb-4">
+			<div class="col-lg-7 mb-lg-0 mb-4" style="width:100%; height:24%;">
 				<div class="card">
 					<div class="card-body p-3">
 						<div class="row">
 							<div class="col-lg-6">
 								<div class="d-flex flex-column h-100">
-									<p class="mb-1 pt-2 text-bold">Built by developers</p>
-									<h5 class="font-weight-bolder">Soft UI Dashboard</h5>
-									<p class="mb-5">From colors, cards, typography to complex
-										elements, you will find the full documentation.</p>
-									<a
-										class="text-body text-sm font-weight-bold mb-0 icon-move-right mt-auto"
-										href="javascript:;"> Read More <i
-										class="fas fa-arrow-right text-sm ms-1" aria-hidden="true"></i>
-									</a>
+									<br><br>
+									<h3 class="font-weight-bolder">🎈&nbsp;전남 관광 종합분석</h3><br>
+									<h5><br>
+									◾ SNS 언급량 : 2020년도 최대 검색량이 약 50,000회에 미치는데 비하여 2021년부터 점차적으로 늘어서 2022년에는 110,000회까지 늘어남을 알 수 있다.<br><br>
+									◾ 동반유형 키워드 순위 : 전체적인 통계를 살펴보면 가족 -> 부모님 -> 자녀순으로 여행을 온다. <br><br>
+									◾ 관광소비유형 : 주요 관광소비 유형은 식음료, 골프장, 레저용품쇼핑 순이다.<br>
+									  &nbsp;전년 동기 대비 관광소비 카테고리별 소비비중의 변동률은 운송업(33.1% 감소), 여행업(32% 감소), 여가서비스업(17.3% 증가) 순.<br><br>
+									◾ 업종별 신용카드 소비액 추이 : 전체 비율의 50%를 넘게 차지할정도로 압도적으로 식음료업의 소비액이 높다. <br><br> 
+									◾ 여행유형/트렌드 : 미식과 자연경관이 주를 이룬다.  <br><br>
+									</h5> 
 								</div>
 							</div>
 							<div class="col-lg-5 ms-auto text-center mt-5 mt-lg-0">
-
-								<img src="./assets/img/shapes/waves-white.svg"
-									class="position-absolute h-100 w-50 top-0 d-lg-block d-none"
-									alt="waves">
-								<div
-									class="position-relative d-flex align-items-center justify-content-center h-100">
-									<img class="w-100 position-relative z-index-2 pt-4"
-										src="./assets/img/namdo.jpg" alt="namdo">
+								<div class="position-relative align-items-center justify-content-center h-100">
+									<div id="imgJN"><img class="w-100 position-relative z-index-2 pt-4"
+										src="./assets/img/namdo.jpg" alt="namdo" style="display: block;"></div>		
+									<div><img class="w-100 position-relative z-index-2 pt-4"
+										src="./assets/img/slogan.jpg" alt="slogan"></div>	
 								</div>
 							</div>
 						</div>
-
 					</div>
 				</div>
 			</div>
-			<div class="col-lg-5">
-				<div class="card h-100 p-3">
-					<div
-						class="overflow-hidden position-relative border-radius-lg bg-cover h-100"
-						style="background-image: url('./assets/img/seryangji.jpg');">
-						<span class="mask bg-gradient-suggest"></span>
-						<div
-							class="card-body position-relative z-index-1 d-flex flex-column h-100 p-3">
-							<h5 class="text-white font-weight-bolder mb-4 pt-2">주영래 바보
-								명청이</h5>
-							<p class="text-white">Wealth creation is an evolutionarily
-								recent positive-sum game. It is all about who take the
-								opportunity first.</p>
-							<a
-								class="text-white text-sm font-weight-bold mb-0 icon-move-right mt-auto"
-								href="javascript:;"> Read More <i
-								class="fas fa-arrow-right text-sm ms-1" aria-hidden="true"></i>
-							</a>
-						</div>
-					</div>
-				</div>
-			</div>
+		
 		</div>
 		<div class="row mt-4">
 			<div class="col-lg-5 mb-lg-0 mb-4">
@@ -361,7 +340,7 @@ g {}
 						<h3>SNS 언급량</h3>
 						<p class="text-sm">
 							<i class="fa fa-arrow-up text-success"></i> <span
-								class="font-weight-bold">&nbsp&nbsp주요 국내 소셜미디어, 커뮤니티의
+								class="font-weight-bold">&nbsp;&nbsp;주요 국내 소셜미디어, 커뮤니티의
 								해당지역에 대한 관광 관련 언급량을 제공</span>
 						</p>
 					</div>
