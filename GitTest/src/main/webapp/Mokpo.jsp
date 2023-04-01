@@ -287,7 +287,7 @@ span {font-family: 'KimjungchulMyungjo-Bold';}
 									</div>
 									<h4 class="font-weight-bolder"><%=Math.round((num1/(num1+num2+num3+num4))*100)%></h4>
 									<div class="progress w-75">
-										<div class="progress-bar bg-dark w-10" role="progressbar"
+										<div class="progress-bar bg-dark w-<%=Math.round((num1/(num1+num2+num3+num4))*100)%>" role="progressbar"
 											aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
 									</div>
 								</div>
@@ -298,7 +298,7 @@ span {font-family: 'KimjungchulMyungjo-Bold';}
 									</div>
 									<h4 class="font-weight-bolder"><%=Math.round((num2/(num1+num2+num3+num4))*100)%></h4>
 									<div class="progress w-75">
-										<div class="progress-bar bg-dark w-50" role="progressbar"
+										<div class="progress-bar bg-dark w-<%=Math.round((num2/(num1+num2+num3+num4))*100)%>" role="progressbar"
 											aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
 									</div>
 								</div>
@@ -320,7 +320,7 @@ span {font-family: 'KimjungchulMyungjo-Bold';}
 									</div>
 									<h4 class="font-weight-bolder"><%=Math.round((num4/(num1+num2+num3+num4))*100)%></h4>
 									<div class="progress w-75">
-										<div class="progress-bar bg-dark w-90" role="progressbar"
+										<div class="progress-bar bg-dark w-<%=Math.round((num4/(num1+num2+num3+num4))*100)%>" role="progressbar"
 											aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
 									</div>
 								</div>
