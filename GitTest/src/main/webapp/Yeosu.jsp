@@ -207,7 +207,7 @@ span {font-family: 'KimjungchulMyungjo-Bold';}
 								<div class="d-flex flex-column h-100">
 									
 									<h3 class="font-weight-bolder">365개의 섬, 다양한 해양생물, 산과 바다가 하모니를 이루고 있는 아름다운 여수</h3><br>
-									<h6>
+									<h5>
 													여름철에는 서늘하고 겨울철은 온난하며 강수량도 풍부하여<br> 
 													사계절 생활하기 좋은 지역.<br>
 													다른 지역에 비해 여가서비스업 분야에서 소비액이 많은 편.<br>
@@ -216,7 +216,7 @@ span {font-family: 'KimjungchulMyungjo-Bold';}
 													외국인 관광객 수가 꾸준히 증가 하고 있었으나 최근 코로나19 대유행으로<br> 
 													하락세를 띄고 있음.(주요 방문객 : 중국, 일본, 미국, 태국)
 
-									</h6>
+									</h5>
 								</div>
 							</div>
 							<div class="col-lg-5 ms-auto text-center mt-5 mt-lg-0">
@@ -245,7 +245,7 @@ span {font-family: 'KimjungchulMyungjo-Bold';}
 							class="card-body position-relative z-index-1 d-flex flex-column h-100 p-3">
 							<h3 class="text-white font-weight-bolder mb-4 pt-2">제안 방향</h3>
 							
-							<h6 style = "color :white;">1. 편향된 관광객 문제 해결<br>
+							<h5 style = "color :white;">1. 편향된 관광객 문제 해결<br>
 							 여름철에 집중되어 있는 방문객의 분산을 위해 여러 계절에 맞는 다양한 관광 프로그램을 마련하고, 주로 인기 있는 관광지(여수밤바다, 오동도, 고소리 마을 등)외에도 조용한 곳을 소개하여 분산을 유도.<br>
 
 <!-- 2. 대중교통이 발달하지 않아 교통체증이 발생할 수 있기 때문에 대중교통 시스템 개선을 추친하고 관광객들에게 이용방법을 안내하는 노력이 필요합니다. --><br>
@@ -254,7 +254,7 @@ span {font-family: 'KimjungchulMyungjo-Bold';}
 레저 시설이나 호텔 등의 숙박시설이 부족하여 관광객의 만족도를 떨어트릴 수 있기에 새로운 호텔과 레저시설을 건설하고 기존 시설의 수리와 보수를 지속적으로 실시.<br><br>
 
 3. 외국인 관광객 유치<br>
-외국인 관광객을 위하여 가이드나 번역기를 제공하는 것뿐만 아니라, 외국어를 구사하는 스텝을 채용하여 의사소통의 어려움을 최소화. </h6>
+외국인 관광객을 위하여 가이드나 번역기를 제공하는 것뿐만 아니라, 외국어를 구사하는 스텝을 채용하여 의사소통의 어려움을 최소화. </h5>
 
 						</div>
 					</div>
