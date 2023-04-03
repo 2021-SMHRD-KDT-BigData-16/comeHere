@@ -296,17 +296,17 @@ h5 {
             mapOption = {
         		<%String area = (String) request.getSession().getAttribute("area");
 				if (area.equals("광주")) {%>
-                	center: new kakao.maps.LatLng(35.176526445801024, 126.86876961961522), // 지도의 중심좌표
+                	center: new kakao.maps.LatLng(35.160345218709104, 126.85154171118359), // 지도의 중심좌표
                 <%} else if (area.equals("목포")) {%>
-                	center: new kakao.maps.LatLng(34.80669672817822, 126.40576752194544), // 지도의 중심좌표
+                	center: new kakao.maps.LatLng(34.79853287848684, 126.39717161002058), // 지도의 중심좌표
                 <%} else if (area.equals("담양")) {%>
-                	center: new kakao.maps.LatLng(35.32400365304959, 126.99720654629182), // 지도의 중심좌표
+                	center: new kakao.maps.LatLng(35.32407575960796, 126.99719554595258), // 지도의 중심좌표
                 <%} else if (area.equals("순천")) {%>
-                	center: new kakao.maps.LatLng(34.95113855753754, 127.4881392650499), // 지도의 중심좌표
+                	center: new kakao.maps.LatLng(34.92417510368015, 127.52353687242329), // 지도의 중심좌표
                 <%} else if (area.equals("여수")) {%>
-                	center: new kakao.maps.LatLng(34.7644094466046, 127.66285261134806), // 지도의 중심좌표
+                	center: new kakao.maps.LatLng(34.73521366693411, 127.7424480027371), // 지도의 중심좌표
                 <%}%>
-                level: 6 // 지도의 확대 레벨
+                level: 7 // 지도의 확대 레벨
             };
 
         // 지도를 생성합니다    
