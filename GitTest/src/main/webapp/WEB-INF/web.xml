@@ -18,8 +18,13 @@
 			<servelt-name>selectYearJN</servelt-name>
 			<url-pattern>/selectYearJN</url-pattern>
 		</servlet-mapping> -->
+  		
+  </servlet>
   
+  
+  <servlet>
+  <servlet-name>areaJN</servlet-name>
   </servlet>
  
-  
+  <!-- areaJN -->
 </web-app>
