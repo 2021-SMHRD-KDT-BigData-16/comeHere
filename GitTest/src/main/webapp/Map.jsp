@@ -8,7 +8,7 @@
 
 <head>
 <meta charset="utf-8">
-<title>주소로 장소 표시하기</title>
+<title>옴서감서</title>
 <!--     Fonts and icons     -->
 <link
 	href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700"
