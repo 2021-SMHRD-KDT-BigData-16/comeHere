@@ -219,7 +219,7 @@ span {
 			%>
 			<br>
 			
-				<h3 id="popular" style="margin-left: 79%;"><a href="map">📍&nbsp;인기관광지 및 지역 맛집</a></h3>
+				<h3 id="popular" style="margin-left: 79%;"><a href="map">&nbsp;&nbsp;📍&nbsp;관광지 및 맛집 분포도</a></h3>
 				<script >var text = document.querySelector('#popular');
 				</script>
 			

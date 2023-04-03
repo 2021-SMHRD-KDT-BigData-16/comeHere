@@ -182,7 +182,7 @@ span {font-family: 'KimjungchulMyungjo-Bold';}
 			<%} %>
 			<br>
 			
-				<h3 id="popular" style="margin-left: 79%;"><a href="map">📍&nbsp;인기관광지 및 지역 맛집</a></h3>
+				<h3 id="popular" style="margin-left: 79%;"><a href="map">&nbsp;&nbsp;📍&nbsp;관광지 및 맛집 분포도</a></h3>
 				<script >var text = document.querySelector('#popular');
 				</script>
 			
@@ -215,7 +215,6 @@ span {font-family: 'KimjungchulMyungjo-Bold';}
 													관광객들이 미식과 자연경관때문에 방문함.<br>
 													외국인 관광객 수가 꾸준히 증가 하고 있었으나 최근 코로나19 대유행으로<br> 
 													하락세를 띄고 있음.(주요 방문객 : 중국, 일본, 미국, 태국)
-
 									</h5>
 								</div>
 							</div>
