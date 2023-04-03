@@ -8,6 +8,7 @@
 
 <head>
 <meta charset="utf-8">
+<link rel="icon" type="image/png" href="./assets/img/icon.JPG">
 <title>옴서감서</title>
 <!--     Fonts and icons     -->
 <link
