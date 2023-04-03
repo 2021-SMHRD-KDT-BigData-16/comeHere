@@ -693,7 +693,7 @@ span {font-family: 'KimjungchulMyungjo-Bold';}
 			</div>
 
 
-			<!-- 업종별 신용카드 소비액 추이 -->
+			<!-- 업종별 신용카드 소비액 -->
 			<div class="col-lg-4 col-md-6">
 				<%
 				List<CreditDTO> creditList = (List) request.getAttribute("creditList");
@@ -701,7 +701,7 @@ span {font-family: 'KimjungchulMyungjo-Bold';}
 				<div
 					style="background-color: white; width: 920px; border-radius: 15px; height: 930px;">
 					<br>
-					<span style="font-size: 200%; color : #344767;">&nbsp&nbsp&nbsp업종별 신용카드 소비액 추이</span><span style="font-size: 100%;">(단위:1,000원)</span>
+					<span style="font-size: 200%; color : #344767;">&nbsp&nbsp&nbsp업종별 신용카드 소비액</span><span style="font-size: 100%;">(단위:1,000원)</span>
 					<script type="text/javascript"
 						src="https://www.gstatic.com/charts/loader.js"></script>
 

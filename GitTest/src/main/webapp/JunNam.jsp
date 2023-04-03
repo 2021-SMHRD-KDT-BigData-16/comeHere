@@ -240,7 +240,7 @@ span {
 									◾ 동반유형 키워드 순위 : 전체적인 통계를 살펴보면 가족 -> 부모님 -> 자녀순으로 여행을 온다. <br><br>
 									◾ 관광소비유형 : 주요 관광소비 유형은 식음료, 골프장, 레저용품쇼핑 순이다.<br>
 									  &nbsp;전년 동기 대비 관광소비 카테고리별 소비비중의 변동률은 운송업(33.1% 감소), 여행업(32% 감소), 여가서비스업(17.3% 증가) 순.<br><br>
-									◾ 업종별 신용카드 소비액 추이 : 전체 비율의 50%를 넘게 차지할정도로 압도적으로 식음료업의 소비액이 높다. <br><br> 
+									◾ 업종별 신용카드 소비액 : 전체 비율의 50%를 넘게 차지할정도로 압도적으로 식음료업의 소비액이 높다. <br><br> 
 									◾ 여행유형/트렌드 : 미식과 자연경관이 주를 이룬다.  <br><br>
 									</h5> 
 								</div>
@@ -709,7 +709,7 @@ span {
 				</div>
 			</div>
 
-			<!-- 업종별 신용카드 소비액 추이 -->
+			<!-- 업종별 신용카드 소비액 -->
 			<div class="col-lg-4 col-md-6">
 				<%
 				List<CreditDTO> creditList = (List) request.getAttribute("creditList");
@@ -717,7 +717,7 @@ span {
 				<div
 					style="background-color: white; width: 920px; border-radius: 15px; height: 930px;">
 					<br> <span style="font-size: 200%; color: #344767;">&nbsp&nbsp&nbsp업종별
-						신용카드 소비액 추이</span><span style="font-size: 100%;">(단위:1,000원)</span>
+						신용카드 소비액</span><span style="font-size: 100%;">(단위:1,000원)</span>
 					<script type="text/javascript"
 						src="https://www.gstatic.com/charts/loader.js"></script>
 
